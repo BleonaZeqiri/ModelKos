@@ -11,15 +11,15 @@ import ServicesMenu from "./Megamenus/ServicesMenu";
 import AboutMenu from "./Megamenus/AboutMenu";
 
 import MobileNav from "../MobileNav/MobileNav";
-import { AiOutlineMenu } from "react-icons/ai";
-import ThemeSwitcher from "../Footer/ThemeSwitcher";
+// import { AiOutlineMenu } from "react-icons/ai";
+// import ThemeSwitcher from "../Footer/ThemeSwitcher";
 
 const Navbar = (props) => {
   const [isSticky, setIsSticky] = useState(false);
 
   useEffect(() => {
-    const nav = document.querySelector(".nav");
-    const navHeight = nav.scrollHeight;
+    // const nav = document.querySelector(".nav");
+    // const navHeight = nav.scrollHeight;
 
     const handleScroll = () => {
       const scrollHeight = window.pageYOffset;

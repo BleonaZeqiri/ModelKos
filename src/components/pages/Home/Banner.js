@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { FormattedMessage } from "react-intl";
+import React from "react";
+// import { FormattedMessage } from "react-intl";
 import "./styles/Banner.scss";
 // import { Link } from "react-router-dom";
 // import StyledLink from "../../shared/StyledLink/StyledLink";

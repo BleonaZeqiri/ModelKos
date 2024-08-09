@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { FormattedMessage } from "react-intl";
 import { FooterData, SocialMedia } from "./data";
 import { Link } from "react-router-dom";
@@ -8,14 +8,14 @@ import SelectLanguage from "../SelectLanguage/SelectLanguage";
 import "./footer.scss";
 
 const Footer = (props) => {
-  const [mode, setMode] = useState(() => localStorage.getItem("mode"));
+  // const [mode, setMode] = useState(() => localStorage.getItem("mode"));
 
   return (
     <div className="shared-footer">
       <div className="first-row">
-        <h1>modeling</h1>
+        <h1>MODELING</h1>
         <div className="modeling"></div>
-        <h1>modeling</h1>
+        <h1>MODELING</h1>
       </div>
       <div className="main-row">
         <div className="all-footer-links">
@@ -45,21 +45,25 @@ const Footer = (props) => {
               <FormattedMessage id="PHONE" defaultMessage="Women " />- 0207 376
               7764
             </p>
-            {/* <h5>
-              <FormattedMessage
-                id="footer-paragraph1"
-                defaultMessage="Building a creative revolution."
-              />
-            </h5> */}
             <p>
               <FormattedMessage id="PHONE" defaultMessage="Men " />- 0207 376
               7764
             </p>
-            <p>bookamodel@modelkos.com</p>
+            <p>
+              <FormattedMessage
+                id="EMAIL"
+                defaultMessage="bookamodel@modelkos.com "
+              />
+            </p>
           </div>
           <div className="down">
             <Link to="/" className="logo-container">
-              <h1>modelkos management</h1>
+              <h1>
+                <FormattedMessage
+                  id="modelkos-management"
+                  defaultMessage="modelkos management"
+                />
+              </h1>
             </Link>
 
             <p>
@@ -81,18 +85,22 @@ const Footer = (props) => {
               />
             </p>
           </div>
-          <div>
+          <div className="down-jobs">
             <h3>
               <FormattedMessage id="Email" defaultMessage="Jobs " />
             </h3>
-            <p>bookamodel@modelkos.com</p>
+            <p>
+              <FormattedMessage
+                id="EMAIL"
+                defaultMessage="bookamodel@modelkos.com "
+              />
+            </p>
           </div>
         </div>
       </div>
       <hr className="hr" />
       <div className="last-row">
         <div className="left">
-          {" "}
           <Link to="/" className="footer-logo">
             <div className="logo"></div>
             <h3>MODELKOS</h3>

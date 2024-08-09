@@ -13,12 +13,12 @@ import "aos/dist/aos.css";
 
 import { IntlProvider } from "react-intl";
 // import { translate } from "./translation/translate";
-import { useSelector } from "react-redux";
+// import { useSelector } from "react-redux";
 
 const Home = lazy(() => import("./pages/Home/Home"));
 
 function App() {
-  const language = useSelector((state) => state.language.language);
+  // const language = useSelector((state) => state.language.language);
 
   useEffect(() => {
     Aos.init({

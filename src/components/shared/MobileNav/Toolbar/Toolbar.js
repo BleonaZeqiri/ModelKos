@@ -9,8 +9,8 @@ const Toolbar = (props) => {
   const [isSticky2, setIsSticky2] = useState(false);
 
   useEffect(() => {
-    const mobileToolbar = document.querySelector(".mobile-toolbar");
-    const navHeight = mobileToolbar.scrollHeight;
+    // const mobileToolbar = document.querySelector(".mobile-toolbar");
+    // const navHeight = mobileToolbar.scrollHeight;
 
     const handleScroll = () => {
       const scrollHeight = window.pageYOffset;
