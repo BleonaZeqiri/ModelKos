@@ -86,9 +86,9 @@ const Footer = (props) => {
             </p>
           </div>
           <div className="down-jobs">
-            <h3>
+            <h1>
               <FormattedMessage id="Email" defaultMessage="Jobs " />
-            </h3>
+            </h1>
             <p>
               <FormattedMessage
                 id="EMAIL"

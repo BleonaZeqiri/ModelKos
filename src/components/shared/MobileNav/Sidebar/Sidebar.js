@@ -8,7 +8,7 @@ import { MdBusinessCenter, MdKeyboardArrowDown } from "react-icons/md";
 import { BiSliderAlt, BiSupport } from "react-icons/bi";
 import { RiInformationFill, RiApps2Fill } from "react-icons/ri";
 import { AboutData, PortfolioData, ServicesData } from "../../Navbar/data";
-// import "../..Navbar/Navbar.css";
+import "../../Navbar/navbar.scss";
 
 const Sidebar = (props) => {
   const [list, showList] = useState(false);
@@ -29,7 +29,7 @@ const Sidebar = (props) => {
       <div className="sidebar-logo-row">
         <Link to="/">
           <div className="mobile-logo-container"></div>
-          <h1>MODELKOS</h1>
+          <h1>modelkos</h1>
         </Link>
         <button onClick={props.click}>
           <CgClose />{" "}
