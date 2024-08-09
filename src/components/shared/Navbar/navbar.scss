@@ -1,0 +1,184 @@
+@import url("https://fonts.cdnfonts.com/css/brown-sugar-2");
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.2vw 2.5% 0;
+  .left-side {
+    display: flex;
+    align-items: center;
+  }
+  .menu-button {
+    color: #fff;
+    border: 0;
+    background: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: max(21px, 1.5vw);
+    margin-right: max(15px, 1.25vw);
+  }
+}
+.nav .nav-logo {
+  display: flex;
+  align-items: center;
+  color: #fff;
+  .logo-container {
+    align-items: center;
+    gap: max(0.25rem, 0.5vw);
+    color: white;
+
+    content: url("../../../assets/NavBar/Logo.svg");
+    height: max(21px, 1.8vw);
+  }
+  h1 {
+    font-family: "Brown Sugar", sans-serif;
+    margin-left: 10px;
+  }
+}
+
+.nav .nav-links {
+  display: flex;
+  align-items: center;
+  .nav-link {
+    position: relative;
+    margin: 0 max(2.5px, 0.7vw);
+    &:hover {
+      .nav-megamenu {
+        display: flex;
+      }
+      .inner-nav-link svg {
+        transform: rotate(-180deg);
+        -webkit-transform: rotate(-180deg);
+      }
+      .megamenu-arrow {
+        display: block;
+      }
+      .line {
+        width: 90%;
+      }
+    }
+  }
+  .megamenu-arrow {
+    position: absolute;
+    color: var(--main-color);
+    font-size: 1.5vw;
+    top: 3.8vw;
+    right: 0.4vw;
+    display: none;
+    @media (max-width: 1200px) {
+      top: 42.5px;
+    }
+  }
+  //   .line {
+  //     position: absolute;
+  //     top: 3.5vw;
+  //     width: 0;
+  //     background: var(--main-color);
+  //     height: max(2px, 0.15vw);
+  //     border-radius: 5px;
+  //     left: 0;
+  //     right: 0;
+  //     margin-left: auto;
+  //     margin-right: auto;
+  //     transition: 0.3s ease-in-out;
+  //     -webkit-transition: 0.3s ease-in-out;
+  //     @media (max-width: 1200px) {
+  //       top: 40px;
+  //     }
+  //   }
+  .inner-nav-link {
+    color: #fff;
+    display: flex;
+    align-items: center;
+    padding: max(1.85vw, 20px) 0.5vw;
+    font-size: max(12.5px, 0.9vw);
+    position: relative;
+    z-index: 2;
+    svg {
+      font-size: max(16px, 1.1vw);
+      margin-left: max(2px, 0.15vw);
+      transition: 0.15s ease-in-out;
+      -webkit-transition: 0.15s ease-in-out;
+    }
+  }
+}
+.nav .nav-auth {
+  display: flex;
+  color: #fff;
+
+  align-items: center;
+  .apply-now {
+    display: flex;
+    align-items: center;
+    padding: max(1.85vw, 20px) 0.5vw;
+    font-size: max(12.5px, 0.9vw);
+    position: relative;
+    z-index: 2;
+  }
+}
+
+.nav .nav-auth .contact-us {
+  background: #000000d4;
+
+  color: #fff;
+  padding: max(7.5px, 0.55vw) max(16px, 1.15vw);
+  border-radius: max(20px, 1.3vw);
+  font-size: max(12px, 0.85vw);
+}
+
+.nav .mobile-nav {
+  display: none;
+}
+@media (max-width: 1020px) {
+  .nav {
+    padding: 0;
+    .nav-links,
+    .left-side,
+    .nav-auth {
+      display: none;
+    }
+    .mobile-nav {
+      display: block;
+    }
+  }
+}
+
+.nav__sticky {
+  background: #fff;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 5px 0px;
+  color: #111;
+  .menu-button,
+  .nav-links .inner-nav-link,
+  h1 {
+    color: #111;
+  }
+  .nav-logo .logo-container {
+    content: url("../../../assets/NavBar/Logo.svg");
+  }
+  .nav-auth .contact-us {
+    background: #000000d4;
+  }
+  .apply-now {
+    color: #111;
+  }
+}
+body.dark-mode .nav__sticky {
+  background: var(--dark-color);
+  .menu-button,
+  .nav-links .inner-nav-link {
+    color: #fff;
+  }
+  .nav-logo .logo-container {
+    content: url("../../../assets/shared/white-logo.svg");
+  }
+  .nav-auth .contact-us {
+    border: 1px solid #fff;
+    color: #fff;
+  }
+}
