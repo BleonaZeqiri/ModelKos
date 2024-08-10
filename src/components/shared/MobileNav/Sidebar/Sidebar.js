@@ -7,7 +7,7 @@ import { CgClose } from "react-icons/cg";
 import { MdBusinessCenter, MdKeyboardArrowDown } from "react-icons/md";
 import { BiSliderAlt, BiSupport } from "react-icons/bi";
 import { RiInformationFill, RiApps2Fill } from "react-icons/ri";
-import { AboutData, PortfolioData, ServicesData } from "../../Navbar/data";
+import { AboutData, Our_work1, AcademyData } from "../../Navbar/data";
 import "../../Navbar/navbar.scss";
 
 const Sidebar = (props) => {
@@ -49,7 +49,7 @@ const Sidebar = (props) => {
           </div>
           {list === true && (
             <div className="mobile-dopdown">
-              {ServicesData.map((props) => {
+              {AcademyData.map((props) => {
                 return (
                   <div className="inner-links">
                     <Link to={props.to}>{props.title}</Link>
@@ -73,7 +73,7 @@ const Sidebar = (props) => {
           {list3 === true && (
             <div className="mobile-dopdown">
               <div className="inner-links">
-                {PortfolioData.map((props) => {
+                {Our_work1.map((props) => {
                   return (
                     <div className="inner-links">
                       <Link to={props.to}>{props.title}</Link>

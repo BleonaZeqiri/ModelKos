@@ -1,12 +1,11 @@
 .banner {
-  background-image: url(../../../../assets/Home/home-page.jpg);
+  background-image: url(../../../../assets/HireModel/Banner-Background.png);
   align-items: stretch;
-  background-position: bottom;
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
   justify-content: space-between;
-  padding: 15% 5%;
+  padding: 19.5% 5%;
   position: relative;
 
   .bg {
@@ -14,11 +13,11 @@
     opacity: 0.75;
   }
   .image-banner {
-    left: -5%;
+    left: -3%;
     opacity: 0.7;
     position: absolute;
     top: 16%;
-    width: max(0rem, 24vw);
+    width: max(0rem, 21vw);
     z-index: 2;
   }
   .left {
@@ -34,24 +33,69 @@
       width: 100%;
       color: #fff;
       font-family: "CustomFont", sans-serif;
-      .big-title {
+      h1 {
         font-weight: 400;
-        font-size: max(80px, 0.875vw);
+        font-size: max(74px, 0.875vw);
         position: absolute;
+      }
+      .big-title {
         z-index: 2;
-
-        left: 8%;
-        top: 39%;
+        left: 10%;
+        top: 34%;
+        width: -moz-fit-content;
         width: fit-content;
       }
 
       .big-title2 {
-        font-weight: 400;
-        font-size: max(80px, 0.875vw);
-        left: 25%;
-        top: 62%;
-        position: absolute;
+        left: 26%;
+        top: 52%;
         width: fit-content;
+      }
+    }
+    .row {
+      align-items: stretch;
+      display: flex;
+      gap: max(0.25rem, 1vw);
+      position: absolute;
+      top: 458px;
+      left: 88px;
+
+      .input {
+        align-items: center;
+        border: 1px solid #fff;
+        display: flex;
+        gap: max(0.25rem, 1vw);
+        padding: max(0.25rem, 0.5vw) max(0.25rem, 1vw);
+        input {
+          background-color: transparent;
+          border: none;
+          color: #fff;
+          height: max(2rem, 2vw);
+          width: 100%;
+        }
+      }
+    }
+    .styledButton {
+      align-items: center;
+      background-color: transparent;
+      border: 2px solid #fff;
+      border: 2px solid var(--main-color);
+      border-radius: 0;
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      overflow: hidden;
+      padding: max(0.35rem, 0.5vw) max(0.5rem, 2vw);
+      position: relative;
+      transition: 0.3s ease-in-out;
+      position: relative;
+      z-index: 3;
+      p {
+        color: #000 !important;
+        position: relative;
+        transition: 0.2s ease-in-out;
+        white-space: nowrap;
+        z-index: 4;
       }
     }
   }

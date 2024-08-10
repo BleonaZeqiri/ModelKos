@@ -39,7 +39,7 @@
     gap: max(0.25rem, 0.5vw);
     color: white;
 
-    content: url("../../../assets/NavBar/Logo.svg");
+    content: url("../../../assets/NavBar/Logo-white.svg");
     height: max(21px, 1.8vw);
   }
   h1 {
@@ -74,7 +74,7 @@
   }
   .megamenu-arrow {
     position: absolute;
-    color: var(--main-color);
+    color: #fff;
     font-size: 1.5vw;
     top: 3.8vw;
     right: 0.4vw;

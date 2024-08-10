@@ -1,4 +1,25 @@
 import { FormattedMessage } from "react-intl";
+//model image
+import model_image1 from "../../../assets/Models/Img1.png";
+import model_image2 from "../../../assets/Models/Img2.png";
+import model_image3 from "../../../assets/Models/Img3.png";
+//our work
+import our_work1 from "../../../assets/nav/portfolio1.svg";
+import our_work2 from "../../../assets/nav/portfolio2.svg";
+import our_work3 from "../../../assets/nav/portfolio3.svg";
+import our_work4 from "../../../assets/nav/portfolio4.svg";
+import our_work5 from "../../../assets/nav/portfolio5.svg";
+import our_work6 from "../../../assets/nav/portfolio6.svg";
+//models
+import model2 from "../../../assets/OurModels/Model2.png";
+import model3 from "../../../assets/OurModels/Model3.png";
+import model4 from "../../../assets/OurModels/Model4.png";
+import model5 from "../../../assets/OurModels/Model5.png";
+import model6 from "../../../assets/OurModels/Model6.png";
+import model7 from "../../../assets/OurModels/Model7.png";
+import model8 from "../../../assets/OurModels/Model8.png";
+import model9 from "../../../assets/OurModels/Model9.png";
+import model10 from "../../../assets/OurModels/Model10.png";
 
 import services1 from "../../../assets/nav/services1.svg";
 import services2 from "../../../assets/nav/services2.svg";
@@ -13,13 +34,6 @@ import services10 from "../../../assets/nav/services10.svg";
 import services11 from "../../../assets/nav/services11.svg";
 import services12 from "../../../assets/nav/services12.svg";
 
-import portfolio1 from "../../../assets/nav/portfolio1.svg";
-import portfolio2 from "../../../assets/nav/portfolio2.svg";
-import portfolio3 from "../../../assets/nav/portfolio3.svg";
-import portfolio4 from "../../../assets/nav/portfolio4.svg";
-import portfolio5 from "../../../assets/nav/portfolio5.svg";
-import portfolio6 from "../../../assets/nav/portfolio6.svg";
-
 import about1 from "../../../assets/nav/about1.svg";
 import about2 from "../../../assets/nav/about2.svg";
 import about3 from "../../../assets/nav/about3.svg";
@@ -27,17 +41,77 @@ import about4 from "../../../assets/nav/about4.svg";
 import about5 from "../../../assets/nav/about5.svg";
 import about6 from "../../../assets/nav/about6.svg";
 
-import portfolioImg1 from "../../../assets/nav/portfolioImg1.jpg";
-import portfolioImg2 from "../../../assets/nav/portfolioImg2.jpg";
-
-import aboutIcon1 from "../../../assets/nav/aboutIcon1.svg";
+import about_image from "../../../assets/WhatWeOffer/Icon2.svg";
 import aboutIcon1red from "../../../assets/nav/aboutIcon1red.svg";
 import aboutIcon1green from "../../../assets/nav/aboutIcon1green.svg";
 import aboutIcon1blue from "../../../assets/nav/aboutIcon1blue.svg";
-
+export const models = [
+  {
+    name: "Beatrise Ramosaj",
+    about:
+      "A person whose profession is posing for artists or photographers. a person employed to wear clothing or pose with a product for purposes of display and advertising.",
+    img: model7,
+  },
+  {
+    name: "Melinda Ademi",
+    about:
+      "A person whose profession is posing for artists or photographers. a person employed to wear clothing or pose with a product for purposes of display and advertising.",
+    to: "/",
+    img: model2,
+  },
+  {
+    name: "Xhensila Myrteza",
+    about:
+      "A person whose profession is posing for artists or photographers. a person employed to wear clothing or pose with a product for purposes of display and advertising.",
+    to: "/",
+    img: model3,
+  },
+  {
+    name: "Ana Lleshi",
+    about:
+      "A person whose profession is posing for artists or photographers. a person employed to wear clothing or pose with a product for purposes of display and advertising.",
+    to: "/",
+    img: model4,
+  },
+  {
+    name: "Afrona Dika",
+    about:
+      "A person whose profession is posing for artists or photographers. a person employed to wear clothing or pose with a product for purposes of display and advertising.",
+    to: "/",
+    img: model5,
+  },
+  {
+    name: "Bleona Zeqiri",
+    about:
+      "A person whose profession is posing for artists or photographers. a person employed to wear clothing or pose with a product for purposes of display and advertising.",
+    to: "/",
+    img: model6,
+  },
+  {
+    name: "Dhurata Ahmetaj",
+    about:
+      "A person whose profession is posing for artists or photographers. a person employed to wear clothing or pose with a product for purposes of display and advertising.",
+    to: "/",
+    img: model8,
+  },
+  {
+    name: "Dafina Zeqiri",
+    about:
+      "A person whose profession is posing for artists or photographers. a person employed to wear clothing or pose with a product for purposes of display and advertising.",
+    to: "/",
+    img: model9,
+  },
+  {
+    name: "Genta Ismajli",
+    about:
+      "A person whose profession is posing for artists or photographers. a person employed to wear clothing or pose with a product for purposes of display and advertising.",
+    to: "/",
+    img: model10,
+  },
+];
 export const AboutData2 = [
   {
-    icon: aboutIcon1,
+    icon: about_image,
     iconRed: aboutIcon1red,
     iconGreen: aboutIcon1green,
     iconBlue: aboutIcon1blue,
@@ -50,7 +124,7 @@ export const AboutData2 = [
     ),
   },
   {
-    icon: aboutIcon1,
+    icon: about_image,
     iconRed: aboutIcon1red,
     iconGreen: aboutIcon1green,
     iconBlue: aboutIcon1blue,
@@ -63,7 +137,7 @@ export const AboutData2 = [
     ),
   },
   {
-    icon: aboutIcon1,
+    icon: about_image,
     iconRed: aboutIcon1red,
     iconGreen: aboutIcon1green,
     iconBlue: aboutIcon1blue,
@@ -116,70 +190,76 @@ export const AboutData = [
   },
 ];
 
-export const PortfolioData2 = [
+export const Our_work2 = [
   {
     to: "/",
-    img: portfolioImg1,
+    img: model_image1,
   },
   {
     to: "/",
-    img: portfolioImg2,
+    img: model_image2,
   },
   {
     to: "/",
-    img: portfolioImg1,
+    img: model_image3,
+  },
+  {
+    to: "/",
+    img: model_image3,
   },
 ];
 
-export const PortfolioData = [
+export const Our_work1 = [
   {
     to: "/",
-    icon: portfolio1,
+
+    icon: our_work1,
     title: <FormattedMessage id="our-work" defaultMessage="Our work" />,
     bg: "#C173E7",
   },
+
   {
     to: "/",
-    icon: portfolio2,
-    title: <FormattedMessage id="campaigns" defaultMessage="Campaigns" />,
+    icon: our_work4,
+    title: <FormattedMessage id="campaigns" defaultMessage="Models" />,
     bg: "#4F9AFF",
   },
   {
     to: "/",
-    icon: portfolio3,
-    title: <FormattedMessage id="brands" defaultMessage="Brands" />,
+    icon: our_work3,
+    title: <FormattedMessage id="brands" defaultMessage="About Us" />,
     bg: "#37B172",
   },
   {
     to: "/",
-    icon: portfolio4,
-    title: <FormattedMessage id="ui-ux-design" defaultMessage="UI/UX Design" />,
+    icon: our_work2,
+    title: <FormattedMessage id="ui-ux-design" defaultMessage="Academy" />,
     bg: "#5C167E",
   },
   {
     to: "/",
-    icon: portfolio5,
-    title: <FormattedMessage id="case-studies" defaultMessage="Case studies" />,
+    icon: our_work5,
+    title: <FormattedMessage id="case-studies" defaultMessage="Blog" />,
     bg: "#CE6A6A",
   },
   {
     to: "/",
-    icon: portfolio6,
-    title: <FormattedMessage id="game-design" defaultMessage="Game design" />,
+    icon: our_work6,
+    title: <FormattedMessage id="game-design" defaultMessage="Apply now" />,
     bg: "#EB8341",
   },
 ];
-export const ServicesData = [
+export const AcademyData = [
   {
     to: "/",
     icon: services1,
     title: (
-      <FormattedMessage id="graphic-design" defaultMessage="Graphic Design" />
+      <FormattedMessage id="graphic-design" defaultMessage="Runway Training" />
     ),
     text: (
       <FormattedMessage
         id="services-menu-text1"
-        defaultMessage="We create original graphical illustrations for you and your brand to stand out"
+        defaultMessage="Learn the art of the catwalk with our experienced instructors."
       />
     ),
     bg: "#E28990",
@@ -187,11 +267,13 @@ export const ServicesData = [
   {
     to: "/",
     icon: services2,
-    title: <FormattedMessage id="animation" defaultMessage="Animation" />,
+    title: (
+      <FormattedMessage id="animation" defaultMessage="Personal Styling " />
+    ),
     text: (
       <FormattedMessage
         id="services-menu-text2"
-        defaultMessage="Our professionals will animate clips or full length animations as you need"
+        defaultMessage="Understand the essentials of fashion, including trends, designers, and wardrobe styling. "
       />
     ),
     bg: "#A01851",
@@ -199,11 +281,16 @@ export const ServicesData = [
   {
     to: "/",
     icon: services3,
-    title: <FormattedMessage id="ui-ux-design" defaultMessage="UI/UX Design" />,
+    title: (
+      <FormattedMessage
+        id="ui-ux-design"
+        defaultMessage="Fitness & Nutrition"
+      />
+    ),
     text: (
       <FormattedMessage
         id="services-menu-text3"
-        defaultMessage="Our team will can transform your ideas into great designs"
+        defaultMessage="Maintain peak physical condition with our fitness program tailored for models. "
       />
     ),
     bg: "#F34040",
@@ -214,13 +301,13 @@ export const ServicesData = [
     title: (
       <FormattedMessage
         id="video-production"
-        defaultMessage="Video Production"
+        defaultMessage="Professional Development"
       />
     ),
     text: (
       <FormattedMessage
         id="services-menu-text4"
-        defaultMessage="We shoot and edit videos with our creative staff and marketing team"
+        defaultMessage="Gain insights into the business side of modeling, including how to build a portfolio, work with agencies, and navigate contracts"
       />
     ),
     bg: "#6A67C5",
@@ -228,7 +315,12 @@ export const ServicesData = [
   {
     to: "/",
     icon: services5,
-    title: <FormattedMessage id="game-design" defaultMessage="Game Design" />,
+    title: (
+      <FormattedMessage
+        id="game-design"
+        defaultMessage="Personality Building"
+      />
+    ),
     text: (
       <FormattedMessage
         id="services-menu-text5"
@@ -241,10 +333,7 @@ export const ServicesData = [
     to: "/",
     icon: services6,
     title: (
-      <FormattedMessage
-        id="ui-ux-consulting"
-        defaultMessage="Ui/UX consulting"
-      />
+      <FormattedMessage id="ui-ux-consulting" defaultMessage="Photo Modeling" />
     ),
     text: (
       <FormattedMessage
@@ -257,11 +346,13 @@ export const ServicesData = [
   {
     to: "/",
     icon: services7,
-    title: <FormattedMessage id="photography" defaultMessage="Photography" />,
+    title: (
+      <FormattedMessage id="photography" defaultMessage="Photo Modeling" />
+    ),
     text: (
       <FormattedMessage
         id="services-menu-text7"
-        defaultMessage="Our photography team shoots the necessary photos to style products of your business"
+        defaultMessage="Master the techniques of posing, facial expressions, and body language in front of the camera. "
       />
     ),
     bg: "#DBBB73",
@@ -272,7 +363,7 @@ export const ServicesData = [
     title: (
       <FormattedMessage
         id="marketing-design"
-        defaultMessage="Marketing Design"
+        defaultMessage="Fashion Knowledge"
       />
     ),
     text: (
@@ -286,53 +377,13 @@ export const ServicesData = [
   {
     to: "/",
     icon: services9,
-    title: (
-      <FormattedMessage id="product-design" defaultMessage="Product Design" />
-    ),
+    title: <FormattedMessage id="product-design" defaultMessage="Confidence" />,
     text: (
       <FormattedMessage
         id="services-menu-text9"
-        defaultMessage="We specialize in physical product design, helping our clients have winning products"
+        defaultMessage="Develop the self-confidence and unique personality that will make you stand out in the industry. "
       />
     ),
     bg: "#224DC6",
-  },
-  {
-    to: "/",
-    icon: services10,
-    title: <FormattedMessage id="3d-artwork" defaultMessage="3D Artwork" />,
-    text: (
-      <FormattedMessage
-        id="services-menu-text10"
-        defaultMessage="We create unique 3D assets that will bring focus and fresh perspective"
-      />
-    ),
-    bg: "#7B7FC5",
-  },
-  {
-    to: "/",
-    icon: services11,
-    title: (
-      <FormattedMessage id="brand-identity" defaultMessage="Brand Identity" />
-    ),
-    text: (
-      <FormattedMessage
-        id="services-menu-text11"
-        defaultMessage="Custom brand identity design from our professionals"
-      />
-    ),
-    bg: "#0099FF",
-  },
-  {
-    to: "/",
-    icon: services12,
-    title: <FormattedMessage id="Infographics" defaultMessage="Infographics" />,
-    text: (
-      <FormattedMessage
-        id="services-menu-text12"
-        defaultMessage="Turn your data into captivating artwork that will keep your audience engaged"
-      />
-    ),
-    bg: "#619D9B",
   },
 ];

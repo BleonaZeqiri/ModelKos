@@ -5,11 +5,11 @@ import { FormattedMessage } from "react-intl";
 import { BsTriangleFill } from "react-icons/bs";
 import { MdKeyboardArrowDown } from "react-icons/md";
 import "./navbar.scss";
-
-import PortfolioMenu from "./Megamenus/PortfolioMenu";
-import ServicesMenu from "./Megamenus/ServicesMenu";
+import Models from "./Megamenus/Models";
+import Our_work from "./Megamenus/Out-work";
+import ServicesMenu from "./Megamenus/Academy";
 import AboutMenu from "./Megamenus/AboutMenu";
-
+import Academy from "./Megamenus/Academy";
 import MobileNav from "../MobileNav/MobileNav";
 // import { AiOutlineMenu } from "react-icons/ai";
 // import ThemeSwitcher from "../Footer/ThemeSwitcher";
@@ -44,25 +44,25 @@ const Navbar = (props) => {
       </div>
 
       <div className="nav-links">
-        <div className="nav-link home-link">
+        <div className="nav-link support-link ">
           <Link to="/" className="inner-nav-link">
             <FormattedMessage id="academy" defaultMessage="Home" />
           </Link>
           <div className="line"></div>
         </div>
-        <div className=" services-link">
+        <div className="nav-link services-link">
           <Link to="/" className="inner-nav-link">
-            <FormattedMessage id="services" defaultMessage="Our Work" />
+            <FormattedMessage id="our-work" defaultMessage="Our Work" />
             <MdKeyboardArrowDown className="arrow1" />
           </Link>
           <div className="megamenu-arrow">
             <BsTriangleFill />
           </div>
           <div className="line"></div>
-          <ServicesMenu />
+          <Our_work />
         </div>
 
-        <div className="portfolio-link">
+        <div className="nav-link portfolio-link">
           <Link to="/" className="inner-nav-link">
             <FormattedMessage id="portfolio" defaultMessage="About" />
             <MdKeyboardArrowDown className="arrow1" />
@@ -71,10 +71,9 @@ const Navbar = (props) => {
             <BsTriangleFill />
           </div>
           <div className="line"></div>
-          <PortfolioMenu />
+          <AboutMenu />
         </div>
-        {/* nav-link */}
-        <div className=" support-link">
+        <div className="nav-link support-link">
           <Link to="/" className="inner-nav-link">
             <FormattedMessage id="about" defaultMessage="Models" />
             <MdKeyboardArrowDown className="arrow1" />
@@ -83,9 +82,9 @@ const Navbar = (props) => {
             <BsTriangleFill />
           </div>
           <div className="line"></div>
-          <AboutMenu />
+          <Models />
         </div>
-        <div className="  support-link">
+        <div className=" nav-link home-link">
           <Link to="/" className="inner-nav-link">
             <FormattedMessage id="about" defaultMessage="Academy" />
             <MdKeyboardArrowDown className="arrow1" />
@@ -94,10 +93,10 @@ const Navbar = (props) => {
             <BsTriangleFill />
           </div>
           <div className="line"></div>
-          <AboutMenu />
+          <Academy />
         </div>
 
-        <div className="nav-link support-link">
+        <div className=" support-link">
           <Link to="/" className="inner-nav-link">
             <FormattedMessage id="support" defaultMessage="Blog" />
           </Link>

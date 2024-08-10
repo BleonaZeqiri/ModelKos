@@ -110,7 +110,7 @@
   padding: max(1rem, 3vw) 5% max(1rem, 2vw);
   position: relative;
   .first-row {
-    align-items: flex-end;
+    align-items: center;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -218,36 +218,62 @@
 }
 @media (max-width: 1020px) {
   .shared-footer {
+    .first-row {
+      padding: 0px 40px;
+      .modeling {
+        width: 17%;
+      }
+      h1 {
+        font-size: max(12px, 6.5vw);
+      }
+    }
+
     .main-row .first-col {
       width: 100%;
-      margin-bottom: 35px;
+      margin-top: 37px;
+      border: none;
       .links1 a {
         width: 35px;
         height: 35px;
         font-size: 20px;
       }
+      h1 {
+        font-size: max(17px, 1.1vw);
+      }
     }
     .main-row .all-footer-links {
       width: 100%;
+      margin-bottom: 20px;
     }
   }
 }
 @media (max-width: 820px) {
   .shared-footer .last-row .right {
     flex-direction: column;
+    .social a {
+      color: #fff;
+      margin-right: 22px;
+      font-size: calc(19px + 1vw);
+    }
+    .phone {
+      p,
+      svg {
+        font-size: calc(13px + 1vw);
+      }
+    }
   }
   .first-row {
     .modeling {
       width: 20%;
     }
-    h1 {
-      font-size: max(12px, 7.5vw);
-    }
+  }
+  .last-row {
+    flex-direction: column;
   }
 }
 @media (max-width: 650px) {
   .shared-footer .first-col {
-    text-align: center;
+    display: contents;
     .colors {
       flex-direction: column;
     }
@@ -275,18 +301,43 @@
   }
 }
 @media (max-width: 550px) {
-  .shared-footer .last-row .right {
-    flex-direction: column;
-  }
-  .first-row {
-    .modeling {
-      width: 20%;
+  .shared-footer .first-row {
+    padding: 0;
+    .first-row {
+      .modeling {
+        width: 20%;
+      }
+      h1 {
+        font-size: max(12px, 7.5vw);
+      }
     }
-    h1 {
-      font-size: max(12px, 7.5vw);
+  }
+  .shared-footer .main-row .first-col {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    div {
+      padding-top: 23px;
     }
   }
-  .shared-footer .first-col {
-    border-left: none;
+  .shared-footer .last-row .footer-logo {
+    .logo {
+      height: max(25px, 2.1vw);
+    }
+    h3 {
+      font-size: max(1.5rem, 0.5vw);
+    }
   }
+
+  // .shared-footer .first-col {
+  //   display: flex;
+  //   justify-content: center;
+  //   align-items: center;
+
+  //   h1 {
+  //     padding: 0px 43px;
+  //     margin-top: 10px;
+  //   }
+  // }
 }
