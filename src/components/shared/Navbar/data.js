@@ -48,12 +48,16 @@ import aboutIcon1blue from "../../../assets/nav/aboutIcon1blue.svg";
 export const models = [
   {
     name: "Beatrise Ramosaj",
+    to: "/",
+
     about:
       "A person whose profession is posing for artists or photographers. a person employed to wear clothing or pose with a product for purposes of display and advertising.",
     img: model7,
   },
   {
     name: "Melinda Ademi",
+    to: "/",
+
     about:
       "A person whose profession is posing for artists or photographers. a person employed to wear clothing or pose with a product for purposes of display and advertising.",
     to: "/",
@@ -61,6 +65,8 @@ export const models = [
   },
   {
     name: "Xhensila Myrteza",
+    to: "/",
+
     about:
       "A person whose profession is posing for artists or photographers. a person employed to wear clothing or pose with a product for purposes of display and advertising.",
     to: "/",
@@ -68,6 +74,8 @@ export const models = [
   },
   {
     name: "Ana Lleshi",
+    to: "/",
+
     about:
       "A person whose profession is posing for artists or photographers. a person employed to wear clothing or pose with a product for purposes of display and advertising.",
     to: "/",
@@ -75,6 +83,7 @@ export const models = [
   },
   {
     name: "Afrona Dika",
+
     about:
       "A person whose profession is posing for artists or photographers. a person employed to wear clothing or pose with a product for purposes of display and advertising.",
     to: "/",
@@ -221,31 +230,31 @@ export const Our_work1 = [
   {
     to: "/",
     icon: our_work4,
-    title: <FormattedMessage id="campaigns" defaultMessage="Models" />,
+    title: <FormattedMessage id="models" defaultMessage="Models" />,
     bg: "#4F9AFF",
   },
   {
     to: "/",
     icon: our_work3,
-    title: <FormattedMessage id="brands" defaultMessage="About Us" />,
+    title: <FormattedMessage id="about" defaultMessage="About Us" />,
     bg: "#37B172",
   },
   {
     to: "/",
     icon: our_work2,
-    title: <FormattedMessage id="ui-ux-design" defaultMessage="Academy" />,
+    title: <FormattedMessage id="academy" defaultMessage="Academy" />,
     bg: "#5C167E",
   },
   {
     to: "/",
     icon: our_work5,
-    title: <FormattedMessage id="case-studies" defaultMessage="Blog" />,
+    title: <FormattedMessage id="blog" defaultMessage="Blog" />,
     bg: "#CE6A6A",
   },
   {
     to: "/",
     icon: our_work6,
-    title: <FormattedMessage id="game-design" defaultMessage="Apply now" />,
+    title: <FormattedMessage id="apply" defaultMessage="Apply now" />,
     bg: "#EB8341",
   },
 ];
@@ -299,10 +308,7 @@ export const AcademyData = [
     to: "/",
     icon: services4,
     title: (
-      <FormattedMessage
-        id="video-production"
-        defaultMessage="Professional Development"
-      />
+      <FormattedMessage id="video-production" defaultMessage="Nutrition" />
     ),
     text: (
       <FormattedMessage

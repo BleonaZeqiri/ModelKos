@@ -9,8 +9,6 @@ import image3 from "../../../assets/HireModel/down.svg";
 import image4 from "../../../assets/HireModel/location.svg";
 import image5 from "../../../assets/HireModel//HireText2.svg";
 
-// import image5 from "../../../assets/HireModel/Banner-Background.png";
-
 const Banner = () => {
   return (
     <div className="banner">
@@ -19,14 +17,9 @@ const Banner = () => {
         data-aos="fade-up"
         data-aos-anchor-placement="top-bottom"
       ></div>
-      {/* <img className="image-banner" src={image}></img> */}
-      {/* <img className="image-banner" src={image1}></img>
+
       <img className="image-banner" src={image5}></img>
-     
-      <img className="image-banner" src={image4}></img>
-      <img className="image-banner" src={image5}></img> */}
-      <img className="image-banner" src={image5}></img>
-      <div className="left">
+      {/* <div className="left">
         <div className="text">
           <h1 className="big-title">Hire a model or </h1>
           <h1 className="big-title2">become one</h1>
@@ -56,7 +49,7 @@ const Banner = () => {
           </button>
         </div>
       </div>
-      <div className="right"></div>
+      <div className="right"></div> */}
     </div>
   );
 };

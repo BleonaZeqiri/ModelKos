@@ -7,22 +7,23 @@ import { CgClose } from "react-icons/cg";
 import { MdBusinessCenter, MdKeyboardArrowDown } from "react-icons/md";
 import { BiSliderAlt, BiSupport } from "react-icons/bi";
 import { RiInformationFill, RiApps2Fill } from "react-icons/ri";
-import { AboutData, Our_work1, AcademyData } from "../../Navbar/data";
+import { AboutData, Our_work1, AcademyData, models } from "../../Navbar/data";
 import "../../Navbar/navbar.scss";
 
 const Sidebar = (props) => {
-  const [list, showList] = useState(false);
-  const [list2, showList2] = useState(false);
-  const [list3, showList3] = useState(false);
-  function show() {
-    showList(!list);
-  }
-  function show2() {
-    showList2(!list2);
-  }
-  function show3() {
-    showList3(!list3);
-  }
+  const [dropdowns, setDropdowns] = useState({
+    list: false,
+    list1: false,
+    list2: false,
+    list3: false,
+  });
+
+  const toggleDropdown = (dropdown) => {
+    setDropdowns((prevState) => ({
+      ...prevState,
+      [dropdown]: !prevState[dropdown],
+    }));
+  };
 
   return (
     <div className="mobile-sidebar">
@@ -32,95 +33,114 @@ const Sidebar = (props) => {
           <h1>modelkos</h1>
         </Link>
         <button onClick={props.click}>
-          <CgClose />{" "}
+          <CgClose />
         </button>
       </div>
 
       <div className="mobile-sidebar-links">
-        <div className="sidebar-dropdown">
-          <div className="nav-sidebar-link" onClick={show}>
-            <Link to="/" className="nav-anchor">
-              <BiSliderAlt />
-              <FormattedMessage id="services" defaultMessage="Services" />
-            </Link>
-            <div className="dropdown-arrow">
-              <MdKeyboardArrowDown />
-            </div>
-          </div>
-          {list === true && (
-            <div className="mobile-dopdown">
-              {AcademyData.map((props) => {
-                return (
-                  <div className="inner-links">
-                    <Link to={props.to}>{props.title}</Link>
-                  </div>
-                );
-              })}
-            </div>
-          )}
-        </div>
-
-        <div className="sidebar-dropdown">
-          <div className="nav-sidebar-link" onClick={show3}>
-            <Link to="/" className="nav-anchor">
-              <HiOutlineDocumentDuplicate />
-              <FormattedMessage id="portfolio" defaultMessage="Portfolio" />
-            </Link>
-            <div className="dropdown-arrow">
-              <MdKeyboardArrowDown />
-            </div>
-          </div>
-          {list3 === true && (
-            <div className="mobile-dopdown">
-              <div className="inner-links">
-                {Our_work1.map((props) => {
-                  return (
-                    <div className="inner-links">
-                      <Link to={props.to}>{props.title}</Link>
-                    </div>
-                  );
-                })}
-              </div>
-            </div>
-          )}
-        </div>
-
         <div className="nav-sidebar-link">
           <Link to="/Resources" className="nav-anchor">
             <MdBusinessCenter />
-            <FormattedMessage id="academy" defaultMessage="Academy" />
+            <FormattedMessage id="Home" defaultMessage="Home" />
           </Link>
         </div>
 
         <div className="sidebar-dropdown">
-          <div className="nav-sidebar-link" onClick={show2}>
-            <Link to="/AllServices" className="nav-anchor">
-              <RiInformationFill />
-              <FormattedMessage id="about" defaultMessage="About" />
+          <div
+            className="nav-sidebar-link"
+            onClick={() => toggleDropdown("list")}
+          >
+            <Link to="/" className="nav-anchor">
+              <BiSliderAlt />
+              <FormattedMessage id="our-work" defaultMessage="Our-work" />
             </Link>
             <div className="dropdown-arrow">
               <MdKeyboardArrowDown />
             </div>
           </div>
-          {list2 === true && (
-            <div className="mobile-dopdown">
-              {AboutData.map((props) => {
-                return (
-                  <div className="inner-links">
-                    <Link to={props.to}>{props.title}</Link>
-                  </div>
-                );
-              })}
+          {dropdowns.list && (
+            <div className="mobile-dropdown">
+              {AcademyData.map((item) => (
+                <div className="inner-links" key={item.title}>
+                  <Link to={item.to}>{item.title}</Link>
+                </div>
+              ))}
             </div>
           )}
         </div>
 
-        <div className="nav-sidebar-link">
-          <Link to="/" className="nav-anchor">
-            <BiSupport />
-            <FormattedMessage id="support" defaultMessage="Support" />
-          </Link>
+        <div className="sidebar-dropdown">
+          <div
+            className="nav-sidebar-link"
+            onClick={() => toggleDropdown("list1")}
+          >
+            <Link to="/" className="nav-anchor">
+              <HiOutlineDocumentDuplicate />
+              <FormattedMessage id="about" defaultMessage="About us" />
+            </Link>
+            <div className="dropdown-arrow">
+              <MdKeyboardArrowDown />
+            </div>
+          </div>
+          {dropdowns.list1 && (
+            <div className="mobile-dropdown">
+              {Our_work1.map((item) => (
+                <div className="inner-links" key={item.title}>
+                  <Link to={item.to}>{item.title}</Link>
+                </div>
+              ))}
+            </div>
+          )}
         </div>
+
+        <div className="sidebar-dropdown">
+          <div
+            className="nav-sidebar-link"
+            onClick={() => toggleDropdown("list2")}
+          >
+            <Link to="/" className="nav-anchor">
+              <RiInformationFill />
+              <FormattedMessage id="models" defaultMessage="Models" />
+            </Link>
+            <div className="dropdown-arrow">
+              <MdKeyboardArrowDown />
+            </div>
+          </div>
+          {dropdowns.list2 && (
+            <div className="mobile-dropdown">
+              {models.map((item) => (
+                <div className="inner-links" key={item.name}>
+                  <Link to={item.to}>{item.name}</Link>
+                </div>
+              ))}
+            </div>
+          )}
+        </div>
+
+        <div className="sidebar-dropdown">
+          <div
+            className="nav-sidebar-link"
+            onClick={() => toggleDropdown("list3")}
+          >
+            <Link to="/AllServices" className="nav-anchor">
+              <BiSupport />
+              <FormattedMessage id="academy" defaultMessage="Academy" />
+            </Link>
+            <div className="dropdown-arrow">
+              <MdKeyboardArrowDown />
+            </div>
+          </div>
+          {dropdowns.list3 && (
+            <div className="mobile-dropdown">
+              {AboutData.map((item) => (
+                <div className="inner-links" key={item.title}>
+                  <Link to={item.to}>{item.title}</Link>
+                </div>
+              ))}
+            </div>
+          )}
+        </div>
+
         <div className="nav-sidebar-link">
           <Link to="/" className="nav-anchor">
             <RiApps2Fill />
@@ -131,7 +151,7 @@ const Sidebar = (props) => {
 
       <div className="sidebar-auth">
         <Link to="/" className="contact-us">
-          <FormattedMessage id="contact-us" defaultMessage="Contact Us" />
+          <FormattedMessage id="apply" defaultMessage="Apply Now" />
         </Link>
       </div>
 
