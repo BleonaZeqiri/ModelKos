@@ -105,7 +105,7 @@
       }
     }
     &:hover {
-      border-left: 4px solid var(--main-color);
+      border-left: 4px solid #31335b;
     }
   }
   .dropdown-arrow {
@@ -135,7 +135,7 @@
     display: flex;
     align-items: center;
     &:hover {
-      color: var(--main-color);
+      color: #1b1919;
     }
   }
 }
@@ -176,7 +176,7 @@ body.dark-mode {
       a {
         color: #ddd;
         svg {
-          color: var(--main-color);
+          color: #1b1919;
         }
       }
     }
@@ -190,7 +190,7 @@ body.dark-mode {
       border-bottom: 1px solid #bbb;
       color: #ddd;
       &:hover {
-        color: var(--main-color);
+        color: #1b1919;
       }
     }
   }

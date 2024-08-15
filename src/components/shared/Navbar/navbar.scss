@@ -59,6 +59,7 @@
     &:hover {
       .nav-megamenu {
         display: flex;
+        padding-bottom: 25px;
       }
       .inner-nav-link svg {
         transform: rotate(-180deg);
@@ -172,5 +173,10 @@ body.dark-mode .nav__sticky {
   .nav-auth .contact-us {
     border: 1px solid #fff;
     color: #fff;
+  }
+}
+@media (max-width: 361px) {
+  .footer-row {
+    flex-direction: column;
   }
 }

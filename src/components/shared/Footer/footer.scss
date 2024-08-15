@@ -244,6 +244,7 @@
     .main-row .all-footer-links {
       width: 100%;
       margin-bottom: 20px;
+      margin-top: 0;
     }
   }
 }
@@ -287,6 +288,7 @@
       margin: 5px;
     }
   }
+
   .shared-footer .all-footer-links {
     flex-wrap: wrap;
     .footer-list {
@@ -319,6 +321,9 @@
     margin: 0;
     div {
       padding-top: 23px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
   }
   .shared-footer .last-row .footer-logo {

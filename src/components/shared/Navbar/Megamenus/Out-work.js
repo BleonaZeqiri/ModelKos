@@ -19,25 +19,22 @@ const Our_work = () => {
   };
 
   return (
-    <div className="nav-megamenu portfolio-megamenu">
+    <div className="nav-megamenu ourwork-megamenu">
       <div className="menu-links">
-        <h5>
-          <FormattedMessage id="our_work" defaultMessage="Our Work" />
-        </h5>
         <div className="inner-links">
-          {Our_work1.map((props) => {
+          {Our_work1.map((item) => {
             return (
-              <Link to={props.to} className="menu-main-link">
-                <div className="bg" style={{ background: `${props.bg}` }}></div>
+              <Link to={item.to} className="menu-main-link">
                 <div className="main">
                   <div className="icon-container">
-                    <div
-                      className="icon"
-                      style={{ content: `url(${props.icon})` }}
-                    ></div>
+                    <h3>{item.title}</h3>
                   </div>
                   <div className="block">
-                    <h6>{props.title}</h6>
+                    <ul>
+                      {item?.link?.map((link) => {
+                        return <li>{link.name}</li>;
+                      })}
+                    </ul>
                   </div>
                 </div>
               </Link>
@@ -47,9 +44,14 @@ const Our_work = () => {
       </div>
 
       <div className="right">
-        <h5>
-          <FormattedMessage id="latest" defaultMessage="Latest" />
-        </h5>
+        <div className="models">
+          <h4>
+            <FormattedMessage id="models" defaultMessage="Models" />
+          </h4>
+          <p>
+            <FormattedMessage id="view-all" defaultMessage="View All >" />
+          </p>
+        </div>
         <Carousel
           className="slider"
           itemsToShow={2}
@@ -58,14 +60,23 @@ const Our_work = () => {
           onNextStart={onNextStart}
           disableArrowsOnEnd={false}
         >
-          {Our_work2.map((props) => {
+          {Our_work2.map((item) => {
             return (
               <div className="slider-item">
-                <Link to={props.to}>
+                <Link to={item.to}>
                   <div
                     className="img"
-                    style={{ content: `url(${props.img})` }}
+                    style={{ content: `url(${item.img})` }}
                   ></div>
+                  <div className="model-item">
+                    <h3>{item.name}</h3>
+                    <div className="item">
+                      {item?.description?.map((description) => {
+                        return <li>{description.name}</li>;
+                      })}
+                    </div>
+                    <h3>{item.date}</h3>
+                  </div>
                 </Link>
               </div>
             );

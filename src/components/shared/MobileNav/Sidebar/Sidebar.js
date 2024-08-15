@@ -7,7 +7,7 @@ import { CgClose } from "react-icons/cg";
 import { MdBusinessCenter, MdKeyboardArrowDown } from "react-icons/md";
 import { BiSliderAlt, BiSupport } from "react-icons/bi";
 import { RiInformationFill, RiApps2Fill } from "react-icons/ri";
-import { AboutData, Our_work1, AcademyData, models } from "../../Navbar/data";
+import { AboutData, Our_work1 } from "../../Navbar/data";
 import "../../Navbar/navbar.scss";
 
 const Sidebar = (props) => {
@@ -60,7 +60,7 @@ const Sidebar = (props) => {
           </div>
           {dropdowns.list && (
             <div className="mobile-dropdown">
-              {AcademyData.map((item) => (
+              {Our_work1.map((item) => (
                 <div className="inner-links" key={item.title}>
                   <Link to={item.to}>{item.title}</Link>
                 </div>
@@ -84,7 +84,7 @@ const Sidebar = (props) => {
           </div>
           {dropdowns.list1 && (
             <div className="mobile-dropdown">
-              {Our_work1.map((item) => (
+              {AboutData.map((item) => (
                 <div className="inner-links" key={item.title}>
                   <Link to={item.to}>{item.title}</Link>
                 </div>
@@ -108,11 +108,11 @@ const Sidebar = (props) => {
           </div>
           {dropdowns.list2 && (
             <div className="mobile-dropdown">
-              {models.map((item) => (
+              {/* {models.map((item) => (
                 <div className="inner-links" key={item.name}>
                   <Link to={item.to}>{item.name}</Link>
                 </div>
-              ))}
+              ))} */}
             </div>
           )}
         </div>
@@ -132,11 +132,11 @@ const Sidebar = (props) => {
           </div>
           {dropdowns.list3 && (
             <div className="mobile-dropdown">
-              {AboutData.map((item) => (
+              {/* {AboutData.map((item) => (
                 <div className="inner-links" key={item.title}>
                   <Link to={item.to}>{item.title}</Link>
                 </div>
-              ))}
+              ))} */}
             </div>
           )}
         </div>

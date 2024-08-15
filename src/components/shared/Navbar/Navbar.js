@@ -2,14 +2,10 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import clsx from "clsx";
 import { FormattedMessage } from "react-intl";
-import { BsTriangleFill } from "react-icons/bs";
 import { MdKeyboardArrowDown } from "react-icons/md";
 import "./navbar.scss";
-import Models from "./Megamenus/Models";
 import Our_work from "./Megamenus/Out-work";
-import ServicesMenu from "./Megamenus/Academy";
 import AboutMenu from "./Megamenus/AboutMenu";
-import Academy from "./Megamenus/Academy";
 import MobileNav from "../MobileNav/MobileNav";
 // import { AiOutlineMenu } from "react-icons/ai";
 // import ThemeSwitcher from "../Footer/ThemeSwitcher";
@@ -55,9 +51,7 @@ const Navbar = (props) => {
             <FormattedMessage id="our-work" defaultMessage="Our Work" />
             <MdKeyboardArrowDown className="arrow1" />
           </Link>
-          <div className="megamenu-arrow">
-            <BsTriangleFill />
-          </div>
+
           <div className="line"></div>
           <Our_work />
         </div>
@@ -67,33 +61,23 @@ const Navbar = (props) => {
             <FormattedMessage id="portfolio" defaultMessage="About" />
             <MdKeyboardArrowDown className="arrow1" />
           </Link>
-          <div className="megamenu-arrow">
-            <BsTriangleFill />
-          </div>
+
           <div className="line"></div>
           <AboutMenu />
         </div>
         <div className="nav-link support-link">
           <Link to="/" className="inner-nav-link">
-            <FormattedMessage id="about" defaultMessage="Models" />
+            <FormattedMessage id="models" defaultMessage="Models" />
             <MdKeyboardArrowDown className="arrow1" />
           </Link>
-          <div className="megamenu-arrow">
-            <BsTriangleFill />
-          </div>
           <div className="line"></div>
-          <Models />
         </div>
         <div className=" nav-link home-link">
           <Link to="/" className="inner-nav-link">
             <FormattedMessage id="about" defaultMessage="Academy" />
             <MdKeyboardArrowDown className="arrow1" />
           </Link>
-          <div className="megamenu-arrow">
-            <BsTriangleFill />
-          </div>
           <div className="line"></div>
-          <Academy />
         </div>
 
         <div className=" support-link">
