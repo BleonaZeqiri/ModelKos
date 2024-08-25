@@ -90,7 +90,10 @@ const Navbar = (props) => {
 
       <div className="nav-auth">
         {/* <ThemeSwitcher /> */}
-        <p className="apply-now">Apply now</p>
+        <Link>
+          <p className="apply-now">Apply now</p>
+        </Link>
+
         <Link to="/" className="contact-us">
           <FormattedMessage id="contact-us" defaultMessage="Contact Us" />
         </Link>

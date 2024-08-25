@@ -1,0 +1,289 @@
+.home-models {
+  display: flex;
+  flex-direction: column;
+  gap: max(1rem, 2vw);
+  padding: 5%;
+
+  .text {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: max(0.5rem, 1vw);
+    text-align: center;
+
+    h1 {
+      font-size: max(25px, 5vw);
+      font-family: "CustomFont", sans-serif;
+      font-weight: 400;
+    }
+  }
+
+  .tabs_models {
+    display: flex;
+    flex-direction: column;
+    gap: max(1rem, 2vw);
+    width: 100%;
+
+    .row {
+      align-items: center;
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+
+      .tabs_models__tab-list {
+        align-items: center;
+        display: flex;
+        gap: max(0.5rem, 2vw);
+        justify-content: center;
+        width: 100%;
+
+        .tabs_models__tab {
+          border-bottom: 4px solid transparent;
+          cursor: pointer;
+          display: flex;
+          flex-direction: column;
+          gap: max(0.5rem, 0.5vw);
+          padding: max(0.25rem, 0.5vw);
+          position: relative;
+          transition: 0.3s ease-out;
+          white-space: nowrap;
+
+          &.active {
+            .line {
+              width: 100%;
+            }
+          }
+
+          .line {
+            background-color: #4b4b4b;
+            border-radius: 10px;
+            height: 0.25rem;
+            transition: 0.2s ease-in;
+            width: 0;
+          }
+        }
+      }
+    }
+
+    .tabs__tab-panel {
+      align-items: stretch;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+
+      .models-anyTabPanel {
+        align-items: stretch;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        .col {
+          display: flex;
+          flex-direction: column;
+          gap: max(0.5rem, 1.5vw);
+          justify-content: flex-start;
+          width: 24%;
+
+          .modelsCard {
+            align-content: center;
+            cursor: pointer;
+            display: flex;
+            height: fit-content;
+            justify-content: center;
+            overflow: hidden;
+            position: relative;
+            width: 100%;
+
+            .image-container {
+              position: relative;
+
+              .model-image {
+                display: block;
+                width: 100%;
+                height: auto;
+                transition: transform 0.3s ease;
+              }
+
+              .about-models-hover {
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background-color: rgb(0 0 0 / 68%);
+                display: flex;
+                flex-direction: column;
+                padding: 21px;
+                justify-content: space-between;
+                align-items: center;
+                text-align: center;
+                opacity: 0;
+                transition: opacity 0.3s ease;
+                color: white;
+                pointer-events: none;
+                .about-models-description {
+                  gap: max(0.15rem, 0.9vw);
+                  display: grid;
+                  h4 {
+                    font-family: "CustomFont", sans-serif;
+                    padding-bottom: 8px;
+                  }
+                  p {
+                    font-size: max(12px, 0vw);
+                  }
+                }
+                .social {
+                  display: flex;
+
+                  gap: max(0.25rem, 1.5vw);
+                  a {
+                    color: #fff;
+                  }
+                }
+              }
+
+              &:hover .model-image {
+                transform: scale(1.1);
+              }
+
+              &:hover .about-models-hover {
+                opacity: 1;
+              }
+            }
+
+            .content {
+              display: flex;
+              flex-direction: column;
+              padding: max(0.5rem, 1vw);
+
+              .text1 {
+                display: flex;
+                flex-direction: column;
+                gap: max(0.25rem, 0.5vw);
+                text-align: left;
+
+                h3 {
+                  font-size: max(18px, 1.8vw);
+                  font-family: "CustomFont", sans-serif;
+                  font-weight: lighter;
+                }
+              }
+
+              .def-text {
+                font-size: max(14px, 0.8vw);
+                color: #4b4b4b;
+                font-family: sans-serif;
+                font-weight: 300;
+                line-height: 2;
+              }
+
+              .circleLink {
+                align-items: center;
+                display: flex;
+                height: max(2rem, 10vw);
+                justify-content: center;
+                width: max(2rem, 10vw);
+
+                .circleText {
+                  height: fit-content;
+                  position: absolute;
+                  transition: 0.2s ease-out;
+                  left: 225px;
+                  width: 85px;
+                  top: 145px;
+                }
+              }
+            }
+
+            img {
+              height: auto;
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1435px) {
+  .home-models
+    .tabs_models
+    .tabs__tab-panel
+    .models-anyTabPanel
+    .col
+    .modelsCard
+    .content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .circleLink {
+      .circleText {
+        position: static;
+      }
+    }
+  }
+}
+@media (max-width: 1247px) {
+  .home-models .circleLink {
+    .circleText {
+      img {
+        display: none;
+      }
+    }
+  }
+}
+@media (max-width: 900px) {
+  .home-models .tabs_models .tabs__tab-panel .models-anyTabPanel .col {
+    width: 48%;
+  }
+  .models-anyTabPanel .modelsCard .content {
+    gap: max(2rem, 4vw);
+    justify-content: center;
+  }
+  .home-models
+    .tabs_models
+    .tabs__tab-panel
+    .models-anyTabPanel
+    .col
+    .modelsCard
+    .content {
+    gap: 0;
+  }
+  .home-models
+    .tabs_models
+    .tabs__tab-panel
+    .models-anyTabPanel
+    .col
+    .modelsCard
+    .content
+    .circleLink
+    .circleText {
+    display: none;
+  }
+}
+@media (max-width: 400px) {
+  .home-models
+    .tabs_models
+    .tabs__tab-panel
+    .models-anyTabPanel
+    .col
+    .modelsCard
+    .content
+    .text1
+    h3 {
+    font-size: max(12px, 1.8vw);
+    font-family: "CustomFont", sans-serif;
+    font-weight: lighter;
+  }
+  .home-models
+    .tabs_models
+    .tabs__tab-panel
+    .models-anyTabPanel
+    .col
+    .modelsCard
+    .content
+    .def-text {
+    font-size: max(9px, 0.8vw);
+  }
+}
