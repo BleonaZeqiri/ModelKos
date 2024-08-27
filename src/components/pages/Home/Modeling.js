@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useRef } from "react";
 import Carousel from "react-elastic-carousel";
 import { Link } from "react-router-dom";
 import "./styles/Modeling.scss";
@@ -7,25 +7,6 @@ import { ModelingData } from "../data";
 
 const Modeling = () => {
   const carouselRef = useRef(null);
-  const [currentIndex, setCurrentIndex] = useState(0); // State to track current slide
-
-  const handlePrevClick = () => {
-    if (carouselRef.current) {
-      carouselRef.current.slidePrev();
-    }
-  };
-
-  const handleNextClick = () => {
-    if (carouselRef.current) {
-      carouselRef.current.slideNext();
-    }
-  };
-
-  const handleDotClick = (index) => {
-    if (carouselRef.current) {
-      carouselRef.current.goTo(index);
-    }
-  };
 
   return (
     <div className="home-modeling">
@@ -38,7 +19,6 @@ const Modeling = () => {
         itemsToShow={1}
         ref={carouselRef}
         className="absoluteSlider"
-        onChange={(item) => setCurrentIndex(item.index)} // Update index on slide change
         disableArrowsOnEnd={false}
       >
         {ModelingData.map((item, index) => (

@@ -4,7 +4,7 @@ import clsx from "clsx";
 import { FormattedMessage } from "react-intl";
 import { MdKeyboardArrowDown } from "react-icons/md";
 import "./navbar.scss";
-import Our_work from "./Megamenus/Out-work";
+import OurWork from "./Megamenus/Out-work";
 import AboutMenu from "./Megamenus/AboutMenu";
 import MobileNav from "../MobileNav/MobileNav";
 // import { AiOutlineMenu } from "react-icons/ai";
@@ -14,9 +14,6 @@ const Navbar = (props) => {
   const [isSticky, setIsSticky] = useState(false);
 
   useEffect(() => {
-    // const nav = document.querySelector(".nav");
-    // const navHeight = nav.scrollHeight;
-
     const handleScroll = () => {
       const scrollHeight = window.pageYOffset;
       setIsSticky(scrollHeight > 25 ? true : false);
@@ -51,9 +48,8 @@ const Navbar = (props) => {
             <FormattedMessage id="our-work" defaultMessage="Our Work" />
             <MdKeyboardArrowDown className="arrow1" />
           </Link>
-
           <div className="line"></div>
-          <Our_work />
+          <OurWork />
         </div>
 
         <div className="nav-link portfolio-link">

@@ -157,6 +157,7 @@
       background-repeat: no-repeat;
       background-size: contain;
       background-position: center;
+      background-color: transparent;
     }
 
     .rec-arrow-right {
@@ -165,6 +166,7 @@
       background-repeat: no-repeat;
       background-size: contain;
       background-position: center;
+      background-color: transparent;
     }
   }
   .white {
@@ -193,6 +195,12 @@
     text-align: left;
     top: 67%;
     left: 6%;
+  }
+  .eHxPRW:hover:enabled,
+  .eHxPRW:focus:enabled {
+    color: rgb(255, 255, 255);
+    background-color: transparent;
+    box-shadow: none;
   }
 }
 

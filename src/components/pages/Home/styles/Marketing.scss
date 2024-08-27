@@ -1,0 +1,233 @@
+.home-marketing {
+  align-items: stretch;
+  display: flex;
+  justify-content: space-between;
+  padding: 10% 5%;
+  position: relative;
+
+  .left {
+    display: flex;
+    flex-direction: column;
+    gap: max(1rem, 3vw);
+    justify-content: center;
+    width: 50%;
+
+    .marketing-title {
+      font-size: max(25px, 5.2vw);
+      font-family: "CustomFont", sans-serif;
+      font-weight: 100;
+    }
+
+    .marketing-text {
+      font-size: max(12px, 0.1vw);
+      line-height: 2.5;
+      color: #3e3e3e;
+    }
+
+    .row {
+      align-items: center;
+      display: flex;
+      gap: max(4rem, 5vw);
+
+      .item {
+        display: flex;
+        flex-direction: column;
+        gap: max(10px, 0.25vw);
+
+        h1 {
+          font-size: max(28px, 1.75vw);
+          font-family: "CustomFont", sans-serif;
+          color: #808080;
+          letter-spacing: 0.5px;
+          font-weight: 100;
+        }
+      }
+    }
+  }
+
+  .right {
+    align-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    width: 39%;
+
+    .circleLink {
+      align-items: center;
+      display: flex;
+      height: max(3rem, 8vw);
+      width: max(3rem, 9vw);
+      justify-content: center;
+      position: absolute;
+      left: -15%;
+      top: -2%;
+      z-index: 5;
+
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+
+    .images {
+      align-content: center;
+      display: flex;
+      justify-content: center;
+      position: relative;
+      margin-top: 2.5rem;
+
+      .img {
+        background-position: 50%;
+        height: max(13rem, 23vw);
+        width: max(11.5rem, 19vw);
+        position: relative;
+        transition: 0.2s ease-in;
+        z-index: 3;
+        left: 33.5px;
+
+        &.img1,
+        &.img2 {
+          background-repeat: no-repeat;
+          background-size: cover;
+        }
+
+        &.img2 {
+          width: 380px;
+          height: 407px;
+          left: -5.7rem;
+          top: 1.5rem;
+          z-index: 4;
+        }
+      }
+    }
+
+    .tabs {
+      align-items: stretch;
+      background-color: #fff;
+      border: 1px solid #cfcfcf;
+      border-radius: max(10px, 3vw);
+      bottom: 11%;
+      display: flex;
+      gap: max(2rem, 4vw);
+      justify-content: space-between;
+      left: -23%;
+      padding: max(0.25rem, 1vw) max(1rem, 3vw);
+      position: absolute;
+      z-index: 5;
+
+      .tab {
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        gap: max(5px, 0.25vw);
+
+        svg {
+          color: #808080;
+        }
+      }
+    }
+  }
+  .marketing-textt {
+    font-size: max(13px, 0.85vw);
+    color: #3e3e3e;
+  }
+}
+
+@media (max-width: 1260px) {
+  .home-marketing {
+    flex-direction: column;
+    padding: 6% 10%;
+    .left {
+      width: 100%;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    .right {
+      width: 100%;
+      justify-content: center;
+      align-items: center;
+
+      .circleLink {
+        left: 28%;
+        top: 2%;
+      }
+
+      .images {
+        .img {
+          height: max(10rem, 21vw);
+          width: max(7.5rem, 17vw);
+
+          &.img2 {
+            width: max(8rem, 23vw);
+            height: max(8rem, 25vw);
+            left: -3rem;
+            top: 1rem;
+          }
+        }
+      }
+
+      .tabs {
+        position: static;
+        gap: max(2rem, 6vw);
+      }
+    }
+  }
+}
+@media (max-width: 600px) {
+  .home-marketing {
+    .left {
+      .marketing-text {
+        font-size: max(10px, 0.1vw);
+      }
+      .row {
+        gap: max(2rem, 3vw);
+        align-items: flex-start;
+        .item h1 {
+          font-size: max(20px, 0.75vw);
+        }
+      }
+    }
+    .right {
+      .images .img.img2 {
+        width: max(8rem, 36vw);
+        height: max(8rem, 38vw);
+        left: -3rem;
+        top: 1rem;
+      }
+      .images .img {
+        height: max(10rem, 32vw);
+        width: max(7.5rem, 28vw);
+      }
+      .circleLink {
+        left: 16%;
+        top: 9%;
+      }
+    }
+
+    .marketing-textt {
+      font-size: max(10px, 0.1vw);
+    }
+  }
+}
+@media (max-width: 400px) {
+  .home-marketing {
+    .right {
+      .tabs {
+        gap: max(1rem, 5vw);
+        padding: max(0.5rem, 0vw) max(1rem, 6vw);
+      }
+
+      .images .img.img2 {
+        width: max(8rem, 48vw);
+        height: max(8rem, 51vw);
+      }
+      .circleLink {
+        left: 7%;
+        top: 7%;
+      }
+    }
+  }
+}

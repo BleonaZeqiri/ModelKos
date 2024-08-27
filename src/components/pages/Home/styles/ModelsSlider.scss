@@ -1,0 +1,328 @@
+.home-modelsSlider {
+  display: flex;
+  flex-direction: column;
+
+  .big-title {
+    font-size: max(25px, 5.2vw);
+    padding: 0% 5%;
+    font-family: "CustomFont", sans-serif;
+    font-weight: 100;
+  }
+
+  .react-tabs {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    .row {
+      align-items: flex-start;
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      padding: 0% 4.3%;
+
+      .react-tabs__tab-list {
+        align-items: center;
+        display: flex;
+        gap: max(0.5rem, 2vw);
+        justify-content: flex-start;
+        width: 100%;
+
+        .react-tabs__tab {
+          font-size: max(13px, 0.85vw);
+          color: #3e3e3e;
+          border-bottom: 4px solid transparent;
+          cursor: pointer;
+          display: flex;
+          flex-direction: column;
+          gap: max(0.5rem, 0.5vw);
+          padding: max(0.25rem, 0.5vw);
+          position: relative;
+          transition: 0.3s ease-out;
+          white-space: nowrap;
+
+          &.active {
+            .line {
+              width: 100%;
+            }
+          }
+
+          .line {
+            background-color: #4b4b4b;
+            border-radius: 10px;
+            height: 0.25rem;
+            transition: 0.2s ease-in;
+            width: 0;
+          }
+        }
+      }
+
+      .styledLink {
+        .unstyled {
+          align-items: center;
+          background-color: transparent;
+          cursor: pointer;
+          display: flex;
+          justify-content: center;
+          overflow: hidden;
+          padding: 0.75rem;
+          position: relative;
+          color: #000;
+          gap: max(0.5rem, 0.5vw);
+
+          p {
+            font-size: max(13.5px, 0.9vw);
+            transition: 0.5s ease-in-out;
+            white-space: nowrap;
+            z-index: 2;
+          }
+
+          .icon {
+            transition: 0.5s ease-in-out;
+            z-index: 2;
+            svg {
+              font-size: max(17.5px, 1.5vw);
+
+              font-weight: bolder;
+            }
+          }
+        }
+      }
+    }
+
+    .carousel-slide {
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+
+      .modelSliderCard {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin: 1rem;
+        width: 100%;
+        border: 1px solid #ececec;
+        position: relative;
+
+        &:hover .content {
+          background-color: #1d1d1d;
+          color: #fff;
+
+          span {
+            color: #fff !important;
+          }
+
+          .item svg {
+            color: #fff !important;
+          }
+        }
+
+        &:hover .img .styledLink {
+          opacity: 1;
+        }
+
+        .img {
+          align-items: flex-end;
+          background-position: 50% 50%;
+          background-repeat: no-repeat;
+          background-size: cover;
+          display: flex;
+          height: max(15rem, 20vw);
+          justify-content: center;
+          overflow: hidden;
+          padding: max(0.5rem, 1vw);
+          position: relative;
+
+          .styledLink {
+            position: absolute;
+            bottom: 4%;
+            left: 32%;
+            transform: translateX(-50%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+
+            .black {
+              align-items: center;
+              background-color: rgba(29, 29, 29, 0.5);
+              border: 2px solid #1d1d1d;
+              border-radius: max(0px, 0.3vw);
+              cursor: pointer;
+              display: flex;
+              justify-content: center;
+              overflow: hidden;
+              padding: max(0.35rem, 0.5vw) max(0.5rem, 1.5vw);
+              position: relative;
+              transition: background-color 0.3s ease-in-out;
+
+              &:before {
+                background-color: #1d1d1d;
+                border-radius: max(10px, 0.5vw);
+                bottom: -10%;
+                color: #fff;
+                content: "";
+                height: 120%;
+                left: -10%;
+                position: absolute;
+                right: -10%;
+                top: -10%;
+                transform: scale(1);
+                transition: transform 0.2s ease-in-out;
+                width: 120%;
+                z-index: 1;
+              }
+
+              p {
+                color: #fff !important;
+                position: relative;
+                white-space: nowrap;
+                z-index: 4;
+                font-size: max(12px, 0.5vw);
+              }
+            }
+          }
+        }
+
+        .content {
+          background-color: #fff;
+          display: flex;
+          flex-direction: column;
+          gap: max(0.5rem, 0.5vw);
+          padding: max(0.75rem, 1vw) max(0.5rem, 1.2vw);
+          transition: background-color 0.2s linear;
+          width: 100%;
+          span {
+            color: #808080;
+            font-size: max(12px, 0.75vw);
+          }
+
+          .row-content {
+            padding: 10px 0px;
+          }
+
+          .row1 {
+            align-items: center;
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+
+            h3 {
+              font-size: max(16px, 1vw);
+              font-family: "CustomFont", sans-serif;
+            }
+
+            .item {
+              align-items: center;
+              display: flex;
+              gap: max(4px, 0.2vw);
+
+              svg {
+                color: #808080;
+                font-size: max(13px, 0.5vw);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .styledLink,
+  .styledLink .icon {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+  }
+
+  .def-text {
+    font-size: max(12px, 0.75vw);
+  }
+
+  .rec-pagination {
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+    align-items: center;
+  }
+
+  .rec-dot {
+    width: max(8px, 0.25vw) !important;
+    height: max(8px, 0.25vw) !important;
+    border-radius: 50% !important;
+    margin: 0 max(3px, 0.2vw) !important;
+    border: 0 !important;
+    box-shadow: none !important;
+    background: #bbb !important;
+  }
+  .rec-dot_active {
+    width: max(10.5px, 0.25vw) !important;
+    height: max(10.5px, 0.25vw) !important;
+    border-radius: 50% !important;
+    border: 0 !important;
+    box-shadow: none !important;
+    background: #242424 !important;
+  }
+  .custom-arrow {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    outline: none;
+    transition: transform 0.2s ease;
+
+    &.prev {
+      padding-left: 27px;
+      svg {
+        width: 25px;
+      }
+    }
+
+    &.next {
+      padding-right: 27px;
+      svg {
+        width: 25px;
+      }
+    }
+
+    &:disabled {
+      cursor: not-allowed;
+      opacity: 0.5;
+    }
+  }
+  .cEzuq {
+    margin: 0;
+  }
+}
+@media (max-width: 830px) {
+  .home-modelsSlider .react-tabs .row .styledLink .unstyled {
+    padding: 0;
+    gap: 0;
+  }
+}
+@media (max-width: 750px) {
+  .home-modelsSlider {
+    padding: 7% 0%;
+    .big-title {
+      text-align: center;
+    }
+    .react-tabs {
+      .row {
+        flex-wrap: wrap;
+        justify-content: center;
+        .react-tabs__tab-list {
+          gap: max(0.2rem, 0vw);
+          flex-wrap: wrap;
+          justify-content: center;
+        }
+        .react-tabs__tab-list .react-tabs__tab {
+          font-size: max(10px, 0.55vw);
+        }
+        .styledLink .unstyled p {
+          font-size: max(10px, 0.8vw);
+        }
+      }
+    }
+  }
+}

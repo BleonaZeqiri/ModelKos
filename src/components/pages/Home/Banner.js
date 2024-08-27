@@ -41,7 +41,7 @@ const Banner = () => {
       ></div>
 
       <div className="banner-content">
-        <img className="image-banner" src={image2} alt="Banner" />
+        <img className="image-banner" src={image2} alt="Hire text graphic" />
         {BannerData.map((item, index) => (
           <div key={index} className="left">
             <div className="text">
@@ -51,7 +51,7 @@ const Banner = () => {
             <div className="row">
               <div className="input">
                 <div className="icon">
-                  <img src={image} alt="Input Icon" />
+                  <img src={image} alt="Female models icon" />
                 </div>
                 <input type="text" placeholder="Female Models" />
                 <div className="icon-down" onClick={toggleModelDropdown}>
@@ -67,7 +67,7 @@ const Banner = () => {
                         Male Model
                       </li>
                       <li onClick={() => handleSelectModel("Child Model")}>
-                        Females Model
+                        Child Model
                       </li>
                     </ul>
                   </div>
@@ -85,13 +85,13 @@ const Banner = () => {
                 {isOpenLocationDropdown && (
                   <div className="dropdown">
                     <ul>
-                      <li onClick={() => handleSelectLocation("New York")}>
+                      <li onClick={() => handleSelectLocation("Kosovo")}>
                         Kosovo
                       </li>
-                      <li onClick={() => handleSelectLocation("Los Angeles")}>
+                      <li onClick={() => handleSelectLocation("Albania")}>
                         Albania
                       </li>
-                      <li onClick={() => handleSelectLocation("Chicago")}>
+                      <li onClick={() => handleSelectLocation("Macedonia")}>
                         Macedonia
                       </li>
                     </ul>
@@ -108,16 +108,16 @@ const Banner = () => {
 
         <div className="right">
           <Link to="/some-route" className="circleLink">
-            <img src={image1} alt="Link Icon" />
+            <img src={image1} alt="Interactive link icon" />
           </Link>
           <div className="img1">
             <div className="inner-img">
-              <img src={image3} alt="Image 1" />
+              <img src={image3} alt="Banner detail 1" />
             </div>
           </div>
           <div className="img2">
             <div className="inner-img">
-              <img src={image4} alt="Image 2" />
+              <img src={image4} alt="Banner detail 2" />
             </div>
           </div>
         </div>

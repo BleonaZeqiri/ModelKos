@@ -42,7 +42,6 @@ export const models = [
   },
   {
     name: "Melinda Ademi",
-    to: "/",
 
     about:
       "A person whose profession is posing for artists or photographers. a person employed to wear clothing or pose with a product for purposes of display and advertising.",
@@ -51,7 +50,6 @@ export const models = [
   },
   {
     name: "Xhensila Myrteza",
-    to: "/",
 
     about:
       "A person whose profession is posing for artists or photographers. a person employed to wear clothing or pose with a product for purposes of display and advertising.",
@@ -60,7 +58,6 @@ export const models = [
   },
   {
     name: "Ana Lleshi",
-    to: "/",
 
     about:
       "A person whose profession is posing for artists or photographers. a person employed to wear clothing or pose with a product for purposes of display and advertising.",
