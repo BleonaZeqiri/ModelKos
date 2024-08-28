@@ -8,6 +8,7 @@ import Modeling from "../../components/pages/Home/Modeling";
 import Marketing from "../../components/pages/Home/Marketing";
 import BeingClassy from "../../components/pages/Home/BeingClassy";
 import ModelsSlider from "../../components/pages/Home/ModelsSlider";
+import What_we_offer from "../../components/pages/Home/What_we_offer";
 
 const Home = () => {
   return (
@@ -21,6 +22,7 @@ const Home = () => {
       <BeingClassy />
       <Marketing />
       <ModelsSlider />
+      <What_we_offer />
       <Footer />
     </div>
   );

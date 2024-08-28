@@ -1,0 +1,300 @@
+.home-what_we_offer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: max(2rem, 2vw);
+  padding: 4%;
+
+  .text {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: max(0.5rem, 1vw);
+    text-align: center;
+  }
+
+  .big-title {
+    font-size: max(25px, 5.2vw);
+    padding: 0% 5%;
+    font-family: "CustomFont", sans-serif;
+    font-weight: 100;
+  }
+
+  .Card {
+    align-items: flex-start;
+    border: 1px solid #cfcfcf;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 1rem;
+    padding: max(0rem, 0vw) max(0.9rem, 0.4vw);
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+
+    .img {
+      background-image: url("../../../../assets/WhatWeOffer/HoverBackground.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+      bottom: 0;
+      left: 0;
+      opacity: 0;
+      padding: max(1rem, 2vw);
+      position: absolute;
+      right: 0;
+      text-align: right;
+      top: 0;
+      -webkit-transform: scale(0.65);
+      transform: scale(0.65);
+      transition: opacity 0.3s ease, transform 0.3s ease;
+      z-index: 2;
+
+      .bg {
+        background-color: rgba(0, 0, 0, 0.7);
+        bottom: 0;
+        left: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
+        z-index: 1;
+      }
+
+      h1 {
+        color: #fff;
+        font-size: max(22px, 3vw);
+        opacity: 0.27;
+        position: relative;
+        text-transform: uppercase;
+        z-index: 5;
+        font-family: "CustomFont", sans-serif;
+        top: -9px;
+        left: 8px;
+        font-weight: 100;
+      }
+    }
+
+    .icon {
+      align-items: center;
+      display: flex;
+      height: 7rem;
+      justify-content: center;
+      width: 2.5rem;
+    }
+
+    svg {
+      position: relative;
+      z-index: 3;
+    }
+
+    h3 {
+      font-family: "CustomFont", sans-serif;
+      font-size: max(16px, 1vw);
+      text-transform: uppercase;
+      z-index: 2;
+    }
+
+    .def-text {
+      font-size: max(11px, 0.7vw);
+      line-height: 3;
+      z-index: 2;
+      font-weight: 100;
+    }
+
+    .styledLink,
+    .styledLink .icon {
+      align-items: center;
+      display: flex;
+      justify-content: center;
+      position: relative;
+      z-index: 3;
+      font-size: 22px;
+      color: black;
+    }
+
+    .styledLink .unstyled {
+      align-items: center;
+      background-color: transparent;
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      overflow: hidden;
+      position: relative;
+
+      p {
+        color: #000;
+        font-size: max(11.5px, 0.7vw);
+        transition: color 0.5s ease-in-out;
+        white-space: nowrap;
+        z-index: 2;
+      }
+    }
+
+    &:hover {
+      .icon svg,
+      h3,
+      .def-text,
+      .styledLink .unstyled p {
+        color: #fff;
+      }
+      .img {
+        opacity: 1;
+        -webkit-transform: scale(1);
+        transform: scale(1);
+      }
+    }
+  }
+
+  .styledLink {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+
+    .black {
+      align-items: center;
+      background-color: #1d1d1d;
+      border-radius: max(10px, 0.5vw);
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      overflow: hidden;
+      padding: max(0.35rem, 0.5vw) max(0.5rem, 2vw);
+      position: relative;
+      transition: background-color 0.3s ease-in-out;
+
+      p {
+        font-size: max(13.5px, 0.9vw);
+        color: #fff !important;
+        position: relative;
+        white-space: nowrap;
+        z-index: 4;
+      }
+    }
+  }
+  .rec-pagination {
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+    align-items: center;
+  }
+
+  .rec-dot {
+    width: max(8px, 0.25vw) !important;
+    height: max(8px, 0.25vw) !important;
+    border-radius: 50% !important;
+    margin: 0 max(3px, 0.2vw) !important;
+    border: 0 !important;
+    box-shadow: none !important;
+    background: #bbb !important;
+  }
+  .rec-dot_active {
+    width: max(10.5px, 0.25vw) !important;
+    height: max(10.5px, 0.25vw) !important;
+    border-radius: 50% !important;
+    border: 0 !important;
+    box-shadow: none !important;
+    background: #242424 !important;
+  }
+  .rec-arrow-left,
+  .rec-arrow-right {
+    text-indent: -9999px;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+  }
+
+  .rec-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+
+    &.rec-arrow-left {
+      left: 28px;
+      background-image: url("../../../../assets/Modeling/arrow/arrow-left.svg");
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+      background-color: transparent;
+    }
+
+    &.rec-arrow-right {
+      right: 28px;
+      background-image: url("../../../../assets/Modeling/arrow/arrow-right.svg");
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+      background-color: transparent;
+    }
+  }
+  .PIJXl {
+    border: none;
+    box-shadow: none;
+    background-color: #fff;
+    min-width: 0px;
+    line-height: 0px;
+
+    &:hover {
+      border: none;
+      box-shadow: none;
+      background-color: #fff;
+    }
+  }
+}
+
+.eHxPRW {
+  border: none !important;
+  box-shadow: rgb(255, 255, 255) 0px 0px 0px 0px !important;
+  &:hover:enabled,
+  .eHxPRW:focus:enabled {
+    border: none !important;
+    box-shadow: rgb(255, 255, 255) 0px 0px 0px 0px !important;
+    background-color: #fff !important;
+  }
+}
+@media (max-width: 1200px) {
+  .home-what_we_offer {
+    .rec-arrow.rec-arrow-left {
+      left: 20px;
+    }
+    .rec-arrow.rec-arrow-right {
+      right: 20px;
+    }
+  }
+}
+@media (max-width: 900px) {
+  .home-what_we_offer {
+    .rec-arrow.rec-arrow-left {
+      left: 13px;
+    }
+    .rec-arrow.rec-arrow-right {
+      right: 13px;
+    }
+  }
+}
+@media (max-width: 650px) {
+  .home-what_we_offer {
+    .rec-arrow-left,
+    .rec-arrow-right {
+      width: 32px;
+      height: 32px;
+    }
+  }
+}
+@media (max-width: 550px) {
+  .home-what_we_offer {
+    .rec-arrow.rec-arrow-left {
+      left: 7px;
+    }
+    .rec-arrow.rec-arrow-right {
+      right: 7px;
+    }
+  }
+}

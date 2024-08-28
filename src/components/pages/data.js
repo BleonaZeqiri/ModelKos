@@ -37,6 +37,15 @@ import ModelsSlider4 from "../../assets/ModelsSlider/Img4.png";
 
 import { SlLocationPin } from "react-icons/sl";
 import { FiEye } from "react-icons/fi";
+
+//What we offer
+import { ReactComponent as What_we_offer2 } from "../../assets/WhatWeOffer/Icon1.svg";
+import { ReactComponent as What_we_offer3 } from "../../assets/WhatWeOffer/Icon2.svg";
+import { ReactComponent as What_we_offer4 } from "../../assets/WhatWeOffer/Icon3.svg";
+import { ReactComponent as What_we_offer5 } from "../../assets/WhatWeOffer/Icon4.svg";
+
+import { HiOutlineArrowLongRight } from "react-icons/hi2";
+
 export const BannerData = [
   {
     text1: "Hire a model or",
@@ -718,5 +727,103 @@ export const ModelsSliderData = [
   {
     name: "Prizereni",
     models: [],
+  },
+];
+export const What_we_offerData = [
+  {
+    icon: <What_we_offer2 />,
+
+    course: "Training",
+    text: "We train actors for commercials, campaigns, stores, showrooms, and retail outlets.",
+    button: {
+      to: "/",
+      text: "Learn more",
+      icon: <HiOutlineArrowLongRight />,
+    },
+  },
+  {
+    icon: <What_we_offer3 />,
+
+    course: "Coaching",
+    text: "We get the most out of our talents through coaching, private discussions, and trainings.",
+    button: {
+      to: "/",
+
+      text: "Learn more",
+
+      icon: <HiOutlineArrowLongRight />,
+    },
+  },
+  {
+    icon: <What_we_offer4 />,
+
+    course: "Selection",
+    text: "ModelKos is by your side during the selection and casting process. We plan efficient processes for you and your customers.",
+    button: {
+      to: "/",
+      text: "Learn more",
+
+      icon: <HiOutlineArrowLongRight />,
+    },
+  },
+  {
+    icon: <What_we_offer5 />,
+
+    course: "Social Media",
+    text: "Other services include social media, influencer marketing, castings, and switching at top photographers and videographers.",
+    button: {
+      to: "/",
+      text: "Learn more",
+
+      icon: <HiOutlineArrowLongRight />,
+    },
+  },
+  {
+    icon: <What_we_offer2 />,
+
+    course: "Training",
+    text: "We train actors for commercials, campaigns, stores, showrooms, and retail outlets.",
+    button: {
+      to: "/",
+      text: "Learn more",
+
+      icon: <HiOutlineArrowLongRight />,
+    },
+  },
+  {
+    icon: <What_we_offer3 />,
+
+    course: "Coaching",
+    text: "We train actors for commercials, campaigns, stores, showrooms, and retail outlets.",
+    button: {
+      to: "/",
+      text: "Learn more",
+
+      icon: <HiOutlineArrowLongRight />,
+    },
+  },
+  {
+    icon: <What_we_offer4 />,
+
+    course: "Selection",
+    text: "We train actors for commercials, campaigns, stores, showrooms, and retail outlets.",
+    button: {
+      to: "/",
+      text: "Learn more",
+
+      icon: <HiOutlineArrowLongRight />,
+    },
+  },
+  {
+    icon: <What_we_offer5 />,
+
+    course: "Social Media",
+    text: "We train actors for commercials, campaigns, stores, showrooms, and retail outlets.",
+    button: {
+      to: "/",
+      text: "Learn more",
+
+      icon: <HiOutlineArrowLongRight />,
+    },
   },
 ];
