@@ -9,6 +9,9 @@ import Marketing from "../../components/pages/Home/Marketing";
 import BeingClassy from "../../components/pages/Home/BeingClassy";
 import ModelsSlider from "../../components/pages/Home/ModelsSlider";
 import What_we_offer from "../../components/pages/Home/What_we_offer";
+import Content from "../../components/pages/Home/Content";
+import What_people_say from "../../components/pages/Home/What_people_say";
+import Our_partnerships from "../../components/pages/Home/Our_partnerships";
 
 const Home = () => {
   return (
@@ -23,6 +26,10 @@ const Home = () => {
       <Marketing />
       <ModelsSlider />
       <What_we_offer />
+
+      <Content />
+      <What_people_say />
+      <Our_partnerships />
       <Footer />
     </div>
   );

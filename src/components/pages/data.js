@@ -43,8 +43,17 @@ import { ReactComponent as What_we_offer2 } from "../../assets/WhatWeOffer/Icon1
 import { ReactComponent as What_we_offer3 } from "../../assets/WhatWeOffer/Icon2.svg";
 import { ReactComponent as What_we_offer4 } from "../../assets/WhatWeOffer/Icon3.svg";
 import { ReactComponent as What_we_offer5 } from "../../assets/WhatWeOffer/Icon4.svg";
-
 import { HiOutlineArrowLongRight } from "react-icons/hi2";
+//Content
+import ContentImage from "../../assets/Content/BigText.svg";
+import ContentImag1 from "../../assets/Content/BottomLine.png";
+import ContentImag2 from "../../assets/Content/SmallText.svg";
+import ContentImag3 from "../../assets/Content/TopLine.png";
+// What people sat
+import What_people_sayImage from "../../assets/WhatPeopleSay/Profile1.png";
+//Our partnerships
+import { ReactComponent as Our_partnerships1 } from "../../assets/OurPartners/Logo.svg";
+import Our_partnerships2 from "../../assets/OurPartners/Profile.png";
 
 export const BannerData = [
   {
@@ -825,5 +834,78 @@ export const What_we_offerData = [
 
       icon: <HiOutlineArrowLongRight />,
     },
+  },
+];
+export const ContentData = [
+  {
+    image3: ContentImag1,
+    image: ContentImage,
+    image1: ContentImag2,
+    text: "ModelKos is one of the most influential fashion news sites and creative resources within the fashion industry, with an extensive database, feature interviews of the creative stars of the industry, and its influential top model rankings.",
+    image2: ContentImag3,
+  },
+];
+export const What_people_sayData = [
+  {
+    title: "The Best Agency",
+    text: "Sarah Doukas founded the agency in her home in 1987. With Richard Branson as her business partner, Sarah revolutionized the traditional modeling industry by launching the first UK agency to represent worldwide new faces Sarah had discovered herself, and this became the hallmark of the agency. 1988 is remembered as the year Sarah changed the fashion industry when she spotted Kate Moss at JFK Airport in New York City.",
+    img: What_people_sayImage,
+
+    profile: [
+      {
+        name: "Xhensila Halimi",
+        profile: "Social Media Manager",
+        text: "Rating",
+        img: What_people_sayImage,
+      },
+    ],
+  },
+  {
+    title: "A Leading Modelling Agency",
+    text: "Since 1987, the agency has established itself as a leader in the fashion industry by promoting diversity and inclusivity. Over the years, it has introduced fresh faces that have become international stars. Its innovative approach and dedication to nurturing talent have set a new standard in the world of modeling.",
+    img: What_people_sayImage,
+
+    profile: [
+      {
+        name: "Ermira Hoxha",
+        profile: "Talent Scout",
+        text: "Rating",
+      },
+    ],
+  },
+  {
+    title: "A Leading Modelling Agency",
+    text: "Since 1987, the agency has established itself as a leader in the fashion industry by promoting diversity and inclusivity. Over the years, it has introduced fresh faces that have become international stars. Its innovative approach and dedication to nurturing talent have set a new standard in the world of modeling.",
+    img: What_people_sayImage,
+
+    profile: [
+      {
+        name: "Ermira Hoxha",
+        profile: "Talent Scout",
+        text: "Rating",
+      },
+    ],
+  },
+  {
+    title: "A Leading Modelling Agency",
+    text: "Since 1987, the agency has established itself as a leader in the fashion industry by promoting diversity and inclusivity. Over the years, it has introduced fresh faces that have become international stars. Its innovative approach and dedication to nurturing talent have set a new standard in the world of modeling.",
+    img: What_people_sayImage,
+
+    profile: [
+      {
+        name: "Ermira Hoxha",
+        profile: "Talent Scout",
+        text: "Rating",
+      },
+    ],
+  },
+];
+export const Our_partnershipsData = [
+  {
+    icon: <Our_partnerships1 />,
+    title: "Manage your social media",
+    text: "MediaKos assists all influencers, models, and artists in managing their social media accounts, as well as creating content and much more.",
+    to: "/",
+    image: Our_partnerships2,
   },
 ];

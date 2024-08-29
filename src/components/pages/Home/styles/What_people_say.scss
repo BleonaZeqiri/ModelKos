@@ -1,0 +1,254 @@
+.home-what_people_say {
+  display: flex;
+  flex-direction: column;
+  gap: max(1rem, 2vw);
+  width: 100%;
+  .text {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: max(0.5rem, 1vw);
+    text-align: center;
+    h1 {
+      font-size: max(25px, 5.2vw);
+      padding: 0% 5%;
+      font-family: "CustomFont", sans-serif;
+      font-weight: 100;
+    }
+  }
+  .img {
+    align-items: center;
+    background-image: url(../../../../assets/WhatPeopleSay/Background.png);
+    display: flex;
+    justify-content: space-between;
+    padding: 5%;
+    position: relative;
+    height: 100%;
+    background-size: cover;
+
+    background-repeat: no-repeat;
+    background-position: center;
+
+    .bg {
+      background-color: #1d1d1d;
+      opacity: 0.7;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      position: absolute;
+      right: 0;
+      top: 0;
+      z-index: 3;
+    }
+    .left {
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+      width: 50%;
+      h1 {
+        color: #fff;
+        font-size: max(20px, 10vw);
+        opacity: 0.5;
+        position: relative;
+        z-index: 3;
+        font-family: "CustomFont", sans-serif;
+        font-weight: lighter;
+      }
+    }
+    .right {
+      width: 45%;
+      .rec-carousel-wrapper {
+        position: relative;
+        z-index: 3;
+      }
+      .peopleCard {
+        background-color: #fff;
+        display: flex;
+        flex-direction: column;
+
+        gap: max(0.5rem, 2.2vw);
+        padding: max(1rem, 4vw);
+        position: relative;
+        h1 {
+          color: #808080;
+          font-size: max(22px, 2.3vw);
+          font-family: "CustomFont", sans-serif;
+          font-weight: 100;
+        }
+        p {
+          line-height: max(29px, 2vw);
+          font-size: max(11px, 0.75vw);
+          color: #444444;
+        }
+        .dots-shadow {
+          bottom: 12%;
+          content: url(../../../../assets/WhatPeopleSay/Dots.jpg);
+          height: 32%;
+          left: 20%;
+          position: absolute;
+          width: 71%;
+          z-index: 1;
+        }
+        .profile {
+          align-items: stretch;
+          background-color: #f1f1f1;
+          display: flex;
+          justify-content: space-between;
+          margin-top: max(1rem, 5vw);
+          padding: max(10px, 1vw);
+          position: relative;
+          width: 93%;
+          z-index: 5;
+          .left-side {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: max(0.5rem, 0.8vw);
+
+            h3 {
+              font-size: max(20px, 1.25vw);
+              font-family: "CustomFont", sans-serif;
+              font-weight: lighter;
+            }
+            .rating {
+              align-items: center;
+              display: flex;
+              gap: max(1rem, 1vw);
+              .dots {
+                align-items: center;
+                display: flex;
+                gap: max(0.5rem, 0.5vw);
+                span {
+                  border-radius: 50%;
+                  display: block;
+                  height: 10px;
+                  width: 10px;
+                }
+                .filled {
+                  background-color: #1d1d1d;
+                }
+                .unfilled {
+                  background-color: #9d9d9d;
+                }
+              }
+            }
+          }
+          img {
+            height: auto;
+            width: max(7.5rem, 10vw);
+          }
+        }
+      }
+    }
+  }
+  .rec-pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 90px;
+    top: min(0.7vw, 17.5px);
+    right: calc(1% + max(18px, 1.65vw));
+    gap: max(0.1rem, 0.1vw);
+
+    z-index: 3;
+  }
+
+  .rec-dot {
+    width: max(8px, 0.55vw) !important;
+    height: max(8px, 0.55vw) !important;
+    border-radius: 50% !important;
+    margin: 0 max(3px, 0.2vw) !important;
+    border: 0 !important;
+    box-shadow: none !important;
+    background: #bbb !important;
+  }
+  .rec-dot_active {
+    width: max(10.5px, 0.75vw) !important;
+    height: max(10.5px, 0.75vw) !important;
+    border-radius: 50% !important;
+    border: 0 !important;
+    box-shadow: none !important;
+    background: #242424 !important;
+  }
+  .carousel-container {
+    position: relative;
+  }
+
+  .rec-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    margin: 0 5px;
+    font-size: 24px;
+  }
+
+  .rec-arrow-left {
+    position: absolute;
+    z-index: 3;
+    box-shadow: none !important;
+    width: 90px;
+    background: url("../../../../assets/WhatPeopleSay/arrow/arrow-right.svg");
+    background-repeat: no-repeat;
+    top: min(0vw, -22.5px);
+    font-size: 0;
+    right: calc(1% + max(18px, 1.85vw));
+  }
+  .rec-arrow-right {
+    position: absolute;
+    z-index: 3;
+    box-shadow: none !important;
+    background: url("../../../../assets/WhatPeopleSay/arrow/arrow-left.svg");
+    width: 45px;
+    background-repeat: no-repeat;
+    top: min(0vw, -23.5px);
+    font-size: 0;
+    right: 1.5%;
+  }
+}
+@media (max-width: 1000px) {
+  .home-what_people_say .img {
+    .left {
+      display: none;
+    }
+    .right {
+      width: 100%;
+      .peopleCard .dots-shadow {
+        bottom: 13%;
+
+        left: 22%;
+      }
+    }
+  }
+}
+@media (max-width: 500px) {
+  .home-what_people_say {
+    .img {
+      padding: 8%;
+      .right .peopleCard {
+        .dots-shadow {
+          display: none;
+        }
+        .profile {
+          flex-direction: column;
+          width: 100%;
+          justify-content: center;
+          align-items: center;
+        }
+      }
+    }
+    .rec-pagination {
+      position: initial;
+      align-items: center;
+      justify-content: center;
+    }
+    .rec-dot_active {
+      background: #ffffff !important;
+    }
+  }
+}

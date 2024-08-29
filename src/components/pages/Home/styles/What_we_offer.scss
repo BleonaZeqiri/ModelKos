@@ -152,12 +152,12 @@
     .black {
       align-items: center;
       background-color: #1d1d1d;
-      border-radius: max(10px, 0.5vw);
+      border-radius: max(3px, 0.3vw);
       cursor: pointer;
       display: flex;
       justify-content: center;
       overflow: hidden;
-      padding: max(0.35rem, 0.5vw) max(0.5rem, 2vw);
+      padding: max(0.55rem, 0.5vw) max(0.5rem, 1.5vw);
       position: relative;
       transition: background-color 0.3s ease-in-out;
 

@@ -1,0 +1,56 @@
+.home-content {
+  background-attachment: fixed;
+  padding: 5%;
+  position: relative;
+  background-repeat: no-repeat;
+
+  .image-logo {
+    left: -10%;
+    position: absolute;
+    top: -103px;
+    width: 37%;
+  }
+
+  .text {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: max(0.5rem, 1vw);
+    text-align: center;
+
+    img {
+      height: auto;
+      width: 20%;
+    }
+
+    p {
+      width: 66%;
+      font-weight: lighter;
+      font-size: max(12px, 0.5vw);
+      line-height: 2.5;
+      color: #3e3e3e;
+    }
+  }
+  .line {
+    margin-bottom: 139px;
+    .bottom-line {
+      position: absolute;
+      right: 0;
+      width: 100vw;
+      display: block;
+    }
+  }
+
+  .top-line {
+    position: absolute;
+
+    top: 109px;
+    right: 0;
+    width: 44.3%;
+  }
+}
+@media (max-width: 800px) {
+  .home-content .line {
+    margin-bottom: 43px;
+  }
+}
