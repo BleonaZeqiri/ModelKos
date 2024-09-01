@@ -1,0 +1,146 @@
+.home-ksgirls {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  padding: 5% 10%;
+  width: 100%;
+  .left {
+    display: flex;
+    flex-direction: column;
+    gap: max(1rem, 2vw);
+    width: 46%;
+    .ksgirlsCard {
+      background-repeat: no-repeat;
+      background-size: cover;
+      padding: max(2rem, 2vw) max(2.5rem, 3vw);
+      position: relative;
+      width: 100%;
+
+      .bg {
+        background-color: #000;
+        opacity: 0.45;
+        transition: 0.3s ease-in-out;
+        bottom: 0;
+        left: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
+        z-index: 1;
+      }
+      a {
+        align-items: center;
+        color: #fff;
+        display: flex;
+        font-size: max(20px, 2.5vw);
+        justify-content: space-between;
+        position: relative;
+        text-transform: capitalize;
+        z-index: 2;
+
+        svg {
+          transition: 0.2s ease-in;
+          font-size: max(17px, 2.6vw);
+          color: #fff;
+          z-index: 1;
+        }
+      }
+    }
+  }
+  .sharedText {
+    width: 45%;
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    gap: max(0.25rem, 4vh);
+    justify-content: flex-start;
+    .logo {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: max(0.25rem, 1vh);
+
+      svg {
+        width: 70px;
+      }
+      p {
+        font-size: max(18px, 1.8vw);
+      }
+    }
+    h1 {
+      font-size: max(25px, 4.7vw);
+      font-family: "CustomFont", sans-serif;
+      font-weight: 100;
+    }
+    p.text1 {
+      font-size: max(14px, 1vw);
+      line-height: max(30px, 2.5vw);
+    }
+    .styledLink {
+      align-items: center;
+      display: flex;
+      justify-content: center;
+      .black {
+        align-items: center;
+        background-color: rgba(29, 29, 29, 0.5);
+        border: 2px solid #1d1d1d;
+        border-radius: max(2px, 0.3vw);
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        overflow: hidden;
+        padding: max(0.35rem, 0.5vw) max(0.5rem, 2vw);
+        position: relative;
+        transition: 0.3s ease-in-out;
+        &:before {
+          background-color: #1d1d1d;
+          border-radius: max(10px, 0.5vw);
+          bottom: -10%;
+          color: #fff;
+          content: "";
+          height: 120%;
+          left: -10%;
+          position: absolute;
+          right: -10%;
+          top: -10%;
+          transform: scale(1);
+          transition: 0.2s ease-in-out;
+          width: 120%;
+          z-index: 1;
+        }
+        p {
+          color: #fff !important;
+          position: relative;
+          white-space: nowrap;
+          z-index: 4;
+          font-size: max(12px, 0.75vw);
+        }
+      }
+    }
+  }
+}
+@media (max-width: 1150px) {
+  .home-ksgirls {
+    padding: 5%;
+  }
+}
+@media (max-width: 750px) {
+  .home-ksgirls {
+    flex-direction: column-reverse;
+    gap: max(2rem, 2vw);
+    padding: 5%;
+    .left {
+      width: 80%;
+    }
+    .sharedText {
+      align-items: center;
+      text-align: center;
+      width: 100%;
+    }
+  }
+}
+
+@media (max-width: 550px) {
+  .home-ksgirls .left {
+    width: 100%;
+  }
+}

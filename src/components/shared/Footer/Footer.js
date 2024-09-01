@@ -39,62 +39,72 @@ const Footer = (props) => {
         <div className="first-col">
           <div className="top">
             <Link to="/" className="logo-container">
-              <h1>MODELKOS</h1>
+              <h1>
+                <FormattedMessage
+                  id="modelkos-management"
+                  defaultMessage="MODELS"
+                />
+              </h1>
             </Link>
-            <p>
-              <FormattedMessage id="PHONE" defaultMessage="Women " />- 0207 376
-              7764
-            </p>
-            <p>
-              <FormattedMessage id="PHONE" defaultMessage="Men " />- 0207 376
-              7764
-            </p>
-            <p>
-              <FormattedMessage
-                id="EMAIL"
-                defaultMessage="bookamodel@modelkos.com "
-              />
-            </p>
+            <div className="paragraph">
+              <p>
+                <FormattedMessage id="PHONE" defaultMessage="Women " />- 0207
+                376 7764
+              </p>
+              <p>
+                <FormattedMessage id="PHONE" defaultMessage="Men " />- 0207 376
+                7764
+              </p>
+              <p>
+                <FormattedMessage
+                  id="EMAIL"
+                  defaultMessage="bookamodel@modelkos.com "
+                />
+              </p>
+            </div>
           </div>
           <div className="down">
             <Link to="/" className="logo-container">
               <h1>
                 <FormattedMessage
                   id="modelkos-management"
-                  defaultMessage="modelkos management"
+                  defaultMessage="MODELKOS MANAGEMENT"
                 />
               </h1>
             </Link>
-
-            <p>
-              <FormattedMessage
-                id="footer-paragraph1"
-                defaultMessage="1st Floor"
-              />
-            </p>
-            <p>
-              <FormattedMessage
-                id="footer-paragraph1"
-                defaultMessage="5 Jubilee Place"
-              />
-            </p>
-            <p>
-              <FormattedMessage
-                id="footer-paragraph1"
-                defaultMessage="Prishtina, Kosovo"
-              />
-            </p>
+            <div className="paragraph">
+              <p>
+                <FormattedMessage
+                  id="footer-paragraph1"
+                  defaultMessage="1st Floor"
+                />
+              </p>
+              <p>
+                <FormattedMessage
+                  id="footer-paragraph1"
+                  defaultMessage="5 Jubilee Place"
+                />
+              </p>
+              <p>
+                <FormattedMessage
+                  id="footer-paragraph1"
+                  defaultMessage="Prishtina, Kosovo"
+                />
+              </p>
+            </div>
           </div>
           <div className="down-jobs">
             <h1>
               <FormattedMessage id="Email" defaultMessage="Jobs " />
             </h1>
-            <p>
-              <FormattedMessage
-                id="EMAIL"
-                defaultMessage="bookamodel@modelkos.com "
-              />
-            </p>
+            <div className="paragraph">
+              <p>
+                <FormattedMessage
+                  id="EMAIL"
+                  defaultMessage="jobs@modelkos.com "
+                />
+              </p>
+            </div>
           </div>
         </div>
       </div>
@@ -114,7 +124,7 @@ const Footer = (props) => {
           <span className="span-footer"></span>
           <p>
             <FormattedMessage
-              id="footer-paragraph4"
+              id="footer-paragraph5"
               defaultMessage=" MODELKOS "
             />
           </p>
@@ -122,22 +132,23 @@ const Footer = (props) => {
         <div className="footer-row">
           <p>
             <FormattedMessage
-              id="footer-paragraph5"
-              defaultMessage=" MODELKOS "
+              id="footer-paragraph4"
+              defaultMessage=" Privacy Statement "
             />
           </p>
           |
           <p>
             <FormattedMessage
               id="footer-paragraph5"
-              defaultMessage=" MODELKOS "
+              defaultMessage=" 
+              Terms of Service "
             />
           </p>
           |
           <p>
             <FormattedMessage
               id="footer-paragraph5"
-              defaultMessage=" MODELKOS "
+              defaultMessage=" Help/FAQ "
             />
           </p>
         </div>
@@ -149,7 +160,7 @@ const Footer = (props) => {
           </div>
           <div className="phone">
             <p>
-              <FaPhoneAlt />
+              {/* <FaPhoneAlt /> */}
               <FormattedMessage
                 id="footer-paragraph5"
                 defaultMessage=" +383 (44) 000 - 558 "

@@ -54,7 +54,18 @@ import What_people_sayImage from "../../assets/WhatPeopleSay/Profile1.png";
 //Our partnerships
 import { ReactComponent as Our_partnerships1 } from "../../assets/OurPartners/Logo.svg";
 import Our_partnerships2 from "../../assets/OurPartners/Profile.png";
-
+//Kosova Girls
+import Kosova_GirlsImage from "../../assets/Kosova_Girls/Background1.jpg";
+import Kosova_GirlsImage1 from "../../assets/Kosova_Girls/Background2.png";
+import Kosova_GirlsImage2 from "../../assets/Kosova_Girls/Background3.png";
+import Kosova_GirlsImage3 from "../../assets/Kosova_Girls/Background4.png";
+import { ReactComponent as Kosova_GirlsImage4 } from "../../assets/Kosova_Girls/Logo.svg";
+import { BsArrowRight } from "react-icons/bs";
+//Our-work
+import Our_workImage from "../../assets/Our-Work/Image1.png";
+import Our_workImage1 from "../../assets/Our-Work/Image2.png";
+import Our_workImage2 from "../../assets/Our-Work/Image3.png";
+import { HiArrowLongRight } from "react-icons/hi2";
 export const BannerData = [
   {
     text1: "Hire a model or",
@@ -907,5 +918,113 @@ export const Our_partnershipsData = [
     text: "MediaKos assists all influencers, models, and artists in managing their social media accounts, as well as creating content and much more.",
     to: "/",
     image: Our_partnerships2,
+  },
+];
+export const Kosova_GirlsData = [
+  {
+    image: Kosova_GirlsImage,
+    title: "Fashion",
+    icon: <BsArrowRight />,
+  },
+  {
+    image: Kosova_GirlsImage1,
+    title: "Hair Styling",
+    icon: <BsArrowRight />,
+  },
+  {
+    image: Kosova_GirlsImage2,
+    title: "Photography",
+    icon: <BsArrowRight />,
+  },
+  {
+    image: Kosova_GirlsImage3,
+    title: "Acting",
+    icon: <BsArrowRight />,
+  },
+];
+export const SharedTextData = {
+  icon: <Kosova_GirlsImage4 />,
+  title: "Free education for EVERYONE",
+  text: "ModelKos, in collaboration with KosovaGirls, provides women with support and free training in fashion, design, hair styling, photography, video shooting, modeling, acting, and other areas.",
+  to: "/",
+};
+export const Our_workData = [
+  {
+    image: Our_workImage,
+    date: "18th July, 2022",
+    title: "Things You Should Know About The Modeling Industry In 2022",
+
+    text: "Every year, the modeling industry changes, and so do the things that aspiring models should know to be successful. Therefore, it's essential to educate yourself about the industry to keep up with the times and be prepared for what is coming ahead.",
+    link: "Read More",
+    icon: <HiArrowLongRight />,
+  },
+  {
+    image: Our_workImage1,
+    date: "20th Jun, 2022",
+    title: "Things You Should Know About The Modeling Industry In 2022",
+    text: "A photoshoot is an exciting opportunity for models to show their creativity and personality. However, it can also be a challenging experience if you don't prepare properly!",
+    link: "Read More",
+    icon: <HiArrowLongRight />,
+  },
+  {
+    image: Our_workImage2,
+    date: "1st May, 2022",
+    title: "Things You Should Know About The Modeling Industry In 2022",
+
+    text: "It's not a secret that social media is one of the most powerful tools in marketing these days. It has been proven time and again that people who use it are more likely to buy your products or services. Now, it's also being used as a car",
+    link: "Read More",
+    icon: <HiArrowLongRight />,
+  },
+  {
+    image: Our_workImage,
+    date: "18th July, 2022",
+    title: "Things You Should Know About The Modeling Industry In 2022",
+
+    text: "Every year, the modeling industry changes, and so do the things that aspiring models should know to be successful. Therefore, it's essential to educate yourself about the industry to keep up with the times and be prepared for what is coming ahead.",
+    link: "Read More",
+    icon: <HiArrowLongRight />,
+  },
+  {
+    image: Our_workImage1,
+    date: "20th Jun, 2022",
+    title: "Things You Should Know About The Modeling Industry In 2022",
+    text: "A photoshoot is an exciting opportunity for models to show their creativity and personality. However, it can also be a challenging experience if you don't prepare properly!",
+    link: "Read More",
+    icon: <HiArrowLongRight />,
+  },
+  {
+    image: Our_workImage2,
+    date: "1st May, 2022",
+    title: "Things You Should Know About The Modeling Industry In 2022",
+
+    text: "It's not a secret that social media is one of the most powerful tools in marketing these days. It has been proven time and again that people who use it are more likely to buy your products or services. Now, it's also being used as a car",
+    link: "Read More",
+    icon: <HiArrowLongRight />,
+  },
+  {
+    image: Our_workImage,
+    date: "18th July, 2022",
+    title: "Things You Should Know About The Modeling Industry In 2022",
+
+    text: "Every year, the modeling industry changes, and so do the things that aspiring models should know to be successful. Therefore, it's essential to educate yourself about the industry to keep up with the times and be prepared for what is coming ahead.",
+    link: "Read More",
+    icon: <HiArrowLongRight />,
+  },
+  {
+    image: Our_workImage1,
+    date: "20th Jun, 2022",
+    title: "Things You Should Know About The Modeling Industry In 2022",
+    text: "A photoshoot is an exciting opportunity for models to show their creativity and personality. However, it can also be a challenging experience if you don't prepare properly!",
+    link: "Read More",
+    icon: <HiArrowLongRight />,
+  },
+  {
+    image: Our_workImage2,
+    date: "1st May, 2022",
+    title: "Things You Should Know About The Modeling Industry In 2022",
+
+    text: "It's not a secret that social media is one of the most powerful tools in marketing these days. It has been proven time and again that people who use it are more likely to buy your products or services. Now, it's also being used as a car",
+    link: "Read More",
+    icon: <HiArrowLongRight />,
   },
 ];

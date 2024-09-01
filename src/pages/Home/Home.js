@@ -12,6 +12,8 @@ import What_we_offer from "../../components/pages/Home/What_we_offer";
 import Content from "../../components/pages/Home/Content";
 import What_people_say from "../../components/pages/Home/What_people_say";
 import Our_partnerships from "../../components/pages/Home/Our_partnerships";
+import Kosova_Girls from "../../components/pages/Home/Kosova_Girls";
+import Our_blog from "../../components/pages/Home/Our_blog";
 
 const Home = () => {
   return (
@@ -30,6 +32,9 @@ const Home = () => {
       <Content />
       <What_people_say />
       <Our_partnerships />
+      <Kosova_Girls />
+      <Our_blog />
+
       <Footer />
     </div>
   );
