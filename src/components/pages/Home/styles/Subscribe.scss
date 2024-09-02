@@ -1,0 +1,85 @@
+.home-subscribe {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: max(1rem, 2.5vw);
+  padding: 5% 10%;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  background-image: url(../../../../assets/Content/BottomLine.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  .mid-title {
+    font-size: max(25px, 2.5vw);
+    font-family: "CustomFont", sans-serif;
+    font-weight: lighter;
+    line-height: 0;
+  }
+  .def-text {
+    font-size: max(11px, 0.78vw);
+    line-height: max(32px, 2vw);
+    color: #3e3e3e;
+  }
+  .input {
+    align-items: stretch;
+    border: 1px solid #d0d0d0;
+    border-radius: max(10px, 0.5vw);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 57%;
+    .icon {
+      align-items: center;
+      color: var(--main-gray);
+      display: flex;
+      font-size: max(20px, 1.5vw);
+      justify-content: center;
+      padding: max(0.5rem, 0.75vw);
+    }
+    input {
+      border: transparent;
+      outline: none;
+      width: 100%;
+    }
+    .blackButton {
+      align-items: center;
+      background-color: #1d1d1d;
+      border: 2px solid #1d1d1d;
+      border-radius: max(10px, 0.5vw);
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      overflow: hidden;
+      padding: max(0.25rem, 0.4vw) max(0.5rem, 3vw);
+      position: relative;
+      transition: 0.3s ease-in-out;
+
+      p {
+        color: #fff !important;
+        font-size: max(12px, 0.9vw);
+      }
+    }
+  }
+}
+@media (max-width: 915px) {
+  .home-subscribe {
+    padding: 5%;
+  }
+}
+@media (max-width: 450px) {
+  .home-subscribe {
+    .mid-title {
+      font-size: max(18px, 1.5vw);
+    }
+    .input {
+      width: 90%;
+      .blackButton {
+        padding: max(0.25rem, 0.4vw) max(0.5rem, 8vw);
+      }
+    }
+  }
+}

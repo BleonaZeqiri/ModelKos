@@ -66,6 +66,18 @@ import Our_workImage from "../../assets/Our-Work/Image1.png";
 import Our_workImage1 from "../../assets/Our-Work/Image2.png";
 import Our_workImage2 from "../../assets/Our-Work/Image3.png";
 import { HiArrowLongRight } from "react-icons/hi2";
+//Modelkos Academy
+import { ReactComponent as ModelkosAcademy } from "../../assets/Academy/Logo.svg";
+//Partners
+import PartnersImage1 from "../../assets/Partners/bershka.svg";
+import PartnersImage2 from "../../assets/Partners/boohoo.svg";
+import PartnersImage3 from "../../assets/Partners/chanel.svg";
+import PartnersImage4 from "../../assets/Partners/ck.svg";
+import PartnersImage5 from "../../assets/Partners/mango.svg";
+import PartnersImage6 from "../../assets/Partners/braty.svg";
+import PartnersImage7 from "../../assets/Partners/kosovagirls.svg";
+//Subscribe
+import { ReactComponent as SubscribeIcon } from "../../assets/Subscribe/icon.svg";
 export const BannerData = [
   {
     text1: "Hire a model or",
@@ -1026,5 +1038,85 @@ export const Our_workData = [
     text: "It's not a secret that social media is one of the most powerful tools in marketing these days. It has been proven time and again that people who use it are more likely to buy your products or services. Now, it's also being used as a car",
     link: "Read More",
     icon: <HiArrowLongRight />,
+  },
+];
+export const AcademyData = [
+  {
+    icon: <ModelkosAcademy />,
+    text: "If you want to be a model then we are here to offer advice and create a platform for new aspiring models. We endeavor to work across a diverse range of talent and champion every individual regardless of their background or ability. We are a female-led team of accomplished, diverse women.",
+    link: {
+      send: "Join academy",
+      to: "/",
+    },
+  },
+  {
+    icon: <ModelkosAcademy />,
+    text: "If you want to be a model then we are here to offer advice and create a platform for new aspiring models. We endeavor to work across a diverse range of talent and champion every individual regardless of their background or ability. We are a female-led team of accomplished, diverse women.",
+    link: {
+      send: "Join academy",
+      to: "/",
+    },
+  },
+  {
+    icon: <ModelkosAcademy />,
+    text: "If you want to be a model then we are here to offer advice and create a platform for new aspiring models. We endeavor to work across a diverse range of talent and champion every individual regardless of their background or ability. We are a female-led team of accomplished, diverse women.",
+    link: {
+      send: "Join academy",
+      to: "/",
+    },
+  },
+];
+export const Our_partnersData = [
+  {
+    logo: PartnersImage3,
+  },
+  {
+    logo: PartnersImage2,
+  },
+  {
+    logo: PartnersImage5,
+  },
+
+  {
+    logo: PartnersImage1,
+  },
+  {
+    logo: PartnersImage4,
+  },
+  {
+    logo: PartnersImage7,
+  },
+  {
+    logo: PartnersImage6,
+  },
+  {
+    logo: PartnersImage3,
+  },
+  {
+    logo: PartnersImage2,
+  },
+  {
+    logo: PartnersImage5,
+  },
+
+  {
+    logo: PartnersImage1,
+  },
+  {
+    logo: PartnersImage4,
+  },
+  {
+    logo: PartnersImage7,
+  },
+  {
+    logo: PartnersImage6,
+  },
+];
+export const SubscribeData = [
+  {
+    title: "Subscribe to our newsletter",
+    text: "Subscribe to our newsletter to receive the latest news and updates about ModelKos",
+    icon: <SubscribeIcon />,
+    button: "Subscribe",
   },
 ];

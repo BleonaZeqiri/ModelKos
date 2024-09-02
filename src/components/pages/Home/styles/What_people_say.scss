@@ -197,7 +197,7 @@
     background-repeat: no-repeat;
     top: min(0vw, -22.5px);
     font-size: 0;
-    right: calc(1% + max(18px, 1.85vw));
+    left: 1.5%;
   }
   .rec-arrow-right {
     position: absolute;
@@ -224,6 +224,12 @@
         left: 22%;
       }
     }
+    .rec-arrow-left {
+      top: min(0vw, -0.5px);
+    }
+    .rec-arrow-right {
+      top: min(0vw, -0.5px);
+    }
   }
 }
 @media (max-width: 500px) {
@@ -249,6 +255,13 @@
     }
     .rec-dot_active {
       background: #ffffff !important;
+    }
+    .rec-arrow-left {
+      top: min(0vw, -1.5px);
+      left: 66.5%;
+    }
+    .rec-arrow-right {
+      top: min(0vw, -2.5px);
     }
   }
 }
