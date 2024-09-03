@@ -167,6 +167,15 @@
       background-position: center;
       background-color: transparent;
     }
+    .PIJXl {
+      box-shadow: none !important;
+    }
+    .eHxPRW:hover:enabled,
+    .eHxPRW:focus:enabled {
+      color: rgb(255, 255, 255);
+      background-color: transparent !important;
+      box-shadow: none !important;
+    }
   }
   .white {
     color: #fff;
@@ -194,12 +203,6 @@
     text-align: left;
     top: 67%;
     left: 6%;
-  }
-  .eHxPRW:hover:enabled,
-  .eHxPRW:focus:enabled {
-    color: rgb(255, 255, 255);
-    background-color: transparent;
-    box-shadow: none;
   }
 }
 

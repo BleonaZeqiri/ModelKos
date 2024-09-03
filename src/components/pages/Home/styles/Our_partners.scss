@@ -14,9 +14,7 @@
     overflow: hidden;
     position: relative;
     width: 100%;
-    &:hover .inner-logos {
-      animation-play-state: paused;
-    }
+
     .inner-logos {
       animation: marquee 11s linear infinite;
       display: flex;
@@ -40,30 +38,11 @@
       }
     }
   }
+
   .styledLink {
     align-items: center;
     display: flex;
     justify-content: center;
-    .black {
-      align-items: center;
-      background-color: #1d1d1d;
-      border: 2px solid #1d1d1d;
-      border-radius: max(2px, 0.3vw);
-      cursor: pointer;
-      display: flex;
-      justify-content: center;
-      overflow: hidden;
-      padding: max(0.35rem, 0.5vw) max(0.3rem, 1.8vw);
-      position: relative;
-      transition: 0.3s ease-in-out;
-      p {
-        color: #fff !important;
-        position: relative;
-        white-space: nowrap;
-        z-index: 4;
-        font-size: max(12px, 0.75vw);
-      }
-    }
   }
 }
 
@@ -74,4 +53,8 @@
   100% {
     transform: translateX(-50%);
   }
+}
+
+.home-our_partners .logos-partner:hover .inner-logos {
+  animation-play-state: paused;
 }

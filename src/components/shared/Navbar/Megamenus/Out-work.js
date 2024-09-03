@@ -1,9 +1,9 @@
 import React from "react";
 import { FormattedMessage } from "react-intl";
 import { Link } from "react-router-dom";
-import "./megamenu.scss";
 import { Our_work1, Our_work2 } from "../data";
 import Carousel from "react-elastic-carousel";
+import "./megamenu.scss";
 
 const Our_work = () => {
   const carouselRef = React.useRef(null);
@@ -22,24 +22,24 @@ const Our_work = () => {
     <div className="nav-megamenu ourwork-megamenu">
       <div className="menu-links">
         <div className="inner-links">
-          {Our_work1.map((item) => {
-            return (
-              <Link to={item.to} className="menu-main-link">
-                <div className="main">
-                  <div className="icon-container">
-                    <h3>{item.title}</h3>
-                  </div>
-                  <div className="block">
-                    <ul>
-                      {item?.link?.map((link) => {
-                        return <li>{link.name}</li>;
-                      })}
-                    </ul>
-                  </div>
-                </div>
-              </Link>
-            );
-          })}
+          {Our_work1.map((item, index) => (
+            <div className="main" key={index}>
+              <div className="icon-container">
+                <h3>{item.title}</h3>
+              </div>
+              <div className="block">
+                <ul>
+                  {item.links.map((link, linkIndex) => (
+                    <li key={linkIndex}>
+                      <Link to={link.to} className="menu-main-link">
+                        {link.title}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
 

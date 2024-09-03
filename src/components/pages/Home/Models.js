@@ -2,6 +2,8 @@ import React, { useState, useMemo } from "react";
 import { Link } from "react-router-dom";
 import { ModelsData } from "../data";
 import "./styles/Models.scss";
+import { FormattedMessage } from "react-intl";
+import StyledLink from "../../shared/StyledLink/StyledLink";
 
 const ModelCard = ({ model }) => (
   <div className="modelsCard">
@@ -88,7 +90,13 @@ const Models = () => {
   return (
     <div className="home-models">
       <div className="text">
-        <h1 className="title">Our Models</h1>
+        <h1 className="title">
+          {" "}
+          <FormattedMessage
+            id="home-models-title"
+            defaultMessage="Our Models"
+          />
+        </h1>
       </div>
 
       <div className="tabs_models">
@@ -125,6 +133,12 @@ const Models = () => {
           </div>
         </div>
       </div>
+      <StyledLink
+        to="/"
+        link={
+          <FormattedMessage id="find-model" defaultMessage="See all models" />
+        }
+      />
     </div>
   );
 };

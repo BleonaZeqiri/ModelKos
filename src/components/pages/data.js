@@ -1,5 +1,10 @@
 import image1 from "../../assets/AboutUs-section/DeaGashi.png";
 import image2 from "../../assets/AboutUs-section/BlertaBerisha.png";
+//banner
+import image4 from "../../assets/Banner/Image2.png";
+import image3 from "../../assets/Banner/Imag1.png";
+import image11 from "../../assets/Banner/Text.svg";
+
 // models
 import model1 from "../../assets/OurModels/Model1.png";
 import model2 from "../../assets/OurModels/Model10.png";
@@ -19,13 +24,11 @@ import { FaTwitter, FaFacebookF, FaInstagram, FaTiktok } from "react-icons/fa";
 import modeling1 from "../../assets/Modeling/Imag1.png";
 import modeling2 from "../../assets/Modeling/Image2.png";
 //Marketing
-import { IoSearch } from "react-icons/io5";
-import { GoClock } from "react-icons/go";
-import { IoBag } from "react-icons/io5";
-import { ReactComponent as MarketingIcon } from "../../assets/ModelsMarketing/ModelsMarektingText.svg";
+import { ReactComponent as Marketingbag } from "../../assets/ModelsMarketing/bag.svg";
+import { ReactComponent as Marketingschedule } from "../../assets/ModelsMarketing/schedule.svg";
+import { ReactComponent as Marketingclock } from "../../assets/ModelsMarketing/oclock.svg";
+import { ReactComponent as Marketingsearch } from "../../assets/ModelsMarketing/search.svg";
 
-import marketing1 from "../../assets/ModelsMarketing/Image1.png";
-import marketing2 from "../../assets/ModelsMarketing/Image2.png";
 //BeingClassy
 import { ReactComponent as BeingClassy1 } from "../../assets/BeingClassy/Logo.svg";
 import { ReactComponent as BeingClassy2 } from "../../assets/BeingClassy/BeingClassy.svg";
@@ -78,12 +81,9 @@ import PartnersImage6 from "../../assets/Partners/braty.svg";
 import PartnersImage7 from "../../assets/Partners/kosovagirls.svg";
 //Subscribe
 import { ReactComponent as SubscribeIcon } from "../../assets/Subscribe/icon.svg";
-export const BannerData = [
-  {
-    text1: "Hire a model or",
-    text2: "become one",
-    button_text: "Find model",
-  },
+
+export const BannerData1 = [
+  { image_1: image11, image_2: image3, image_3: image4 },
 ];
 export const AboutUsData = [
   {
@@ -143,12 +143,6 @@ export const AboutUsData2 = [
     name: "Anisa Xhaferi",
     about: [{ name: "Model" }, { name: "Photography" }, { name: "Artist" }],
     date: "19 may 2022",
-  },
-];
-export const AboutUsData1 = [
-  {
-    Title: "ABOUT US",
-    text: " ModelKos is the leading interactive fashion database connecting the world to models, creative talent, magazines, and luxury and commercial brands. With 1.1 million unique visits per month, the site stands as an essential tool to attribute credit and source new talent.",
   },
 ];
 
@@ -552,13 +546,7 @@ export const ModelsData = [
     models: [],
   },
 ];
-export const MarketingData = [
-  {
-    title: "MODEL MARKETING",
-    description:
-      " With a network of over 200,000 active members, ModelKos is the top market place for models, photographers, and creative talents in fashion to look for work. Add your online modeling portfolio to ModelKos so that prospective clients can view and make direct bookings. Modeling profiles are completely customizable, allowing you to add your Instagram feed for potential clients to view. So far, thousands of members have been scouted by industry professionals fo both castings and work. Join our community to get started!",
-  },
-];
+
 export const MarketingData1 = [
   {
     number: "500,000+",
@@ -573,25 +561,23 @@ export const MarketingData1 = [
     name: "Visits",
   },
 ];
-export const MarketingData2 = [
-  { icon: <MarketingIcon />, img1: marketing1, img2: marketing2 },
-];
+
 export const MarketingData3 = [
   {
-    icon: <IoSearch />,
+    icon: <Marketingsearch />,
     title: "Search",
   },
   {
-    icon: <GoClock />,
+    icon: <Marketingclock />,
     title: "Book",
   },
   {
-    icon: <IoBag />,
+    icon: <Marketingschedule />,
 
     title: "Schedule",
   },
   {
-    icon: <IoBag />,
+    icon: <Marketingbag />,
     title: "Work with us",
   },
 ];
@@ -928,7 +914,6 @@ export const Our_partnershipsData = [
     icon: <Our_partnerships1 />,
     title: "Manage your social media",
     text: "MediaKos assists all influencers, models, and artists in managing their social media accounts, as well as creating content and much more.",
-    to: "/",
     image: Our_partnerships2,
   },
 ];
@@ -958,7 +943,6 @@ export const SharedTextData = {
   icon: <Kosova_GirlsImage4 />,
   title: "Free education for EVERYONE",
   text: "ModelKos, in collaboration with KosovaGirls, provides women with support and free training in fashion, design, hair styling, photography, video shooting, modeling, acting, and other areas.",
-  to: "/",
 };
 export const Our_workData = [
   {
@@ -1044,26 +1028,14 @@ export const AcademyData = [
   {
     icon: <ModelkosAcademy />,
     text: "If you want to be a model then we are here to offer advice and create a platform for new aspiring models. We endeavor to work across a diverse range of talent and champion every individual regardless of their background or ability. We are a female-led team of accomplished, diverse women.",
-    link: {
-      send: "Join academy",
-      to: "/",
-    },
   },
   {
     icon: <ModelkosAcademy />,
     text: "If you want to be a model then we are here to offer advice and create a platform for new aspiring models. We endeavor to work across a diverse range of talent and champion every individual regardless of their background or ability. We are a female-led team of accomplished, diverse women.",
-    link: {
-      send: "Join academy",
-      to: "/",
-    },
   },
   {
     icon: <ModelkosAcademy />,
     text: "If you want to be a model then we are here to offer advice and create a platform for new aspiring models. We endeavor to work across a diverse range of talent and champion every individual regardless of their background or ability. We are a female-led team of accomplished, diverse women.",
-    link: {
-      send: "Join academy",
-      to: "/",
-    },
   },
 ];
 export const Our_partnersData = [

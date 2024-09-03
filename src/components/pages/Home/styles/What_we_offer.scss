@@ -148,27 +148,6 @@
     align-items: center;
     display: flex;
     justify-content: center;
-
-    .black {
-      align-items: center;
-      background-color: #1d1d1d;
-      border-radius: max(3px, 0.3vw);
-      cursor: pointer;
-      display: flex;
-      justify-content: center;
-      overflow: hidden;
-      padding: max(0.55rem, 0.5vw) max(0.5rem, 1.5vw);
-      position: relative;
-      transition: background-color 0.3s ease-in-out;
-
-      p {
-        font-size: max(13.5px, 0.9vw);
-        color: #fff !important;
-        position: relative;
-        white-space: nowrap;
-        z-index: 4;
-      }
-    }
   }
   .rec-pagination {
     display: flex;
@@ -247,18 +226,23 @@
       background-color: #fff;
     }
   }
-}
-
-.eHxPRW {
-  border: none !important;
-  box-shadow: rgb(255, 255, 255) 0px 0px 0px 0px !important;
-  &:hover:enabled,
-  .eHxPRW:focus:enabled {
+  .eHxPRW {
     border: none !important;
-    box-shadow: rgb(255, 255, 255) 0px 0px 0px 0px !important;
-    background-color: #fff !important;
+    box-shadow: none !important;
+    &:hover:enabled,
+    .eHxPRW:focus:enabled {
+      border: none !important;
+      box-shadow: none !important;
+      background-color: transparent !important;
+    }
+  }
+  .eHxPRW:focus:enabled {
+    color: rgb(255, 255, 255);
+    background-color: transparent !important;
+    box-shadow: none !important;
   }
 }
+
 @media (max-width: 1200px) {
   .home-what_we_offer {
     .rec-arrow.rec-arrow-left {

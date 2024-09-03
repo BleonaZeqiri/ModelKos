@@ -1,11 +1,18 @@
 import React from "react";
 import { Our_partnersData } from "../data";
 import "./styles/Our_partners.scss";
+import { FormattedMessage } from "react-intl";
+import StyledLink from "../../shared/StyledLink/StyledLink";
 
 const Our_partners = () => {
   return (
     <div className="home-our_partners">
-      <p className="def-text">OUR PARTNERS</p>
+      <p className="def-text">
+        <FormattedMessage
+          id="home-partners-title"
+          defaultMessage="OUR PARTNERS"
+        />
+      </p>
       <div className="logos-partner">
         <div className="inner-logos">
           {Our_partnersData.map((partner, index) => (
@@ -18,11 +25,12 @@ const Our_partners = () => {
           ))}
         </div>
       </div>
-      <div class="styledLink">
-        <a class="styledLink black" href="/">
-          <p>See all partners</p>
-        </a>
-      </div>
+      <StyledLink
+        to="/"
+        link={
+          <FormattedMessage id="find-model" defaultMessage="See all models" />
+        }
+      />
     </div>
   );
 };

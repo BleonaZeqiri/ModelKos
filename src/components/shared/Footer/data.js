@@ -114,7 +114,10 @@ export const FooterData = [
       },
       {
         link: (
-          <FormattedMessage id="guidelines" defaultMessage="Terms of Use" />
+          <FormattedMessage
+            id="guidelines"
+            defaultMessage="Terms of Services"
+          />
         ),
         to: "/",
       },

@@ -2,47 +2,49 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./megamenu.scss";
 
-import { AboutData } from "../data";
-
-import image1 from "../../../../assets/AboutUs/Image2.png";
+import { AboutData, AboutData1 } from "../data";
 
 const AboutMenu = () => {
   return (
     <div className="nav-megamenu about-megamenu">
       <div className="menu-links">
         <div className="inner-links">
-          {AboutData.map((item) => {
-            return (
-              <Link to={item.to} className="menu-main-link">
-                <div className="main">
-                  <div className="icon-container">
-                    <h3>{item.title}</h3>
-                  </div>
-                  <div className="block">
-                    <ul>
-                      {item?.link?.map((link) => {
-                        return <li>{link.name}</li>;
-                      })}
-                    </ul>
-                  </div>
-                </div>
-              </Link>
-            );
-          })}
-        </div>
-      </div>
-      <div className="right">
-        <div className="image-item">
-          <div className="image">
-            <div className="item-name">
-              <h3>Modelkos</h3>
-              <h3>2022</h3>
+          {AboutData.map((item) => (
+            <div className="main" key={item.section}>
+              <div className="icon-container">
+                <h3>{item.title}</h3>
+              </div>
+              <div className="block">
+                <ul>
+                  {item.links.map((link, index) => (
+                    <li key={index}>
+                      <Link to={link.to} className="menu-main-link">
+                        {link.title}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </div>
-            <img src={image1} alt="Other" className="left-image" />
-          </div>
+          ))}
         </div>
-        <button className="button">About us</button>
       </div>
+      {AboutData1.map((item, index) => (
+        <div className="right" key={index}>
+          <div className="image-item">
+            <div className="image">
+              <div className="item-name">
+                <h3>{item.title}</h3>
+                <h3>{item.year}</h3>
+              </div>
+              <img src={item.image} alt={item.title} className="left-image" />
+            </div>
+          </div>
+          <Link to={item.button.to}>
+            <button className="button">{item.button.text}</button>
+          </Link>
+        </div>
+      ))}
     </div>
   );
 };

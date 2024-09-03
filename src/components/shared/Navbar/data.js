@@ -1,5 +1,5 @@
 import { FormattedMessage } from "react-intl";
-//model image
+//Our work image
 import model_image1 from "../../../assets/OurWork/Image1.png";
 import model_image2 from "../../../assets/OurWork/Image2.png";
 import model_image3 from "../../../assets/OurWork/Image3.png";
@@ -9,167 +9,84 @@ import model_image6 from "../../../assets/OurWork/Image6.png";
 import model_image7 from "../../../assets/OurWork/Image8.png";
 import model_image8 from "../../../assets/OurWork/Image7.png";
 
-//our work
-// import our_work1 from "../../../assets/nav/portfolio1.svg";
-import our_work2 from "../../../assets/nav/portfolio2.svg";
-import our_work3 from "../../../assets/nav/portfolio3.svg";
-import our_work4 from "../../../assets/nav/portfolio4.svg";
-import our_work5 from "../../../assets/nav/portfolio5.svg";
-// import our_work6 from "../../../assets/nav/portfolio6.svg";
-//models
-import model2 from "../../../assets/OurModels/Model2.png";
-import model3 from "../../../assets/OurModels/Model3.png";
-import model4 from "../../../assets/OurModels/Model4.png";
-import model5 from "../../../assets/OurModels/Model5.png";
-import model6 from "../../../assets/OurModels/Model6.png";
-import model7 from "../../../assets/OurModels/Model7.png";
-import model8 from "../../../assets/OurModels/Model8.png";
-import model9 from "../../../assets/OurModels/Model9.png";
-import model10 from "../../../assets/OurModels/Model10.png";
+//about
+import about_image from "../../../assets/AboutUs/Image2.png";
 
-import about_image from "../../../assets/WhatWeOffer/Icon2.svg";
-import aboutIcon1red from "../../../assets/nav/aboutIcon1red.svg";
-import aboutIcon1green from "../../../assets/nav/aboutIcon1green.svg";
-import aboutIcon1blue from "../../../assets/nav/aboutIcon1blue.svg";
-export const models = [
+export const AboutData1 = [
   {
-    name: "Beatrise Ramosaj",
-    to: "/",
-
-    about:
-      "A person whose profession is posing for artists or photographers. a person employed to wear clothing or pose with a product for purposes of display and advertising.",
-    img: model7,
-  },
-  {
-    name: "Melinda Ademi",
-
-    about:
-      "A person whose profession is posing for artists or photographers. a person employed to wear clothing or pose with a product for purposes of display and advertising.",
-    to: "/",
-    img: model2,
-  },
-  {
-    name: "Xhensila Myrteza",
-
-    about:
-      "A person whose profession is posing for artists or photographers. a person employed to wear clothing or pose with a product for purposes of display and advertising.",
-    to: "/",
-    img: model3,
-  },
-  {
-    name: "Ana Lleshi",
-
-    about:
-      "A person whose profession is posing for artists or photographers. a person employed to wear clothing or pose with a product for purposes of display and advertising.",
-    to: "/",
-    img: model4,
-  },
-  {
-    name: "Afrona Dika",
-
-    about:
-      "A person whose profession is posing for artists or photographers. a person employed to wear clothing or pose with a product for purposes of display and advertising.",
-    to: "/",
-    img: model5,
-  },
-  {
-    name: "Bleona Zeqiri",
-    about:
-      "A person whose profession is posing for artists or photographers. a person employed to wear clothing or pose with a product for purposes of display and advertising.",
-    to: "/",
-    img: model6,
-  },
-  {
-    name: "Dhurata Ahmetaj",
-    about:
-      "A person whose profession is posing for artists or photographers. a person employed to wear clothing or pose with a product for purposes of display and advertising.",
-    to: "/",
-    img: model8,
-  },
-  {
-    name: "Dafina Zeqiri",
-    about:
-      "A person whose profession is posing for artists or photographers. a person employed to wear clothing or pose with a product for purposes of display and advertising.",
-    to: "/",
-    img: model9,
-  },
-  {
-    name: "Genta Ismajli",
-    about:
-      "A person whose profession is posing for artists or photographers. a person employed to wear clothing or pose with a product for purposes of display and advertising.",
-    to: "/",
-    img: model10,
-  },
-];
-export const AboutData2 = [
-  {
-    icon: about_image,
-    iconRed: aboutIcon1red,
-    iconGreen: aboutIcon1green,
-    iconBlue: aboutIcon1blue,
-    title: <FormattedMessage id="our-strategy" defaultMessage="Our strategy" />,
-    text: (
-      <FormattedMessage
-        id="about-megamenu-text1"
-        defaultMessage="Our ability to create sustainable brand strategies based on real-world applications allows us to translate original ideas into unique brand solutions."
-      />
-    ),
-  },
-  {
-    icon: about_image,
-    iconRed: aboutIcon1red,
-    iconGreen: aboutIcon1green,
-    iconBlue: aboutIcon1blue,
-    title: <FormattedMessage id="our-strategy" defaultMessage="Our strategy" />,
-    text: (
-      <FormattedMessage
-        id="about-megamenu-text1"
-        defaultMessage="Our ability to create sustainable brand strategies based on real-world applications allows us to translate original ideas into unique brand solutions."
-      />
-    ),
-  },
-  {
-    icon: about_image,
-    iconRed: aboutIcon1red,
-    iconGreen: aboutIcon1green,
-    iconBlue: aboutIcon1blue,
-    title: <FormattedMessage id="our-strategy" defaultMessage="Our strategy" />,
-    text: (
-      <FormattedMessage
-        id="about-megamenu-text1"
-        defaultMessage="Our ability to create sustainable brand strategies based on real-world applications allows us to translate original ideas into unique brand solutions."
-      />
-    ),
+    title: "Modelkos",
+    year: "2022",
+    image: about_image,
+    button: {
+      to: "/",
+      text: "About us",
+    },
   },
 ];
 
 export const AboutData = [
   {
-    to: "/",
-    icon: our_work4,
-
-    title: <FormattedMessage id="our-work" defaultMessage="Agency" />,
-    link: [
-      { name: "About Us" },
-      { name: "Our Models" },
-      { name: "Our Partners" },
-      { name: "Our Team" },
-      { name: " Our Partners" },
-      { name: "Clients" },
+    section: "agency",
+    title: <FormattedMessage id="agency" defaultMessage="Agency" />,
+    links: [
+      {
+        to: "/",
+        title: <FormattedMessage id="about-us" defaultMessage="About Us" />,
+      },
+      {
+        to: "/",
+        title: <FormattedMessage id="our-models" defaultMessage="Our Models" />,
+      },
+      {
+        to: "/",
+        title: (
+          <FormattedMessage id="our-partners" defaultMessage="Our Partners" />
+        ),
+      },
+      {
+        to: "/",
+        title: <FormattedMessage id="our-team" defaultMessage="Our Team" />,
+      },
+      {
+        to: "/",
+        title: (
+          <FormattedMessage id="our-partners1" defaultMessage="Our Partners" />
+        ),
+      },
+      {
+        to: "/",
+        title: <FormattedMessage id="clients" defaultMessage="Clients" />,
+      },
     ],
   },
   {
-    to: "/",
-    icon: our_work4,
-
-    title: <FormattedMessage id="our-work" defaultMessage="Models" />,
-    link: [
-      { name: "Be a Model" },
-      { name: "Careers" },
-      { name: "Magazine" },
-      { name: "Lists" },
-      { name: " New Faces" },
-      { name: "Rankings" },
+    section: "models",
+    title: <FormattedMessage id="models" defaultMessage="Models" />,
+    links: [
+      {
+        to: "/",
+        title: <FormattedMessage id="be-a-model" defaultMessage="Be a Model" />,
+      },
+      {
+        to: "/",
+        title: <FormattedMessage id="careers" defaultMessage="Careers" />,
+      },
+      {
+        to: "/",
+        title: <FormattedMessage id="magazine" defaultMessage="Magazine" />,
+      },
+      {
+        to: "/",
+        title: <FormattedMessage id="lists" defaultMessage="Lists" />,
+      },
+      {
+        to: "/",
+        title: <FormattedMessage id="new-faces" defaultMessage="New Faces" />,
+      },
+      {
+        to: "/",
+        title: <FormattedMessage id="ranking" defaultMessage="Rankings" />,
+      },
     ],
   },
 ];
@@ -177,30 +94,8 @@ export const AboutData = [
 export const Our_work2 = [
   {
     to: "/",
-    img: model_image1,
-    name: "Albina Myrtezaj",
-    description: [
-      { name: "Model" },
-      { name: "Photography" },
-      { name: "Artist" },
-    ],
-    date: "19 may 2022",
-  },
-  {
-    to: "/",
-    img: model_image2,
-    name: "Klea Gashi",
-    description: [
-      { name: "Model" },
-      { name: "Photography" },
-      { name: "Artist" },
-    ],
-    date: "19 may 2022",
-  },
-  {
-    to: "/",
     img: model_image3,
-    name: "Arta Kalluri",
+    name: "Anda Lßleshi",
     description: [
       { name: "Model" },
       { name: "Photography" },
@@ -211,7 +106,7 @@ export const Our_work2 = [
   {
     to: "/",
     img: model_image4,
-    name: "Blina Beka",
+    name: "Driada Lakna",
     description: [
       { name: "Model" },
       { name: "Photography" },
@@ -222,7 +117,7 @@ export const Our_work2 = [
   {
     to: "/",
     img: model_image5,
-    name: "Blina Beka",
+    name: "Klea Gashi",
     description: [
       { name: "Model" },
       { name: "Photography" },
@@ -233,18 +128,7 @@ export const Our_work2 = [
   {
     to: "/",
     img: model_image6,
-    name: "Alora Gojani",
-    description: [
-      { name: "Model" },
-      { name: "Photography" },
-      { name: "Artist" },
-    ],
-    date: "19 may 2022",
-  },
-  {
-    to: "/",
-    img: model_image7,
-    name: "Anila Xhaferi",
+    name: "Arta Kalludra",
     description: [
       { name: "Model" },
       { name: "Photography" },
@@ -263,54 +147,150 @@ export const Our_work2 = [
     ],
     date: "19 may 2022",
   },
+  {
+    to: "/",
+    img: model_image7,
+    name: "Albina Myrtezaj",
+    description: [
+      { name: "Model" },
+      { name: "Photography" },
+      { name: "Artist" },
+    ],
+    date: "19 may 2022",
+  },
+  {
+    to: "/",
+    img: model_image1,
+    name: "Blina Beka",
+    description: [
+      { name: "Model" },
+      { name: "Photography" },
+      { name: "Artist" },
+    ],
+    date: "19 may 2022",
+  },
+  {
+    to: "/",
+    img: model_image2,
+    name: "Alora Gojani",
+    description: [
+      { name: "Model" },
+      { name: "Photography" },
+      { name: "Artist" },
+    ],
+    date: "19 may 2022",
+  },
 ];
 
 export const Our_work1 = [
   {
-    to: "/",
-    icon: our_work4,
-
-    title: <FormattedMessage id="our-work" defaultMessage="City" />,
-    link: [
-      { name: "Prishtina" },
-      { name: "Peja" },
-      { name: "Prizren" },
-      { name: "Gjakov" },
-      { name: " Gjilan" },
-      { name: "Ferizaj" },
-      { name: "Mitrovic" },
-    ],
-  },
-
-  {
-    to: "/",
-    icon: our_work4,
-
-    title: <FormattedMessage id="models" defaultMessage="Female" />,
-    link: [{ name: "Main" }, { name: "Direct" }, { name: "B Plus" }],
-  },
-  {
-    to: "/",
-    icon: our_work3,
-    title: <FormattedMessage id="about" defaultMessage="Male" />,
-    link: [{ name: "Main" }, { name: "Direct" }, { name: "Big & Tall" }],
-  },
-  {
-    to: "/",
-    icon: our_work2,
-    title: <FormattedMessage id="academy" defaultMessage="Kids" />,
-    link: [
-      { name: "Babies" },
-      { name: "Todlers" },
-      { name: "Preschool" },
-      { name: "Grandschooler" },
-      { name: "Teen" },
+    section: "city",
+    title: <FormattedMessage id="city" defaultMessage="City" />,
+    links: [
+      {
+        to: "/",
+        title: <FormattedMessage id="city-1" defaultMessage="Prishtina" />,
+      },
+      {
+        to: "/",
+        title: <FormattedMessage id="city-2" defaultMessage="Peja" />,
+      },
+      {
+        to: "/",
+        title: <FormattedMessage id="city-3" defaultMessage="Prizren" />,
+      },
+      {
+        to: "/",
+        title: <FormattedMessage id="city-4" defaultMessage="Gjakove" />,
+      },
+      {
+        to: "/",
+        title: <FormattedMessage id="city-5" defaultMessage="Gjilan" />,
+      },
+      {
+        to: "/",
+        title: <FormattedMessage id="city-6" defaultMessage="Ferizaj" />,
+      },
+      {
+        to: "/",
+        title: <FormattedMessage id="city-7" defaultMessage="Mitrovice" />,
+      },
     ],
   },
   {
-    to: "/",
-    icon: our_work5,
-    title: <FormattedMessage id="blog" defaultMessage="Erderly" />,
-    link: [{ name: "Old Female" }, { name: "Old Male" }],
+    section: "Female",
+    title: <FormattedMessage id="female" defaultMessage="Female" />,
+    links: [
+      {
+        to: "/",
+        title: <FormattedMessage id="female-1" defaultMessage="Main" />,
+      },
+      {
+        to: "/",
+        title: <FormattedMessage id="female-2" defaultMessage="Direct" />,
+      },
+      {
+        to: "/",
+        title: <FormattedMessage id="female-3" defaultMessage="B Plus" />,
+      },
+    ],
+  },
+  {
+    section: "Male",
+    title: <FormattedMessage id="male" defaultMessage="Male" />,
+    links: [
+      {
+        to: "/",
+        title: <FormattedMessage id="male-1" defaultMessage="Main" />,
+      },
+      {
+        to: "/",
+        title: <FormattedMessage id="male-2" defaultMessage="Direct" />,
+      },
+      {
+        to: "/",
+        title: <FormattedMessage id="male-3" defaultMessage="Big & Tall" />,
+      },
+    ],
+  },
+  {
+    section: "Kids",
+    title: <FormattedMessage id="kids" defaultMessage="Kids" />,
+    links: [
+      {
+        to: "/",
+        title: <FormattedMessage id="kids-1" defaultMessage="Babies" />,
+      },
+      {
+        to: "/",
+        title: <FormattedMessage id="kids-2" defaultMessage="Todlers" />,
+      },
+      {
+        to: "/",
+        title: <FormattedMessage id="kids-3" defaultMessage="Preschool" />,
+      },
+      {
+        to: "/",
+        title: <FormattedMessage id="kids-3" defaultMessage="Grandschooler" />,
+      },
+      {
+        to: "/",
+        title: <FormattedMessage id="kids-3" defaultMessage="Teen" />,
+      },
+    ],
+  },
+  {
+    section: "Elderly",
+    title: <FormattedMessage id="elderly" defaultMessage="Elderly" />,
+    links: [
+      {
+        to: "/",
+        title: <FormattedMessage id="elderly-1" defaultMessage="Old Female" />,
+      },
+      {
+        to: "/",
+        title: <FormattedMessage id="elderly-2" defaultMessage="Old Male" />,
+      },
+    ],
   },
 ];

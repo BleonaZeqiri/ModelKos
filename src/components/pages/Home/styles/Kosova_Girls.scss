@@ -79,42 +79,6 @@
       align-items: center;
       display: flex;
       justify-content: center;
-      .black {
-        align-items: center;
-        background-color: rgba(29, 29, 29, 0.5);
-        border: 2px solid #1d1d1d;
-        border-radius: max(2px, 0.3vw);
-        cursor: pointer;
-        display: flex;
-        justify-content: center;
-        overflow: hidden;
-        padding: max(0.35rem, 0.5vw) max(0.5rem, 2vw);
-        position: relative;
-        transition: 0.3s ease-in-out;
-        &:before {
-          background-color: #1d1d1d;
-          border-radius: max(10px, 0.5vw);
-          bottom: -10%;
-          color: #fff;
-          content: "";
-          height: 120%;
-          left: -10%;
-          position: absolute;
-          right: -10%;
-          top: -10%;
-          transform: scale(1);
-          transition: 0.2s ease-in-out;
-          width: 120%;
-          z-index: 1;
-        }
-        p {
-          color: #fff !important;
-          position: relative;
-          white-space: nowrap;
-          z-index: 4;
-          font-size: max(12px, 0.75vw);
-        }
-      }
     }
   }
 }

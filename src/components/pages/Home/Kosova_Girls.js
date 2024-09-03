@@ -1,7 +1,8 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import { Kosova_GirlsData, SharedTextData } from "../data";
 import "./styles/Kosova_Girls.scss";
+import { FormattedMessage } from "react-intl";
+import StyledLink from "../../shared/StyledLink/StyledLink";
 
 const Kosova_Girls = () => {
   return (
@@ -23,15 +24,19 @@ const Kosova_Girls = () => {
       <div className="sharedText">
         <div className="logo">
           {SharedTextData.icon}
-          <p>KosovaGirls</p>
+          <p>
+            <FormattedMessage id="kosova-girls" defaultMessage="KosovaGirls " />
+          </p>
         </div>
         <h1>{SharedTextData.title}</h1>
         <p className="text1">{SharedTextData.text}</p>
-        <div className="styledLink">
-          <Link className="styledLink black" to={SharedTextData.to}>
-            <p>Learn More</p>
-          </Link>
-        </div>
+
+        <StyledLink
+          to="/"
+          link={
+            <FormattedMessage id="find-model" defaultMessage="Learn More" />
+          }
+        />
       </div>
     </div>
   );

@@ -3,6 +3,8 @@ import Carousel from "react-elastic-carousel";
 import "../Home/styles/What_we_offer.scss";
 import { What_we_offerData } from "../data";
 import { Link } from "react-router-dom";
+import { FormattedMessage } from "react-intl";
+import StyledLink from "../../shared/StyledLink/StyledLink";
 
 const What_we_offer = () => {
   const [itemsToShow, setItemsToShow] = useState(4);
@@ -36,7 +38,12 @@ const What_we_offer = () => {
   return (
     <div className="home-what_we_offer">
       <div className="text">
-        <h1 className="big-title">What we offer</h1>
+        <h1 className="big-title">
+          <FormattedMessage
+            id="home-banner-text"
+            defaultMessage="What we offer"
+          />
+        </h1>
       </div>
       <Carousel
         itemsToShow={itemsToShow}
@@ -49,7 +56,12 @@ const What_we_offer = () => {
           <div key={index} className="Card">
             <div className="img">
               <div className="bg"></div>
-              <h1>Training</h1>
+              <h1>
+                <FormattedMessage
+                  id="home-banner-text"
+                  defaultMessage="Training"
+                />
+              </h1>
             </div>
             <div className="icon">{item.icon}</div>
             <h3>{item.course}</h3>
@@ -63,11 +75,13 @@ const What_we_offer = () => {
           </div>
         ))}
       </Carousel>
-      <div className="styledLink">
-        <a className="styledLink black" href="/">
-          <p>See all</p>
-        </a>
-      </div>
+
+      <StyledLink
+        to="/"
+        link={
+          <FormattedMessage id="find-model" defaultMessage="See all models" />
+        }
+      />
     </div>
   );
 };

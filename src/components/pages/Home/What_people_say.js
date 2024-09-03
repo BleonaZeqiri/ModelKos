@@ -2,6 +2,7 @@ import React from "react";
 import Carousel from "react-elastic-carousel";
 import "../Home/styles/What_people_say.scss";
 import { What_people_sayData } from "../data.js";
+import { FormattedMessage } from "react-intl";
 
 const What_people_say = () => {
   const itemsToShow = 1;
@@ -27,17 +28,22 @@ const What_people_say = () => {
   return (
     <div className="home-what_people_say">
       <div className="text">
-        <h1 className="big-title">What People Say</h1>
+        <h1 className="big-title">
+          <FormattedMessage
+            id="home-wps-title"
+            defaultMessage="What People Say"
+          />
+        </h1>
       </div>
       <div className="img">
         <div className="bg"></div>
         <div className="left">
           <h1>
-            What
+            <FormattedMessage id="home-wps1-text" defaultMessage="What" />
             <br />
-            People
+            <FormattedMessage id="home-wps2-text" defaultMessage="People" />
             <br />
-            Say
+            <FormattedMessage id="home-wps3-text" defaultMessage="Say" />
           </h1>
         </div>
         <div className="right">

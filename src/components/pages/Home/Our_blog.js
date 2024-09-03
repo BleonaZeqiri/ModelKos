@@ -1,9 +1,10 @@
 import { Link } from "react-router-dom";
 import React, { useState, useEffect, useRef } from "react";
 import Carousel from "react-elastic-carousel";
-
+import { FormattedMessage } from "react-intl";
 import "./styles/Our_blog.scss";
 import { Our_workData } from "../data";
+import StyledLink from "../../shared/StyledLink/StyledLink";
 
 const Our_blog = () => {
   const [itemsToShow, setItemsToShow] = useState(4);
@@ -11,9 +12,9 @@ const Our_blog = () => {
 
   const updateItemsToShow = () => {
     const screenWidth = window.innerWidth;
-    if (screenWidth <= 550) {
+    if (screenWidth <= 600) {
       setItemsToShow(1);
-    } else if (screenWidth <= 850) {
+    } else if (screenWidth <= 1000) {
       setItemsToShow(2);
     } else {
       setItemsToShow(3);
@@ -29,19 +30,16 @@ const Our_blog = () => {
     };
   }, []);
 
-  const onPrevStart = () => {};
-  const onNextStart = () => {};
-
   return (
     <div className="home-our_work">
       <div className="text">
-        <h1 className="big-title">OUR BLOG</h1>
+        <h1 className="big-title">
+          <FormattedMessage id="our-blog" defaultMessage="OUR BLOG " />
+        </h1>
 
         <Carousel
           itemsToShow={itemsToShow}
           ref={carouselRef}
-          onPrevStart={onPrevStart}
-          onNextStart={onNextStart}
           disableArrowsOnEnd={false}
         >
           {Our_workData.map((item, index) => (
@@ -62,11 +60,12 @@ const Our_blog = () => {
             </div>
           ))}
         </Carousel>
-        <div class="styledLink">
-          <a class="styledLink black" href="/">
-            <p>Read all blog</p>
-          </a>
-        </div>
+        <StyledLink
+          to="/"
+          link={
+            <FormattedMessage id="find-model" defaultMessage="See all models" />
+          }
+        />
       </div>
     </div>
   );

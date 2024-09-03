@@ -2,7 +2,9 @@ import React from "react";
 import "./styles/About.scss";
 import { Link } from "react-router-dom";
 import Carousel from "react-elastic-carousel";
-import { AboutUsData, AboutUsData1, AboutUsData2 } from "../data";
+import { FormattedMessage } from "react-intl";
+
+import { AboutUsData, AboutUsData2 } from "../data";
 import image from "../../../assets/AboutUs-section/AboutUsText.svg";
 const About = () => {
   const carouselRef = React.useRef(null);
@@ -22,12 +24,15 @@ const About = () => {
   return (
     <div className="home-about">
       <div className="left">
-        {AboutUsData1.map((item, index) => (
-          <React.Fragment key={index}>
-            <h1>{item.Title}</h1>
-            <p className="text">{item.text}</p>
-          </React.Fragment>
-        ))}
+        <h1>
+          <FormattedMessage id="home-about-title" defaultMessage="ABOUT US" />
+        </h1>
+        <p className="text">
+          <FormattedMessage
+            id="home-about-text"
+            defaultMessage="ModelKos is the leading interactive fashion database connecting the world to models, creative talent, magazines, and luxury and commercial brands. With 1.1 million unique visits per month, the site stands as an essential tool to attribute credit and source new talent."
+          />
+        </p>
       </div>
       <div className="right">
         <Carousel
@@ -83,6 +88,7 @@ const About = () => {
                         </React.Fragment>
                       ))}
                     </div>
+
                     <h3>{AboutUsData2[index].date}</h3>
                   </div>
                 </div>
@@ -90,6 +96,7 @@ const About = () => {
             </div>
           ))}
         </Carousel>
+
         <Link className="circleLink">
           <div className="circleText">
             <img src={image} alt="About Us" />

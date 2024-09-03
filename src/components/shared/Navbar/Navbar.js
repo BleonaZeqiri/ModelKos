@@ -2,14 +2,11 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import clsx from "clsx";
 import { FormattedMessage } from "react-intl";
-import { MdKeyboardArrowDown } from "react-icons/md";
 import "./navbar.scss";
 import OurWork from "./Megamenus/Out-work";
 import AboutMenu from "./Megamenus/AboutMenu";
 import MobileNav from "../MobileNav/MobileNav";
-// import { AiOutlineMenu } from "react-icons/ai";
-// import ThemeSwitcher from "../Footer/ThemeSwitcher";
-
+import { TiArrowSortedDown } from "react-icons/ti";
 const Navbar = (props) => {
   const [isSticky, setIsSticky] = useState(false);
 
@@ -46,7 +43,7 @@ const Navbar = (props) => {
         <div className="nav-link services-link">
           <Link to="/" className="inner-nav-link">
             <FormattedMessage id="our-work" defaultMessage="Our Work" />
-            <MdKeyboardArrowDown className="arrow1" />
+            <TiArrowSortedDown className="arrow1" />
           </Link>
           <div className="line"></div>
           <OurWork />
@@ -55,7 +52,7 @@ const Navbar = (props) => {
         <div className="nav-link portfolio-link">
           <Link to="/" className="inner-nav-link">
             <FormattedMessage id="portfolio" defaultMessage="About" />
-            <MdKeyboardArrowDown className="arrow1" />
+            <TiArrowSortedDown className="arrow1" />
           </Link>
 
           <div className="line"></div>
@@ -64,14 +61,14 @@ const Navbar = (props) => {
         <div className="nav-link support-link">
           <Link to="/" className="inner-nav-link">
             <FormattedMessage id="models" defaultMessage="Models" />
-            <MdKeyboardArrowDown className="arrow1" />
+            <TiArrowSortedDown className="arrow1" />
           </Link>
           <div className="line"></div>
         </div>
         <div className=" nav-link home-link">
           <Link to="/" className="inner-nav-link">
             <FormattedMessage id="about" defaultMessage="Academy" />
-            <MdKeyboardArrowDown className="arrow1" />
+            <TiArrowSortedDown className="arrow1" />
           </Link>
           <div className="line"></div>
         </div>
@@ -91,7 +88,7 @@ const Navbar = (props) => {
         </Link>
 
         <Link to="/" className="contact-us">
-          <FormattedMessage id="contact-us" defaultMessage="Contact Us" />
+          <FormattedMessage id="contact-us" defaultMessage="Contacts" />
         </Link>
       </div>
 

@@ -32,27 +32,28 @@
 }
 .nav .nav-logo {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   color: #fff;
   .logo-container {
     align-items: center;
     gap: max(0.25rem, 0.5vw);
     color: white;
-
     content: url("../../../assets/NavBar/Logo-white.svg");
     height: max(21px, 1.8vw);
   }
   h1 {
     font-family: "CustomFont", sans-serif;
     line-height: 1.4;
-    font-size: max(1.5rem, 0.5vw);
-    margin-left: 10px;
+    font-size: max(1.4rem, 0.7vw);
+    margin-left: 8px;
+    font-weight: lighter;
   }
 }
 
 .nav .nav-links {
   display: flex;
   align-items: center;
+  gap: max(0.7rem, 1vw);
   .nav-link {
     position: relative;
     margin: 0 max(2.5px, 0.7vw);
@@ -90,7 +91,7 @@
     display: flex;
     align-items: center;
     padding: max(1.85vw, 20px) 0.5vw;
-    font-size: max(12.5px, 0.9vw);
+    font-size: max(12px, 0.75vw);
     position: relative;
     z-index: 2;
     svg {
@@ -111,19 +112,18 @@
     display: flex;
     align-items: center;
     padding: max(1.85vw, 20px) 2.5vw;
-    font-size: max(12.5px, 0.9vw);
+    font-size: max(12px, 0.75vw);
     position: relative;
     z-index: 2;
   }
-}
+  .contact-us {
+    background: #fff;
 
-.nav .nav-auth .contact-us {
-  background: #000000d4;
-
-  color: #fff;
-  padding: max(10.5px, 0.85vw) max(16px, 1.95vw);
-  border-radius: max(20px, 1.3vw);
-  font-size: max(12px, 0.85vw);
+    color: #111;
+    padding: max(10.5px, 0.85vw) max(16px, 1.95vw);
+    border-radius: max(20px, 1.3vw);
+    font-size: max(12px, 0.85vw);
+  }
 }
 
 .nav .mobile-nav {
@@ -156,7 +156,8 @@
     content: url("../../../assets/NavBar/Logo.svg");
   }
   .nav-auth .contact-us {
-    background: #000000d4;
+    background: #1d1d1d;
+    color: #fff;
   }
   .apply-now {
     color: #111 !important;

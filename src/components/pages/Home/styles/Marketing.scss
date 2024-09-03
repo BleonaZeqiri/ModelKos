@@ -1,9 +1,9 @@
 .home-marketing {
   align-items: stretch;
   display: flex;
-  justify-content: space-between;
   padding: 10% 5%;
   position: relative;
+  gap: max(2rem, 8.5vw);
 
   .left {
     display: flex;
@@ -16,6 +16,7 @@
       font-size: max(25px, 5.2vw);
       font-family: "CustomFont", sans-serif;
       font-weight: 100;
+      line-height: 0;
     }
 
     .marketing-text {
@@ -44,78 +45,65 @@
       }
     }
   }
-
   .right {
-    align-content: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
-    width: 39%;
-
-    .circleLink {
-      align-items: center;
+    .image-item {
+      margin-right: 150px;
       display: flex;
-      height: max(3rem, 8vw);
-      width: max(3rem, 9vw);
-      justify-content: center;
-      position: absolute;
-      left: -15%;
-      top: -2%;
-      z-index: 5;
+      height: 323px;
+      .circleLink {
+        align-items: center;
+        display: flex;
+        height: max(3rem, 8vw);
+        width: max(3rem, 9vw);
+        justify-content: center;
+        position: absolute;
+        right: 35%;
+        top: 14.5%;
+        z-index: 5;
 
-      img {
-        width: 100%;
-        height: auto;
+        img {
+          width: 100%;
+          height: auto;
+        }
       }
-    }
-
-    .images {
-      align-content: center;
-      display: flex;
-      justify-content: center;
-      position: relative;
-      margin-top: 2.5rem;
-
-      .img {
-        background-position: 50%;
-        height: max(13rem, 23vw);
-        width: max(11.5rem, 19vw);
+      .image {
         position: relative;
-        transition: 0.2s ease-in;
-        z-index: 3;
-        left: 33.5px;
+        height: 100%;
+        background-color: #7c7c7c;
+        background-image: url("../../../../assets/ModelsMarketing/Image1.png");
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        flex-direction: row;
+        text-align: left;
+        padding: 12px;
+        width: 278px;
+        color: #ddd;
 
-        &.img1,
-        &.img2 {
-          background-repeat: no-repeat;
-          background-size: cover;
-        }
-
-        &.img2 {
-          width: 380px;
-          height: 407px;
-          left: -5.7rem;
-          top: 1.5rem;
-          z-index: 4;
+        .left-image {
+          position: absolute;
+          width: 370px;
+          height: auto;
+          margin-right: 10px;
+          z-index: 2;
+          left: 161px;
+          top: 41px;
         }
       }
     }
-
     .tabs {
       align-items: stretch;
       background-color: #fff;
       border: 1px solid #cfcfcf;
       border-radius: max(10px, 3vw);
-      bottom: 11%;
       display: flex;
-      gap: max(2rem, 4vw);
+      gap: max(2rem, 3.5vw);
       justify-content: space-between;
-      left: -23%;
-      padding: max(0.25rem, 1vw) max(1rem, 3vw);
-      position: absolute;
+      padding: max(0.25rem, 0.8vw) max(1rem, 4vw);
+      position: relative;
       z-index: 5;
-
+      bottom: 30px;
+      right: 101px;
       .tab {
         cursor: pointer;
         display: flex;
@@ -124,12 +112,14 @@
 
         svg {
           color: #808080;
+          width: 17px;
         }
       }
     }
   }
+
   .marketing-textt {
-    font-size: max(13px, 0.85vw);
+    font-size: max(12px, 0.75vw);
     color: #3e3e3e;
   }
 }
@@ -137,7 +127,9 @@
 @media (max-width: 1260px) {
   .home-marketing {
     flex-direction: column;
-    padding: 6% 10%;
+    padding: 10% 10%;
+    align-items: center;
+    gap: max(2rem, 8.5vw);
     .left {
       width: 100%;
       justify-content: center;
@@ -149,24 +141,11 @@
       width: 100%;
       justify-content: center;
       align-items: center;
-
+      display: grid;
       .circleLink {
-        left: 28%;
-        top: 2%;
-      }
-
-      .images {
-        .img {
-          height: max(10rem, 21vw);
-          width: max(7.5rem, 17vw);
-
-          &.img2 {
-            width: max(8rem, 23vw);
-            height: max(8rem, 25vw);
-            left: -3rem;
-            top: 1rem;
-          }
-        }
+        position: relative !important;
+        left: 63px;
+        top: -10% !important;
       }
 
       .tabs {
@@ -176,7 +155,29 @@
     }
   }
 }
-@media (max-width: 600px) {
+@media (max-width: 850px) {
+  .home-marketing {
+    padding: 9% 10%;
+
+    .right {
+      .image-item {
+        height: 245px;
+        .image {
+          width: 212px;
+          .left-image {
+            width: 295px;
+            left: 117px;
+            top: 27px;
+          }
+        }
+      }
+      .circleLink {
+        left: 51px;
+      }
+    }
+  }
+}
+@media (max-width: 650px) {
   .home-marketing {
     .left {
       .marketing-text {
@@ -191,19 +192,19 @@
       }
     }
     .right {
-      .images .img.img2 {
-        width: max(8rem, 36vw);
-        height: max(8rem, 38vw);
-        left: -3rem;
-        top: 1rem;
-      }
-      .images .img {
-        height: max(10rem, 32vw);
-        width: max(7.5rem, 28vw);
+      .image-item {
+        height: 210px;
+        .image {
+          width: 180px;
+          .left-image {
+            width: 255px;
+            left: 100px;
+            top: 22px;
+          }
+        }
       }
       .circleLink {
-        left: 16%;
-        top: 9%;
+        left: 39px;
       }
     }
 
@@ -212,22 +213,37 @@
     }
   }
 }
-@media (max-width: 400px) {
+@media (max-width: 480px) {
   .home-marketing {
     .right {
-      .tabs {
-        gap: max(1rem, 5vw);
-        padding: max(0.5rem, 0vw) max(1rem, 6vw);
+      .image-item {
+        height: 175px;
+        .image {
+          width: 150px;
+          .left-image {
+            width: 210px;
+            left: 85px;
+            top: 19px;
+          }
+        }
       }
+    }
+    .tabs {
+      position: relative !important;
+      left: 21px;
+      top: 0px;
+      width: 84%;
+      .tab svg {
+        width: 13px !important;
+      }
+    }
 
-      .images .img.img2 {
-        width: max(8rem, 48vw);
-        height: max(8rem, 51vw);
-      }
-      .circleLink {
-        left: 7%;
-        top: 7%;
-      }
+    .circleLink {
+      left: 7%;
+      top: 7%;
+    }
+    .marketing-textt {
+      font-size: max(9px, 0.1vw);
     }
   }
 }

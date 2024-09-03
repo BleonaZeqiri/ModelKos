@@ -2,6 +2,8 @@ import React, { useRef } from "react";
 import Carousel from "react-elastic-carousel";
 import { AcademyData } from "../data";
 import "./styles/Academy.scss";
+import { FormattedMessage } from "react-intl";
+import StyledLink from "../../shared/StyledLink/StyledLink";
 
 const Academy = () => {
   const carouselRef = useRef(null);
@@ -11,11 +13,12 @@ const Academy = () => {
       <div className="bg"></div>
       <div className="absolute">
         <h1>
-          Be
+          <FormattedMessage id="home-academy-text1" defaultMessage="Be" />
           <br />
-          a
+          <FormattedMessage id="home-academy-text1" defaultMessage="a" />
+
           <br />
-          model
+          <FormattedMessage id="home-academy-text1" defaultMessage="model" />
         </h1>
       </div>
       <Carousel
@@ -28,11 +31,15 @@ const Academy = () => {
           <div key={index} class="academy-content" tabindex="0">
             {item.icon}
             <p class="def-txt">{item.text}</p>
-            <div className="styledLink">
-              <a className="styledLink white" href={item.link.to}>
-                <p>{item.link.send}</p>
-              </a>
-            </div>
+            <StyledLink
+              to="/"
+              link={
+                <FormattedMessage
+                  id="find-model"
+                  defaultMessage="Join academy"
+                />
+              }
+            />
           </div>
         ))}
       </Carousel>
