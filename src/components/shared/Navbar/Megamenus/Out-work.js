@@ -4,8 +4,14 @@ import { Link } from "react-router-dom";
 import { Our_work1, Our_work2 } from "../data";
 import Carousel from "react-elastic-carousel";
 import "./megamenu.scss";
+import { useSelector } from "react-redux";
+import { translate } from "../../../../translation/translate";
 
 const Our_work = () => {
+  const language = useSelector((state) => state.language.language);
+  const our_work2 = Our_work2(language);
+  const our_work1 = Our_work1(language);
+
   const carouselRef = React.useRef(null);
   const onNextStart = (currentItem, nextItem) => {
     if (currentItem.index === nextItem.index) {
@@ -22,7 +28,7 @@ const Our_work = () => {
     <div className="nav-megamenu ourwork-megamenu">
       <div className="menu-links">
         <div className="inner-links">
-          {Our_work1.map((item, index) => (
+          {our_work1.map((item, index) => (
             <div className="main" key={index}>
               <div className="icon-container">
                 <h3>{item.title}</h3>
@@ -46,11 +52,15 @@ const Our_work = () => {
       <div className="right">
         <div className="models">
           <h4>
-            <FormattedMessage id="models" defaultMessage="Models" />
+            <FormattedMessage
+              id={translate[language].our_work_megamenu_models1}
+            />
           </h4>
-          <p>
-            <FormattedMessage id="view-all" defaultMessage="View All >" />
-          </p>
+          <Link>
+            <FormattedMessage
+              id={translate[language].our_work_megamenu_view_all}
+            />
+          </Link>
         </div>
         <Carousel
           className="slider"
@@ -60,7 +70,7 @@ const Our_work = () => {
           onNextStart={onNextStart}
           disableArrowsOnEnd={false}
         >
-          {Our_work2.map((item) => {
+          {our_work2.map((item) => {
             return (
               <div className="slider-item">
                 <Link to={item.to}>

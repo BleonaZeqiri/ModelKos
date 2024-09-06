@@ -216,6 +216,10 @@
     .text {
       gap: max(0.5rem, 7vw);
     }
+    .rec-arrow-left,
+    .rec-arrow-right {
+      display: none;
+    }
     .PIJXl {
       display: none;
     }

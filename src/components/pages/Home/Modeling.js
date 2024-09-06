@@ -5,24 +5,20 @@ import "./styles/Modeling.scss";
 import image from "../../../assets/Modeling/DayOfModelingText.svg";
 import { ModelingData } from "../data";
 import { FormattedMessage } from "react-intl";
-
+import { translate } from "../../../translation/translate";
+import { useSelector } from "react-redux";
 const Modeling = () => {
   const carouselRef = useRef(null);
+  const language = useSelector((state) => state.language.language);
 
   return (
     <div className="home-modeling">
       <div className="text1">
         <h1 className="title1 outside-background">
-          <FormattedMessage
-            id="home-modeling-title"
-            defaultMessage="THE DAY OF"
-          />
+          <FormattedMessage id={translate[language].modeling_title} />
         </h1>
         <h1 className="title2 outside-background">
-          <FormattedMessage
-            id="home-modeling-title"
-            defaultMessage="modeling"
-          />
+          <FormattedMessage id={translate[language].modeling_title2} />
         </h1>
       </div>
 
@@ -52,16 +48,13 @@ const Modeling = () => {
       </Carousel>
 
       <h1 className="white white1">
-        <FormattedMessage
-          id="home-modeling-title1"
-          defaultMessage="THE DAY OF"
-        />
+        <FormattedMessage id={translate[language].modeling_text1} />
       </h1>
       <h1 className="white white2">
-        <FormattedMessage id="home-modeling-title2" defaultMessage="modeling" />
+        <FormattedMessage id={translate[language].modeling_text2} />
       </h1>
       <h1 className="white white3">
-        <FormattedMessage id="home-modeling-title3" defaultMessage="modelkos" />
+        <FormattedMessage id={translate[language].modeling_text3} />
       </h1>
     </div>
   );

@@ -5,8 +5,12 @@ import { What_we_offerData } from "../data";
 import { Link } from "react-router-dom";
 import { FormattedMessage } from "react-intl";
 import StyledLink from "../../shared/StyledLink/StyledLink";
+import { useSelector } from "react-redux";
+import { translate } from "../../../translation/translate";
 
 const What_we_offer = () => {
+  const language = useSelector((state) => state.language.language);
+
   const [itemsToShow, setItemsToShow] = useState(4);
   const carouselRef = useRef(null);
 
@@ -34,15 +38,12 @@ const What_we_offer = () => {
 
   const onPrevStart = () => {};
   const onNextStart = () => {};
-
+  const what_we_offerData = What_we_offerData(language);
   return (
     <div className="home-what_we_offer">
       <div className="text">
         <h1 className="big-title">
-          <FormattedMessage
-            id="home-banner-text"
-            defaultMessage="What we offer"
-          />
+          <FormattedMessage id={translate[language].what_we_offer_title} />
         </h1>
       </div>
       <Carousel
@@ -52,16 +53,11 @@ const What_we_offer = () => {
         onNextStart={onNextStart}
         disableArrowsOnEnd={false}
       >
-        {What_we_offerData.map((item, index) => (
+        {what_we_offerData.map((item, index) => (
           <div key={index} className="Card">
             <div className="img">
               <div className="bg"></div>
-              <h1>
-                <FormattedMessage
-                  id="home-banner-text"
-                  defaultMessage="Training"
-                />
-              </h1>
+              <h1>{item.course}</h1>
             </div>
             <div className="icon">{item.icon}</div>
             <h3>{item.course}</h3>
@@ -79,7 +75,7 @@ const What_we_offer = () => {
       <StyledLink
         to="/"
         link={
-          <FormattedMessage id="find-model" defaultMessage="See all models" />
+          <FormattedMessage id={translate[language].what_we_offer_see_all} />
         }
       />
     </div>

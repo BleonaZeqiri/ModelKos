@@ -1,22 +1,38 @@
 import React from "react";
 import { ContentData } from "../data";
 import "../Home/styles/Content.scss";
+import { useSelector } from "react-redux";
 
 const Content = () => {
+  const language = useSelector((state) => state.language.language);
+  const contentData = ContentData(language);
+
   return (
     <>
-      {ContentData.map((item, index) => (
+      {contentData.map((item, index) => (
         <div key={index} className="home-content">
-          <img src={item.image2} className="top-line"></img>
+          <div
+            className="top-line"
+            style={{ content: `url(${item.image2})` }}
+          ></div>
 
-          <img src={item.image} alt="Content Image" className="image-logo" />
+          <div
+            className="image-logo"
+            style={{ content: `url(${item.image})` }}
+          ></div>
 
           <div className="text">
-            <img src={item.image1} alt="Content Image 1" />
+            <div
+              className="img"
+              style={{ content: `url(${item.image1})` }}
+            ></div>
             <p className="def-text">{item.text}</p>
           </div>
           <div className="line">
-            <img src={item.image3} className="bottom-line"></img>
+            <div
+              className="bottom-line"
+              style={{ content: `url(${item.image3})` }}
+            ></div>
           </div>
         </div>
       ))}

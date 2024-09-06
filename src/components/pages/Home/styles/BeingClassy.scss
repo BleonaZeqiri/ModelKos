@@ -78,3 +78,8 @@
     font-size: max(14px, 3vw);
   }
 }
+@media (max-width: 320px) {
+  .circleLink {
+    display: none !important;
+  }
+}

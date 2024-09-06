@@ -60,6 +60,7 @@
         left: 7%;
         top: 35%;
         width: fit-content;
+        width: 50%;
       }
 
       .big-title1 {
@@ -67,7 +68,6 @@
         left: 23.5%;
         top: 52%;
         color: #fff !important;
-        width: fit-content;
       }
     }
 
@@ -88,7 +88,7 @@
         z-index: 1;
 
         .icon {
-          img {
+          .img {
             width: 12px;
           }
           svg {
@@ -181,7 +181,7 @@
       z-index: 222;
       top: 162px;
 
-      img {
+      .icon {
         width: 150px;
       }
     }
@@ -194,7 +194,7 @@
       right: 234px;
 
       .inner-img {
-        img {
+        .img-img1 {
           width: 266px;
         }
       }
@@ -207,14 +207,65 @@
       top: 237px;
 
       .inner-img {
-        img {
+        .img-img2 {
           width: 380px;
         }
       }
     }
   }
 }
+@media (min-width: 2650px) {
+  .banner .right .img1 .inner-img .img-img1 {
+    bottom: 89px !important;
+  }
+  .banner .right a {
+    right: 570px !important;
+    top: 200px !important;
+  }
+}
+@media (min-width: 2350px) {
+  .banner .right .img1 .inner-img .img-img1 {
+    position: relative;
+    bottom: 40px;
+  }
+}
+@media (min-width: 2200px) {
+  .banner .left .row {
+    top: 697px !important;
+    left: 188px !important;
+  }
+  .banner .right .img1 {
+    top: 0px;
+  }
+}
+@media (min-width: 1750px) {
+  .banner .left .row {
+    top: 583px;
+    left: 100px;
+  }
 
+  .banner .right .img2 .inner-img .img-img2 {
+    width: 430px;
+    top: 59px;
+    position: relative;
+    left: 81px;
+  }
+  .banner .right .img2 {
+    position: absolute;
+    z-index: 1;
+    right: 87px;
+    top: 237px;
+  }
+  .banner .right .img1 .inner-img .img-img1 {
+    width: 336px;
+  }
+  .banner .right a {
+    position: absolute;
+    right: 517px;
+    z-index: 222;
+    top: 195px;
+  }
+}
 @media (max-width: 1450px) {
   .banner {
     background-position: center;
@@ -254,8 +305,8 @@
   .banner .right .img2 {
     position: absolute;
     z-index: 1;
-    right: 90px;
-    top: 66px;
+    right: 53px;
+    top: 54px;
 
     .inner-img img {
       width: 312px;

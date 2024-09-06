@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+
 import "./styles/Banner.scss";
 import { BannerData1 } from "../data";
 import { FormattedMessage } from "react-intl";
@@ -7,8 +8,11 @@ import { SlLocationPin } from "react-icons/sl";
 import { FaSortDown } from "react-icons/fa";
 import image from "../../../assets/Banner/FemaleModelsInput.svg";
 import image11 from "../../../assets/Banner/HireText1.svg";
-
+import { translate } from "../../../translation/translate";
+import { useSelector } from "react-redux";
 const Banner = () => {
+  const language = useSelector((state) => state.language.language);
+
   const [isOpenModelDropdown, setIsOpenModelDropdown] = useState(false);
   const [isOpenLocationDropdown, setIsOpenLocationDropdown] = useState(false);
 
@@ -29,6 +33,8 @@ const Banner = () => {
     console.log(`Selected Location: ${option}`);
     setIsOpenLocationDropdown(false);
   };
+  const placeholderText = `${translate[language].banner_dropdown_find_location} `;
+  const placeholderText1 = `${translate[language].banner_dropdown_find_Female_models} `;
 
   return (
     <div className="banner">
@@ -43,48 +49,45 @@ const Banner = () => {
         <div className="left">
           <div className="text">
             <h1 className="big-title">
-              <FormattedMessage
-                id="home-banner-text"
-                defaultMessage="Hire a model or"
-              />
+              <FormattedMessage id={translate[language].banner_text} />
             </h1>
             <h1 className="big-title1">
-              <FormattedMessage
-                id="home-banner-text"
-                defaultMessage="become one"
-              />
+              <FormattedMessage id={translate[language].banner_text1} />
             </h1>
           </div>
           <div className="row">
             <div className="input">
               <div className="icon">
-                <img src={image} alt="Female models icon" />
+                <div className="img" style={{ content: `url(${image})` }}></div>
               </div>
-              <input type="text" placeholder="Female Models" />
+              <input type="text" placeholder={placeholderText1} />
               <div className="icon-down" onClick={toggleModelDropdown}>
                 <FaSortDown />
               </div>
               {isOpenModelDropdown && (
                 <div className="dropdown">
                   <ul>
-                    <li onClick={() => handleSelectModel("Female Model")}>
-                      <FormattedMessage
-                        id="home-banner-title"
-                        defaultMessage="Female"
-                      />
-                    </li>
-                    <li onClick={() => handleSelectModel("Male Model")}>
-                      <FormattedMessage
-                        id="home-banner-title"
-                        defaultMessage="Male Model"
-                      />
-                    </li>
-                    <li onClick={() => handleSelectModel("Child Model")}>
-                      <FormattedMessage
-                        id="home-banner-title"
-                        defaultMessage="Models"
-                      />
-                    </li>
+                    <Link>
+                      <li onClick={() => handleSelectModel("Female Model")}>
+                        <FormattedMessage
+                          id={translate[language].banner_dropdown_female}
+                        />
+                      </li>
+                    </Link>
+                    <Link>
+                      <li onClick={() => handleSelectModel("Male Model")}>
+                        <FormattedMessage
+                          id={translate[language].banner_dropdown_male}
+                        />
+                      </li>
+                    </Link>
+                    <Link>
+                      <li onClick={() => handleSelectModel("Models")}>
+                        <FormattedMessage
+                          id={translate[language].banner_dropdown_models}
+                        />
+                      </li>
+                    </Link>
                   </ul>
                 </div>
               )}
@@ -94,40 +97,47 @@ const Banner = () => {
               <div className="icon">
                 <SlLocationPin />
               </div>
-              <input type="text" placeholder="Find location" />
+              <input type="text" placeholder={placeholderText} />
               <div className="icon-down" onClick={toggleLocationDropdown}>
                 <FaSortDown />
               </div>
               {isOpenLocationDropdown && (
                 <div className="dropdown">
                   <ul>
-                    <li onClick={() => handleSelectLocation("Kosovo")}>
-                      <FormattedMessage
-                        id="home-banner-title"
-                        defaultMessage="Kosovo"
-                      />
-                    </li>
-                    <li onClick={() => handleSelectLocation("Albania")}>
-                      <FormattedMessage
-                        id="home-banner-title"
-                        defaultMessage="  Albania"
-                      />
-                    </li>
-                    <li onClick={() => handleSelectLocation("Macedonia")}>
-                      <FormattedMessage
-                        id="home-banner-title"
-                        defaultMessage="  Macedonia"
-                      />
-                    </li>
+                    <Link>
+                      <li onClick={() => handleSelectLocation("Kosovo")}>
+                        <FormattedMessage
+                          id={translate[language].banner_dropdown_Kosovo}
+                        />
+                      </li>
+                    </Link>
+                    <Link>
+                      <li onClick={() => handleSelectLocation("Albania")}>
+                        <FormattedMessage
+                          id={translate[language].banner_dropdown_Albania}
+                        />
+                      </li>
+                    </Link>
+                    <Link>
+                      <li onClick={() => handleSelectLocation("Macedonia")}>
+                        <FormattedMessage
+                          id={translate[language].banner_dropdown_Macedonia}
+                        />
+                      </li>
+                    </Link>
                   </ul>
                 </div>
               )}
             </div>
 
             <button class="styledButton">
-              <p>
-                <FormattedMessage id="find-model" defaultMessage="Find model" />
-              </p>
+              <Link>
+                <p>
+                  <FormattedMessage
+                    id={translate[language].banner_dropdown_find}
+                  />
+                </p>
+              </Link>
             </button>
           </div>
         </div>
@@ -135,16 +145,25 @@ const Banner = () => {
         {BannerData1.map((item, index) => (
           <div className="right" key={index}>
             <Link to="/some-route" className="circleLink">
-              <img src={item.image_1} alt="Interactive link icon" />
+              <div
+                className="icon"
+                style={{ content: `url(${item.image_1})` }}
+              ></div>
             </Link>
             <div className="img1">
               <div className="inner-img">
-                <img src={item.image_2} alt="Banner detail 1" />
+                <div
+                  className="img-img1"
+                  style={{ content: `url(${item.image_2})` }}
+                ></div>
               </div>
             </div>
             <div className="img2">
               <div className="inner-img">
-                <img src={item.image_3} alt="Banner detail 2" />
+                <div
+                  className="img-img2"
+                  style={{ content: `url(${item.image_3})` }}
+                ></div>
               </div>
             </div>
           </div>

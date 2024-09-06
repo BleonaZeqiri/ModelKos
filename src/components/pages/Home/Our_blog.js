@@ -5,8 +5,12 @@ import { FormattedMessage } from "react-intl";
 import "./styles/Our_blog.scss";
 import { Our_workData } from "../data";
 import StyledLink from "../../shared/StyledLink/StyledLink";
+import { translate } from "../../../translation/translate";
+import { useSelector } from "react-redux";
 
 const Our_blog = () => {
+  const language = useSelector((state) => state.language.language);
+
   const [itemsToShow, setItemsToShow] = useState(4);
   const carouselRef = useRef(null);
 
@@ -29,12 +33,13 @@ const Our_blog = () => {
       window.removeEventListener("resize", updateItemsToShow);
     };
   }, []);
+  const our_workData = Our_workData(language);
 
   return (
     <div className="home-our_work">
       <div className="text">
         <h1 className="big-title">
-          <FormattedMessage id="our-blog" defaultMessage="OUR BLOG " />
+          <FormattedMessage id={translate[language].our_blog_title} />
         </h1>
 
         <Carousel
@@ -42,7 +47,7 @@ const Our_blog = () => {
           ref={carouselRef}
           disableArrowsOnEnd={false}
         >
-          {Our_workData.map((item, index) => (
+          {our_workData.map((item, index) => (
             <div className="blogCard" key={index}>
               <div
                 className="img"
@@ -62,9 +67,7 @@ const Our_blog = () => {
         </Carousel>
         <StyledLink
           to="/"
-          link={
-            <FormattedMessage id="find-model" defaultMessage="See all models" />
-          }
+          link={<FormattedMessage id={translate[language].our_blog_read} />}
         />
       </div>
     </div>

@@ -1,25 +1,28 @@
 import React from "react";
 import "./styles/Our_partnerships.scss";
-import { Link } from "react-router-dom";
 import { Our_partnershipsData } from "../data";
 import { FormattedMessage } from "react-intl";
 import StyledLink from "../../shared/StyledLink/StyledLink";
+import { useSelector } from "react-redux";
+import { translate } from "../../../translation/translate";
 
 const Our_partnerships = () => {
+  const language = useSelector((state) => state.language.language);
+  const our_partnershipsData = Our_partnershipsData(language);
   return (
     <div className="home-partnerships">
       <div className="text">
         <h1 className="big-title">
-          <FormattedMessage id="find-model" defaultMessage="Our Partnerships" />
+          <FormattedMessage id={translate[language].Our_partnerships_title} />
         </h1>
       </div>
       <div className="flex">
-        {Our_partnershipsData.map((item, index) => (
+        {our_partnershipsData.map((item, index) => (
           <div className="sharedText" key={index}>
             <div className="logo">
               {item.icon}{" "}
               <span>
-                <FormattedMessage id="find-model" defaultMessage="MediaKos" />
+                <FormattedMessage id="logo" defaultMessage="MediaKos" />
               </span>
             </div>
             <h1>{item.title}</h1>
@@ -29,21 +32,20 @@ const Our_partnerships = () => {
               to="/"
               link={
                 <FormattedMessage
-                  id="find-model"
-                  defaultMessage="See all models"
+                  id={translate[language].Our_partnerships_learn}
                 />
               }
             />
           </div>
         ))}
         <div className="right">
-          {Our_partnershipsData.map((item, index) => (
-            <img
+          {our_partnershipsData.map((item, index) => (
+            <div
               className="img"
-              key={index}
-              src={item.image}
+              style={{ content: `url(${item.image})` }}
               alt={`Partnership ${index}`}
-            />
+              key={index}
+            ></div>
           ))}
         </div>
       </div>

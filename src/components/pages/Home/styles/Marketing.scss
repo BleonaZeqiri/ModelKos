@@ -16,7 +16,7 @@
       font-size: max(25px, 5.2vw);
       font-family: "CustomFont", sans-serif;
       font-weight: 100;
-      line-height: 0;
+      line-height: 1;
     }
 
     .marketing-text {
@@ -244,6 +244,29 @@
     }
     .marketing-textt {
       font-size: max(9px, 0.1vw);
+    }
+  }
+}
+@media (max-width: 340px) {
+  .home-marketing {
+    .right {
+      .image-item {
+        height: 120px;
+        margin-right: 98px;
+        .image {
+          width: 106px;
+          .left-image {
+            width: 140px;
+            left: 63px;
+            top: 11px;
+          }
+        }
+      }
+    }
+    .tabs {
+      gap: max(0.5rem, 0.5vw) !important;
+      width: 100%;
+      left: -12px;
     }
   }
 }

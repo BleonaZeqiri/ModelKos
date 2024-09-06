@@ -1,5 +1,186 @@
 import { FormattedMessage } from "react-intl";
 import { FaTwitter, FaFacebookF, FaInstagram, FaYoutube } from "react-icons/fa";
+import { translate } from "../../../translation/translate";
+export const FooterData = (language) => [
+  {
+    category: <FormattedMessage id={translate[language].footer_models} />,
+    links: [
+      {
+        link: <FormattedMessage id={translate[language].footer_book_model} />,
+        to: "/",
+      },
+      {
+        link: <FormattedMessage id={translate[language].footer_clients} />,
+        to: "/",
+      },
+      {
+        link: <FormattedMessage id={translate[language].footer_woman_models} />,
+        to: "/",
+      },
+      {
+        link: <FormattedMessage id={translate[language].footer_kid_models} />,
+        to: "/",
+      },
+      {
+        link: <FormattedMessage id={translate[language].footer_membership} />,
+        to: "/",
+      },
+    ],
+  },
+  {
+    category: <FormattedMessage id={translate[language].footer_about} />,
+    links: [
+      {
+        link: <FormattedMessage id={translate[language].footer_company} />,
+        to: "/",
+      },
+      {
+        link: <FormattedMessage id={translate[language].footer_our_team} />,
+        to: "/",
+      },
+      {
+        link: <FormattedMessage id={translate[language].footer_partners} />,
+        to: "/",
+      },
+      {
+        link: <FormattedMessage id={translate[language].footer_career} />,
+        to: "/",
+      },
+      {
+        link: <FormattedMessage id={translate[language].footer_news_events} />,
+        to: "/",
+      },
+    ],
+  },
+  {
+    category: <FormattedMessage id={translate[language].footer_work} />,
+    links: [
+      {
+        link: <FormattedMessage id={translate[language].footer_photography} />,
+        to: "/",
+      },
+      {
+        link: <FormattedMessage id={translate[language].footer_design} />,
+        to: "/",
+      },
+      {
+        link: (
+          <FormattedMessage id={translate[language].footer_makeup_artist} />
+        ),
+        to: "/",
+      },
+      {
+        link: <FormattedMessage id={translate[language].footer_fashion_show} />,
+        to: "/",
+      },
+      {
+        link: <FormattedMessage id={translate[language].footer_advertising} />,
+        to: "/",
+      },
+    ],
+  },
+  {
+    category: <FormattedMessage id={translate[language].footer_support} />,
+    links: [
+      {
+        link: (
+          <FormattedMessage id={translate[language].footer_privacy_statement} />
+        ),
+        to: "/",
+      },
+      {
+        link: (
+          <FormattedMessage id={translate[language].footer_terms_of_services} />
+        ),
+        to: "/",
+      },
+      {
+        link: <FormattedMessage id={translate[language].footer_help} />,
+        to: "/",
+      },
+      {
+        link: <FormattedMessage id={translate[language].footer_FAQs} />,
+        to: "/",
+      },
+      {
+        link: <FormattedMessage id={translate[language].footer_contacts} />,
+        to: "/",
+      },
+    ],
+  },
+];
+export const FooterData1 = (language) => [
+  {
+    category: <FormattedMessage id={translate[language].footer_models1} />,
+    find: [
+      {
+        text: <FormattedMessage id={translate[language].footer_women_phone} />,
+      },
+      {
+        text: <FormattedMessage id={translate[language].footer_men_phone} />,
+      },
+      {
+        text: (
+          <FormattedMessage
+            id="footer_email"
+            defaultMessage="bookamodel@modelkos.com"
+          />
+        ),
+      },
+    ],
+  },
+  {
+    category: <FormattedMessage id={translate[language].footer_management} />,
+    find: [
+      {
+        text: <FormattedMessage id={translate[language].footer_floor} />,
+      },
+      {
+        text: (
+          <FormattedMessage id={translate[language].footer_jubilee_place} />
+        ),
+      },
+      {
+        text: (
+          <FormattedMessage
+            id="footer_place"
+            defaultMessage="Prishtina, Kosovo"
+          />
+        ),
+      },
+    ],
+  },
+  {
+    category: <FormattedMessage id={translate[language].footer_jobs} />,
+    find: [
+      {
+        text: <FormattedMessage id="footer_jobs_email" />,
+      },
+    ],
+  },
+];
+
+export const FooterData2 = (language) => [
+  {
+    link: (
+      <FormattedMessage id={translate[language].footer_privacy_statement} />
+    ),
+    to: "/",
+    span: "|",
+  },
+  {
+    link: (
+      <FormattedMessage id={translate[language].footer_terms_of_services} />
+    ),
+    to: "/",
+    span: "|",
+  },
+  {
+    link: <FormattedMessage id={translate[language].footer_help_FAQ} />,
+    id: "footer_help/FAQ",
+    to: "/",
+  },
+];
 
 export const SocialMedia = [
   {
@@ -17,124 +198,5 @@ export const SocialMedia = [
   {
     to: "/",
     icon: <FaTwitter />,
-  },
-];
-
-export const FooterData = [
-  {
-    category: <FormattedMessage id="models" defaultMessage="MODELS" />,
-    links: [
-      {
-        link: <FormattedMessage id="about-us" defaultMessage="Book Model" />,
-        to: "/",
-      },
-      {
-        link: <FormattedMessage id="our-team" defaultMessage="Clients" />,
-        to: "/",
-      },
-      {
-        link: <FormattedMessage id="careers" defaultMessage="Woman Models" />,
-        to: "/",
-      },
-      {
-        link: <FormattedMessage id="our-work" defaultMessage="Kid Models" />,
-        to: "/",
-      },
-      {
-        link: <FormattedMessage id="partners" defaultMessage="Membership" />,
-        to: "/",
-      },
-    ],
-  },
-  {
-    category: <FormattedMessage id="about" defaultMessage="About" />,
-    links: [
-      {
-        link: <FormattedMessage id="brand-design" defaultMessage="Company" />,
-        to: "/",
-      },
-      {
-        link: (
-          <FormattedMessage id="graphic-design" defaultMessage="Our Team" />
-        ),
-        to: "/",
-      },
-      {
-        link: <FormattedMessage id="game-art" defaultMessage=" Partners" />,
-        to: "/",
-      },
-      {
-        link: <FormattedMessage id="3d-art-work" defaultMessage="Career" />,
-        to: "/",
-      },
-      {
-        link: (
-          <FormattedMessage id="animations" defaultMessage="News & Events" />
-        ),
-        to: "/",
-      },
-    ],
-  },
-  {
-    category: <FormattedMessage id="work" defaultMessage="Work" />,
-    links: [
-      {
-        link: <FormattedMessage id="contact-us" defaultMessage="Photography" />,
-        to: "/",
-      },
-      {
-        link: <FormattedMessage id="culture" defaultMessage="Design" />,
-        to: "/",
-      },
-      {
-        link: <FormattedMessage id="blog" defaultMessage="Makeup Artist" />,
-        to: "/",
-      },
-      {
-        link: <FormattedMessage id="press" defaultMessage="Fashion Show" />,
-        to: "/",
-      },
-      {
-        link: <FormattedMessage id="q-a" defaultMessage="Advertising" />,
-        to: "/",
-      },
-    ],
-  },
-  {
-    category: <FormattedMessage id="support" defaultMessage="Support" />,
-    links: [
-      {
-        link: (
-          <FormattedMessage
-            id="user-trust"
-            defaultMessage="Privacy Statement"
-          />
-        ),
-        to: "/",
-      },
-      {
-        link: (
-          <FormattedMessage
-            id="guidelines"
-            defaultMessage="Terms of Services"
-          />
-        ),
-        to: "/",
-      },
-      {
-        link: <FormattedMessage id="privacy-policy" defaultMessage="Help" />,
-        to: "/",
-      },
-      {
-        link: <FormattedMessage id="terms-of-use" defaultMessage="FAQs" />,
-        to: "/",
-      },
-      {
-        link: (
-          <FormattedMessage id="responsibility" defaultMessage="Contacts" />
-        ),
-        to: "/",
-      },
-    ],
   },
 ];

@@ -1,24 +1,12 @@
+import { FormattedMessage } from "react-intl";
+import { translate } from "../../translation/translate";
+
 import image1 from "../../assets/AboutUs-section/DeaGashi.png";
 import image2 from "../../assets/AboutUs-section/BlertaBerisha.png";
 //banner
 import image4 from "../../assets/Banner/Image2.png";
 import image3 from "../../assets/Banner/Imag1.png";
 import image11 from "../../assets/Banner/Text.svg";
-
-// models
-import model1 from "../../assets/OurModels/Model1.png";
-import model2 from "../../assets/OurModels/Model10.png";
-import model3 from "../../assets/OurModels/Model11.png";
-import model4 from "../../assets/OurModels/Model2.png";
-import model5 from "../../assets/OurModels/Model3.png";
-import model6 from "../../assets/OurModels/Model4.png";
-import model7 from "../../assets/OurModels/Model5.png";
-import model8 from "../../assets/OurModels/Model6.png";
-import model9 from "../../assets/OurModels/Model7.png";
-import model11 from "../../assets/OurModels/Model8.png";
-import model10 from "../../assets/OurModels/Model9.png";
-import modelText from "../../assets/OurModels/ModelText.svg";
-import { FaTwitter, FaFacebookF, FaInstagram, FaTiktok } from "react-icons/fa";
 
 //Modeling
 import modeling1 from "../../assets/Modeling/Imag1.png";
@@ -85,63 +73,191 @@ import { ReactComponent as SubscribeIcon } from "../../assets/Subscribe/icon.svg
 export const BannerData1 = [
   { image_1: image11, image_2: image3, image_3: image4 },
 ];
-export const AboutUsData = [
+export const AboutUsData = (language) => [
   {
     to: "/",
     img: image1,
     name: "Albina Myrtezaj",
-    about: [{ name: "Model" }, { name: "Photography" }, { name: "Artist" }],
+    about: [
+      {
+        name: <FormattedMessage id={translate[language].about_models_name1} />,
+      },
+      {
+        name: (
+          <FormattedMessage
+            id={translate[language].about_models_photography1}
+          />
+        ),
+      },
+      {
+        name: (
+          <FormattedMessage id={translate[language].about_models_artist1} />
+        ),
+      },
+    ],
     date: "19 may 2022",
   },
   {
     to: "/",
     img: image1,
     name: "Klea Gashi",
-    about: [{ name: "Model" }, { name: "Photography" }, { name: "Artist" }],
+    about: [
+      {
+        name: <FormattedMessage id={translate[language].about_models_name2} />,
+      },
+      {
+        name: (
+          <FormattedMessage
+            id={translate[language].about_models_photography2}
+          />
+        ),
+      },
+      {
+        name: (
+          <FormattedMessage id={translate[language].about_models_artist2} />
+        ),
+      },
+    ],
     date: "19 may 2022",
   },
   {
     to: "/",
     img: image1,
     name: "Arta Kalluri",
-    about: [{ name: "Model" }, { name: "Photography" }, { name: "Artist" }],
+    about: [
+      {
+        name: <FormattedMessage id={translate[language].about_models_name3} />,
+      },
+      {
+        name: (
+          <FormattedMessage
+            id={translate[language].about_models_photography3}
+          />
+        ),
+      },
+      {
+        name: (
+          <FormattedMessage id={translate[language].about_models_artist3} />
+        ),
+      },
+    ],
     date: "19 may 2022",
   },
   {
     to: "/",
     img: image1,
     name: "Blina Beka",
-    about: [{ name: "Model" }, { name: "Photography" }, { name: "Artist" }],
+    about: [
+      {
+        name: <FormattedMessage id={translate[language].about_models_name4} />,
+      },
+      {
+        name: (
+          <FormattedMessage
+            id={translate[language].about_models_photography4}
+          />
+        ),
+      },
+      {
+        name: (
+          <FormattedMessage id={translate[language].about_models_artist4} />
+        ),
+      },
+    ],
     date: "19 may 2022",
   },
 ];
-export const AboutUsData2 = [
+export const AboutUsData2 = (language) => [
   {
     to: "/",
     img: image2,
     name: "Blina Beka",
-    about: [{ name: "Model" }, { name: "Photography" }, { name: "Artist" }],
+    about: [
+      {
+        name: <FormattedMessage id={translate[language].about_models_name5} />,
+      },
+      {
+        name: (
+          <FormattedMessage
+            id={translate[language].about_models_photography5}
+          />
+        ),
+      },
+      {
+        name: (
+          <FormattedMessage id={translate[language].about_models_artist5} />
+        ),
+      },
+    ],
     date: "19 may 2022",
   },
   {
     to: "/",
     img: image2,
     name: "Alora Gojani",
-    about: [{ name: "Model" }, { name: "Photography" }, { name: "Artist" }],
+    about: [
+      {
+        name: <FormattedMessage id={translate[language].about_models_name6} />,
+      },
+      {
+        name: (
+          <FormattedMessage
+            id={translate[language].about_models_photography6}
+          />
+        ),
+      },
+      {
+        name: (
+          <FormattedMessage id={translate[language].about_models_artist6} />
+        ),
+      },
+    ],
     date: "19 may 2022",
   },
   {
     to: "/",
     img: image2,
     name: "Anila Xhaferi",
-    about: [{ name: "Model" }, { name: "Photography" }, { name: "Artist" }],
+    about: [
+      {
+        name: <FormattedMessage id={translate[language].about_models_name7} />,
+      },
+      {
+        name: (
+          <FormattedMessage
+            id={translate[language].about_models_photography7}
+          />
+        ),
+      },
+      {
+        name: (
+          <FormattedMessage id={translate[language].about_models_artist7} />
+        ),
+      },
+    ],
     date: "19 may 2022",
   },
   {
     to: "/",
     img: image2,
     name: "Anisa Xhaferi",
-    about: [{ name: "Model" }, { name: "Photography" }, { name: "Artist" }],
+    about: [
+      {
+        name: <FormattedMessage id={translate[language].about_models_name8} />,
+      },
+      {
+        name: (
+          <FormattedMessage
+            id={translate[language].about_models_photography8}
+          />
+        ),
+      },
+      {
+        name: (
+          <FormattedMessage id={translate[language].about_models_artist8} />
+        ),
+      },
+    ],
     date: "19 may 2022",
   },
 ];
@@ -161,446 +277,640 @@ export const ModelingData = [
   },
 ];
 
-export const ModelsData = [
-  {
-    name: "Any",
-    models: [
-      {
-        image: model1,
-        name: "Anda Lleshi",
-        paragraph1: "Height 5'10\"",
-        paragraph2: 'Bust 34"A',
-        paragraph3: 'Waist 24"',
-        paragraph4: 'Hips 34"',
-        paragraph5: "Dress 2 US",
-        paragraph6: "Shoe 8 Us",
-        paragraph7: "Hair Dark Blonde",
-        paragraph8: "Eyes Brown",
-        socialMedia: [
-          {
-            to: "/",
-            icon: <FaFacebookF />,
-          },
+// export const ModelsData = (language) => [
+//   {
+//     name: <FormattedMessage id={translate[language].about_models_tab_name1} />,
 
-          {
-            to: "/",
-            icon: <FaInstagram />,
-          },
-          {
-            to: "/",
-            icon: <FaTiktok />,
-          },
-          {
-            to: "/",
-            icon: <FaTwitter />,
-          },
-        ],
-      },
-      {
-        image: model7,
-        name: "Anila Xhaferi",
-        paragraph1: "Height 5'10\"",
-        paragraph2: 'Bust 34"A',
-        paragraph3: 'Waist 24"',
-        paragraph4: 'Hips 34"',
-        paragraph5: "Dress 2 US",
-        paragraph6: "Shoe 8 US",
-        paragraph7: "Hair Dark Blonde",
-        paragraph8: "Eyes Brown",
-        socialMedia: [
-          {
-            to: "/",
-            icon: <FaFacebookF />,
-          },
+//     models: [
+//       {
+//         image: model1,
+//         name: "Anda Lleshi",
+//         paragraph1: (
+//           <FormattedMessage id={translate[language].about_models_tab_height1} />
+//         ),
+//         paragraph2: (
+//           <FormattedMessage id={translate[language].about_models_tab_bust1} />
+//         ),
+//         paragraph3: (
+//           <FormattedMessage id={translate[language].about_models_tab_waist1} />
+//         ),
+//         paragraph4: (
+//           <FormattedMessage id={translate[language].about_models_tab_hips1} />
+//         ),
+//         paragraph5: (
+//           <FormattedMessage id={translate[language].about_models_tab_dress1} />
+//         ),
+//         paragraph6: (
+//           <FormattedMessage id={translate[language].about_models_tab_shoe1} />
+//         ),
+//         paragraph7: (
+//           <FormattedMessage id={translate[language].about_models_tab_hair1} />
+//         ),
+//         paragraph8: (
+//           <FormattedMessage id={translate[language].about_models_tab_eyes1} />
+//         ),
+//         socialMedia: [
+//           {
+//             to: "/",
+//             icon: <FaFacebookF />,
+//           },
 
-          {
-            to: "/",
-            icon: <FaInstagram />,
-          },
-          {
-            to: "/",
-            icon: <FaTiktok />,
-          },
-          {
-            to: "/",
-            icon: <FaTwitter />,
-          },
-        ],
-      },
+//           {
+//             to: "/",
+//             icon: <FaInstagram />,
+//           },
+//           {
+//             to: "/",
+//             icon: <FaTiktok />,
+//           },
+//           {
+//             to: "/",
+//             icon: <FaTwitter />,
+//           },
+//         ],
+//       },
+//       {
+//         image: model7,
+//         name: "Anila Xhaferi",
+//         paragraph1: (
+//           <FormattedMessage id={translate[language].about_models_tab_height2} />
+//         ),
+//         paragraph2: (
+//           <FormattedMessage id={translate[language].about_models_tab_bust2} />
+//         ),
+//         paragraph3: (
+//           <FormattedMessage id={translate[language].about_models_tab_waist2} />
+//         ),
+//         paragraph4: (
+//           <FormattedMessage id={translate[language].about_models_tab_hips2} />
+//         ),
+//         paragraph5: (
+//           <FormattedMessage id={translate[language].about_models_tab_dress2} />
+//         ),
+//         paragraph6: (
+//           <FormattedMessage id={translate[language].about_models_tab_shoe2} />
+//         ),
+//         paragraph7: (
+//           <FormattedMessage id={translate[language].about_models_tab_hair2} />
+//         ),
+//         paragraph8: (
+//           <FormattedMessage id={translate[language].about_models_tab_eyes2} />
+//         ),
+//         socialMedia: [
+//           {
+//             to: "/",
+//             icon: <FaFacebookF />,
+//           },
 
-      {
-        image: model10,
+//           {
+//             to: "/",
+//             icon: <FaInstagram />,
+//           },
+//           {
+//             to: "/",
+//             icon: <FaTiktok />,
+//           },
+//           {
+//             to: "/",
+//             icon: <FaTwitter />,
+//           },
+//         ],
+//       },
 
-        name: "Blerta Salihu",
-        paragraph1: "Height 5'10\"",
-        paragraph2: 'Bust 34"A',
-        paragraph3: 'Waist 24"',
-        paragraph4: 'Hips 34"',
-        paragraph5: "Dress 2 US",
-        paragraph6: "Shoe 8 Us",
-        paragraph7: "Hair Dark Blonde",
-        paragraph8: "Eyes Brown ",
-        socialMedia: [
-          {
-            to: "/",
-            icon: <FaFacebookF />,
-          },
+//       {
+//         image: model10,
 
-          {
-            to: "/",
-            icon: <FaInstagram />,
-          },
-          {
-            to: "/",
-            icon: <FaTiktok />,
-          },
-          {
-            to: "/",
-            icon: <FaTwitter />,
-          },
-        ],
-      },
-    ],
-    models1: [
-      {
-        image: model4,
+//         name: "Blerta Salihu",
+//         paragraph1: (
+//           <FormattedMessage id={translate[language].about_models_tab_height3} />
+//         ),
+//         paragraph2: (
+//           <FormattedMessage id={translate[language].about_models_tab_bust3} />
+//         ),
+//         paragraph3: (
+//           <FormattedMessage id={translate[language].about_models_tab_waist3} />
+//         ),
+//         paragraph4: (
+//           <FormattedMessage id={translate[language].about_models_tab_hips3} />
+//         ),
+//         paragraph5: (
+//           <FormattedMessage id={translate[language].about_models_tab_dress3} />
+//         ),
+//         paragraph6: (
+//           <FormattedMessage id={translate[language].about_models_tab_shoe3} />
+//         ),
+//         paragraph7: (
+//           <FormattedMessage id={translate[language].about_models_tab_hair3} />
+//         ),
+//         paragraph8: (
+//           <FormattedMessage id={translate[language].about_models_tab_eyes3} />
+//         ),
+//         socialMedia: [
+//           {
+//             to: "/",
+//             icon: <FaFacebookF />,
+//           },
 
-        name: "Drianda Lakna",
-        paragraph1: "Height 5'10\"",
-        paragraph2: 'Bust 34"A',
-        paragraph3: 'Waist 24"',
-        paragraph4: 'Hips 34"',
-        paragraph5: "Dress 2 US",
-        paragraph6: "Shoe 8 Us",
-        paragraph7: "Hair Dark Blonde",
-        paragraph8: "Eyes Brown ",
-        socialMedia: [
-          {
-            to: "/",
-            icon: <FaFacebookF />,
-          },
+//           {
+//             to: "/",
+//             icon: <FaInstagram />,
+//           },
+//           {
+//             to: "/",
+//             icon: <FaTiktok />,
+//           },
+//           {
+//             to: "/",
+//             icon: <FaTwitter />,
+//           },
+//         ],
+//       },
+//     ],
+//     models1: [
+//       {
+//         image: model4,
 
-          {
-            to: "/",
-            icon: <FaInstagram />,
-          },
-          {
-            to: "/",
-            icon: <FaTiktok />,
-          },
-          {
-            to: "/",
-            icon: <FaTwitter />,
-          },
-        ],
-      },
-      {
-        image: model8,
+//         name: "Drianda Lakna",
+//         paragraph1: (
+//           <FormattedMessage id={translate[language].about_models_tab_height4} />
+//         ),
+//         paragraph2: (
+//           <FormattedMessage id={translate[language].about_models_tab_bust4} />
+//         ),
+//         paragraph3: (
+//           <FormattedMessage id={translate[language].about_models_tab_waist4} />
+//         ),
+//         paragraph4: (
+//           <FormattedMessage id={translate[language].about_models_tab_hips4} />
+//         ),
+//         paragraph5: (
+//           <FormattedMessage id={translate[language].about_models_tab_dress4} />
+//         ),
+//         paragraph6: (
+//           <FormattedMessage id={translate[language].about_models_tab_shoe4} />
+//         ),
+//         paragraph7: (
+//           <FormattedMessage id={translate[language].about_models_tab_hair4} />
+//         ),
+//         paragraph8: (
+//           <FormattedMessage id={translate[language].about_models_tab_eyes4} />
+//         ),
+//         socialMedia: [
+//           {
+//             to: "/",
+//             icon: <FaFacebookF />,
+//           },
 
-        name: "Albina Myrtezaj",
-        paragraph1: "Height 5'10\"",
-        paragraph2: 'Bust 34"A',
-        paragraph3: 'Waist 24"',
-        paragraph4: 'Hips 34"',
-        paragraph5: "Dress 2 US",
-        paragraph6: "Shoe 8 Us",
-        paragraph7: "Hair Dark Blonde",
-        paragraph8: "Eyes Brown ",
-        socialMedia: [
-          {
-            to: "/",
-            icon: <FaFacebookF />,
-          },
+//           {
+//             to: "/",
+//             icon: <FaInstagram />,
+//           },
+//           {
+//             to: "/",
+//             icon: <FaTiktok />,
+//           },
+//           {
+//             to: "/",
+//             icon: <FaTwitter />,
+//           },
+//         ],
+//       },
+//       {
+//         image: model8,
 
-          {
-            to: "/",
-            icon: <FaInstagram />,
-          },
-          {
-            to: "/",
-            icon: <FaTiktok />,
-          },
-          {
-            to: "/",
-            icon: <FaTwitter />,
-          },
-        ],
-      },
-      {
-        image: model2,
+//         name: "Albina Myrtezaj",
+//         paragraph1: (
+//           <FormattedMessage id={translate[language].about_models_tab_height5} />
+//         ),
+//         paragraph2: (
+//           <FormattedMessage id={translate[language].about_models_tab_bust5} />
+//         ),
+//         paragraph3: (
+//           <FormattedMessage id={translate[language].about_models_tab_waist5} />
+//         ),
+//         paragraph4: (
+//           <FormattedMessage id={translate[language].about_models_tab_hips5} />
+//         ),
+//         paragraph5: (
+//           <FormattedMessage id={translate[language].about_models_tab_dress5} />
+//         ),
+//         paragraph6: (
+//           <FormattedMessage id={translate[language].about_models_tab_shoe5} />
+//         ),
+//         paragraph7: (
+//           <FormattedMessage id={translate[language].about_models_tab_hair5} />
+//         ),
+//         paragraph8: (
+//           <FormattedMessage id={translate[language].about_models_tab_eyes5} />
+//         ),
+//         socialMedia: [
+//           {
+//             to: "/",
+//             icon: <FaFacebookF />,
+//           },
 
-        name: "Iliada Sadriu",
-        paragraph1: "Height 5'10\"",
-        paragraph2: 'Bust 34"A',
-        paragraph3: 'Waist 24"',
-        paragraph4: 'Hips 34"',
-        paragraph5: "Dress 2 US",
-        paragraph6: "Shoe 8 Us",
-        paragraph7: "Hair Dark Blonde",
-        paragraph8: "Eyes Brown ",
-        socialMedia: [
-          {
-            to: "/",
-            icon: <FaFacebookF />,
-          },
+//           {
+//             to: "/",
+//             icon: <FaInstagram />,
+//           },
+//           {
+//             to: "/",
+//             icon: <FaTiktok />,
+//           },
+//           {
+//             to: "/",
+//             icon: <FaTwitter />,
+//           },
+//         ],
+//       },
+//       {
+//         image: model2,
 
-          {
-            to: "/",
-            icon: <FaInstagram />,
-          },
-          {
-            to: "/",
-            icon: <FaTiktok />,
-          },
-          {
-            to: "/",
-            icon: <FaTwitter />,
-          },
-        ],
-      },
-    ],
-    models2: [
-      {
-        image: model5,
+//         name: "Iliada Sadriu",
+//         paragraph1: (
+//           <FormattedMessage id={translate[language].about_models_tab_height6} />
+//         ),
+//         paragraph2: (
+//           <FormattedMessage id={translate[language].about_models_tab_bust6} />
+//         ),
+//         paragraph3: (
+//           <FormattedMessage id={translate[language].about_models_tab_waist6} />
+//         ),
+//         paragraph4: (
+//           <FormattedMessage id={translate[language].about_models_tab_hips6} />
+//         ),
+//         paragraph5: (
+//           <FormattedMessage id={translate[language].about_models_tab_dress6} />
+//         ),
+//         paragraph6: (
+//           <FormattedMessage id={translate[language].about_models_tab_shoe6} />
+//         ),
+//         paragraph7: (
+//           <FormattedMessage id={translate[language].about_models_tab_hair6} />
+//         ),
+//         paragraph8: (
+//           <FormattedMessage id={translate[language].about_models_tab_eyes7} />
+//         ),
+//         socialMedia: [
+//           {
+//             to: "/",
+//             icon: <FaFacebookF />,
+//           },
 
-        name: "Klea Gashi",
-        paragraph1: "Height 5'10\"",
-        paragraph2: 'Bust 34"A',
-        paragraph3: 'Waist 24"',
-        paragraph4: 'Hips 34"',
-        paragraph5: "Dress 2 US",
-        paragraph6: "Shoe 8 Us",
-        paragraph7: "Hair Dark Blonde",
-        paragraph8: "Eyes Brown ",
-        socialMedia: [
-          {
-            to: "/",
-            icon: <FaFacebookF />,
-          },
-          {
-            to: "/",
-            icon: <FaInstagram />,
-          },
-          {
-            to: "/",
-            icon: <FaTiktok />,
-          },
-          {
-            to: "/",
-            icon: <FaTwitter />,
-          },
-        ],
-      },
-      {
-        image: model9,
+//           {
+//             to: "/",
+//             icon: <FaInstagram />,
+//           },
+//           {
+//             to: "/",
+//             icon: <FaTiktok />,
+//           },
+//           {
+//             to: "/",
+//             icon: <FaTwitter />,
+//           },
+//         ],
+//       },
+//     ],
+//     models2: [
+//       {
+//         image: model5,
 
-        name: "Drenusha Qaza",
-        paragraph1: "Height 5'10\"",
-        paragraph2: 'Bust 34"A',
-        paragraph3: 'Waist 24"',
-        paragraph4: 'Hips 34"',
-        paragraph5: "Dress 2 US",
-        paragraph6: "Shoe 8 Us",
-        paragraph7: "Hair Dark Blonde",
-        paragraph8: "Eyes Brown ",
-        socialMedia: [
-          {
-            to: "/",
-            icon: <FaFacebookF />,
-          },
+//         name: "Klea Gashi",
+//         paragraph1: (
+//           <FormattedMessage id={translate[language].about_models_tab_height7} />
+//         ),
+//         paragraph2: (
+//           <FormattedMessage id={translate[language].about_models_tab_bust7} />
+//         ),
+//         paragraph3: (
+//           <FormattedMessage id={translate[language].about_models_tab_waist7} />
+//         ),
+//         paragraph4: (
+//           <FormattedMessage id={translate[language].about_models_tab_hips7} />
+//         ),
+//         paragraph5: (
+//           <FormattedMessage id={translate[language].about_models_tab_dress7} />
+//         ),
+//         paragraph6: (
+//           <FormattedMessage id={translate[language].about_models_tab_shoe7} />
+//         ),
+//         paragraph7: (
+//           <FormattedMessage id={translate[language].about_models_tab_hair7} />
+//         ),
+//         paragraph8: (
+//           <FormattedMessage id={translate[language].about_models_tab_eyes7} />
+//         ),
+//         socialMedia: [
+//           {
+//             to: "/",
+//             icon: <FaFacebookF />,
+//           },
+//           {
+//             to: "/",
+//             icon: <FaInstagram />,
+//           },
+//           {
+//             to: "/",
+//             icon: <FaTiktok />,
+//           },
+//           {
+//             to: "/",
+//             icon: <FaTwitter />,
+//           },
+//         ],
+//       },
+//       {
+//         image: model9,
 
-          {
-            to: "/",
-            icon: <FaInstagram />,
-          },
-          {
-            to: "/",
-            icon: <FaTiktok />,
-          },
-          {
-            to: "/",
-            icon: <FaTwitter />,
-          },
-        ],
-      },
-      {
-        model_title: "Want to be here?",
-        paragraph:
-          "ModelKos is seeking new talent, so join the largest modeling agency in Kosovo and show off your skills. Be a model!",
-        icon: modelText,
-      },
-    ],
-    models3: [
-      {
-        image: model6,
+//         name: "Drenusha Qaza",
+//         paragraph1: (
+//           <FormattedMessage id={translate[language].about_models_tab_height8} />
+//         ),
+//         paragraph2: (
+//           <FormattedMessage id={translate[language].about_models_tab_bust8} />
+//         ),
+//         paragraph3: (
+//           <FormattedMessage id={translate[language].about_models_tab_waist8} />
+//         ),
+//         paragraph4: (
+//           <FormattedMessage id={translate[language].about_models_tab_hips8} />
+//         ),
+//         paragraph5: (
+//           <FormattedMessage id={translate[language].about_models_tab_dress8} />
+//         ),
+//         paragraph6: (
+//           <FormattedMessage id={translate[language].about_models_tab_shoe8} />
+//         ),
+//         paragraph7: (
+//           <FormattedMessage id={translate[language].about_models_tab_hair8} />
+//         ),
+//         paragraph8: (
+//           <FormattedMessage id={translate[language].about_models_tab_eyes8} />
+//         ),
+//         socialMedia: [
+//           {
+//             to: "/",
+//             icon: <FaFacebookF />,
+//           },
 
-        name: "Arta Kalludra",
-        paragraph1: "Height 5'10\"",
-        paragraph2: 'Bust 34"A',
-        paragraph3: 'Waist 24"',
-        paragraph4: 'Hips 34"',
-        paragraph5: "Dress 2 US",
-        paragraph6: "Shoe 8 Us",
-        paragraph7: "Hair Dark Blonde",
-        paragraph8: "Eyes Brown ",
-        socialMedia: [
-          {
-            to: "/",
-            icon: <FaFacebookF />,
-          },
+//           {
+//             to: "/",
+//             icon: <FaInstagram />,
+//           },
+//           {
+//             to: "/",
+//             icon: <FaTiktok />,
+//           },
+//           {
+//             to: "/",
+//             icon: <FaTwitter />,
+//           },
+//         ],
+//       },
+//       {
+//         model_title: "Want to be here?",
+//         paragraph:
+//           "ModelKos is seeking new talent, so join the largest modeling agency in Kosovo and show off your skills. Be a model!",
+//         icon: modelText,
+//       },
+//     ],
+//     models3: [
+//       {
+//         image: model6,
 
-          {
-            to: "/",
-            icon: <FaInstagram />,
-          },
-          {
-            to: "/",
-            icon: <FaTiktok />,
-          },
-          {
-            to: "/",
-            icon: <FaTwitter />,
-          },
-        ],
-      },
-      {
-        image: model11,
+//         name: "Arta Kalludra",
+//         paragraph1: (
+//           <FormattedMessage id={translate[language].about_models_tab_height9} />
+//         ),
+//         paragraph2: (
+//           <FormattedMessage id={translate[language].about_models_tab_bust9} />
+//         ),
+//         paragraph3: (
+//           <FormattedMessage id={translate[language].about_models_tab_waist9} />
+//         ),
+//         paragraph4: (
+//           <FormattedMessage id={translate[language].about_models_tab_hips9} />
+//         ),
+//         paragraph5: (
+//           <FormattedMessage id={translate[language].about_models_tab_dress9} />
+//         ),
+//         paragraph6: (
+//           <FormattedMessage id={translate[language].about_models_tab_shoe9} />
+//         ),
+//         paragraph7: (
+//           <FormattedMessage id={translate[language].about_models_tab_hair9} />
+//         ),
+//         paragraph8: (
+//           <FormattedMessage id={translate[language].about_models_tab_eyes9} />
+//         ),
+//         socialMedia: [
+//           {
+//             to: "/",
+//             icon: <FaFacebookF />,
+//           },
 
-        name: "Klesta Trifoni",
-        paragraph1: "Height 5'10\"",
-        paragraph2: 'Bust 34"A',
-        paragraph3: 'Waist 24"',
-        paragraph4: 'Hips 34"',
-        paragraph5: "Dress 2 US",
-        paragraph6: "Shoe 8 Us",
-        paragraph7: "Hair Dark Blonde",
-        paragraph8: "Eyes Brown ",
-        socialMedia: [
-          {
-            to: "/",
-            icon: <FaFacebookF />,
-          },
+//           {
+//             to: "/",
+//             icon: <FaInstagram />,
+//           },
+//           {
+//             to: "/",
+//             icon: <FaTiktok />,
+//           },
+//           {
+//             to: "/",
+//             icon: <FaTwitter />,
+//           },
+//         ],
+//       },
+//       {
+//         image: model11,
 
-          {
-            to: "/",
-            icon: <FaInstagram />,
-          },
-          {
-            to: "/",
-            icon: <FaTiktok />,
-          },
-          {
-            to: "/",
-            icon: <FaTwitter />,
-          },
-        ],
-      },
-      {
-        image: model3,
+//         name: "Klesta Trifoni",
+//         paragraph1: (
+//           <FormattedMessage
+//             id={translate[language].about_models_tab_height10}
+//           />
+//         ),
+//         paragraph2: (
+//           <FormattedMessage id={translate[language].about_models_tab_bust10} />
+//         ),
+//         paragraph3: (
+//           <FormattedMessage id={translate[language].about_models_tab_waist10} />
+//         ),
+//         paragraph4: (
+//           <FormattedMessage id={translate[language].about_models_tab_hips10} />
+//         ),
+//         paragraph5: (
+//           <FormattedMessage id={translate[language].about_models_tab_dress10} />
+//         ),
+//         paragraph6: (
+//           <FormattedMessage id={translate[language].about_models_tab_shoe10} />
+//         ),
+//         paragraph7: (
+//           <FormattedMessage id={translate[language].about_models_tab_hair10} />
+//         ),
+//         paragraph8: (
+//           <FormattedMessage id={translate[language].about_models_tab_eyes10} />
+//         ),
+//         socialMedia: [
+//           {
+//             to: "/",
+//             icon: <FaFacebookF />,
+//           },
 
-        name: "Melinda Ademi",
-        paragraph1: "Height 5'10\"",
-        paragraph2: 'Bust 34"A',
-        paragraph3: 'Waist 24"',
-        paragraph4: 'Hips 34"',
-        paragraph5: "Dress 2 US",
-        paragraph6: "Shoe 8 Us",
-        paragraph7: "Hair Dark Blonde",
-        paragraph8: "Eyes Brown ",
-        socialMedia: [
-          {
-            to: "/",
-            icon: <FaFacebookF />,
-          },
+//           {
+//             to: "/",
+//             icon: <FaInstagram />,
+//           },
+//           {
+//             to: "/",
+//             icon: <FaTiktok />,
+//           },
+//           {
+//             to: "/",
+//             icon: <FaTwitter />,
+//           },
+//         ],
+//       },
+//       {
+//         image: model3,
 
-          {
-            to: "/",
-            icon: <FaInstagram />,
-          },
-          {
-            to: "/",
-            icon: <FaTiktok />,
-          },
-          {
-            to: "/",
-            icon: <FaTwitter />,
-          },
-        ],
-      },
-    ],
-  },
-  {
-    name: "Kids",
-    models: [],
-  },
-  {
-    name: "Female",
-    models: [],
-  },
-  {
-    name: "Male",
-    models: [],
-  },
-  {
-    name: "Mature",
-    models: [],
-  },
-];
+//         name: "Melinda Ademi",
+//         paragraph1: (
+//           <FormattedMessage
+//             id={translate[language].about_models_tab_height10}
+//           />
+//         ),
+//         paragraph2: (
+//           <FormattedMessage id={translate[language].about_models_tab_bust11} />
+//         ),
+//         paragraph3: (
+//           <FormattedMessage id={translate[language].about_models_tab_waist11} />
+//         ),
+//         paragraph4: (
+//           <FormattedMessage id={translate[language].about_models_tab_hips11} />
+//         ),
+//         paragraph5: (
+//           <FormattedMessage id={translate[language].about_models_tab_dress11} />
+//         ),
+//         paragraph6: (
+//           <FormattedMessage id={translate[language].about_models_tab_shoe11} />
+//         ),
+//         paragraph7: (
+//           <FormattedMessage id={translate[language].about_models_tab_hair11} />
+//         ),
+//         paragraph8: (
+//           <FormattedMessage id={translate[language].about_models_tab_eyes11} />
+//         ),
+//         socialMedia: [
+//           {
+//             to: "/",
+//             icon: <FaFacebookF />,
+//           },
 
-export const MarketingData1 = [
+//           {
+//             to: "/",
+//             icon: <FaInstagram />,
+//           },
+//           {
+//             to: "/",
+//             icon: <FaTiktok />,
+//           },
+//           {
+//             to: "/",
+//             icon: <FaTwitter />,
+//           },
+//         ],
+//       },
+//     ],
+//   },
+//   {
+//     name: <FormattedMessage id={translate[language].about_models_tab_name2} />,
+
+//     models: [],
+//   },
+//   {
+//     name: <FormattedMessage id={translate[language].about_models_tab_name3} />,
+
+//     models: [],
+//   },
+//   {
+//     name: <FormattedMessage id={translate[language].about_models_tab_name4} />,
+
+//     models: [],
+//   },
+//   {
+//     name: <FormattedMessage id={translate[language].about_models_tab_name5} />,
+
+//     models: [],
+//   },
+// ];
+
+export const MarketingData1 = (language) => [
   {
     number: "500,000+",
-    name: "Portfolio Images",
+    name: <FormattedMessage id={translate[language].marketing_portfolio} />,
   },
   {
     number: "520,000+",
-    name: "Featured Talents",
+    name: <FormattedMessage id={translate[language].marketing_featured} />,
   },
   {
     number: "100M",
-    name: "Visits",
+    name: <FormattedMessage id={translate[language].marketing_visits} />,
   },
 ];
 
-export const MarketingData3 = [
+export const MarketingData3 = (language) => [
   {
     icon: <Marketingsearch />,
-    title: "Search",
+    title: <FormattedMessage id={translate[language].marketing_search} />,
   },
   {
     icon: <Marketingclock />,
-    title: "Book",
+    title: <FormattedMessage id={translate[language].marketing_book} />,
   },
   {
     icon: <Marketingschedule />,
 
-    title: "Schedule",
+    title: <FormattedMessage id={translate[language].marketing_schedule} />,
   },
   {
     icon: <Marketingbag />,
-    title: "Work with us",
+    title: <FormattedMessage id={translate[language].marketing_work_with_us} />,
   },
 ];
 export const BeingClassyData = [{ image1: BeingClassy1, image2: BeingClassy2 }];
-export const ModelsSliderData = [
+export const ModelsSliderData = (language) => [
   {
-    name: "All",
+    cls: "tab1",
     models: [
       {
         image: ModelsSlider1,
-        profession: "Model",
+        profession: (
+          <FormattedMessage id={translate[language].modelsSlider_profession1} />
+        ),
         name: "Anila Canolli",
-        time: "$150 / hour",
+        time: <FormattedMessage id={translate[language].modelsSlider_time1} />,
+
         location: "Prishtina, Kosova",
+
         icon: <SlLocationPin />,
         icon1: <FiEye />,
         view: "290",
       },
+
       {
         image: ModelsSlider2,
-        profession: "Model",
+        profession: (
+          <FormattedMessage id={translate[language].modelsSlider_profession2} />
+        ),
+
         name: "Klea Gashi",
-        time: "$150 / hour",
+        time: <FormattedMessage id={translate[language].modelsSlider_time2} />,
+
         location: "Prishtina, Kosova",
         icon: <SlLocationPin />,
         icon1: <FiEye />,
@@ -609,9 +919,12 @@ export const ModelsSliderData = [
       },
       {
         image: ModelsSlider3,
-        profession: "Model",
+        profession: (
+          <FormattedMessage id={translate[language].modelsSlider_profession3} />
+        ),
         name: "Ari Berisha",
-        time: "$150 / hour",
+        time: <FormattedMessage id={translate[language].modelsSlider_time3} />,
+
         location: "Prishtina, Kosova",
         icon: <SlLocationPin />,
         icon1: <FiEye />,
@@ -620,9 +933,12 @@ export const ModelsSliderData = [
       },
       {
         image: ModelsSlider4,
-        profession: "Model",
+        profession: (
+          <FormattedMessage id={translate[language].modelsSlider_profession4} />
+        ),
         name: "Jon Klaiqi",
-        time: "$150 / hour",
+        time: <FormattedMessage id={translate[language].modelsSlider_time4} />,
+
         location: "Prishtina, Kosova",
         icon: <SlLocationPin />,
         icon1: <FiEye />,
@@ -631,19 +947,28 @@ export const ModelsSliderData = [
       },
       {
         image: ModelsSlider1,
-        profession: "Model",
+        profession: (
+          <FormattedMessage id={translate[language].modelsSlider_profession5} />
+        ),
+
         name: "Anila Canolli",
-        time: "$150 / hour",
+        time: <FormattedMessage id={translate[language].modelsSlider_time5} />,
+
         location: "Prishtina, Kosova",
+
         icon: <SlLocationPin />,
         icon1: <FiEye />,
         view: "290",
       },
       {
         image: ModelsSlider2,
-        profession: "Model",
+        profession: (
+          <FormattedMessage id={translate[language].modelsSlider_profession6} />
+        ),
+
         name: "Klea Gashi",
-        time: "$150 / hour",
+        time: <FormattedMessage id={translate[language].modelsSlider_time6} />,
+
         location: "Prishtina, Kosova",
         icon: <SlLocationPin />,
         icon1: <FiEye />,
@@ -652,9 +977,12 @@ export const ModelsSliderData = [
       },
       {
         image: ModelsSlider3,
-        profession: "Model",
+        profession: (
+          <FormattedMessage id={translate[language].modelsSlider_profession7} />
+        ),
         name: "Ari Berisha",
-        time: "$150 / hour",
+        time: <FormattedMessage id={translate[language].modelsSlider_time7} />,
+
         location: "Prishtina, Kosova",
         icon: <SlLocationPin />,
         icon1: <FiEye />,
@@ -663,9 +991,12 @@ export const ModelsSliderData = [
       },
       {
         image: ModelsSlider4,
-        profession: "Model",
+        profession: (
+          <FormattedMessage id={translate[language].modelsSlider_profession8} />
+        ),
         name: "Jon Klaiqi",
-        time: "$150 / hour",
+        time: <FormattedMessage id={translate[language].modelsSlider_time8} />,
+
         location: "Prishtina, Kosova",
         icon: <SlLocationPin />,
         icon1: <FiEye />,
@@ -675,19 +1006,30 @@ export const ModelsSliderData = [
 
       {
         image: ModelsSlider1,
-        profession: "Model",
+        profession: (
+          <FormattedMessage id={translate[language].modelsSlider_profession9} />
+        ),
+
         name: "Anila Canolli",
-        time: "$150 / hour",
+        time: <FormattedMessage id={translate[language].modelsSlider_time9} />,
+
         location: "Prishtina, Kosova",
+
         icon: <SlLocationPin />,
         icon1: <FiEye />,
         view: "290",
       },
       {
         image: ModelsSlider2,
-        profession: "Model",
+        profession: (
+          <FormattedMessage
+            id={translate[language].modelsSlider_profession10}
+          />
+        ),
+
         name: "Klea Gashi",
-        time: "$150 / hour",
+        time: <FormattedMessage id={translate[language].modelsSlider_time10} />,
+
         location: "Prishtina, Kosova",
         icon: <SlLocationPin />,
         icon1: <FiEye />,
@@ -696,9 +1038,14 @@ export const ModelsSliderData = [
       },
       {
         image: ModelsSlider3,
-        profession: "Model",
+        profession: (
+          <FormattedMessage
+            id={translate[language].modelsSlider_profession11}
+          />
+        ),
         name: "Ari Berisha",
-        time: "$150 / hour",
+        time: <FormattedMessage id={translate[language].modelsSlider_time11} />,
+
         location: "Prishtina, Kosova",
         icon: <SlLocationPin />,
         icon1: <FiEye />,
@@ -707,9 +1054,14 @@ export const ModelsSliderData = [
       },
       {
         image: ModelsSlider4,
-        profession: "Model",
+        profession: (
+          <FormattedMessage
+            id={translate[language].modelsSlider_profession12}
+          />
+        ),
         name: "Jon Klaiqi",
-        time: "$150 / hour",
+        time: <FormattedMessage id={translate[language].modelsSlider_time12} />,
+
         location: "Prishtina, Kosova",
         icon: <SlLocationPin />,
         icon1: <FiEye />,
@@ -718,92 +1070,20 @@ export const ModelsSliderData = [
       },
     ],
   },
-  {
-    name: "Prishtina",
-    models: [],
-  },
-  {
-    name: "Peja",
-    models: [],
-  },
-  {
-    name: "Ferizaji",
-    models: [],
-  },
-  {
-    name: "Mitrovica",
-    models: [],
-  },
-  {
-    name: "Gjakova",
-    models: [],
-  },
-  {
-    name: " Gjilani",
-    models: [],
-  },
-  {
-    name: "Prizereni",
-    models: [],
-  },
 ];
-export const What_we_offerData = [
+export const What_we_offerData = (language) => [
   {
     icon: <What_we_offer2 />,
 
-    course: "Training",
-    text: "We train actors for commercials, campaigns, stores, showrooms, and retail outlets.",
+    course: <FormattedMessage id={translate[language].what_we_offer_course1} />,
+
+    text: <FormattedMessage id={translate[language].what_we_offer_text1} />,
+
     button: {
       to: "/",
-      text: "Learn more",
-      icon: <HiOutlineArrowLongRight />,
-    },
-  },
-  {
-    icon: <What_we_offer3 />,
-
-    course: "Coaching",
-    text: "We get the most out of our talents through coaching, private discussions, and trainings.",
-    button: {
-      to: "/",
-
-      text: "Learn more",
-
-      icon: <HiOutlineArrowLongRight />,
-    },
-  },
-  {
-    icon: <What_we_offer4 />,
-
-    course: "Selection",
-    text: "ModelKos is by your side during the selection and casting process. We plan efficient processes for you and your customers.",
-    button: {
-      to: "/",
-      text: "Learn more",
-
-      icon: <HiOutlineArrowLongRight />,
-    },
-  },
-  {
-    icon: <What_we_offer5 />,
-
-    course: "Social Media",
-    text: "Other services include social media, influencer marketing, castings, and switching at top photographers and videographers.",
-    button: {
-      to: "/",
-      text: "Learn more",
-
-      icon: <HiOutlineArrowLongRight />,
-    },
-  },
-  {
-    icon: <What_we_offer2 />,
-
-    course: "Training",
-    text: "We train actors for commercials, campaigns, stores, showrooms, and retail outlets.",
-    button: {
-      to: "/",
-      text: "Learn more",
+      text: (
+        <FormattedMessage id={translate[language].what_we_offer_learn_more1} />
+      ),
 
       icon: <HiOutlineArrowLongRight />,
     },
@@ -811,11 +1091,16 @@ export const What_we_offerData = [
   {
     icon: <What_we_offer3 />,
 
-    course: "Coaching",
-    text: "We train actors for commercials, campaigns, stores, showrooms, and retail outlets.",
+    course: <FormattedMessage id={translate[language].what_we_offer_course2} />,
+
+    text: <FormattedMessage id={translate[language].what_we_offer_text2} />,
+
     button: {
       to: "/",
-      text: "Learn more",
+
+      text: (
+        <FormattedMessage id={translate[language].what_we_offer_learn_more2} />
+      ),
 
       icon: <HiOutlineArrowLongRight />,
     },
@@ -823,11 +1108,14 @@ export const What_we_offerData = [
   {
     icon: <What_we_offer4 />,
 
-    course: "Selection",
-    text: "We train actors for commercials, campaigns, stores, showrooms, and retail outlets.",
+    course: <FormattedMessage id={translate[language].what_we_offer_course3} />,
+    text: <FormattedMessage id={translate[language].what_we_offer_text3} />,
+
     button: {
       to: "/",
-      text: "Learn more",
+      text: (
+        <FormattedMessage id={translate[language].what_we_offer_learn_more3} />
+      ),
 
       icon: <HiOutlineArrowLongRight />,
     },
@@ -835,207 +1123,308 @@ export const What_we_offerData = [
   {
     icon: <What_we_offer5 />,
 
-    course: "Social Media",
-    text: "We train actors for commercials, campaigns, stores, showrooms, and retail outlets.",
+    course: <FormattedMessage id={translate[language].what_we_offer_course4} />,
+    text: <FormattedMessage id={translate[language].what_we_offer_text4} />,
+
     button: {
       to: "/",
-      text: "Learn more",
+      text: (
+        <FormattedMessage id={translate[language].what_we_offer_learn_more4} />
+      ),
+
+      icon: <HiOutlineArrowLongRight />,
+    },
+  },
+  {
+    icon: <What_we_offer2 />,
+
+    course: <FormattedMessage id={translate[language].what_we_offer_course1} />,
+
+    text: <FormattedMessage id={translate[language].what_we_offer_text1} />,
+
+    button: {
+      to: "/",
+      text: (
+        <FormattedMessage id={translate[language].what_we_offer_learn_more1} />
+      ),
+
+      icon: <HiOutlineArrowLongRight />,
+    },
+  },
+  {
+    icon: <What_we_offer3 />,
+
+    course: <FormattedMessage id={translate[language].what_we_offer_course2} />,
+
+    text: <FormattedMessage id={translate[language].what_we_offer_text2} />,
+
+    button: {
+      to: "/",
+
+      text: (
+        <FormattedMessage id={translate[language].what_we_offer_learn_more2} />
+      ),
+
+      icon: <HiOutlineArrowLongRight />,
+    },
+  },
+  {
+    icon: <What_we_offer4 />,
+
+    course: <FormattedMessage id={translate[language].what_we_offer_course3} />,
+    text: <FormattedMessage id={translate[language].what_we_offer_text3} />,
+
+    button: {
+      to: "/",
+      text: (
+        <FormattedMessage id={translate[language].what_we_offer_learn_more3} />
+      ),
+
+      icon: <HiOutlineArrowLongRight />,
+    },
+  },
+  {
+    icon: <What_we_offer5 />,
+
+    course: <FormattedMessage id={translate[language].what_we_offer_course4} />,
+    text: <FormattedMessage id={translate[language].what_we_offer_text4} />,
+
+    button: {
+      to: "/",
+      text: (
+        <FormattedMessage id={translate[language].what_we_offer_learn_more4} />
+      ),
 
       icon: <HiOutlineArrowLongRight />,
     },
   },
 ];
-export const ContentData = [
+export const ContentData = (language) => [
   {
     image3: ContentImag1,
     image: ContentImage,
     image1: ContentImag2,
-    text: "ModelKos is one of the most influential fashion news sites and creative resources within the fashion industry, with an extensive database, feature interviews of the creative stars of the industry, and its influential top model rankings.",
+    text: <FormattedMessage id={translate[language].content_text} />,
     image2: ContentImag3,
   },
 ];
-export const What_people_sayData = [
+export const What_people_sayData = (language) => [
   {
-    title: "The Best Agency",
-    text: "Sarah Doukas founded the agency in her home in 1987. With Richard Branson as her business partner, Sarah revolutionized the traditional modeling industry by launching the first UK agency to represent worldwide new faces Sarah had discovered herself, and this became the hallmark of the agency. 1988 is remembered as the year Sarah changed the fashion industry when she spotted Kate Moss at JFK Airport in New York City.",
+    title: (
+      <FormattedMessage id={translate[language].What_people_say_agency1} />
+    ),
+    text: <FormattedMessage id={translate[language].What_people_say_text1} />,
     img: What_people_sayImage,
 
     profile: [
       {
         name: "Xhensila Halimi",
-        profile: "Social Media Manager",
-        text: "Rating",
+        profile: (
+          <FormattedMessage id={translate[language].What_people_say_profile1} />
+        ),
+        text: (
+          <FormattedMessage id={translate[language].What_people_say_rating1} />
+        ),
         img: What_people_sayImage,
       },
     ],
   },
   {
-    title: "A Leading Modelling Agency",
-    text: "Since 1987, the agency has established itself as a leader in the fashion industry by promoting diversity and inclusivity. Over the years, it has introduced fresh faces that have become international stars. Its innovative approach and dedication to nurturing talent have set a new standard in the world of modeling.",
+    title: (
+      <FormattedMessage id={translate[language].What_people_say_agency2} />
+    ),
+    text: <FormattedMessage id={translate[language].What_people_say_text2} />,
     img: What_people_sayImage,
 
     profile: [
       {
-        name: "Ermira Hoxha",
-        profile: "Talent Scout",
-        text: "Rating",
+        name: "Xhensila Halimi",
+        profile: (
+          <FormattedMessage id={translate[language].What_people_say_profile2} />
+        ),
+        text: (
+          <FormattedMessage id={translate[language].What_people_say_rating2} />
+        ),
+        img: What_people_sayImage,
       },
     ],
   },
   {
-    title: "A Leading Modelling Agency",
-    text: "Since 1987, the agency has established itself as a leader in the fashion industry by promoting diversity and inclusivity. Over the years, it has introduced fresh faces that have become international stars. Its innovative approach and dedication to nurturing talent have set a new standard in the world of modeling.",
+    title: (
+      <FormattedMessage id={translate[language].What_people_say_agency3} />
+    ),
+    text: <FormattedMessage id={translate[language].What_people_say_text3} />,
     img: What_people_sayImage,
 
     profile: [
       {
-        name: "Ermira Hoxha",
-        profile: "Talent Scout",
-        text: "Rating",
+        name: "Xhensila Halimi",
+        profile: (
+          <FormattedMessage id={translate[language].What_people_say_profile3} />
+        ),
+        text: (
+          <FormattedMessage id={translate[language].What_people_say_rating3} />
+        ),
+        img: What_people_sayImage,
       },
     ],
   },
   {
-    title: "A Leading Modelling Agency",
-    text: "Since 1987, the agency has established itself as a leader in the fashion industry by promoting diversity and inclusivity. Over the years, it has introduced fresh faces that have become international stars. Its innovative approach and dedication to nurturing talent have set a new standard in the world of modeling.",
+    title: (
+      <FormattedMessage id={translate[language].What_people_say_agency4} />
+    ),
+    text: <FormattedMessage id={translate[language].What_people_say_text4} />,
     img: What_people_sayImage,
 
     profile: [
       {
-        name: "Ermira Hoxha",
-        profile: "Talent Scout",
-        text: "Rating",
+        name: "Xhensila Halimi",
+        profile: (
+          <FormattedMessage id={translate[language].What_people_say_profile4} />
+        ),
+        text: (
+          <FormattedMessage id={translate[language].What_people_say_rating4} />
+        ),
+        img: What_people_sayImage,
       },
     ],
   },
 ];
-export const Our_partnershipsData = [
+export const Our_partnershipsData = (language) => [
   {
     icon: <Our_partnerships1 />,
-    title: "Manage your social media",
-    text: "MediaKos assists all influencers, models, and artists in managing their social media accounts, as well as creating content and much more.",
+    title: <FormattedMessage id={translate[language].Our_partnerships_text1} />,
+
+    text: <FormattedMessage id={translate[language].Our_partnerships_text2} />,
+
     image: Our_partnerships2,
   },
 ];
-export const Kosova_GirlsData = [
+export const Kosova_GirlsData = (language) => [
   {
     image: Kosova_GirlsImage,
-    title: "Fashion",
+
+    title: <FormattedMessage id={translate[language].ks_fashion} />,
     icon: <BsArrowRight />,
   },
   {
     image: Kosova_GirlsImage1,
-    title: "Hair Styling",
+    title: <FormattedMessage id={translate[language].ks_hair} />,
     icon: <BsArrowRight />,
   },
   {
     image: Kosova_GirlsImage2,
-    title: "Photography",
+    title: <FormattedMessage id={translate[language].ks_photography} />,
     icon: <BsArrowRight />,
   },
   {
     image: Kosova_GirlsImage3,
-    title: "Acting",
+    title: <FormattedMessage id={translate[language].ks_acting} />,
     icon: <BsArrowRight />,
   },
 ];
-export const SharedTextData = {
-  icon: <Kosova_GirlsImage4 />,
-  title: "Free education for EVERYONE",
-  text: "ModelKos, in collaboration with KosovaGirls, provides women with support and free training in fashion, design, hair styling, photography, video shooting, modeling, acting, and other areas.",
-};
-export const Our_workData = [
+export const SharedTextData = (language) => [
+  {
+    icon: <Kosova_GirlsImage4 />,
+    title: <FormattedMessage id={translate[language].ks_education} />,
+    text: <FormattedMessage id={translate[language].ks_text} />,
+  },
+];
+export const Our_workData = (language) => [
   {
     image: Our_workImage,
-    date: "18th July, 2022",
-    title: "Things You Should Know About The Modeling Industry In 2022",
+    date: <FormattedMessage id={translate[language].our_blog_date1} />,
+    title: <FormattedMessage id={translate[language].our_blog_text1} />,
 
-    text: "Every year, the modeling industry changes, and so do the things that aspiring models should know to be successful. Therefore, it's essential to educate yourself about the industry to keep up with the times and be prepared for what is coming ahead.",
-    link: "Read More",
+    text: <FormattedMessage id={translate[language].our_blog_textt1} />,
+    link: <FormattedMessage id={translate[language].our_blog_read_more1} />,
     icon: <HiArrowLongRight />,
   },
   {
     image: Our_workImage1,
-    date: "20th Jun, 2022",
-    title: "Things You Should Know About The Modeling Industry In 2022",
-    text: "A photoshoot is an exciting opportunity for models to show their creativity and personality. However, it can also be a challenging experience if you don't prepare properly!",
-    link: "Read More",
+    date: <FormattedMessage id={translate[language].our_blog_date2} />,
+    title: <FormattedMessage id={translate[language].our_blog_text2} />,
+
+    text: <FormattedMessage id={translate[language].our_blog_textt2} />,
+    link: <FormattedMessage id={translate[language].our_blog_read_more2} />,
     icon: <HiArrowLongRight />,
   },
   {
     image: Our_workImage2,
-    date: "1st May, 2022",
-    title: "Things You Should Know About The Modeling Industry In 2022",
+    date: <FormattedMessage id={translate[language].our_blog_date3} />,
+    title: <FormattedMessage id={translate[language].our_blog_text3} />,
 
-    text: "It's not a secret that social media is one of the most powerful tools in marketing these days. It has been proven time and again that people who use it are more likely to buy your products or services. Now, it's also being used as a car",
-    link: "Read More",
+    text: <FormattedMessage id={translate[language].our_blog_textt3} />,
+    link: <FormattedMessage id={translate[language].our_blog_read_more3} />,
     icon: <HiArrowLongRight />,
   },
   {
     image: Our_workImage,
-    date: "18th July, 2022",
-    title: "Things You Should Know About The Modeling Industry In 2022",
+    date: <FormattedMessage id={translate[language].our_blog_date1} />,
+    title: <FormattedMessage id={translate[language].our_blog_text1} />,
 
-    text: "Every year, the modeling industry changes, and so do the things that aspiring models should know to be successful. Therefore, it's essential to educate yourself about the industry to keep up with the times and be prepared for what is coming ahead.",
-    link: "Read More",
+    text: <FormattedMessage id={translate[language].our_blog_textt1} />,
+    link: <FormattedMessage id={translate[language].our_blog_read_more1} />,
     icon: <HiArrowLongRight />,
   },
   {
     image: Our_workImage1,
-    date: "20th Jun, 2022",
-    title: "Things You Should Know About The Modeling Industry In 2022",
-    text: "A photoshoot is an exciting opportunity for models to show their creativity and personality. However, it can also be a challenging experience if you don't prepare properly!",
-    link: "Read More",
+    date: <FormattedMessage id={translate[language].our_blog_date2} />,
+    title: <FormattedMessage id={translate[language].our_blog_text2} />,
+
+    text: <FormattedMessage id={translate[language].our_blog_textt2} />,
+    link: <FormattedMessage id={translate[language].our_blog_read_more2} />,
     icon: <HiArrowLongRight />,
   },
   {
     image: Our_workImage2,
-    date: "1st May, 2022",
-    title: "Things You Should Know About The Modeling Industry In 2022",
+    date: <FormattedMessage id={translate[language].our_blog_date3} />,
+    title: <FormattedMessage id={translate[language].our_blog_text3} />,
 
-    text: "It's not a secret that social media is one of the most powerful tools in marketing these days. It has been proven time and again that people who use it are more likely to buy your products or services. Now, it's also being used as a car",
-    link: "Read More",
+    text: <FormattedMessage id={translate[language].our_blog_textt3} />,
+    link: <FormattedMessage id={translate[language].our_blog_read_more3} />,
     icon: <HiArrowLongRight />,
   },
   {
     image: Our_workImage,
-    date: "18th July, 2022",
-    title: "Things You Should Know About The Modeling Industry In 2022",
+    date: <FormattedMessage id={translate[language].our_blog_date1} />,
+    title: <FormattedMessage id={translate[language].our_blog_text1} />,
 
-    text: "Every year, the modeling industry changes, and so do the things that aspiring models should know to be successful. Therefore, it's essential to educate yourself about the industry to keep up with the times and be prepared for what is coming ahead.",
-    link: "Read More",
+    text: <FormattedMessage id={translate[language].our_blog_textt1} />,
+    link: <FormattedMessage id={translate[language].our_blog_read_more1} />,
     icon: <HiArrowLongRight />,
   },
   {
     image: Our_workImage1,
-    date: "20th Jun, 2022",
-    title: "Things You Should Know About The Modeling Industry In 2022",
-    text: "A photoshoot is an exciting opportunity for models to show their creativity and personality. However, it can also be a challenging experience if you don't prepare properly!",
-    link: "Read More",
+    date: <FormattedMessage id={translate[language].our_blog_date2} />,
+    title: <FormattedMessage id={translate[language].our_blog_text2} />,
+
+    text: <FormattedMessage id={translate[language].our_blog_textt2} />,
+    link: <FormattedMessage id={translate[language].our_blog_read_more2} />,
     icon: <HiArrowLongRight />,
   },
   {
     image: Our_workImage2,
-    date: "1st May, 2022",
-    title: "Things You Should Know About The Modeling Industry In 2022",
+    date: <FormattedMessage id={translate[language].our_blog_date3} />,
+    title: <FormattedMessage id={translate[language].our_blog_text3} />,
 
-    text: "It's not a secret that social media is one of the most powerful tools in marketing these days. It has been proven time and again that people who use it are more likely to buy your products or services. Now, it's also being used as a car",
-    link: "Read More",
+    text: <FormattedMessage id={translate[language].our_blog_textt3} />,
+    link: <FormattedMessage id={translate[language].our_blog_read_more3} />,
     icon: <HiArrowLongRight />,
   },
 ];
-export const AcademyData = [
+export const AcademyData = (language) => [
   {
     icon: <ModelkosAcademy />,
-    text: "If you want to be a model then we are here to offer advice and create a platform for new aspiring models. We endeavor to work across a diverse range of talent and champion every individual regardless of their background or ability. We are a female-led team of accomplished, diverse women.",
+    text: <FormattedMessage id={translate[language].academy_text1} />,
   },
   {
     icon: <ModelkosAcademy />,
-    text: "If you want to be a model then we are here to offer advice and create a platform for new aspiring models. We endeavor to work across a diverse range of talent and champion every individual regardless of their background or ability. We are a female-led team of accomplished, diverse women.",
+    text: <FormattedMessage id={translate[language].academy_text2} />,
   },
   {
     icon: <ModelkosAcademy />,
-    text: "If you want to be a model then we are here to offer advice and create a platform for new aspiring models. We endeavor to work across a diverse range of talent and champion every individual regardless of their background or ability. We are a female-led team of accomplished, diverse women.",
+    text: <FormattedMessage id={translate[language].academy_text3} />,
   },
 ];
 export const Our_partnersData = [
@@ -1084,11 +1473,13 @@ export const Our_partnersData = [
     logo: PartnersImage6,
   },
 ];
-export const SubscribeData = [
+export const SubscribeData = (language) => [
   {
-    title: "Subscribe to our newsletter",
-    text: "Subscribe to our newsletter to receive the latest news and updates about ModelKos",
+    title: <FormattedMessage id={translate[language].subscribe_title} />,
+
+    text: <FormattedMessage id={translate[language].subscribe_text} />,
+
     icon: <SubscribeIcon />,
-    button: "Subscribe",
+    button: <FormattedMessage id={translate[language].subscribe_subscribe} />,
   },
 ];

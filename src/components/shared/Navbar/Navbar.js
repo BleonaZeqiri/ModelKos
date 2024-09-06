@@ -7,7 +7,11 @@ import OurWork from "./Megamenus/Out-work";
 import AboutMenu from "./Megamenus/AboutMenu";
 import MobileNav from "../MobileNav/MobileNav";
 import { TiArrowSortedDown } from "react-icons/ti";
+import { translate } from "../../../translation/translate";
+import { useSelector } from "react-redux";
+
 const Navbar = (props) => {
+  const language = useSelector((state) => state.language.language);
   const [isSticky, setIsSticky] = useState(false);
 
   useEffect(() => {
@@ -20,14 +24,21 @@ const Navbar = (props) => {
 
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-
   return (
     <div
       id="navbar"
-      className={clsx(`nav ${props.styles}`, isSticky ? "nav__sticky" : "")}
+      className={clsx(
+        `nav ${props.styles}`,
+        isSticky ? "nav__sticky" : "",
+        props.isColor && "logo-black"
+      )}
     >
       <div className="left-side">
-        <Link to="/" className="nav-logo">
+        <Link
+          to="/"
+          className="nav-logo"
+          style={{ color: props.isColor ? "black" : "white" }}
+        >
           <div className="logo-container"></div>
           <h1>MODELKOS</h1>
         </Link>
@@ -35,14 +46,22 @@ const Navbar = (props) => {
 
       <div className="nav-links">
         <div className="nav-link support-link ">
-          <Link to="/" className="inner-nav-link">
-            <FormattedMessage id="academy" defaultMessage="Home" />
+          <Link
+            to="/"
+            className="inner-nav-link"
+            style={{ color: props.isColor || isSticky ? "black" : "white" }}
+          >
+            <FormattedMessage id={translate[language].home} />
           </Link>
           <div className="line"></div>
         </div>
         <div className="nav-link services-link">
-          <Link to="/" className="inner-nav-link">
-            <FormattedMessage id="our-work" defaultMessage="Our Work" />
+          <Link
+            to="/"
+            className="inner-nav-link"
+            style={{ color: props.isColor || isSticky ? "black" : "white" }}
+          >
+            <FormattedMessage id={translate[language].our_work} />
             <TiArrowSortedDown className="arrow1" />
           </Link>
           <div className="line"></div>
@@ -50,8 +69,12 @@ const Navbar = (props) => {
         </div>
 
         <div className="nav-link portfolio-link">
-          <Link to="/" className="inner-nav-link">
-            <FormattedMessage id="portfolio" defaultMessage="About" />
+          <Link
+            to="/"
+            className="inner-nav-link"
+            style={{ color: props.isColor || isSticky ? "black" : "white" }}
+          >
+            <FormattedMessage id={translate[language].about} />
             <TiArrowSortedDown className="arrow1" />
           </Link>
 
@@ -59,23 +82,35 @@ const Navbar = (props) => {
           <AboutMenu />
         </div>
         <div className="nav-link support-link">
-          <Link to="/" className="inner-nav-link">
-            <FormattedMessage id="models" defaultMessage="Models" />
+          <Link
+            to="/"
+            className="inner-nav-link"
+            style={{ color: props.isColor || isSticky ? "black" : "white" }}
+          >
+            <FormattedMessage id={translate[language].models} />
             <TiArrowSortedDown className="arrow1" />
           </Link>
           <div className="line"></div>
         </div>
         <div className=" nav-link home-link">
-          <Link to="/" className="inner-nav-link">
-            <FormattedMessage id="about" defaultMessage="Academy" />
+          <Link
+            to="/"
+            className="inner-nav-link"
+            style={{ color: props.isColor || isSticky ? "black" : "white" }}
+          >
+            <FormattedMessage id={translate[language].academy} />
             <TiArrowSortedDown className="arrow1" />
           </Link>
           <div className="line"></div>
         </div>
 
         <div className=" support-link">
-          <Link to="/" className="inner-nav-link">
-            <FormattedMessage id="support" defaultMessage="Blog" />
+          <Link
+            to="/"
+            className="inner-nav-link"
+            style={{ color: props.isColor || isSticky ? "black" : "white" }}
+          >
+            <FormattedMessage id={translate[language].blog} />
           </Link>
           <div className="line"></div>
         </div>
@@ -83,12 +118,23 @@ const Navbar = (props) => {
 
       <div className="nav-auth">
         {/* <ThemeSwitcher /> */}
-        <Link>
-          <p className="apply-now">Apply now</p>
+        <Link
+          to="/"
+          className="apply-now"
+          style={{ color: props.isColor || isSticky ? "black" : "white" }}
+        >
+          <FormattedMessage id={translate[language].apply} />
         </Link>
 
-        <Link to="/" className="contact-us">
-          <FormattedMessage id="contact-us" defaultMessage="Contacts" />
+        <Link
+          to="/"
+          className="contact-us"
+          style={{
+            background: props.isColor || isSticky ? "black" : "white",
+            color: props.isColor || isSticky ? "white" : "black",
+          }}
+        >
+          <FormattedMessage id={translate[language].contact} />
         </Link>
       </div>
 

@@ -22,15 +22,15 @@
 }
 .shared-footer .first-col {
   width: 35%;
-  .top,
-  .down,
-  .down-jobs {
+  .top {
     gap: 10px;
     display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    h1 {
+      color: #fff;
+    }
   }
-  .down-jobs {
-    margin-top: 24px;
-  }
+
   .logo-container {
     display: flex;
     align-items: center;
@@ -129,7 +129,8 @@
     }
     h1 {
       font-family: "CustomFont", sans-serif;
-
+      color: #fff;
+      opacity: 0.2;
       font-size: max(16px, 8vw);
       opacity: 0.2;
       font-weight: 400;
@@ -214,6 +215,7 @@
       font-size: max(11px, 0.725vw);
       margin: 15px;
       line-height: 1.7;
+      color: #fff;
       text-align: center;
     }
     .span-footer {
@@ -227,7 +229,7 @@
 @media (max-width: 1020px) {
   .shared-footer {
     .first-row {
-      padding: 0px 40px;
+      padding: 0px;
       .modeling {
         width: 17%;
       }

@@ -1,17 +1,33 @@
-import React from "react";
-import { FormattedMessage } from "react-intl";
-import { FooterData, SocialMedia } from "./data";
+import React, { useState, useEffect } from "react";
+import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
-import { FaPhoneAlt } from "react-icons/fa";
-// import ThemeSwitcher from "./ThemeSwitcher";
+import { FormattedMessage } from "react-intl";
+import { FooterData, SocialMedia, FooterData1, FooterData2 } from "./data";
 import SelectLanguage from "../SelectLanguage/SelectLanguage";
+import clsx from "clsx";
 import "./footer.scss";
-
 const Footer = (props) => {
-  // const [mode, setMode] = useState(() => localStorage.getItem("mode"));
+  const language = useSelector((state) => state.language.language);
+  const [isSticky, setIsSticky] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollHeight = window.pageYOffset;
+      setIsSticky(scrollHeight > 25);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const footerData = FooterData(language);
+  const footerData1 = FooterData1(language);
+  const footerData2 = FooterData2(language);
 
   return (
-    <div className="shared-footer">
+    <div
+      className={clsx("shared-footer", props.styles, isSticky && "nav__sticky")}
+    >
       <div className="first-row">
         <h1>MODELING</h1>
         <div className="modeling"></div>
@@ -19,92 +35,31 @@ const Footer = (props) => {
       </div>
       <div className="main-row">
         <div className="all-footer-links">
-          {FooterData.map((props) => {
-            return (
-              <div className="footer-list">
-                <h6>{props.category}</h6>
-                <div className="links">
-                  {props.links.map((l) => {
-                    return (
-                      <Link key={l.to} to={l.to} className="footer-item">
-                        {l.link}
-                      </Link>
-                    );
-                  })}
-                </div>
+          {footerData.map((section, index) => (
+            <div key={index} className="footer-list">
+              <h6>{section.category}</h6>
+              <div className="links">
+                {section.links.map((link, idx) => (
+                  <Link key={idx} to={link.to} className="footer-item">
+                    {link.link}
+                  </Link>
+                ))}
               </div>
-            );
-          })}
+            </div>
+          ))}
         </div>
         <div className="first-col">
           <div className="top">
-            <Link to="/" className="logo-container">
-              <h1>
-                <FormattedMessage
-                  id="modelkos-management"
-                  defaultMessage="MODELS"
-                />
-              </h1>
-            </Link>
-            <div className="paragraph">
-              <p>
-                <FormattedMessage id="PHONE" defaultMessage="Women " />- 0207
-                376 7764
-              </p>
-              <p>
-                <FormattedMessage id="PHONE" defaultMessage="Men " />- 0207 376
-                7764
-              </p>
-              <p>
-                <FormattedMessage
-                  id="EMAIL"
-                  defaultMessage="bookamodel@modelkos.com "
-                />
-              </p>
-            </div>
-          </div>
-          <div className="down">
-            <Link to="/" className="logo-container">
-              <h1>
-                <FormattedMessage
-                  id="modelkos-management"
-                  defaultMessage="MODELKOS MANAGEMENT"
-                />
-              </h1>
-            </Link>
-            <div className="paragraph">
-              <p>
-                <FormattedMessage
-                  id="footer-paragraph1"
-                  defaultMessage="1st Floor"
-                />
-              </p>
-              <p>
-                <FormattedMessage
-                  id="footer-paragraph1"
-                  defaultMessage="5 Jubilee Place"
-                />
-              </p>
-              <p>
-                <FormattedMessage
-                  id="footer-paragraph1"
-                  defaultMessage="Prishtina, Kosovo"
-                />
-              </p>
-            </div>
-          </div>
-          <div className="down-jobs">
-            <h1>
-              <FormattedMessage id="Email" defaultMessage="Jobs " />
-            </h1>
-            <div className="paragraph">
-              <p>
-                <FormattedMessage
-                  id="EMAIL"
-                  defaultMessage="jobs@modelkos.com "
-                />
-              </p>
-            </div>
+            {footerData1.map((section, index) => (
+              <div key={index} className="section">
+                <h1>{section.category}</h1>
+                <div className="paragraph">
+                  {section.find.map((item, idx) => (
+                    <p key={idx}>{item.text}</p>
+                  ))}
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </div>
@@ -116,60 +71,47 @@ const Footer = (props) => {
             <h3>MODELKOS</h3>
           </Link>
         </div>
-
         <div className="links">
           <p>
-            <FormattedMessage id="footer-paragraph3" defaultMessage="©2022" />
+            <FormattedMessage id="footer-paragraph4" defaultMessage="©2022" />
           </p>
           <span className="span-footer"></span>
           <p>
             <FormattedMessage
               id="footer-paragraph5"
-              defaultMessage=" MODELKOS "
+              defaultMessage="MODELKOS"
             />
           </p>
         </div>
         <div className="footer-row">
-          <p>
-            <FormattedMessage
-              id="footer-paragraph4"
-              defaultMessage=" Privacy Statement "
-            />
-          </p>
-          |
-          <p>
-            <FormattedMessage
-              id="footer-paragraph5"
-              defaultMessage=" 
-              Terms of Service "
-            />
-          </p>
-          |
-          <p>
-            <FormattedMessage
-              id="footer-paragraph5"
-              defaultMessage=" Help/FAQ "
-            />
-          </p>
+          {footerData2.map((item, index) => (
+            <React.Fragment key={index}>
+              <Link to={item.to}>
+                <p>{item.link}</p>
+              </Link>
+              {item.span && index < footerData2.length - 1 && (
+                <span>{item.span}</span>
+              )}
+            </React.Fragment>
+          ))}
         </div>
         <div className="right">
           <div className="social">
-            {SocialMedia.map((props) => {
-              return <Link to={props.to}>{props.icon}</Link>;
-            })}
+            {SocialMedia.map((social, idx) => (
+              <Link key={idx} to={social.to}>
+                {social.icon}
+              </Link>
+            ))}
           </div>
           <div className="phone">
             <p>
-              {/* <FaPhoneAlt /> */}
               <FormattedMessage
-                id="footer-paragraph5"
-                defaultMessage=" +383 (44) 000 - 558 "
+                id="footer-paragraph9"
+                defaultMessage="+383 (44) 000 - 558"
               />
             </p>
           </div>
           <div className="flex">
-            {/* <ThemeSwitcher /> */}
-
             <SelectLanguage
               setLanguage={props.setLanguage}
               language={props.language}

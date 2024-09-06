@@ -1,4 +1,4 @@
-.home-about {
+.aboutus-about {
   display: flex;
   justify-content: space-between;
   align-items: stretch;
@@ -12,12 +12,12 @@
   }
   .left {
     width: 41%;
-    padding: 10rem 4rem;
+    padding: 6rem 4rem;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    align-items: flex-start;
-    gap: max(0.25rem, 1.5vh);
+    // align-items: flex-start;
+    // gap: max(0.25rem, 1.5vh);
 
     h1 {
       font-size: max(25px, 5vw);
@@ -25,9 +25,29 @@
       font-weight: 400;
     }
 
-    p.text1 {
-      font-size: max(14px, 1vw);
+    .text {
+      font-size: max(12px, 0.83vw);
       line-height: max(30px, 2.5vw);
+    }
+    .circleLink {
+      align-items: center;
+      display: flex;
+      justify-content: flex-end;
+
+      .circleText {
+        // height: fit-content;
+        // position: absolute;
+        // transition: 0.2s ease-out;
+        // width: fit-content;
+
+        .circle {
+          //   position: relative;
+          //   top: -57px;
+          //   left: 53px;
+          //   width: 133px;
+          width: 140px;
+        }
+      }
     }
   }
 
@@ -54,12 +74,13 @@
       width: 100%;
       display: flex;
       gap: max(0.5rem, 1vw);
-      padding: max(2rem, 3vw);
+      padding: max(2rem, 3.5vw);
       align-items: stretch;
       position: relative;
 
       .aboutCard {
         width: max(10rem, 25vw);
+        height: max(10rem, 31vw);
         display: flex;
         flex-direction: column;
         gap: max(1rem, 1vw);
@@ -157,8 +178,8 @@
       display: flex;
       justify-content: flex-start;
       align-items: center;
-      padding-right: 62.5%;
-      top: -59px;
+      right: 30.5%;
+      bottom: 68px;
       position: relative;
     }
 
@@ -186,31 +207,10 @@
       left: max(0.5rem, 1vw);
       top: max(0.25rem, 1vw);
     }
-    .circleLink {
-      align-items: center;
-      display: flex;
-      height: max(2rem, 10vw);
-      justify-content: center;
-      width: max(2rem, 10vw);
-
-      .circleText {
-        height: fit-content;
-        position: absolute;
-        transition: 0.2s ease-out;
-        width: fit-content;
-
-        .circle {
-          position: relative;
-          top: -57px;
-          left: 53px;
-          width: 133px;
-        }
-      }
-    }
   }
 }
 @media (max-width: 1300px) {
-  .home-about {
+  .aboutus-about {
     align-items: center;
     flex-direction: column;
     gap: max(1rem, 2vw);
@@ -235,7 +235,7 @@
   }
 }
 @media (max-width: 900px) {
-  .home-about {
+  .aboutus-about {
     padding: 10% 8%;
     gap: 0;
     .left {
@@ -269,7 +269,7 @@
   }
 }
 @media (max-width: 600px) {
-  .home-about {
+  .aboutus-about {
     .right {
       height: max(73rem, 40vw);
 
@@ -284,7 +284,7 @@
   }
 }
 @media (max-width: 450px) {
-  .home-about {
+  .aboutus-about {
     .right {
       height: max(45rem, 40vw);
 

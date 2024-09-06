@@ -1,10 +1,15 @@
 import React from "react";
+
 import "./styles/BeingClassy.scss";
 import { BeingClassyData } from "../data";
 import { Link } from "react-router-dom";
 import { FormattedMessage } from "react-intl";
+import { useSelector } from "react-redux";
+import { translate } from "../../../translation/translate";
 
 const BeingClassy = () => {
+  const language = useSelector((state) => state.language.language);
+
   return (
     <div className="home-classy">
       {BeingClassyData.map((data, index) => (
@@ -15,18 +20,12 @@ const BeingClassy = () => {
           <div className="text1">
             <div className="row row1">
               <h1 className="big-title">
-                <FormattedMessage
-                  id="home-modeling-title"
-                  defaultMessage="BEING CLASSY IS BENEFICIAL"
-                />
+                <FormattedMessage id={translate[language].beingClassy_title1} />
               </h1>
             </div>
             <div className="row row2">
               <h1 className="big-title">
-                <FormattedMessage
-                  id="home-modeling-title"
-                  defaultMessage="BEING PROFESSIONAL IS INVALUABLE"
-                />
+                <FormattedMessage id={translate[language].beingClassy_title2} />
               </h1>
             </div>
           </div>

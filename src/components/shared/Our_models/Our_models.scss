@@ -1,0 +1,218 @@
+.shared-our-work {
+  display: flex;
+  flex-direction: column;
+  padding: 6%;
+  h1 {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: max(0.5rem, 1vw);
+    text-align: center;
+    font-size: max(25px, 5vw);
+    font-family: "CustomFont", sans-serif;
+    font-weight: 400;
+  }
+  .tabs {
+    display: grid;
+    gap: max(1rem, 3vw);
+    align-items: center;
+  }
+  .react-tabs__tab-list {
+    align-items: center;
+    display: flex;
+    gap: max(0.5rem, 2vw);
+    justify-content: center;
+    width: 100%;
+  }
+  .styledLink {
+    display: flex;
+    justify-content: center;
+  }
+  .react-tabs__tab {
+    border-bottom: 4px solid transparent;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: max(0.5rem, 0.5vw);
+    padding: max(0.25rem, 0.5vw);
+    position: relative;
+    transition: 0.3s ease-out;
+    white-space: nowrap;
+
+    .line {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      border-radius: 5px;
+      height: 2.5px;
+      background-color: #1d1d1d;
+      transform: scaleX(0);
+      transition: transform 0.3s ease;
+    }
+  }
+
+  .react-tabs__tab--selected .line {
+    transform: scaleX(1);
+  }
+
+  .react-tabs__tab-panel {
+    align-items: stretch;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .col {
+    display: flex;
+    flex-direction: column;
+    gap: max(0.5rem, 1.5vw);
+    justify-content: flex-start;
+    width: 24%;
+
+    .modelsCard {
+      align-content: center;
+      cursor: pointer;
+      display: flex;
+      height: fit-content;
+      justify-content: center;
+      overflow: hidden;
+      position: relative;
+      width: 100%;
+      .image-container {
+        position: relative;
+        .model-image {
+          display: block;
+          width: 100%;
+          height: auto;
+          transition: transform 0.3s ease;
+        }
+      }
+
+      .about-models-hover {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgb(0 0 0 / 68%);
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px;
+        z-index: 1;
+        pointer-events: none;
+        color: #fff;
+        text-align: center;
+
+        .about-models-description {
+          display: grid;
+          gap: max(0.15rem, 0.8vw);
+
+          h4 {
+            font-family: "CustomFont", sans-serif;
+            padding-bottom: 8px;
+          }
+
+          p {
+            font-size: max(12px, 0vw);
+          }
+        }
+        .social {
+          display: flex;
+          gap: max(0.25rem, 1.5vw);
+
+          a {
+            color: #fff;
+          }
+        }
+      }
+      &:hover .about-models-hover {
+        opacity: 1;
+        pointer-events: auto;
+      }
+
+      .content {
+        display: flex;
+        flex-direction: column;
+        padding: max(0.5rem, 1vw);
+
+        .text1 {
+          display: flex;
+          flex-direction: column;
+          gap: max(0.25rem, 0.5vw);
+          text-align: left;
+
+          h3 {
+            font-size: max(18px, 1.8vw);
+            font-family: "CustomFont", sans-serif;
+            font-weight: lighter;
+          }
+        }
+
+        .def-text {
+          font-size: max(13px, 0.8vw);
+          color: #1d1d1d;
+          font-family: sans-serif;
+          font-weight: 300;
+          line-height: 2;
+        }
+
+        .circleLink {
+          align-items: center;
+          display: flex;
+          justify-content: flex-end;
+
+          .circleText {
+            .img {
+              width: 80px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .shared-our-work .col {
+    width: 48%;
+  }
+}
+@media (max-width: 600px) {
+  .shared-our-work .react-tabs__tab-list {
+    flex-wrap: wrap;
+    .react-tabs__tab {
+      font-size: max(10px, 0.5vw);
+    }
+  }
+}
+body.dark-mode .shared-our-work .item {
+  border: 1px solid rgba(var(--main-color-rgb), 0.25);
+
+  .icon {
+    filter: brightness(0) invert(1);
+    -webkit-filter: brightness(0) invert(1);
+  }
+}
+
+@keyframes shining {
+  0% {
+    background-position: left top;
+  }
+  100% {
+    background: right bottom;
+  }
+}
+
+@-webkit-keyframes shining {
+  0% {
+    background-position: left top;
+  }
+  100% {
+    background: right bottom;
+  }
+}

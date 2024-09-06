@@ -1,0 +1,49 @@
+.aboutus-history {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  padding: 5%;
+  width: 100%;
+
+  .left {
+    width: 38%;
+    padding: 0rem 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    h1 {
+      font-size: max(25px, 5vw);
+      font-family: "CustomFont", sans-serif;
+      font-weight: 400;
+    }
+    .text {
+      display: grid;
+      gap: max(2rem, 2vw);
+      p {
+        line-height: 2.5;
+        font-size: max(14px, 0.82vw);
+        color: #4b4b4b;
+        font-family: regularMont, sans-serif;
+      }
+    }
+  }
+  .right {
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    .img {
+      width: 50%;
+    }
+  }
+}
+@media (max-width: 1000px) {
+  .aboutus-history {
+    flex-direction: column;
+    .left {
+      width: 100%;
+    }
+    .right {
+      width: 100%;
+    }
+  }
+}

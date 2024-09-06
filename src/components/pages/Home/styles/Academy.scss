@@ -196,26 +196,14 @@
 }
 @media (max-width: 650px) {
   .home-academy {
-    .rec-carousel-wrapper .academy-content svg {
-      width: 190px;
-    }
-    .rec-arrow-left {
-      left: -33px;
-      height: 20px;
-    }
-    .rec-arrow-right {
-      right: -31px;
-      height: 20px;
-    }
-  }
-}
-@media (max-width: 360px) {
-  .home-academy {
-    .rec-arrow-left {
-      left: -23px;
-    }
-    .rec-arrow-right {
-      right: -21px;
+    .rec-carousel-wrapper {
+      .academy-content svg {
+        width: 190px;
+      }
+      .rec-arrow-left,
+      .rec-arrow-right {
+        display: none;
+      }
     }
   }
 }

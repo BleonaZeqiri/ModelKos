@@ -16,6 +16,7 @@ import { IntlProvider } from "react-intl";
 // import { useSelector } from "react-redux";
 
 const Home = lazy(() => import("./pages/Home/Home"));
+const AboutUs = lazy(() => import("./pages/AboutUs/AboutUs"));
 
 function App() {
   // const language = useSelector((state) => state.language.language);
@@ -35,6 +36,7 @@ function App() {
 
           <Routes>
             <Route exact path="/" element={<Home />} />
+            <Route exact path="/about" element={<AboutUs />} />
 
             <Route path="*" element={<Navigate to="/" />} />
           </Routes>

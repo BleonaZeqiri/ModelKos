@@ -3,8 +3,13 @@ import Carousel from "react-elastic-carousel";
 import "../Home/styles/What_people_say.scss";
 import { What_people_sayData } from "../data.js";
 import { FormattedMessage } from "react-intl";
+import { translate } from "../../../translation/translate";
+
+import { useSelector } from "react-redux";
 
 const What_people_say = () => {
+  const language = useSelector((state) => state.language.language); // Adjust if needed
+
   const itemsToShow = 1;
   const carouselRef = React.createRef();
 
@@ -24,26 +29,23 @@ const What_people_say = () => {
       </button>
     );
   };
-
+  const what_people_sayData = What_people_sayData(language);
   return (
     <div className="home-what_people_say">
       <div className="text">
         <h1 className="big-title">
-          <FormattedMessage
-            id="home-wps-title"
-            defaultMessage="What People Say"
-          />
+          <FormattedMessage id={translate[language].What_people_say_title} />
         </h1>
       </div>
       <div className="img">
         <div className="bg"></div>
         <div className="left">
           <h1>
-            <FormattedMessage id="home-wps1-text" defaultMessage="What" />
+            <FormattedMessage id={translate[language].What_people_say_title1} />
             <br />
-            <FormattedMessage id="home-wps2-text" defaultMessage="People" />
+            <FormattedMessage id={translate[language].What_people_say_title2} />
             <br />
-            <FormattedMessage id="home-wps3-text" defaultMessage="Say" />
+            <FormattedMessage id={translate[language].What_people_say_title3} />
           </h1>
         </div>
         <div className="right">
@@ -64,7 +66,7 @@ const What_people_say = () => {
               disableArrowsOnEnd={false}
               renderArrow={myArrow}
             >
-              {What_people_sayData.map((item, index) => (
+              {what_people_sayData.map((item, index) => (
                 <div className="peopleCard" key={index}>
                   <h1 className="mid-title">{item.title}</h1>
                   <p className="def-text">{item.text}</p>
@@ -90,7 +92,11 @@ const What_people_say = () => {
                         </div>
                       </div>
                     ))}
-                    <img src={item.img} alt={`Image for ${item.title}`} />
+                    <div
+                      className="image"
+                      style={{ content: `url(${item.img})` }}
+                      alt={`Image for ${item.title}`}
+                    ></div>
                   </div>
                 </div>
               ))}

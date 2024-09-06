@@ -1,9 +1,12 @@
-import React, { useState, useMemo } from "react";
+import React, { useState, useMemo, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { ModelsData } from "../data";
 import "./styles/Models.scss";
 import { FormattedMessage } from "react-intl";
 import StyledLink from "../../shared/StyledLink/StyledLink";
+import { translate } from "../../../translation/translate";
+
+import { useSelector } from "react-redux";
 
 const ModelCard = ({ model }) => (
   <div className="modelsCard">
@@ -54,9 +57,22 @@ const ModelCard = ({ model }) => (
 );
 
 const Models = () => {
+  const language = useSelector((state) => state.language.language);
+  const [isSticky, setIsSticky] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollHeight = window.pageYOffset;
+      setIsSticky(scrollHeight > 25 ? true : false);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
   const [selectedCategory, setSelectedCategory] = useState("Any");
 
-  const selectedTab = ModelsData.find((tab) => tab.name === selectedCategory);
+  const selectedTab = modelsData.find((tab) => tab.name === selectedCategory);
 
   const selectedModels = useMemo(
     () => [
@@ -86,23 +102,19 @@ const Models = () => {
     () => chunkArray(selectedModels, columnsPerRow * 3),
     [selectedModels]
   );
-
+  const modelsData = ModelsData(language);
   return (
     <div className="home-models">
       <div className="text">
         <h1 className="title">
-          {" "}
-          <FormattedMessage
-            id="home-models-title"
-            defaultMessage="Our Models"
-          />
+          <FormattedMessage id={translate[language].models_title} />
         </h1>
       </div>
 
       <div className="tabs_models">
         <div className="row">
           <ul className="tabs_models__tab-list">
-            {ModelsData.map((tab) => (
+            {modelsData.map((tab) => (
               <li
                 key={tab.name}
                 className={`tabs_models__tab ${
@@ -136,7 +148,7 @@ const Models = () => {
       <StyledLink
         to="/"
         link={
-          <FormattedMessage id="find-model" defaultMessage="See all models" />
+          <FormattedMessage id={translate[language].models_see_all_models} />
         }
       />
     </div>

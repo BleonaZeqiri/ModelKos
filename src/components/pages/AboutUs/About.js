@@ -30,7 +30,7 @@ const About = () => {
   const aboutUsData2 = AboutUsData2(language);
 
   return (
-    <div className="home-about">
+    <div className="aboutus-about">
       <div className="left">
         <h1>
           <FormattedMessage id={translate[language].about_title} />
@@ -38,6 +38,11 @@ const About = () => {
         <p className="text">
           <FormattedMessage id={translate[language].about_text} />
         </p>
+        <Link className="circleLink" to="/">
+          <div className="circleText">
+            <div className="circle" style={{ content: `url(${image})` }}></div>
+          </div>
+        </Link>
       </div>
       <div className="right">
         <Carousel
@@ -101,12 +106,6 @@ const About = () => {
             </div>
           ))}
         </Carousel>
-
-        <Link className="circleLink" to="/">
-          <div className="circleText">
-            <div className="circle" style={{ content: `url(${image})` }}></div>
-          </div>
-        </Link>
       </div>
     </div>
   );

@@ -18,7 +18,7 @@
     gap: max(0.5rem, 1vw);
     text-align: center;
 
-    img {
+    .img {
       height: auto;
       width: 20%;
     }
@@ -52,5 +52,10 @@
 @media (max-width: 800px) {
   .home-content .line {
     margin-bottom: 83px;
+  }
+}
+@media (max-width: 650px) {
+  .home-content .image-logo {
+    display: none;
   }
 }

@@ -163,6 +163,9 @@
     color: #111 !important;
   }
 }
+.logo-black .logo-container {
+  content: url("../../../assets/NavBar/Logo.svg") !important;
+}
 body.dark-mode .nav__sticky {
   background: var(--dark-color);
   .menu-button,

@@ -1,15 +1,19 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./megamenu.scss";
-
+import { useSelector } from "react-redux";
 import { AboutData, AboutData1 } from "../data";
 
 const AboutMenu = () => {
+  const language = useSelector((state) => state.language.language);
+  const aboutData1 = AboutData1(language);
+  const aboutData = AboutData(language);
+
   return (
     <div className="nav-megamenu about-megamenu">
       <div className="menu-links">
         <div className="inner-links">
-          {AboutData.map((item) => (
+          {aboutData.map((item) => (
             <div className="main" key={item.section}>
               <div className="icon-container">
                 <h3>{item.title}</h3>
@@ -29,7 +33,7 @@ const AboutMenu = () => {
           ))}
         </div>
       </div>
-      {AboutData1.map((item, index) => (
+      {aboutData1.map((item, index) => (
         <div className="right" key={index}>
           <div className="image-item">
             <div className="image">

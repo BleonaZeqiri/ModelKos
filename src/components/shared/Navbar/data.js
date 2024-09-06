@@ -1,4 +1,6 @@
 import { FormattedMessage } from "react-intl";
+import { translate } from "../../../translation/translate";
+
 //Our work image
 import model_image1 from "../../../assets/OurWork/Image1.png";
 import model_image2 from "../../../assets/OurWork/Image2.png";
@@ -12,94 +14,140 @@ import model_image8 from "../../../assets/OurWork/Image7.png";
 //about
 import about_image from "../../../assets/AboutUs/Image2.png";
 
-export const AboutData1 = [
+export const AboutData1 = (language) => [
   {
     title: "Modelkos",
     year: "2022",
     image: about_image,
     button: {
       to: "/",
-      text: "About us",
+      text: <FormattedMessage id={translate[language].about_megamenu_button} />,
     },
   },
 ];
 
-export const AboutData = [
+export const AboutData = (language) => [
   {
     section: "agency",
-    title: <FormattedMessage id="agency" defaultMessage="Agency" />,
+    // to: "/",
+    title: <FormattedMessage id={translate[language].about_megamenu_agency} />,
     links: [
       {
-        to: "/",
-        title: <FormattedMessage id="about-us" defaultMessage="About Us" />,
-      },
-      {
-        to: "/",
-        title: <FormattedMessage id="our-models" defaultMessage="Our Models" />,
-      },
-      {
-        to: "/",
+        to: "/about",
         title: (
-          <FormattedMessage id="our-partners" defaultMessage="Our Partners" />
+          <FormattedMessage id={translate[language].about_megamenu_about_us} />
         ),
       },
       {
         to: "/",
-        title: <FormattedMessage id="our-team" defaultMessage="Our Team" />,
-      },
-      {
-        to: "/",
         title: (
-          <FormattedMessage id="our-partners1" defaultMessage="Our Partners" />
+          <FormattedMessage
+            id={translate[language].about_megamenu_our_models}
+          />
         ),
       },
       {
         to: "/",
-        title: <FormattedMessage id="clients" defaultMessage="Clients" />,
+        title: (
+          <FormattedMessage
+            id={translate[language].about_megamenu_our_partners}
+          />
+        ),
+      },
+      {
+        to: "/",
+        title: (
+          <FormattedMessage id={translate[language].about_megamenu_our_team} />
+        ),
+      },
+      {
+        to: "/",
+        title: (
+          <FormattedMessage
+            id={translate[language].about_megamenu_our_partners1}
+          />
+        ),
+      },
+      {
+        to: "/",
+        title: (
+          <FormattedMessage id={translate[language].about_megamenu_clients} />
+        ),
       },
     ],
   },
   {
     section: "models",
-    title: <FormattedMessage id="models" defaultMessage="Models" />,
+    // to: "/",
+    title: <FormattedMessage id={translate[language].about_megamenu_models} />,
     links: [
       {
         to: "/",
-        title: <FormattedMessage id="be-a-model" defaultMessage="Be a Model" />,
+        title: (
+          <FormattedMessage
+            id={translate[language].about_megamenu_be_a_model}
+          />
+        ),
       },
       {
         to: "/",
-        title: <FormattedMessage id="careers" defaultMessage="Careers" />,
+        title: (
+          <FormattedMessage id={translate[language].about_megamenu_careers} />
+        ),
       },
       {
         to: "/",
-        title: <FormattedMessage id="magazine" defaultMessage="Magazine" />,
+        title: (
+          <FormattedMessage id={translate[language].about_megamenu_magazine} />
+        ),
       },
       {
         to: "/",
-        title: <FormattedMessage id="lists" defaultMessage="Lists" />,
+        title: (
+          <FormattedMessage id={translate[language].about_megamenu_lists} />
+        ),
       },
       {
         to: "/",
-        title: <FormattedMessage id="new-faces" defaultMessage="New Faces" />,
+        title: (
+          <FormattedMessage id={translate[language].about_megamenu_new_faces} />
+        ),
       },
       {
         to: "/",
-        title: <FormattedMessage id="ranking" defaultMessage="Rankings" />,
+        title: (
+          <FormattedMessage id={translate[language].about_megamenu_ranking} />
+        ),
       },
     ],
   },
 ];
 
-export const Our_work2 = [
+export const Our_work2 = (language) => [
   {
     to: "/",
     img: model_image3,
-    name: "Anda Lßleshi",
+    name: "Anda Lleshi",
     description: [
-      { name: "Model" },
-      { name: "Photography" },
-      { name: "Artist" },
+      {
+        name: (
+          <FormattedMessage id={translate[language].our_work_megamenu_model1} />
+        ),
+      },
+      {
+        name: (
+          <FormattedMessage
+            id={translate[language].our_work_megamenu_photography1}
+          />
+        ),
+      },
+      {
+        name: (
+          <FormattedMessage
+            id={translate[language].our_work_megamenu_artist1}
+          />
+        ),
+      },
     ],
     date: "19 may 2022",
   },
@@ -108,9 +156,25 @@ export const Our_work2 = [
     img: model_image4,
     name: "Driada Lakna",
     description: [
-      { name: "Model" },
-      { name: "Photography" },
-      { name: "Artist" },
+      {
+        name: (
+          <FormattedMessage id={translate[language].our_work_megamenu_model2} />
+        ),
+      },
+      {
+        name: (
+          <FormattedMessage
+            id={translate[language].our_work_megamenu_photography2}
+          />
+        ),
+      },
+      {
+        name: (
+          <FormattedMessage
+            id={translate[language].our_work_megamenu_artist2}
+          />
+        ),
+      },
     ],
     date: "19 may 2022",
   },
@@ -119,9 +183,25 @@ export const Our_work2 = [
     img: model_image5,
     name: "Klea Gashi",
     description: [
-      { name: "Model" },
-      { name: "Photography" },
-      { name: "Artist" },
+      {
+        name: (
+          <FormattedMessage id={translate[language].our_work_megamenu_model3} />
+        ),
+      },
+      {
+        name: (
+          <FormattedMessage
+            id={translate[language].our_work_megamenu_photography3}
+          />
+        ),
+      },
+      {
+        name: (
+          <FormattedMessage
+            id={translate[language].our_work_megamenu_artist3}
+          />
+        ),
+      },
     ],
     date: "19 may 2022",
   },
@@ -130,9 +210,25 @@ export const Our_work2 = [
     img: model_image6,
     name: "Arta Kalludra",
     description: [
-      { name: "Model" },
-      { name: "Photography" },
-      { name: "Artist" },
+      {
+        name: (
+          <FormattedMessage id={translate[language].our_work_megamenu_model4} />
+        ),
+      },
+      {
+        name: (
+          <FormattedMessage
+            id={translate[language].our_work_megamenu_photography4}
+          />
+        ),
+      },
+      {
+        name: (
+          <FormattedMessage
+            id={translate[language].our_work_megamenu_artist4}
+          />
+        ),
+      },
     ],
     date: "19 may 2022",
   },
@@ -141,9 +237,25 @@ export const Our_work2 = [
     img: model_image8,
     name: "Anila Xhaferi",
     description: [
-      { name: "Model" },
-      { name: "Photography" },
-      { name: "Artist" },
+      {
+        name: (
+          <FormattedMessage id={translate[language].our_work_megamenu_model5} />
+        ),
+      },
+      {
+        name: (
+          <FormattedMessage
+            id={translate[language].our_work_megamenu_photography5}
+          />
+        ),
+      },
+      {
+        name: (
+          <FormattedMessage
+            id={translate[language].our_work_megamenu_artist5}
+          />
+        ),
+      },
     ],
     date: "19 may 2022",
   },
@@ -152,9 +264,25 @@ export const Our_work2 = [
     img: model_image7,
     name: "Albina Myrtezaj",
     description: [
-      { name: "Model" },
-      { name: "Photography" },
-      { name: "Artist" },
+      {
+        name: (
+          <FormattedMessage id={translate[language].our_work_megamenu_model6} />
+        ),
+      },
+      {
+        name: (
+          <FormattedMessage
+            id={translate[language].our_work_megamenu_photography6}
+          />
+        ),
+      },
+      {
+        name: (
+          <FormattedMessage
+            id={translate[language].our_work_megamenu_artist6}
+          />
+        ),
+      },
     ],
     date: "19 may 2022",
   },
@@ -163,9 +291,25 @@ export const Our_work2 = [
     img: model_image1,
     name: "Blina Beka",
     description: [
-      { name: "Model" },
-      { name: "Photography" },
-      { name: "Artist" },
+      {
+        name: (
+          <FormattedMessage id={translate[language].our_work_megamenu_model7} />
+        ),
+      },
+      {
+        name: (
+          <FormattedMessage
+            id={translate[language].our_work_megamenu_photography7}
+          />
+        ),
+      },
+      {
+        name: (
+          <FormattedMessage
+            id={translate[language].our_work_megamenu_artist7}
+          />
+        ),
+      },
     ],
     date: "19 may 2022",
   },
@@ -174,18 +318,35 @@ export const Our_work2 = [
     img: model_image2,
     name: "Alora Gojani",
     description: [
-      { name: "Model" },
-      { name: "Photography" },
-      { name: "Artist" },
+      {
+        name: (
+          <FormattedMessage id={translate[language].our_work_megamenu_model8} />
+        ),
+      },
+      {
+        name: (
+          <FormattedMessage
+            id={translate[language].our_work_megamenu_photography8}
+          />
+        ),
+      },
+      {
+        name: (
+          <FormattedMessage
+            id={translate[language].our_work_megamenu_artist8}
+          />
+        ),
+      },
     ],
     date: "19 may 2022",
   },
 ];
 
-export const Our_work1 = [
+export const Our_work1 = (language) => [
   {
     section: "city",
-    title: <FormattedMessage id="city" defaultMessage="City" />,
+    to: "/",
+    title: <FormattedMessage id={translate[language].our_work_megamenu_city} />,
     links: [
       {
         to: "/",
@@ -201,7 +362,9 @@ export const Our_work1 = [
       },
       {
         to: "/",
-        title: <FormattedMessage id="city-4" defaultMessage="Gjakove" />,
+        title: (
+          <FormattedMessage id={translate[language].our_work_megamenu_city4} />
+        ),
       },
       {
         to: "/",
@@ -213,83 +376,132 @@ export const Our_work1 = [
       },
       {
         to: "/",
-        title: <FormattedMessage id="city-7" defaultMessage="Mitrovice" />,
+        title: (
+          <FormattedMessage id={translate[language].our_work_megamenu_city7} />
+        ),
       },
     ],
   },
   {
     section: "Female",
-    title: <FormattedMessage id="female" defaultMessage="Female" />,
+    to: "/",
+
+    title: (
+      <FormattedMessage id={translate[language].our_work_megamenu_female} />
+    ),
     links: [
       {
         to: "/",
-        title: <FormattedMessage id="female-1" defaultMessage="Main" />,
+        title: (
+          <FormattedMessage
+            id={translate[language].our_work_megamenu_female1}
+          />
+        ),
       },
       {
         to: "/",
-        title: <FormattedMessage id="female-2" defaultMessage="Direct" />,
+        title: (
+          <FormattedMessage
+            id={translate[language].our_work_megamenu_female2}
+          />
+        ),
       },
       {
         to: "/",
-        title: <FormattedMessage id="female-3" defaultMessage="B Plus" />,
+        title: (
+          <FormattedMessage
+            id={translate[language].our_work_megamenu_female3}
+          />
+        ),
       },
     ],
   },
   {
     section: "Male",
-    title: <FormattedMessage id="male" defaultMessage="Male" />,
+    to: "/",
+
+    title: <FormattedMessage id={translate[language].our_work_megamenu_male} />,
     links: [
       {
         to: "/",
-        title: <FormattedMessage id="male-1" defaultMessage="Main" />,
+        title: (
+          <FormattedMessage id={translate[language].our_work_megamenu_male1} />
+        ),
       },
       {
         to: "/",
-        title: <FormattedMessage id="male-2" defaultMessage="Direct" />,
+        title: (
+          <FormattedMessage id={translate[language].our_work_megamenu_male2} />
+        ),
       },
       {
         to: "/",
-        title: <FormattedMessage id="male-3" defaultMessage="Big & Tall" />,
+        title: (
+          <FormattedMessage id={translate[language].our_work_megamenu_male3} />
+        ),
       },
     ],
   },
   {
     section: "Kids",
-    title: <FormattedMessage id="kids" defaultMessage="Kids" />,
+    title: <FormattedMessage id={translate[language].our_work_megamenu_kids} />,
     links: [
       {
         to: "/",
-        title: <FormattedMessage id="kids-1" defaultMessage="Babies" />,
+        title: (
+          <FormattedMessage id={translate[language].our_work_megamenu_kids1} />
+        ),
       },
       {
         to: "/",
-        title: <FormattedMessage id="kids-2" defaultMessage="Todlers" />,
+        title: (
+          <FormattedMessage id={translate[language].our_work_megamenu_kids2} />
+        ),
       },
       {
         to: "/",
-        title: <FormattedMessage id="kids-3" defaultMessage="Preschool" />,
+        title: (
+          <FormattedMessage id={translate[language].our_work_megamenu_kids3} />
+        ),
       },
       {
         to: "/",
-        title: <FormattedMessage id="kids-3" defaultMessage="Grandschooler" />,
+        title: (
+          <FormattedMessage id={translate[language].our_work_megamenu_kids4} />
+        ),
       },
       {
         to: "/",
-        title: <FormattedMessage id="kids-3" defaultMessage="Teen" />,
+        title: (
+          <FormattedMessage id={translate[language].our_work_megamenu_kids5} />
+        ),
       },
     ],
   },
   {
     section: "Elderly",
-    title: <FormattedMessage id="elderly" defaultMessage="Elderly" />,
+    to: "/",
+
+    title: (
+      <FormattedMessage id={translate[language].our_work_megamenu_elderly} />
+    ),
     links: [
       {
         to: "/",
-        title: <FormattedMessage id="elderly-1" defaultMessage="Old Female" />,
+        title: (
+          <FormattedMessage
+            i
+            id={translate[language].our_work_megamenu_elderly1}
+          />
+        ),
       },
       {
         to: "/",
-        title: <FormattedMessage id="elderly-2" defaultMessage="Old Male" />,
+        title: (
+          <FormattedMessage
+            id={translate[language].our_work_megamenu_elderly2}
+          />
+        ),
       },
     ],
   },
