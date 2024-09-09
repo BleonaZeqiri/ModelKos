@@ -7,7 +7,7 @@ import Footer from "../../components/shared/Footer/Footer";
 
 const AboutUs = () => {
   return (
-    <div className="home-page">
+    <div className="about-page">
       <Navbar isColor />
       <About />
       <History />

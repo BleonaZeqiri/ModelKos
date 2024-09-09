@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { FormattedMessage } from "react-intl";
+import { translate } from "../../../../translation/translate";
 
 import { HiOutlineDocumentDuplicate } from "react-icons/hi";
 import { CgClose } from "react-icons/cg";
@@ -9,13 +10,18 @@ import {
   MdKeyboardArrowDown,
   MdOutlineLanguage,
 } from "react-icons/md";
-import { BiSliderAlt, BiSupport } from "react-icons/bi";
-import { RiInformationFill, RiApps2Fill, RiContactsFill } from "react-icons/ri";
+import { FaHome } from "react-icons/fa";
+import { SiThemodelsresource, SiHtmlacademy } from "react-icons/si";
+import { RiApps2Fill, RiContactsFill } from "react-icons/ri";
 import { AboutData, Our_work1 } from "../../Navbar/data";
 import "../../Navbar/navbar.scss";
-import { useSelector } from "react-redux";
-
+import { useDispatch, useSelector } from "react-redux";
+import england from "../../../../assets/flags/uk.svg";
+import albania from "../../../../assets/flags/albania.svg";
+import { dataLocalStorage } from "../../../../../src/components/shared/SelectLanguage/dataLocalStorage";
+import { chooseLanguage } from "../../../../store/actions/languageAction";
 const Sidebar = (props) => {
+  const dispatch = useDispatch();
   const language = useSelector((state) => state.language.language);
   const aboutData = AboutData(language);
 
@@ -34,7 +40,15 @@ const Sidebar = (props) => {
       [dropdown]: !prevState[dropdown],
     }));
   };
-
+  const languages = [
+    { value: "en-GB", lang: "English", flag: england },
+    { value: "sq-AL", lang: "Albanian", flag: albania },
+  ];
+  const handleLanguageChange = (language, locale) => {
+    dispatch(chooseLanguage(locale));
+    dataLocalStorage.setLanguage(language);
+    dataLocalStorage.setLocale(locale);
+  };
   return (
     <div className="mobile-sidebar">
       <div className="sidebar-logo-row">
@@ -50,8 +64,8 @@ const Sidebar = (props) => {
       <div className="mobile-sidebar-links">
         <div className="nav-sidebar-link">
           <Link to="/Resources" className="nav-anchor">
-            <MdBusinessCenter />
-            <FormattedMessage id="Home" defaultMessage="Home" />
+            <FaHome />
+            <FormattedMessage id={translate[language].home} />
           </Link>
         </div>
 
@@ -61,8 +75,8 @@ const Sidebar = (props) => {
             onClick={() => toggleDropdown("list")}
           >
             <Link to="/" className="nav-anchor">
-              <BiSliderAlt />
-              <FormattedMessage id="our-work" defaultMessage="Our-work" />
+              <MdBusinessCenter />
+              <FormattedMessage id={translate[language].our_work} />
             </Link>
             <div className="dropdown-arrow">
               <MdKeyboardArrowDown />
@@ -86,7 +100,7 @@ const Sidebar = (props) => {
           >
             <Link to="/" className="nav-anchor">
               <HiOutlineDocumentDuplicate />
-              <FormattedMessage id="about" defaultMessage="About us" />
+              <FormattedMessage id={translate[language].about} />
             </Link>
             <div className="dropdown-arrow">
               <MdKeyboardArrowDown />
@@ -96,7 +110,7 @@ const Sidebar = (props) => {
             <div className="mobile-dropdown">
               {aboutData?.map((item) => {
                 return (
-                  <div className="inner-links" key={item.title}>
+                  <div className="inner-links">
                     <Link to={item.to}>{item.title}</Link>
                   </div>
                 );
@@ -111,8 +125,8 @@ const Sidebar = (props) => {
             onClick={() => toggleDropdown("list2")}
           >
             <Link to="/" className="nav-anchor">
-              <RiInformationFill />
-              <FormattedMessage id="models" defaultMessage="Models" />
+              <SiThemodelsresource />
+              <FormattedMessage id={translate[language].models} />
             </Link>
             <div className="dropdown-arrow">
               <MdKeyboardArrowDown />
@@ -124,23 +138,30 @@ const Sidebar = (props) => {
         <div className="sidebar-dropdown">
           <div
             className="nav-sidebar-link"
-            onClick={() => toggleDropdown("list3")}
+            onClick={() => toggleDropdown("list2")}
           >
-            <Link to="/AllServices" className="nav-anchor">
-              <BiSupport />
-              <FormattedMessage id="academy" defaultMessage="Academy" />
+            <Link to="/" className="nav-anchor">
+              <SiHtmlacademy />
+              <FormattedMessage id={translate[language].academy} />
             </Link>
             <div className="dropdown-arrow">
               <MdKeyboardArrowDown />
             </div>
           </div>
-          {dropdowns.list3 && <div className="mobile-dropdown"></div>}
+          {dropdowns.list2 && <div className="mobile-dropdown"></div>}
         </div>
 
         <div className="nav-sidebar-link">
           <Link to="/" className="nav-anchor">
             <RiApps2Fill />
-            <FormattedMessage id="blog" defaultMessage="Blog" />
+            <FormattedMessage id={translate[language].blog} />
+          </Link>
+        </div>
+
+        <div className="nav-sidebar-link">
+          <Link to="/" className="nav-anchor">
+            <RiContactsFill />
+            <FormattedMessage id={translate[language].contact} />
           </Link>
         </div>
         <div className="sidebar-dropdown">
@@ -148,27 +169,43 @@ const Sidebar = (props) => {
             className="nav-sidebar-link"
             onClick={() => toggleDropdown("list3")}
           >
-            <Link to="/AllServices" className="nav-anchor">
-              <MdOutlineLanguage />
-              <FormattedMessage id="academy" defaultMessage="Language" />
-            </Link>
+            <MdOutlineLanguage />
+            <FormattedMessage
+              id={translate[language].language}
+              // defaultMessage="Language"
+            />
             <div className="dropdown-arrow">
               <MdKeyboardArrowDown />
             </div>
           </div>
-          {dropdowns.list3 && <div className="mobile-dropdown"></div>}
-        </div>
-        <div className="nav-sidebar-link">
-          <Link to="/" className="nav-anchor">
-            <RiContactsFill />
-            <FormattedMessage id="blog" defaultMessage="Contacts" />
-          </Link>
+          {dropdowns.list3 && (
+            <div className="mobile-dropdown">
+              {languages?.map((item) => {
+                return (
+                  <div className="inner-links" key={item.title}>
+                    <div
+                      className="flag"
+                      onClick={() =>
+                        handleLanguageChange(item.lang, item.value)
+                      }
+                    >
+                      <div
+                        className="img"
+                        style={{ content: `url(${item.flag})` }}
+                      ></div>
+                      {item.lang}
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          )}
         </div>
       </div>
 
       <div className="sidebar-auth">
         <Link to="/" className="contact-us">
-          <FormattedMessage id="apply" defaultMessage="Apply Now" />
+          <FormattedMessage id={translate[language].apply} />
         </Link>
       </div>
 

@@ -138,6 +138,13 @@
       color: #1b1919;
     }
   }
+  .flag {
+    gap: max(0.5rem, 2vw);
+    padding: 10px 10px 10px 28px !important;
+    .img {
+      width: 20px;
+    }
+  }
 }
 
 .mobile-sidebar .sidebar-auth {

@@ -138,7 +138,7 @@ const Navbar = (props) => {
         </Link>
       </div>
 
-      <MobileNav />
+      <MobileNav isColor={props.isColor} />
     </div>
   );
 };

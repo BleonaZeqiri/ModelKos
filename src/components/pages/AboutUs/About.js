@@ -14,23 +14,11 @@ const About = () => {
 
   const carouselRef = React.useRef(null);
 
-  const onNextStart = (currentItem, nextItem) => {
-    if (currentItem.index === nextItem.index) {
-      carouselRef.current.goTo(0);
-    }
-  };
-
-  const onPrevStart = (currentItem, nextItem) => {
-    if (currentItem.index === nextItem.index) {
-      carouselRef.current.goTo(carouselRef.current.props.itemsToShow - 1);
-    }
-  };
-
   const aboutUsData = AboutUsData(language);
   const aboutUsData2 = AboutUsData2(language);
 
   return (
-    <div className="aboutus-about">
+    <div className="about-AboutUs">
       <div className="left">
         <h1>
           <FormattedMessage id={translate[language].about_title} />
@@ -45,13 +33,7 @@ const About = () => {
         </Link>
       </div>
       <div className="right">
-        <Carousel
-          itemsToShow={1}
-          ref={carouselRef}
-          onPrevStart={onPrevStart}
-          onNextStart={onNextStart}
-          disableArrowsOnEnd={false}
-        >
+        <Carousel itemsToShow={1} ref={carouselRef} disableArrowsOnEnd={false}>
           {aboutUsData.map((item, index) => (
             <div className="flex" key={index}>
               <div className="aboutCard about1">

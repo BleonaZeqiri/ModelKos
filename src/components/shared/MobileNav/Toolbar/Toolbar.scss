@@ -44,15 +44,17 @@
     justify-content: center;
   }
 }
+
 .toolbar__sticky,
+.logo-black,
 .white-nav .mobile-toolbar {
-  background-color: white !important;
+  background-color: white;
   box-shadow: rgba(99, 99, 99, 0.15) 0px 1.5px 2.5px 0px;
   transition: 0.2s ease;
   -webkit-transition: 0.2s ease;
   .mobile-logo-row a {
     .mobile-logo-container {
-      content: url("../../../../assets/NavBar/Logo.svg") !important;
+      content: url("../../../../assets/NavBar/Logo.svg");
     }
     h1 {
       color: #000000;
@@ -60,8 +62,11 @@
   }
 
   button {
-    color: #31335b !important;
+    color: #31335b;
   }
+}
+.logo-black .mobile-logo-container {
+  content: url("../../../../assets/NavBar/Logo.svg") !important;
 }
 body.dark-mode {
   .toolbar__sticky,

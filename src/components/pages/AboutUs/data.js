@@ -4,8 +4,6 @@ import { translate } from "../../translation/translate";
 import image1 from "../../assets/AboutUs-section/DeaGashi.png";
 import image2 from "../../assets/AboutUs-section/BlertaBerisha.png";
 // History
-import historyImage1 from "../../../assets/AboutUsPage/History/banner-1.png";
-import historyImage2 from "../../../assets/AboutUsPage/History/banner-2.png";
 
 export const AboutUsData = (language) => [
   {

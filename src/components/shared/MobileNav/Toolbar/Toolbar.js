@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import clsx from "clsx";
 import { Link } from "react-router-dom";
-
 import { AiOutlineMenu } from "react-icons/ai";
 import "./Toolbar.scss";
 
@@ -23,11 +22,19 @@ const Toolbar = (props) => {
   }, []);
 
   return (
-    <div className={clsx("mobile-toolbar", isSticky2 ? "toolbar__sticky" : "")}>
+    <div
+      className={clsx(
+        `mobile-toolbar ${props.styles}`,
+        isSticky2 ? "toolbar__sticky" : "",
+        props.isColor && ".logo-black "
+      )}
+    >
       <div className="mobile-logo-row">
-        <Link to="/">
+        <Link to="/" className="nav-logo">
           <div className="mobile-logo-container"></div>
-          <h1>MODELKOS</h1>
+          <h1 style={{ color: props.isColor || isSticky2 ? "black" : "white" }}>
+            MODELKOS
+          </h1>
         </Link>
       </div>
       <button onClick={props.drawerClickHandler}>

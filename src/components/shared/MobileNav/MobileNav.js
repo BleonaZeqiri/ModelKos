@@ -1,36 +1,38 @@
-import React, {useState} from 'react';
-import './MobileNav.scss';
-import Backdrop from './Backdrop/Backdrop';
-import Toolbar from './Toolbar/Toolbar';
-import Sidebar from './Sidebar/Sidebar';
+import React, { useState } from "react";
+import "./MobileNav.scss";
+import Backdrop from "./Backdrop/Backdrop";
+import Toolbar from "./Toolbar/Toolbar";
+import Sidebar from "./Sidebar/Sidebar";
 
-const MobileNav = () => {
-
+const MobileNav = (props) => {
   const [openSideDrawer, setOpenSideDrawer] = useState(false);
-  function showDrawer(){
+  function showDrawer() {
     setOpenSideDrawer(!openSideDrawer);
   }
 
-  function backdropClickHandler(){
+  function backdropClickHandler() {
     setOpenSideDrawer(false);
   }
 
-  
   let sideDrawer;
   let backdrop;
 
-  if(openSideDrawer){
-    sideDrawer = <Sidebar click={backdropClickHandler}/>;
-    backdrop = <Backdrop click={backdropClickHandler}/>;
-  } 
+  if (openSideDrawer) {
+    sideDrawer = <Sidebar click={backdropClickHandler} />;
+    backdrop = <Backdrop click={backdropClickHandler} />;
+  }
 
-    return (
-      <div className='mobile-nav'>
-          <Toolbar drawerClickHandler={showDrawer} iconHandler={openSideDrawer} />
-          {sideDrawer}
-          {backdrop}
-      </div>
-    )
-}
+  return (
+    <div className="mobile-nav">
+      <Toolbar
+        drawerClickHandler={showDrawer}
+        iconHandler={openSideDrawer}
+        isColor={props.isColor}
+      />
+      {sideDrawer}
+      {backdrop}
+    </div>
+  );
+};
 
-export default MobileNav
+export default MobileNav;

@@ -1,4 +1,4 @@
-.aboutus-about {
+.about-AboutUs {
   display: flex;
   justify-content: space-between;
   align-items: stretch;
@@ -16,8 +16,6 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    // align-items: flex-start;
-    // gap: max(0.25rem, 1.5vh);
 
     h1 {
       font-size: max(25px, 5vw);
@@ -26,7 +24,7 @@
     }
 
     .text {
-      font-size: max(12px, 0.83vw);
+      font-size: max(12px, 0.85vw);
       line-height: max(30px, 2.5vw);
     }
     .circleLink {
@@ -35,16 +33,7 @@
       justify-content: flex-end;
 
       .circleText {
-        // height: fit-content;
-        // position: absolute;
-        // transition: 0.2s ease-out;
-        // width: fit-content;
-
         .circle {
-          //   position: relative;
-          //   top: -57px;
-          //   left: 53px;
-          //   width: 133px;
           width: 140px;
         }
       }
@@ -178,8 +167,8 @@
       display: flex;
       justify-content: flex-start;
       align-items: center;
-      right: 30.5%;
-      bottom: 68px;
+      padding-right: 62.5%;
+      top: -59px;
       position: relative;
     }
 
@@ -210,10 +199,12 @@
   }
 }
 @media (max-width: 1300px) {
-  .aboutus-about {
+  .about-AboutUs {
     align-items: center;
     flex-direction: column;
     gap: max(1rem, 2vw);
+    position: relative;
+    top: 56px;
     .left {
       align-items: center;
       padding: 0;
@@ -223,9 +214,12 @@
     .right {
       height: max(25rem, 40vw);
       position: relative;
-      top: 55px;
-      .flex .aboutCard .model-item {
-        padding: 0;
+      //   top: 55px;
+      .flex {
+        padding: max(2rem, 0.5vw);
+        .aboutCard .model-item {
+          padding: 0;
+        }
       }
       .rec-pagination {
         padding-right: 57.5%;
@@ -235,24 +229,36 @@
   }
 }
 @media (max-width: 900px) {
-  .aboutus-about {
-    padding: 10% 8%;
+  .about-AboutUs {
+    // padding: 10% 8%;
     gap: 0;
+
     .left {
       width: 100%;
+      gap: max(0.5rem, 2vw);
     }
+
     .right {
       width: 100%;
+      height: max(31rem, 45vw);
       .flex {
-        .about1 {
+        justify-content: center;
+
+        .aboutCard {
+          display: flex;
+          flex-direction: column;
+          height: 100%;
+          width: 100%;
           left: auto;
           top: auto;
-          width: 100%;
-        }
-        .about2 {
-          left: auto;
-          top: auto;
-          width: 100%;
+
+          .img {
+            width: 100%;
+            flex-grow: 1;
+            background-size: cover;
+            background-position: center;
+            height: auto;
+          }
         }
       }
       .rec-pagination {
@@ -268,10 +274,12 @@
     }
   }
 }
-@media (max-width: 600px) {
-  .aboutus-about {
+@media (max-width: 700px) {
+  .about-AboutUs {
+    gap: max(0.5rem, 3vw);
+    // padding: 20% 8%;
     .right {
-      height: max(73rem, 40vw);
+      height: max(77rem, 43vw);
 
       .flex {
         flex-direction: column;
@@ -284,7 +292,9 @@
   }
 }
 @media (max-width: 450px) {
-  .aboutus-about {
+  .about-AboutUs {
+    // padding: 30% 8%;
+
     .right {
       height: max(45rem, 40vw);
 

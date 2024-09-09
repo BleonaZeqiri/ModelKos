@@ -29,8 +29,9 @@ export const AboutData1 = (language) => [
 export const AboutData = (language) => [
   {
     section: "agency",
-    // to: "/",
     title: <FormattedMessage id={translate[language].about_megamenu_agency} />,
+    to: "/about",
+
     links: [
       {
         to: "/about",

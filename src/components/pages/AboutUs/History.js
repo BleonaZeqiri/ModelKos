@@ -2,8 +2,8 @@ import React from "react";
 import { FormattedMessage } from "react-intl";
 // import { Link } from "react-router-dom";
 import "./styles/History.scss";
-import historyImage1 from "../../../assets/AboutUsPage/History/banner-1.png";
-import historyImage2 from "../../../assets/AboutUsPage/History/banner-2.png";
+import historyImage1 from "../../../assets/AboutUsPage/History/banner-5.png";
+import historyImage2 from "../../../assets/AboutUsPage/History/banner-4.png";
 
 const History = () => {
   return (
@@ -35,9 +35,9 @@ movie production."
         </div>
       </div>
       <div className="right">
-        <div className="img" style={{ content: `url(${historyImage2})` }}></div>
-
         <div className="img" style={{ content: `url(${historyImage1})` }}></div>
+
+        <div className="img" style={{ content: `url(${historyImage2})` }}></div>
       </div>
     </div>
   );
