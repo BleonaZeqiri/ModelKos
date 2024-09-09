@@ -1,0 +1,222 @@
+.about-benefits {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: max(1rem, 1vw);
+  padding: 4%;
+
+  .text {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: max(0.5rem, 1vw);
+    text-align: center;
+  }
+
+  .big-title {
+    font-size: max(25px, 5.2vw);
+    padding: 0% 5%;
+    font-family: "CustomFont", sans-serif;
+    font-weight: 100;
+  }
+
+  .Card {
+    border: 1px solid #cfcfcf;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 1rem;
+    padding: max(1rem, 2vw) max(0.9rem, 1.5vw);
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+
+    .img {
+      background-image: url("../../../../assets/AboutUsPage/Benefits/pexels-intel.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+      bottom: 0;
+      left: 0;
+      opacity: 0;
+      position: absolute;
+      right: 0;
+      top: 0;
+      -webkit-transform: scale(0.65);
+      transform: scale(0.65);
+      transition: opacity 0.3s ease, transform 0.3s ease;
+      z-index: 2;
+
+      .bg {
+        background-color: rgb(0 0 0 / 41%);
+        bottom: 0;
+        left: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
+        z-index: 1;
+      }
+    }
+
+    .def-text {
+      font-size: max(11px, 0.7vw);
+      line-height: 3;
+      z-index: 2;
+      font-weight: 100;
+    }
+
+    &:hover {
+      .def-text {
+        color: #fff;
+      }
+      .img {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+  }
+
+  .styledLink {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    .shared-styled-link1 {
+      border-radius: 0px;
+    }
+  }
+  .rec-pagination {
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+    align-items: center;
+  }
+
+  .rec-dot {
+    width: max(8px, 0.25vw) !important;
+    height: max(8px, 0.25vw) !important;
+    border-radius: 50% !important;
+    margin: 0 max(3px, 0.2vw) !important;
+    border: 0 !important;
+    box-shadow: none !important;
+    background: #bbb !important;
+  }
+  .rec-dot_active {
+    width: max(10.5px, 0.25vw) !important;
+    height: max(10.5px, 0.25vw) !important;
+    border-radius: 50% !important;
+    border: 0 !important;
+    box-shadow: none !important;
+    background: #242424 !important;
+  }
+  .rec-arrow-left,
+  .rec-arrow-right {
+    text-indent: -9999px;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+  }
+
+  .rec-arrow {
+    position: absolute;
+    top: 52%;
+    transform: translateY(-50%);
+    z-index: 10;
+
+    &.rec-arrow-left {
+      left: 28px;
+      background-image: url("../../../../assets/Modeling/arrow/arrow-left.svg");
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+      background-color: transparent;
+    }
+
+    &.rec-arrow-right {
+      right: 28px;
+      background-image: url("../../../../assets/Modeling/arrow/arrow-right.svg");
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+      background-color: transparent;
+    }
+  }
+  .PIJXl {
+    border: none;
+    box-shadow: none;
+    background-color: #fff;
+    min-width: 0px;
+    line-height: 0px;
+
+    &:hover {
+      border: none;
+      box-shadow: none;
+      background-color: #fff;
+    }
+  }
+  .eHxPRW {
+    border: none !important;
+    box-shadow: none !important;
+    &:hover:enabled,
+    .eHxPRW:focus:enabled {
+      border: none !important;
+      box-shadow: none !important;
+      background-color: transparent !important;
+    }
+  }
+  .eHxPRW:focus:enabled {
+    color: rgb(255, 255, 255);
+    background-color: transparent !important;
+    box-shadow: none !important;
+  }
+}
+
+@media (max-width: 1200px) {
+  .about-benefits {
+    .rec-arrow.rec-arrow-left {
+      left: 20px;
+    }
+    .rec-arrow.rec-arrow-right {
+      right: 20px;
+    }
+  }
+}
+@media (max-width: 900px) {
+  .about-benefits {
+    .rec-arrow {
+      top: 48%;
+    }
+    .rec-arrow-left {
+      left: 13px;
+      width: 32px;
+    }
+    .rec-arrow-right {
+      right: 13px;
+      width: 32px;
+    }
+  }
+}
+@media (max-width: 650px) {
+  .about-benefits {
+    .rec-arrow-left,
+    .rec-arrow-right {
+      width: 28px;
+    }
+  }
+}
+@media (max-width: 550px) {
+  .about-benefits {
+    .rec-arrow.rec-arrow-left {
+      left: 7px;
+    }
+    .rec-arrow.rec-arrow-right {
+      right: 7px;
+    }
+  }
+}

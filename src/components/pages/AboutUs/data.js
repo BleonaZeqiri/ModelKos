@@ -1,10 +1,16 @@
 import { FormattedMessage } from "react-intl";
-import { translate } from "../../translation/translate";
+import { translate } from "../../../translation/translate";
 // About
-import image1 from "../../assets/AboutUs-section/DeaGashi.png";
-import image2 from "../../assets/AboutUs-section/BlertaBerisha.png";
-// History
+import image1 from "../../../assets/AboutUs-section/DeaGashi.png";
+import image2 from "../../../assets/AboutUs-section/BlertaBerisha.png";
 
+// History
+//hheh
+// import { ReactComponent as What_we_offer2 } from "../../assets/WhatWeOffer/Icon1.svg";
+// import { ReactComponent as What_we_offer3 } from "../../assets/WhatWeOffer/Icon2.svg";
+// import { ReactComponent as What_we_offer4 } from "../../assets/WhatWeOffer/Icon3.svg";
+// import { ReactComponent as What_we_offer5 } from "../../assets/WhatWeOffer/Icon4.svg";
+// import { HiOutlineArrowLongRight } from "react-icons/hi2";
 export const AboutUsData = (language) => [
   {
     to: "/",
@@ -193,24 +199,30 @@ export const AboutUsData2 = (language) => [
     date: "19 may 2022",
   },
 ];
-export const History = [
+
+export const BenefitsData = (language) => [
   {
-    title: (
-      <FormattedMessage id="footer-paragraph4" defaultMessage="  history" />
-    ),
-    text1: (
-      <FormattedMessage
-        id="footer-paragraph4"
-        defaultMessage="ModelKos was created with the commitment and understanding that all talent be equally represented and that appropriate rates and fees for services be negotiated and paid to talent in a timely fashion. With it's own in house studio and technical staff, ModelKos also understands the timely needs of the Model, Talent, Client, Producer, Director, and all support staff in print, television and movie production."
-      ></FormattedMessage>
-    ),
-    text2: (
-      <FormattedMessage
-        id="footer-paragraph4"
-        defaultMessage="  ModelKos's Social Media department is constantly working to add content, tags, mentions and other engagement for our models, talent, clients, and all our partners."
-      ></FormattedMessage>
-    ),
-    img1: historyImage1,
-    img2: historyImage2,
+    text: <FormattedMessage id={translate[language].benefits_text1} />,
+  },
+  {
+    text: <FormattedMessage id={translate[language].benefits_text2} />,
+  },
+  {
+    text: <FormattedMessage id={translate[language].benefits_text3} />,
+  },
+  {
+    text: <FormattedMessage id={translate[language].benefits_text4} />,
+  },
+  {
+    text: <FormattedMessage id={translate[language].benefits_text5} />,
+  },
+  {
+    text: <FormattedMessage id={translate[language].benefits_text6} />,
+  },
+  {
+    text: <FormattedMessage id={translate[language].benefits_text7} />,
+  },
+  {
+    text: <FormattedMessage id={translate[language].benefits_text8} />,
   },
 ];

@@ -139,6 +139,7 @@
     }
   }
   .flag {
+    display: flex;
     gap: max(0.5rem, 2vw);
     padding: 10px 10px 10px 28px !important;
     .img {
