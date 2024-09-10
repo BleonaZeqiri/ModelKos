@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 import { FormattedMessage } from "react-intl";
 import { FooterData, SocialMedia, FooterData1, FooterData2 } from "./data";
 import SelectLanguage from "../SelectLanguage/SelectLanguage";
-import clsx from "clsx";
 import "./footer.scss";
 const Footer = (props) => {
   const language = useSelector((state) => state.language.language);
@@ -25,9 +24,7 @@ const Footer = (props) => {
   const footerData2 = FooterData2(language);
 
   return (
-    <div
-      className={clsx("shared-footer", props.styles, isSticky && "nav__sticky")}
-    >
+    <div className="shared-footer">
       <div className="first-row">
         <h1>MODELING</h1>
         <div className="modeling"></div>

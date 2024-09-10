@@ -1,0 +1,47 @@
+.about-content {
+  display: flex;
+  padding: 3% 0%;
+
+  .img {
+    width: 54%;
+  }
+  .content {
+    width: 45%;
+    padding: 0% 4%;
+    display: grid;
+    gap: max(0.5rem, 1vw);
+    h3 {
+      font-size: max(23px, 2.3vw);
+      font-family: "CustomFont", sans-serif;
+      font-weight: lighter;
+      color: #1d1d1d;
+
+      span {
+        font-size: max(15px, 0.9vw);
+        line-height: max(32px, 2vw);
+        color: #707070;
+      }
+      .and {
+        margin-left: 32px;
+      }
+    }
+    .image {
+      width: 100%;
+    }
+  }
+}
+@media (max-width: 900px) {
+  .about-content {
+    flex-direction: column;
+    .img {
+      width: 100%;
+    }
+    .content {
+      width: 100%;
+      text-align: center;
+      .and {
+        margin-left: 0px !important;
+      }
+    }
+  }
+}

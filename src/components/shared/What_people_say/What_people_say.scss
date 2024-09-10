@@ -1,4 +1,4 @@
-.home-what_people_say {
+.what_people_say {
   display: flex;
   flex-direction: column;
   gap: max(1rem, 2vw);
@@ -18,7 +18,7 @@
   }
   .img {
     align-items: center;
-    background-image: url(../../../../assets/WhatPeopleSay/Background.png);
+    background-image: url(../../../assets/WhatPeopleSay/Background.png);
     display: flex;
     justify-content: space-between;
     padding: 5%;
@@ -84,7 +84,7 @@
         }
         .dots-shadow {
           bottom: 12%;
-          content: url(../../../../assets/WhatPeopleSay/Dots.jpg);
+          content: url(../../../assets/WhatPeopleSay/Dots.jpg);
           height: 32%;
           left: 20%;
           position: absolute;
@@ -189,7 +189,7 @@
   }
 
   .rec-arrow-left {
-    background: url("../../../../assets/WhatPeopleSay/arrow/arrow-right.svg");
+    background: url("../../../assets/WhatPeopleSay/arrow/arrow-right.svg");
     background-repeat: no-repeat;
     box-shadow: none !important;
     font-size: 0;
@@ -200,7 +200,7 @@
     z-index: 3;
   }
   .rec-arrow-right {
-    background: url("../../../../assets/WhatPeopleSay/arrow/arrow-left.svg");
+    background: url("../../../assets/WhatPeopleSay/arrow/arrow-left.svg");
     background-repeat: no-repeat;
     box-shadow: none !important;
     font-size: 0;
@@ -212,7 +212,7 @@
   }
 }
 @media (max-width: 1000px) {
-  .home-what_people_say .img {
+  .what_people_say .img {
     .left {
       display: none;
     }
@@ -227,7 +227,7 @@
   }
 }
 @media (max-width: 500px) {
-  .home-what_people_say {
+  .what_people_say {
     .img {
       padding: 9% 5%;
       .right .peopleCard {

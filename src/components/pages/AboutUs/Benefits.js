@@ -2,7 +2,6 @@ import React, { useState, useEffect, useRef } from "react";
 import Carousel from "react-elastic-carousel";
 import "./styles/Benefits.scss";
 import { BenefitsData } from "./data";
-// import { Link } from "react-router-dom";
 import { FormattedMessage } from "react-intl";
 import StyledLink from "../../shared/StyledLink/StyledLink";
 import { useSelector } from "react-redux";

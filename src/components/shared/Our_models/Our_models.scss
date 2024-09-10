@@ -1,4 +1,4 @@
-.shared-our-work {
+.shared-our-models {
   display: flex;
   flex-direction: column;
   padding: 6%;
@@ -178,19 +178,19 @@
 }
 
 @media (max-width: 900px) {
-  .shared-our-work .col {
+  .shared-our-models.col {
     width: 48%;
   }
 }
 @media (max-width: 600px) {
-  .shared-our-work .react-tabs__tab-list {
+  .shared-our-models .react-tabs__tab-list {
     flex-wrap: wrap;
     .react-tabs__tab {
       font-size: max(10px, 0.5vw);
     }
   }
 }
-body.dark-mode .shared-our-work .item {
+body.dark-mode .shared-our-models .item {
   border: 1px solid rgba(var(--main-color-rgb), 0.25);
 
   .icon {

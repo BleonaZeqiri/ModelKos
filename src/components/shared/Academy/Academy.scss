@@ -1,5 +1,5 @@
-.home-academy {
-  background-image: url(../../../../assets/Academy/Background.png);
+.academy {
+  background-image: url(../../../assets/Academy/Background.png);
   background-position: 50%;
   background-repeat: no-repeat;
   background-size: 100%;
@@ -114,7 +114,7 @@
 
     .rec-arrow-left {
       left: -36px;
-      background-image: url("../../../../assets/Modeling/arrow/arrow-left.svg");
+      background-image: url("../../../assets/Modeling/arrow/arrow-left.svg");
       background-repeat: no-repeat;
       background-size: contain;
       background-position: center;
@@ -123,7 +123,7 @@
 
     .rec-arrow-right {
       right: -36px;
-      background-image: url("../../../../assets/Modeling/arrow/arrow-right.svg");
+      background-image: url("../../../assets/Modeling/arrow/arrow-right.svg");
       background-repeat: no-repeat;
       background-size: contain;
       background-position: center;
@@ -161,7 +161,7 @@
 }
 
 @media (max-width: 1250px) {
-  .home-academy {
+  .academy {
     padding: 5%;
     .rec-arrow-left {
       left: -40px;
@@ -172,7 +172,7 @@
   }
 }
 @media (max-width: 800px) {
-  .home-academy {
+  .academy {
     .eHxPRW {
       background-color: transparent;
       box-shadow: none;
@@ -195,7 +195,7 @@
   }
 }
 @media (max-width: 650px) {
-  .home-academy {
+  .academy {
     .rec-carousel-wrapper {
       .academy-content svg {
         width: 190px;

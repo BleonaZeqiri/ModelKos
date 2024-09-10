@@ -1,8 +1,8 @@
 import React from "react";
-import "./styles/Our_partnerships.scss";
-import { Our_partnershipsData } from "../data";
+import "./Our_partnerships.scss";
+import { Our_partnershipsData } from "./data";
 import { FormattedMessage } from "react-intl";
-import StyledLink from "../../shared/StyledLink/StyledLink";
+import StyledLink from "../StyledLink/StyledLink";
 import { useSelector } from "react-redux";
 import { translate } from "../../../translation/translate";
 
@@ -10,7 +10,7 @@ const Our_partnerships = () => {
   const language = useSelector((state) => state.language.language);
   const our_partnershipsData = Our_partnershipsData(language);
   return (
-    <div className="home-partnerships">
+    <div className="our_partnerships">
       <div className="text">
         <h1 className="big-title">
           <FormattedMessage id={translate[language].Our_partnerships_title} />

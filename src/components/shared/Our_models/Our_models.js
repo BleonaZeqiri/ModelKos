@@ -15,7 +15,7 @@ const OurWork = () => {
   console.log(data);
 
   return (
-    <div className="shared-our-work">
+    <div className="shared-our-models">
       <h1 data-aos="fade-up" data-aos-anchor-placement="top-bottom">
         <FormattedMessage id={translate[language].models_title} />
       </h1>

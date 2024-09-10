@@ -1,9 +1,9 @@
 import React, { useRef } from "react";
 import Carousel from "react-elastic-carousel";
-import { AcademyData } from "../data";
-import "./styles/Academy.scss";
+import { AcademyData } from "./data";
+import "./Academy.scss";
 import { FormattedMessage } from "react-intl";
-import StyledLink from "../../shared/StyledLink/StyledLink";
+import StyledLink from "../StyledLink/StyledLink";
 import { translate } from "../../../translation/translate";
 import { useSelector } from "react-redux";
 const Academy = () => {
@@ -11,7 +11,7 @@ const Academy = () => {
   const language = useSelector((state) => state.language.language);
   const academyData = AcademyData(language);
   return (
-    <div className="home-academy">
+    <div className="academy">
       <div className="bg"></div>
       <div className="absolute">
         <h1>

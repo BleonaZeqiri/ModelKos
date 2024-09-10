@@ -1,4 +1,4 @@
-.home-ksgirls {
+.ksgirls {
   align-items: center;
   display: flex;
   justify-content: space-between;
@@ -83,12 +83,12 @@
   }
 }
 @media (max-width: 1150px) {
-  .home-ksgirls {
+  .ksgirls {
     padding: 5%;
   }
 }
 @media (max-width: 750px) {
-  .home-ksgirls {
+  .ksgirls {
     flex-direction: column-reverse;
     gap: max(2rem, 2vw);
     padding: 5%;
@@ -104,7 +104,7 @@
 }
 
 @media (max-width: 550px) {
-  .home-ksgirls .left {
+  .ksgirls .left {
     width: 100%;
   }
 }

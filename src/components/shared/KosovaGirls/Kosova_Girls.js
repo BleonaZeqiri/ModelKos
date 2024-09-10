@@ -1,8 +1,8 @@
 import React from "react";
-import { Kosova_GirlsData, SharedTextData } from "../data";
-import "./styles/Kosova_Girls.scss";
+import { Kosova_GirlsData, SharedTextData } from "./data";
+import "./Kosova_Girls.scss";
 import { FormattedMessage } from "react-intl";
-import StyledLink from "../../shared/StyledLink/StyledLink";
+import StyledLink from "../StyledLink/StyledLink";
 import { Link } from "react-router-dom";
 import { translate } from "../../../translation/translate";
 import { useSelector } from "react-redux";
@@ -13,7 +13,7 @@ const Kosova_Girls = () => {
   const sharedTextData = SharedTextData(language);
   const { icon, title, text } = sharedTextData[0];
   return (
-    <div className="home-ksgirls">
+    <div className="ksgirls">
       <div className="left">
         {kosova_GirlsData.map((item, index) => (
           <div

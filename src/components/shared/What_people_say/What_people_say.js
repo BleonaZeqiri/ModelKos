@@ -1,14 +1,14 @@
 import React from "react";
 import Carousel from "react-elastic-carousel";
-import "../Home/styles/What_people_say.scss";
-import { What_people_sayData } from "../data.js";
+import "./What_people_say.scss";
+import { What_people_sayData } from "./data.js";
 import { FormattedMessage } from "react-intl";
-import { translate } from "../../../translation/translate";
+import { translate } from "../../../translation/translate.js";
 
 import { useSelector } from "react-redux";
 
 const What_people_say = () => {
-  const language = useSelector((state) => state.language.language); // Adjust if needed
+  const language = useSelector((state) => state.language.language);
 
   const itemsToShow = 1;
   const carouselRef = React.createRef();
@@ -31,7 +31,7 @@ const What_people_say = () => {
   };
   const what_people_sayData = What_people_sayData(language);
   return (
-    <div className="home-what_people_say">
+    <div className="what_people_say">
       <div className="text">
         <h1 className="big-title">
           <FormattedMessage id={translate[language].What_people_say_title} />

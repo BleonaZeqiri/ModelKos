@@ -8,13 +8,15 @@ import Marketing from "../../components/pages/Home/Marketing";
 import BeingClassy from "../../components/pages/Home/BeingClassy";
 import What_we_offer from "../../components/pages/Home/What_we_offer";
 import Content from "../../components/pages/Home/Content";
-import What_people_say from "../../components/pages/Home/What_people_say";
-import Our_partnerships from "../../components/pages/Home/Our_partnerships";
-import Kosova_Girls from "../../components/pages/Home/Kosova_Girls";
+import What_people_say from "../../components/shared/What_people_say/What_people_say";
+import Our_partnerships from "../../components/shared/Our_Partnerships/Our_partnerships";
+import Kosova_Girls from "../../components/shared/KosovaGirls/Kosova_Girls";
 import Our_blog from "../../components/pages/Home/Our_blog";
-import Academy from "../../components/pages/Home/Acadmey";
-import Our_partners from "../../components/pages/Home/Our_partners";
-import Subscribe from "../../components/pages/Home/Subscribe";
+import Academy from "../../components/shared/Academy/Acadmey";
+
+import Our_partners from "../../components/shared/Our_partners/Our_partners";
+
+import Subscribe from "../../components/shared/Subscribe/Subscribe";
 import Models from "../../components/shared/Our_models/Our_models";
 import Slider from "../../components/pages/Home/Slider";
 
