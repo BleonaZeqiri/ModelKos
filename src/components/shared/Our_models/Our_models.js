@@ -7,13 +7,12 @@ import { Data } from "./data";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 import StyledLink from "../StyledLink/StyledLink";
+import { useNavigate } from "react-router-dom";
 
-const OurWork = () => {
+const Our_models = () => {
   const language = useSelector((state) => state.language.language);
-
   const data = Data(language);
-  console.log(data);
-
+  const navigate = useNavigate();
   return (
     <div className="shared-our-models">
       <h1 data-aos="fade-up" data-aos-anchor-placement="top-bottom">
@@ -45,12 +44,13 @@ const OurWork = () => {
         {data.length === 0 ? (
           <p>No data available</p>
         ) : (
-          data.map((props, index) => (
-            <TabPanel key={index}>
-              {props.items.map((l, lIndex) => (
-                <div className={`col ${l.col}`} key={lIndex}>
-                  {l.innerItems.map((i, iIndex) => (
-                    <div className="modelsCard" key={iIndex}>
+          data.map((props, index) => {
+            console.log(props);
+            return (
+              <TabPanel key={index}>
+                {props.items.innerItems.map((i, lIndex) => (
+                  <div className={`col ${i.col}`} key={lIndex}>
+                    <div className="modelsCard " key={i.id}>
                       <div className="image-container">
                         {i.img && (
                           <>
@@ -58,8 +58,11 @@ const OurWork = () => {
                               className="model-image"
                               style={{ content: `url(${i.img})` }}
                             ></div>
-                            <div className="about-models-hover">
-                              <div className="about-models-description">
+                            <div
+                              className="about-models-hover"
+                              onClick={() => navigate(`/profile/${i.id}`)}
+                            >
+                              <div className="about-models-description cursor-pointer">
                                 <h4>{i.name}</h4>
                                 <p>{i.text1}</p>
                                 <p>{i.text2}</p>
@@ -101,11 +104,11 @@ const OurWork = () => {
                         </div>
                       )}
                     </div>
-                  ))}
-                </div>
-              ))}
-            </TabPanel>
-          ))
+                  </div>
+                ))}
+              </TabPanel>
+            );
+          })
         )}
         <StyledLink
           to="/"
@@ -118,4 +121,4 @@ const OurWork = () => {
   );
 };
 
-export default OurWork;
+export default Our_models;

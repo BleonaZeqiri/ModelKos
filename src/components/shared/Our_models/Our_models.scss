@@ -57,28 +57,18 @@
   }
 
   .react-tabs__tab-panel {
-    align-items: stretch;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    column-count: 4;
+    column-width: 33%;
+    padding: 0 12px;
   }
 
   .col {
-    display: flex;
-    flex-direction: column;
-    gap: max(0.5rem, 1.5vw);
-    justify-content: flex-start;
-    width: 24%;
-
+    cursor: pointer;
+    margin-bottom: 12px;
     .modelsCard {
-      align-content: center;
-      cursor: pointer;
-      display: flex;
-      height: fit-content;
-      justify-content: center;
-      overflow: hidden;
-      position: relative;
       width: 100%;
+      margin-bottom: 17px;
+
       .image-container {
         position: relative;
         .model-image {
@@ -177,9 +167,13 @@
   }
 }
 
-@media (max-width: 900px) {
-  .shared-our-models.col {
-    width: 48%;
+@media (max-width: 1000px) {
+  .shared-our-models {
+    .react-tabs__tab-panel {
+      -webkit-column-count: 3;
+      -moz-column-count: 3;
+      column-count: 2;
+    }
   }
 }
 @media (max-width: 600px) {
@@ -187,6 +181,18 @@
     flex-wrap: wrap;
     .react-tabs__tab {
       font-size: max(10px, 0.5vw);
+    }
+  }
+}
+@media (max-width: 480px) {
+  .shared-our-models {
+    .react-tabs__tab-panel {
+      -webkit-column-count: 1;
+      -moz-column-count: 1;
+      column-count: 1;
+      -webkit-column-width: 100%;
+      -moz-column-width: 100%;
+      column-width: 100%;
     }
   }
 }

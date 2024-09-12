@@ -1,0 +1,141 @@
+.gallery-container {
+  margin-top: 8%;
+  padding: 0% 4%;
+  .profile-models {
+    display: grid;
+
+    gap: max(1rem, 2vw);
+
+    .profile-models-description {
+      justify-content: center;
+      display: grid;
+      text-align: center;
+      gap: max(1rem, 2vw);
+
+      h1 {
+        font-size: max(15px, 3.4vw);
+        font-weight: 400;
+        text-transform: uppercase;
+      }
+      .profile-details {
+        gap: max(1rem, 1vw);
+        display: flex;
+        p {
+          line-height: 2.5;
+          font-size: max(12px, 0.75vw);
+          color: #1d1d1d;
+          font-family: Montserrat;
+        }
+      }
+      .social {
+        display: flex;
+        justify-content: center;
+        gap: max(1rem, 3vw);
+
+        a {
+          color: #1d1d1d;
+        }
+      }
+    }
+    .gallery {
+      -webkit-column-count: 3;
+      -moz-column-count: 3;
+      column-count: 3;
+      -webkit-column-width: 33%;
+      -moz-column-width: 33%;
+      column-width: 33%;
+      padding: 0 12px;
+      .pics {
+        -webkit-transition: all 350ms ease;
+        transition: all 350ms ease;
+        cursor: pointer;
+        margin-bottom: 12px;
+        .model-image {
+          width: 100%;
+          margin-bottom: 17px;
+        }
+      }
+    }
+    .gallery .pics:hover {
+      filter: opacity(-8);
+    }
+    .model {
+      width: 100%;
+      height: 100vh;
+      position: fixed;
+      top: 0;
+      left: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: 0#000000;
+
+      transition: opacity 4s ease, visibility 0.4s ease,
+        transform 0.5s ease-in-out;
+      visibility: hidden;
+      opacity: 0;
+      transform: scale(0);
+      overflow: hidden;
+      z-index: 999;
+    }
+    .model .open {
+      visibility: visible;
+      opacity: 1;
+      transform: scale(1);
+    }
+    .model .img {
+      width: auto;
+      max-width: 100%;
+      height: auto;
+      max-height: 100%;
+      display: block;
+      line-height: 0;
+      box-sizing: border-box;
+      padding: 20px 0 20px;
+      margin: 0 auto;
+    }
+    .model.open.svg {
+      position: fixed;
+      top: 10px;
+      right: 10px;
+      width: 2rem;
+      height: 2rem;
+      padding: 5px;
+      background-color: rgba(0, 0, 0, 0.4);
+      color: #ffffff;
+      cursor: pointer;
+    }
+  }
+}
+@media (max-width: 991px) {
+  .gallery-container {
+    margin-top: 12%;
+    .profile-models {
+      .gallery {
+        -webkit-column-count: 2;
+        -moz-column-count: 2;
+        column-count: 2;
+      }
+      .profile-models-description .profile-details {
+        justify-content: center;
+        gap: max(0.5rem, 0.5vw);
+        flex-wrap: wrap;
+      }
+    }
+  }
+}
+@media (max-width: 480px) {
+  .gallery-container {
+    margin-top: 20%;
+    .profile-models {
+      .gallery {
+        -webkit-column-count: 1;
+        -moz-column-count: 1;
+        column-count: 1;
+        -webkit-column-width: 100%;
+        -moz-column-width: 100%;
+        column-width: 100%;
+      }
+    }
+  }
+}

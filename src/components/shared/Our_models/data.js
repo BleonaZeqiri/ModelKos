@@ -13,753 +13,1245 @@ import model9 from "../../../assets/OurModels/Model7.png";
 import model11 from "../../../assets/OurModels/Model8.png";
 import model10 from "../../../assets/OurModels/Model9.png";
 import modelText from "../../../assets/OurModels/ModelText.svg";
+import prtofile1 from "../../../assets/Home/Profile/180.png";
+import prtofile2 from "../../../assets/Home/Profile/181.png";
+import prtofile3 from "../../../assets/Home/Profile/219.png";
+import prtofile4 from "../../../assets/Home/Profile/222.png";
+import prtofile5 from "../../../assets/Home/Profile/225.png";
+import prtofile6 from "../../../assets/Home/Profile/227.png";
+import prtofile7 from "../../../assets/Home/Profile/234.png";
+import prtofile8 from "../../../assets/Home/Profile/236.png";
+import prtofile9 from "../../../assets/Home/Profile/237.png";
+import prtofile10 from "../../../assets/Home/Profile/242.png";
+import prtofile11 from "../../../assets/Home/Profile/252.png";
 
 export const Data = (language) => [
   {
     cls: "tab1",
-    items: [
-      {
-        col: "col1",
-        innerItems: [
-          {
-            img: model1,
+    items: {
+      col: "col1",
+      innerItems: [
+        {
+          id: 1,
+          img: model1,
 
-            name: "Anda Lleshi",
-            text1: (
-              <FormattedMessage
-                id={translate[language].about_models_tab_height1}
-              />
-            ),
-            text2: (
-              <FormattedMessage
-                id={translate[language].about_models_tab_bust1}
-              />
-            ),
-            text3: (
-              <FormattedMessage
-                id={translate[language].about_models_tab_waist1}
-              />
-            ),
-            text4: (
-              <FormattedMessage
-                id={translate[language].about_models_tab_hips1}
-              />
-            ),
-            text5: (
-              <FormattedMessage
-                id={translate[language].about_models_tab_dress1}
-              />
-            ),
-            text6: (
-              <FormattedMessage
-                id={translate[language].about_models_tab_shoe1}
-              />
-            ),
-            text7: (
-              <FormattedMessage
-                id={translate[language].about_models_tab_hair1}
-              />
-            ),
-            text8: (
-              <FormattedMessage
-                id={translate[language].about_models_tab_eyes1}
-              />
-            ),
-            socialMedia: [
-              {
-                to: "/",
-                icon: <FaFacebookF />,
-              },
+          img1: prtofile1,
+          img2: prtofile2,
+          img3: prtofile3,
+          img4: prtofile4,
+          img5: prtofile5,
+          img6: prtofile6,
+          img7: prtofile7,
+          img8: prtofile8,
+          img9: prtofile9,
+          img10: prtofile10,
+          img11: prtofile11,
+          name: "Anda Lleshi",
+          text1: (
+            <FormattedMessage
+              id={translate[language].about_models_tab_height1}
+            />
+          ),
+          text2: (
+            <FormattedMessage id={translate[language].about_models_tab_bust1} />
+          ),
+          text3: (
+            <FormattedMessage
+              id={translate[language].about_models_tab_waist1}
+            />
+          ),
+          text4: (
+            <FormattedMessage id={translate[language].about_models_tab_hips1} />
+          ),
+          text5: (
+            <FormattedMessage
+              id={translate[language].about_models_tab_dress1}
+            />
+          ),
+          text6: (
+            <FormattedMessage id={translate[language].about_models_tab_shoe1} />
+          ),
+          text7: (
+            <FormattedMessage id={translate[language].about_models_tab_hair1} />
+          ),
+          text8: (
+            <FormattedMessage id={translate[language].about_models_tab_eyes1} />
+          ),
+          socialMedia: [
+            {
+              to: "/",
+              icon: <FaFacebookF />,
+            },
 
-              {
-                to: "/",
-                icon: <FaInstagram />,
-              },
-              {
-                to: "/",
-                icon: <FaTiktok />,
-              },
-              {
-                to: "/",
-                icon: <FaTwitter />,
-              },
-            ],
-          },
-          {
-            img: model7,
+            {
+              to: "/",
+              icon: <FaInstagram />,
+            },
+            {
+              to: "/",
+              icon: <FaTiktok />,
+            },
+            {
+              to: "/",
+              icon: <FaTwitter />,
+            },
+          ],
+        },
+        {
+          id: 2,
 
-            name: "Anila Xhaferi",
-            text1: (
-              <FormattedMessage
-                id={translate[language].about_models_tab_height2}
-                // id="video-productionn"
-                // defaultMessage="Video Phjhjroduction"
-              />
-            ),
-            text2: (
-              <FormattedMessage
-                id={translate[language].about_models_tab_bust2}
-              />
-            ),
-            text3: (
-              <FormattedMessage
-                id={translate[language].about_models_tab_waist2}
-              />
-            ),
-            text4: (
-              <FormattedMessage
-                id={translate[language].about_models_tab_hips2}
-              />
-            ),
-            text5: (
-              <FormattedMessage
-                id={translate[language].about_models_tab_dress2}
-              />
-            ),
-            text6: (
-              <FormattedMessage
-                id={translate[language].about_models_tab_shoe2}
-              />
-            ),
-            text7: (
-              <FormattedMessage
-                id={translate[language].about_models_tab_hair2}
-              />
-            ),
-            text8: (
-              <FormattedMessage
-                id={translate[language].about_models_tab_eyes2}
-              />
-            ),
-            socialMedia: [
-              {
-                to: "/",
-                icon: <FaFacebookF />,
-              },
+          img: model7,
 
-              {
-                to: "/",
-                icon: <FaInstagram />,
-              },
-              {
-                to: "/",
-                icon: <FaTiktok />,
-              },
-              {
-                to: "/",
-                icon: <FaTwitter />,
-              },
-            ],
-          },
-          {
-            img: model10,
-            name: "Blerta Salihu",
+          name: "Anila Xhaferi",
+          text1: (
+            <FormattedMessage
+              id={translate[language].about_models_tab_height2}
+              // id="video-productionn"
+              // defaultMessage="Video Phjhjroduction"
+            />
+          ),
+          text2: (
+            <FormattedMessage id={translate[language].about_models_tab_bust2} />
+          ),
+          text3: (
+            <FormattedMessage
+              id={translate[language].about_models_tab_waist2}
+            />
+          ),
+          text4: (
+            <FormattedMessage id={translate[language].about_models_tab_hips2} />
+          ),
+          text5: (
+            <FormattedMessage
+              id={translate[language].about_models_tab_dress2}
+            />
+          ),
+          text6: (
+            <FormattedMessage id={translate[language].about_models_tab_shoe2} />
+          ),
+          text7: (
+            <FormattedMessage id={translate[language].about_models_tab_hair2} />
+          ),
+          text8: (
+            <FormattedMessage id={translate[language].about_models_tab_eyes2} />
+          ),
+          socialMedia: [
+            {
+              to: "/",
+              icon: <FaFacebookF />,
+            },
 
-            text1: (
-              <FormattedMessage
-                id={translate[language].about_models_tab_height3}
-              />
-            ),
-            text2: (
-              <FormattedMessage
-                id={translate[language].about_models_tab_bust3}
-              />
-            ),
-            text3: (
-              <FormattedMessage
-                id={translate[language].about_models_tab_waist3}
-              />
-            ),
-            text4: (
-              <FormattedMessage
-                id={translate[language].about_models_tab_hips3}
-              />
-            ),
-            text5: (
-              <FormattedMessage
-                id={translate[language].about_models_tab_dress3}
-              />
-            ),
-            text6: (
-              <FormattedMessage
-                id={translate[language].about_models_tab_shoe3}
-              />
-            ),
-            text7: (
-              <FormattedMessage
-                id={translate[language].about_models_tab_hair3}
-              />
-            ),
-            text8: (
-              <FormattedMessage
-                id={translate[language].about_models_tab_eyes3}
-              />
-            ),
-            socialMedia: [
-              {
-                to: "/",
-                icon: <FaFacebookF />,
-              },
+            {
+              to: "/",
+              icon: <FaInstagram />,
+            },
+            {
+              to: "/",
+              icon: <FaTiktok />,
+            },
+            {
+              to: "/",
+              icon: <FaTwitter />,
+            },
+          ],
+        },
+        {
+          id: 3,
 
-              {
-                to: "/",
-                icon: <FaInstagram />,
-              },
-              {
-                to: "/",
-                icon: <FaTiktok />,
-              },
-              {
-                to: "/",
-                icon: <FaTwitter />,
-              },
-            ],
-          },
-        ],
-      },
-      {
-        col: "col2",
-        innerItems: [
-          {
-            img: model4,
+          img: model10,
+          name: "Blerta Salihu",
 
-            name: "Drianda Lakna",
-            text1: (
-              <FormattedMessage
-                id={translate[language].about_models_tab_height4}
-              />
-            ),
-            text2: (
-              <FormattedMessage
-                id={translate[language].about_models_tab_bust4}
-              />
-            ),
-            text3: (
-              <FormattedMessage
-                id={translate[language].about_models_tab_waist4}
-              />
-            ),
-            text4: (
-              <FormattedMessage
-                id={translate[language].about_models_tab_hips4}
-              />
-            ),
-            text5: (
-              <FormattedMessage
-                id={translate[language].about_models_tab_dress4}
-              />
-            ),
-            text6: (
-              <FormattedMessage
-                id={translate[language].about_models_tab_shoe4}
-              />
-            ),
-            text7: (
-              <FormattedMessage
-                id={translate[language].about_models_tab_hair4}
-              />
-            ),
-            text8: (
-              <FormattedMessage
-                id={translate[language].about_models_tab_eyes4}
-              />
-            ),
-            socialMedia: [
-              {
-                to: "/",
-                icon: <FaFacebookF />,
-              },
+          text1: (
+            <FormattedMessage
+              id={translate[language].about_models_tab_height3}
+            />
+          ),
+          text2: (
+            <FormattedMessage id={translate[language].about_models_tab_bust3} />
+          ),
+          text3: (
+            <FormattedMessage
+              id={translate[language].about_models_tab_waist3}
+            />
+          ),
+          text4: (
+            <FormattedMessage id={translate[language].about_models_tab_hips3} />
+          ),
+          text5: (
+            <FormattedMessage
+              id={translate[language].about_models_tab_dress3}
+            />
+          ),
+          text6: (
+            <FormattedMessage id={translate[language].about_models_tab_shoe3} />
+          ),
+          text7: (
+            <FormattedMessage id={translate[language].about_models_tab_hair3} />
+          ),
+          text8: (
+            <FormattedMessage id={translate[language].about_models_tab_eyes3} />
+          ),
+          socialMedia: [
+            {
+              to: "/",
+              icon: <FaFacebookF />,
+            },
 
-              {
-                to: "/",
-                icon: <FaInstagram />,
-              },
-              {
-                to: "/",
-                icon: <FaTiktok />,
-              },
-              {
-                to: "/",
-                icon: <FaTwitter />,
-              },
-            ],
-          },
-          {
-            img: model8,
+            {
+              to: "/",
+              icon: <FaInstagram />,
+            },
+            {
+              to: "/",
+              icon: <FaTiktok />,
+            },
+            {
+              to: "/",
+              icon: <FaTwitter />,
+            },
+          ],
+        },
+        {
+          id: 4,
 
-            name: "Albina Myrtezaj",
-            text1: (
-              <FormattedMessage
-                id={translate[language].about_models_tab_height5}
-              />
-            ),
-            text2: (
-              <FormattedMessage
-                id={translate[language].about_models_tab_bust5}
-              />
-            ),
-            text3: (
-              <FormattedMessage
-                id={translate[language].about_models_tab_waist5}
-              />
-            ),
-            text4: (
-              <FormattedMessage
-                id={translate[language].about_models_tab_hips5}
-              />
-            ),
-            text5: (
-              <FormattedMessage
-                id={translate[language].about_models_tab_dress5}
-              />
-            ),
-            text6: (
-              <FormattedMessage
-                id={translate[language].about_models_tab_shoe5}
-              />
-            ),
-            text7: (
-              <FormattedMessage
-                id={translate[language].about_models_tab_hair5}
-              />
-            ),
-            text8: (
-              <FormattedMessage
-                id={translate[language].about_models_tab_eyes5}
-              />
-            ),
-            socialMedia: [
-              {
-                to: "/",
-                icon: <FaFacebookF />,
-              },
+          img: model4,
 
-              {
-                to: "/",
-                icon: <FaInstagram />,
-              },
-              {
-                to: "/",
-                icon: <FaTiktok />,
-              },
-              {
-                to: "/",
-                icon: <FaTwitter />,
-              },
-            ],
-          },
-          {
-            img: model2,
-            name: "Iliada Sadriu",
+          name: "Drianda Lakna",
+          text1: (
+            <FormattedMessage
+              id={translate[language].about_models_tab_height4}
+            />
+          ),
+          text2: (
+            <FormattedMessage id={translate[language].about_models_tab_bust4} />
+          ),
+          text3: (
+            <FormattedMessage
+              id={translate[language].about_models_tab_waist4}
+            />
+          ),
+          text4: (
+            <FormattedMessage id={translate[language].about_models_tab_hips4} />
+          ),
+          text5: (
+            <FormattedMessage
+              id={translate[language].about_models_tab_dress4}
+            />
+          ),
+          text6: (
+            <FormattedMessage id={translate[language].about_models_tab_shoe4} />
+          ),
+          text7: (
+            <FormattedMessage id={translate[language].about_models_tab_hair4} />
+          ),
+          text8: (
+            <FormattedMessage id={translate[language].about_models_tab_eyes4} />
+          ),
+          socialMedia: [
+            {
+              to: "/",
+              icon: <FaFacebookF />,
+            },
 
-            text1: (
-              <FormattedMessage
-                id={translate[language].about_models_tab_height6}
-              />
-            ),
-            text2: (
-              <FormattedMessage
-                id={translate[language].about_models_tab_bust6}
-              />
-            ),
-            text3: (
-              <FormattedMessage
-                id={translate[language].about_models_tab_waist6}
-              />
-            ),
-            text4: (
-              <FormattedMessage
-                id={translate[language].about_models_tab_hips6}
-              />
-            ),
-            text5: (
-              <FormattedMessage
-                id={translate[language].about_models_tab_dress6}
-              />
-            ),
-            text6: (
-              <FormattedMessage
-                id={translate[language].about_models_tab_shoe6}
-              />
-            ),
-            text7: (
-              <FormattedMessage
-                id={translate[language].about_models_tab_hair6}
-              />
-            ),
-            text8: (
-              <FormattedMessage
-                id={translate[language].about_models_tab_eyes6}
-              />
-            ),
-            socialMedia: [
-              {
-                to: "/",
-                icon: <FaFacebookF />,
-              },
+            {
+              to: "/",
+              icon: <FaInstagram />,
+            },
+            {
+              to: "/",
+              icon: <FaTiktok />,
+            },
+            {
+              to: "/",
+              icon: <FaTwitter />,
+            },
+          ],
+        },
+        {
+          id: 5,
 
-              {
-                to: "/",
-                icon: <FaInstagram />,
-              },
-              {
-                to: "/",
-                icon: <FaTiktok />,
-              },
-              {
-                to: "/",
-                icon: <FaTwitter />,
-              },
-            ],
-          },
-        ],
-      },
-      {
-        col: "col3",
-        innerItems: [
-          {
-            img: model5,
+          img: model8,
 
-            name: "Klea Gashi",
-            text1: (
-              <FormattedMessage
-                id={translate[language].about_models_tab_height7}
-              />
-            ),
-            text2: (
-              <FormattedMessage
-                id={translate[language].about_models_tab_bust7}
-              />
-            ),
-            text3: (
-              <FormattedMessage
-                id={translate[language].about_models_tab_waist7}
-              />
-            ),
-            text4: (
-              <FormattedMessage
-                id={translate[language].about_models_tab_hips7}
-              />
-            ),
-            text5: (
-              <FormattedMessage
-                id={translate[language].about_models_tab_dress7}
-              />
-            ),
-            text6: (
-              <FormattedMessage
-                id={translate[language].about_models_tab_shoe7}
-              />
-            ),
-            text7: (
-              <FormattedMessage
-                id={translate[language].about_models_tab_hair7}
-              />
-            ),
-            text8: (
-              <FormattedMessage
-                id={translate[language].about_models_tab_eyes7}
-              />
-            ),
-            socialMedia: [
-              {
-                to: "/",
-                icon: <FaFacebookF />,
-              },
+          name: "Albina Myrtezaj",
+          text1: (
+            <FormattedMessage
+              id={translate[language].about_models_tab_height5}
+            />
+          ),
+          text2: (
+            <FormattedMessage id={translate[language].about_models_tab_bust5} />
+          ),
+          text3: (
+            <FormattedMessage
+              id={translate[language].about_models_tab_waist5}
+            />
+          ),
+          text4: (
+            <FormattedMessage id={translate[language].about_models_tab_hips5} />
+          ),
+          text5: (
+            <FormattedMessage
+              id={translate[language].about_models_tab_dress5}
+            />
+          ),
+          text6: (
+            <FormattedMessage id={translate[language].about_models_tab_shoe5} />
+          ),
+          text7: (
+            <FormattedMessage id={translate[language].about_models_tab_hair5} />
+          ),
+          text8: (
+            <FormattedMessage id={translate[language].about_models_tab_eyes5} />
+          ),
+          socialMedia: [
+            {
+              to: "/",
+              icon: <FaFacebookF />,
+            },
 
-              {
-                to: "/",
-                icon: <FaInstagram />,
-              },
-              {
-                to: "/",
-                icon: <FaTiktok />,
-              },
-              {
-                to: "/",
-                icon: <FaTwitter />,
-              },
-            ],
-          },
-          {
-            img: model9,
+            {
+              to: "/",
+              icon: <FaInstagram />,
+            },
+            {
+              to: "/",
+              icon: <FaTiktok />,
+            },
+            {
+              to: "/",
+              icon: <FaTwitter />,
+            },
+          ],
+        },
+        {
+          id: 6,
 
-            name: "Drenusha Qaza",
-            text1: (
-              <FormattedMessage
-                id={translate[language].about_models_tab_height8}
-              />
-            ),
-            text2: (
-              <FormattedMessage
-                id={translate[language].about_models_tab_bust8}
-              />
-            ),
-            text3: (
-              <FormattedMessage
-                id={translate[language].about_models_tab_waist8}
-              />
-            ),
-            text4: (
-              <FormattedMessage
-                id={translate[language].about_models_tab_hips8}
-              />
-            ),
-            text5: (
-              <FormattedMessage
-                id={translate[language].about_models_tab_dress8}
-              />
-            ),
-            text6: (
-              <FormattedMessage
-                id={translate[language].about_models_tab_shoe8}
-              />
-            ),
-            text7: (
-              <FormattedMessage
-                id={translate[language].about_models_tab_hair8}
-              />
-            ),
-            text8: (
-              <FormattedMessage
-                id={translate[language].about_models_tab_eyes8}
-              />
-            ),
-            socialMedia: [
-              {
-                to: "/",
-                icon: <FaFacebookF />,
-              },
+          img: model2,
+          name: "Iliada Sadriu",
 
-              {
-                to: "/",
-                icon: <FaInstagram />,
-              },
-              {
-                to: "/",
-                icon: <FaTiktok />,
-              },
-              {
-                to: "/",
-                icon: <FaTwitter />,
-              },
-            ],
-          },
-          {
-            model_title: (
-              <FormattedMessage
-                id={translate[language].about_models_content1}
-              />
-            ),
-            paragraph: (
-              <FormattedMessage
-                id={translate[language].about_models_content2}
-              />
-            ),
+          text1: (
+            <FormattedMessage
+              id={translate[language].about_models_tab_height6}
+            />
+          ),
+          text2: (
+            <FormattedMessage id={translate[language].about_models_tab_bust6} />
+          ),
+          text3: (
+            <FormattedMessage
+              id={translate[language].about_models_tab_waist6}
+            />
+          ),
+          text4: (
+            <FormattedMessage id={translate[language].about_models_tab_hips6} />
+          ),
+          text5: (
+            <FormattedMessage
+              id={translate[language].about_models_tab_dress6}
+            />
+          ),
+          text6: (
+            <FormattedMessage id={translate[language].about_models_tab_shoe6} />
+          ),
+          text7: (
+            <FormattedMessage id={translate[language].about_models_tab_hair6} />
+          ),
+          text8: (
+            <FormattedMessage id={translate[language].about_models_tab_eyes6} />
+          ),
+          socialMedia: [
+            {
+              to: "/",
+              icon: <FaFacebookF />,
+            },
 
-            //   "ModelKos is seeking for new talent, so join the largest modeling agency in Kosovo and show off your skills. Be a model!",
-            icon: modelText,
-          },
-        ],
-      },
-      {
-        col: "col4",
-        innerItems: [
-          {
-            img: model6,
-            name: "Arta Kalludra",
+            {
+              to: "/",
+              icon: <FaInstagram />,
+            },
+            {
+              to: "/",
+              icon: <FaTiktok />,
+            },
+            {
+              to: "/",
+              icon: <FaTwitter />,
+            },
+          ],
+        },
+        {
+          id: 7,
 
-            text1: (
-              <FormattedMessage
-                id={translate[language].about_models_tab_height9}
-              />
-            ),
-            text2: (
-              <FormattedMessage
-                id={translate[language].about_models_tab_bust9}
-              />
-            ),
-            text3: (
-              <FormattedMessage
-                id={translate[language].about_models_tab_waist9}
-              />
-            ),
-            text4: (
-              <FormattedMessage
-                id={translate[language].about_models_tab_hips9}
-              />
-            ),
-            text5: (
-              <FormattedMessage
-                id={translate[language].about_models_tab_dress9}
-              />
-            ),
-            text6: (
-              <FormattedMessage
-                id={translate[language].about_models_tab_shoe9}
-              />
-            ),
-            text7: (
-              <FormattedMessage
-                id={translate[language].about_models_tab_hair9}
-              />
-            ),
-            text8: (
-              <FormattedMessage
-                id={translate[language].about_models_tab_eyes9}
-              />
-            ),
-            socialMedia: [
-              {
-                to: "/",
-                icon: <FaFacebookF />,
-              },
+          img: model5,
 
-              {
-                to: "/",
-                icon: <FaInstagram />,
-              },
-              {
-                to: "/",
-                icon: <FaTiktok />,
-              },
-              {
-                to: "/",
-                icon: <FaTwitter />,
-              },
-            ],
-          },
-          {
-            img: model11,
+          name: "Klea Gashi",
+          text1: (
+            <FormattedMessage
+              id={translate[language].about_models_tab_height7}
+            />
+          ),
+          text2: (
+            <FormattedMessage id={translate[language].about_models_tab_bust7} />
+          ),
+          text3: (
+            <FormattedMessage
+              id={translate[language].about_models_tab_waist7}
+            />
+          ),
+          text4: (
+            <FormattedMessage id={translate[language].about_models_tab_hips7} />
+          ),
+          text5: (
+            <FormattedMessage
+              id={translate[language].about_models_tab_dress7}
+            />
+          ),
+          text6: (
+            <FormattedMessage id={translate[language].about_models_tab_shoe7} />
+          ),
+          text7: (
+            <FormattedMessage id={translate[language].about_models_tab_hair7} />
+          ),
+          text8: (
+            <FormattedMessage id={translate[language].about_models_tab_eyes7} />
+          ),
+          socialMedia: [
+            {
+              to: "/",
+              icon: <FaFacebookF />,
+            },
 
-            name: "Klesta Trifoni",
-            text1: (
-              <FormattedMessage
-                id={translate[language].about_models_tab_height10}
-              />
-            ),
-            text2: (
-              <FormattedMessage
-                id={translate[language].about_models_tab_bust10}
-              />
-            ),
-            text3: (
-              <FormattedMessage
-                id={translate[language].about_models_tab_waist10}
-              />
-            ),
-            text4: (
-              <FormattedMessage
-                id={translate[language].about_models_tab_hips10}
-              />
-            ),
-            text5: (
-              <FormattedMessage
-                id={translate[language].about_models_tab_dress10}
-              />
-            ),
-            text6: (
-              <FormattedMessage
-                id={translate[language].about_models_tab_shoe10}
-              />
-            ),
-            text7: (
-              <FormattedMessage
-                id={translate[language].about_models_tab_hair10}
-              />
-            ),
-            text8: (
-              <FormattedMessage
-                id={translate[language].about_models_tab_eyes10}
-              />
-            ),
-            socialMedia: [
-              {
-                to: "/",
-                icon: <FaFacebookF />,
-              },
+            {
+              to: "/",
+              icon: <FaInstagram />,
+            },
+            {
+              to: "/",
+              icon: <FaTiktok />,
+            },
+            {
+              to: "/",
+              icon: <FaTwitter />,
+            },
+          ],
+        },
+        {
+          id: 8,
 
-              {
-                to: "/",
-                icon: <FaInstagram />,
-              },
-              {
-                to: "/",
-                icon: <FaTiktok />,
-              },
-              {
-                to: "/",
-                icon: <FaTwitter />,
-              },
-            ],
-          },
-          {
-            img: model3,
+          img: model9,
 
-            name: "Melinda Ademi",
-            text1: (
-              <FormattedMessage
-                id={translate[language].about_models_tab_height11}
-              />
-            ),
-            text2: (
-              <FormattedMessage
-                id={translate[language].about_models_tab_bust11}
-              />
-            ),
-            text3: (
-              <FormattedMessage
-                id={translate[language].about_models_tab_waist11}
-              />
-            ),
-            text4: (
-              <FormattedMessage
-                id={translate[language].about_models_tab_hips11}
-              />
-            ),
-            text5: (
-              <FormattedMessage
-                id={translate[language].about_models_tab_dress11}
-              />
-            ),
-            text6: (
-              <FormattedMessage
-                id={translate[language].about_models_tab_shoe11}
-              />
-            ),
-            text7: (
-              <FormattedMessage
-                id={translate[language].about_models_tab_hair11}
-              />
-            ),
-            text8: (
-              <FormattedMessage
-                id={translate[language].about_models_tab_eyes11}
-              />
-            ),
-            socialMedia: [
-              {
-                to: "/",
-                icon: <FaFacebookF />,
-              },
+          name: "Drenusha Qaza",
+          text1: (
+            <FormattedMessage
+              id={translate[language].about_models_tab_height8}
+            />
+          ),
+          text2: (
+            <FormattedMessage id={translate[language].about_models_tab_bust8} />
+          ),
+          text3: (
+            <FormattedMessage
+              id={translate[language].about_models_tab_waist8}
+            />
+          ),
+          text4: (
+            <FormattedMessage id={translate[language].about_models_tab_hips8} />
+          ),
+          text5: (
+            <FormattedMessage
+              id={translate[language].about_models_tab_dress8}
+            />
+          ),
+          text6: (
+            <FormattedMessage id={translate[language].about_models_tab_shoe8} />
+          ),
+          text7: (
+            <FormattedMessage id={translate[language].about_models_tab_hair8} />
+          ),
+          text8: (
+            <FormattedMessage id={translate[language].about_models_tab_eyes8} />
+          ),
+          socialMedia: [
+            {
+              to: "/",
+              icon: <FaFacebookF />,
+            },
 
-              {
-                to: "/",
-                icon: <FaInstagram />,
-              },
-              {
-                to: "/",
-                icon: <FaTiktok />,
-              },
-              {
-                to: "/",
-                icon: <FaTwitter />,
-              },
-            ],
-          },
-        ],
-      },
-    ],
+            {
+              to: "/",
+              icon: <FaInstagram />,
+            },
+            {
+              to: "/",
+              icon: <FaTiktok />,
+            },
+            {
+              to: "/",
+              icon: <FaTwitter />,
+            },
+          ],
+        },
+        {
+          model_title: (
+            <FormattedMessage id={translate[language].about_models_content1} />
+          ),
+          paragraph: (
+            <FormattedMessage id={translate[language].about_models_content2} />
+          ),
+
+          icon: modelText,
+        },
+
+        {
+          id: 9,
+
+          img: model6,
+          name: "Arta Kalludra",
+
+          text1: (
+            <FormattedMessage
+              id={translate[language].about_models_tab_height9}
+            />
+          ),
+          text2: (
+            <FormattedMessage id={translate[language].about_models_tab_bust9} />
+          ),
+          text3: (
+            <FormattedMessage
+              id={translate[language].about_models_tab_waist9}
+            />
+          ),
+          text4: (
+            <FormattedMessage id={translate[language].about_models_tab_hips9} />
+          ),
+          text5: (
+            <FormattedMessage
+              id={translate[language].about_models_tab_dress9}
+            />
+          ),
+          text6: (
+            <FormattedMessage id={translate[language].about_models_tab_shoe9} />
+          ),
+          text7: (
+            <FormattedMessage id={translate[language].about_models_tab_hair9} />
+          ),
+          text8: (
+            <FormattedMessage id={translate[language].about_models_tab_eyes9} />
+          ),
+          socialMedia: [
+            {
+              to: "/",
+              icon: <FaFacebookF />,
+            },
+
+            {
+              to: "/",
+              icon: <FaInstagram />,
+            },
+            {
+              to: "/",
+              icon: <FaTiktok />,
+            },
+            {
+              to: "/",
+              icon: <FaTwitter />,
+            },
+          ],
+        },
+        {
+          id: 10,
+
+          img: model11,
+
+          name: "Klesta Trifoni",
+          text1: (
+            <FormattedMessage
+              id={translate[language].about_models_tab_height10}
+            />
+          ),
+          text2: (
+            <FormattedMessage
+              id={translate[language].about_models_tab_bust10}
+            />
+          ),
+          text3: (
+            <FormattedMessage
+              id={translate[language].about_models_tab_waist10}
+            />
+          ),
+          text4: (
+            <FormattedMessage
+              id={translate[language].about_models_tab_hips10}
+            />
+          ),
+          text5: (
+            <FormattedMessage
+              id={translate[language].about_models_tab_dress10}
+            />
+          ),
+          text6: (
+            <FormattedMessage
+              id={translate[language].about_models_tab_shoe10}
+            />
+          ),
+          text7: (
+            <FormattedMessage
+              id={translate[language].about_models_tab_hair10}
+            />
+          ),
+          text8: (
+            <FormattedMessage
+              id={translate[language].about_models_tab_eyes10}
+            />
+          ),
+          socialMedia: [
+            {
+              to: "/",
+              icon: <FaFacebookF />,
+            },
+
+            {
+              to: "/",
+              icon: <FaInstagram />,
+            },
+            {
+              to: "/",
+              icon: <FaTiktok />,
+            },
+            {
+              to: "/",
+              icon: <FaTwitter />,
+            },
+          ],
+        },
+
+        {
+          id: 11,
+
+          img: model3,
+
+          name: "Melinda Ademi",
+          text1: (
+            <FormattedMessage
+              id={translate[language].about_models_tab_height11}
+            />
+          ),
+          text2: (
+            <FormattedMessage
+              id={translate[language].about_models_tab_bust11}
+            />
+          ),
+          text3: (
+            <FormattedMessage
+              id={translate[language].about_models_tab_waist11}
+            />
+          ),
+          text4: (
+            <FormattedMessage
+              id={translate[language].about_models_tab_hips11}
+            />
+          ),
+          text5: (
+            <FormattedMessage
+              id={translate[language].about_models_tab_dress11}
+            />
+          ),
+          text6: (
+            <FormattedMessage
+              id={translate[language].about_models_tab_shoe11}
+            />
+          ),
+          text7: (
+            <FormattedMessage
+              id={translate[language].about_models_tab_hair11}
+            />
+          ),
+          text8: (
+            <FormattedMessage
+              id={translate[language].about_models_tab_eyes11}
+            />
+          ),
+          socialMedia: [
+            {
+              to: "/",
+              icon: <FaFacebookF />,
+            },
+
+            {
+              to: "/",
+              icon: <FaInstagram />,
+            },
+            {
+              to: "/",
+              icon: <FaTiktok />,
+            },
+            {
+              to: "/",
+              icon: <FaTwitter />,
+            },
+          ],
+        },
+      ],
+    },
+    // {
+    //   col: "col2",
+    //   innerItems: [
+    //     {
+    //       id: 4,
+
+    //       img: model4,
+
+    //       name: "Drianda Lakna",
+    //       text1: (
+    //         <FormattedMessage
+    //           id={translate[language].about_models_tab_height4}
+    //         />
+    //       ),
+    //       text2: (
+    //         <FormattedMessage
+    //           id={translate[language].about_models_tab_bust4}
+    //         />
+    //       ),
+    //       text3: (
+    //         <FormattedMessage
+    //           id={translate[language].about_models_tab_waist4}
+    //         />
+    //       ),
+    //       text4: (
+    //         <FormattedMessage
+    //           id={translate[language].about_models_tab_hips4}
+    //         />
+    //       ),
+    //       text5: (
+    //         <FormattedMessage
+    //           id={translate[language].about_models_tab_dress4}
+    //         />
+    //       ),
+    //       text6: (
+    //         <FormattedMessage
+    //           id={translate[language].about_models_tab_shoe4}
+    //         />
+    //       ),
+    //       text7: (
+    //         <FormattedMessage
+    //           id={translate[language].about_models_tab_hair4}
+    //         />
+    //       ),
+    //       text8: (
+    //         <FormattedMessage
+    //           id={translate[language].about_models_tab_eyes4}
+    //         />
+    //       ),
+    //       socialMedia: [
+    //         {
+    //           to: "/",
+    //           icon: <FaFacebookF />,
+    //         },
+
+    //         {
+    //           to: "/",
+    //           icon: <FaInstagram />,
+    //         },
+    //         {
+    //           to: "/",
+    //           icon: <FaTiktok />,
+    //         },
+    //         {
+    //           to: "/",
+    //           icon: <FaTwitter />,
+    //         },
+    //       ],
+    //     },
+    //     {
+    //       id: 5,
+
+    //       img: model8,
+
+    //       name: "Albina Myrtezaj",
+    //       text1: (
+    //         <FormattedMessage
+    //           id={translate[language].about_models_tab_height5}
+    //         />
+    //       ),
+    //       text2: (
+    //         <FormattedMessage
+    //           id={translate[language].about_models_tab_bust5}
+    //         />
+    //       ),
+    //       text3: (
+    //         <FormattedMessage
+    //           id={translate[language].about_models_tab_waist5}
+    //         />
+    //       ),
+    //       text4: (
+    //         <FormattedMessage
+    //           id={translate[language].about_models_tab_hips5}
+    //         />
+    //       ),
+    //       text5: (
+    //         <FormattedMessage
+    //           id={translate[language].about_models_tab_dress5}
+    //         />
+    //       ),
+    //       text6: (
+    //         <FormattedMessage
+    //           id={translate[language].about_models_tab_shoe5}
+    //         />
+    //       ),
+    //       text7: (
+    //         <FormattedMessage
+    //           id={translate[language].about_models_tab_hair5}
+    //         />
+    //       ),
+    //       text8: (
+    //         <FormattedMessage
+    //           id={translate[language].about_models_tab_eyes5}
+    //         />
+    //       ),
+    //       socialMedia: [
+    //         {
+    //           to: "/",
+    //           icon: <FaFacebookF />,
+    //         },
+
+    //         {
+    //           to: "/",
+    //           icon: <FaInstagram />,
+    //         },
+    //         {
+    //           to: "/",
+    //           icon: <FaTiktok />,
+    //         },
+    //         {
+    //           to: "/",
+    //           icon: <FaTwitter />,
+    //         },
+    //       ],
+    //     },
+    //     {
+    //       id: 6,
+
+    //       img: model2,
+    //       name: "Iliada Sadriu",
+
+    //       text1: (
+    //         <FormattedMessage
+    //           id={translate[language].about_models_tab_height6}
+    //         />
+    //       ),
+    //       text2: (
+    //         <FormattedMessage
+    //           id={translate[language].about_models_tab_bust6}
+    //         />
+    //       ),
+    //       text3: (
+    //         <FormattedMessage
+    //           id={translate[language].about_models_tab_waist6}
+    //         />
+    //       ),
+    //       text4: (
+    //         <FormattedMessage
+    //           id={translate[language].about_models_tab_hips6}
+    //         />
+    //       ),
+    //       text5: (
+    //         <FormattedMessage
+    //           id={translate[language].about_models_tab_dress6}
+    //         />
+    //       ),
+    //       text6: (
+    //         <FormattedMessage
+    //           id={translate[language].about_models_tab_shoe6}
+    //         />
+    //       ),
+    //       text7: (
+    //         <FormattedMessage
+    //           id={translate[language].about_models_tab_hair6}
+    //         />
+    //       ),
+    //       text8: (
+    //         <FormattedMessage
+    //           id={translate[language].about_models_tab_eyes6}
+    //         />
+    //       ),
+    //       socialMedia: [
+    //         {
+    //           to: "/",
+    //           icon: <FaFacebookF />,
+    //         },
+
+    //         {
+    //           to: "/",
+    //           icon: <FaInstagram />,
+    //         },
+    //         {
+    //           to: "/",
+    //           icon: <FaTiktok />,
+    //         },
+    //         {
+    //           to: "/",
+    //           icon: <FaTwitter />,
+    //         },
+    //       ],
+    //     },
+    //   ],
+    // },
+    // {
+    //   col: "col3",
+    //   innerItems: [
+    //     {
+    //       id: 7,
+
+    //       img: model5,
+
+    //       name: "Klea Gashi",
+    //       text1: (
+    //         <FormattedMessage
+    //           id={translate[language].about_models_tab_height7}
+    //         />
+    //       ),
+    //       text2: (
+    //         <FormattedMessage
+    //           id={translate[language].about_models_tab_bust7}
+    //         />
+    //       ),
+    //       text3: (
+    //         <FormattedMessage
+    //           id={translate[language].about_models_tab_waist7}
+    //         />
+    //       ),
+    //       text4: (
+    //         <FormattedMessage
+    //           id={translate[language].about_models_tab_hips7}
+    //         />
+    //       ),
+    //       text5: (
+    //         <FormattedMessage
+    //           id={translate[language].about_models_tab_dress7}
+    //         />
+    //       ),
+    //       text6: (
+    //         <FormattedMessage
+    //           id={translate[language].about_models_tab_shoe7}
+    //         />
+    //       ),
+    //       text7: (
+    //         <FormattedMessage
+    //           id={translate[language].about_models_tab_hair7}
+    //         />
+    //       ),
+    //       text8: (
+    //         <FormattedMessage
+    //           id={translate[language].about_models_tab_eyes7}
+    //         />
+    //       ),
+    //       socialMedia: [
+    //         {
+    //           to: "/",
+    //           icon: <FaFacebookF />,
+    //         },
+
+    //         {
+    //           to: "/",
+    //           icon: <FaInstagram />,
+    //         },
+    //         {
+    //           to: "/",
+    //           icon: <FaTiktok />,
+    //         },
+    //         {
+    //           to: "/",
+    //           icon: <FaTwitter />,
+    //         },
+    //       ],
+    //     },
+    //     {
+    //       id: 8,
+
+    //       img: model9,
+
+    //       name: "Drenusha Qaza",
+    //       text1: (
+    //         <FormattedMessage
+    //           id={translate[language].about_models_tab_height8}
+    //         />
+    //       ),
+    //       text2: (
+    //         <FormattedMessage
+    //           id={translate[language].about_models_tab_bust8}
+    //         />
+    //       ),
+    //       text3: (
+    //         <FormattedMessage
+    //           id={translate[language].about_models_tab_waist8}
+    //         />
+    //       ),
+    //       text4: (
+    //         <FormattedMessage
+    //           id={translate[language].about_models_tab_hips8}
+    //         />
+    //       ),
+    //       text5: (
+    //         <FormattedMessage
+    //           id={translate[language].about_models_tab_dress8}
+    //         />
+    //       ),
+    //       text6: (
+    //         <FormattedMessage
+    //           id={translate[language].about_models_tab_shoe8}
+    //         />
+    //       ),
+    //       text7: (
+    //         <FormattedMessage
+    //           id={translate[language].about_models_tab_hair8}
+    //         />
+    //       ),
+    //       text8: (
+    //         <FormattedMessage
+    //           id={translate[language].about_models_tab_eyes8}
+    //         />
+    //       ),
+    //       socialMedia: [
+    //         {
+    //           to: "/",
+    //           icon: <FaFacebookF />,
+    //         },
+
+    //         {
+    //           to: "/",
+    //           icon: <FaInstagram />,
+    //         },
+    //         {
+    //           to: "/",
+    //           icon: <FaTiktok />,
+    //         },
+    //         {
+    //           to: "/",
+    //           icon: <FaTwitter />,
+    //         },
+    //       ],
+    //     },
+    //     {
+    //       // id: 9,
+
+    //       model_title: (
+    //         <FormattedMessage
+    //           id={translate[language].about_models_content1}
+    //         />
+    //       ),
+    //       paragraph: (
+    //         <FormattedMessage
+    //           id={translate[language].about_models_content2}
+    //         />
+    //       ),
+
+    //       icon: modelText,
+    //     },
+    //   ],
+    // },
+    // {
+    //   col: "col4",
+    //   innerItems: [
+    //     {
+    //       id: 9,
+
+    //       img: model6,
+    //       name: "Arta Kalludra",
+
+    //       text1: (
+    //         <FormattedMessage
+    //           id={translate[language].about_models_tab_height9}
+    //         />
+    //       ),
+    //       text2: (
+    //         <FormattedMessage
+    //           id={translate[language].about_models_tab_bust9}
+    //         />
+    //       ),
+    //       text3: (
+    //         <FormattedMessage
+    //           id={translate[language].about_models_tab_waist9}
+    //         />
+    //       ),
+    //       text4: (
+    //         <FormattedMessage
+    //           id={translate[language].about_models_tab_hips9}
+    //         />
+    //       ),
+    //       text5: (
+    //         <FormattedMessage
+    //           id={translate[language].about_models_tab_dress9}
+    //         />
+    //       ),
+    //       text6: (
+    //         <FormattedMessage
+    //           id={translate[language].about_models_tab_shoe9}
+    //         />
+    //       ),
+    //       text7: (
+    //         <FormattedMessage
+    //           id={translate[language].about_models_tab_hair9}
+    //         />
+    //       ),
+    //       text8: (
+    //         <FormattedMessage
+    //           id={translate[language].about_models_tab_eyes9}
+    //         />
+    //       ),
+    //       socialMedia: [
+    //         {
+    //           to: "/",
+    //           icon: <FaFacebookF />,
+    //         },
+
+    //         {
+    //           to: "/",
+    //           icon: <FaInstagram />,
+    //         },
+    //         {
+    //           to: "/",
+    //           icon: <FaTiktok />,
+    //         },
+    //         {
+    //           to: "/",
+    //           icon: <FaTwitter />,
+    //         },
+    //       ],
+    //     },
+    //     {
+    //       id: 10,
+
+    //       img: model11,
+
+    //       name: "Klesta Trifoni",
+    //       text1: (
+    //         <FormattedMessage
+    //           id={translate[language].about_models_tab_height10}
+    //         />
+    //       ),
+    //       text2: (
+    //         <FormattedMessage
+    //           id={translate[language].about_models_tab_bust10}
+    //         />
+    //       ),
+    //       text3: (
+    //         <FormattedMessage
+    //           id={translate[language].about_models_tab_waist10}
+    //         />
+    //       ),
+    //       text4: (
+    //         <FormattedMessage
+    //           id={translate[language].about_models_tab_hips10}
+    //         />
+    //       ),
+    //       text5: (
+    //         <FormattedMessage
+    //           id={translate[language].about_models_tab_dress10}
+    //         />
+    //       ),
+    //       text6: (
+    //         <FormattedMessage
+    //           id={translate[language].about_models_tab_shoe10}
+    //         />
+    //       ),
+    //       text7: (
+    //         <FormattedMessage
+    //           id={translate[language].about_models_tab_hair10}
+    //         />
+    //       ),
+    //       text8: (
+    //         <FormattedMessage
+    //           id={translate[language].about_models_tab_eyes10}
+    //         />
+    //       ),
+    //       socialMedia: [
+    //         {
+    //           to: "/",
+    //           icon: <FaFacebookF />,
+    //         },
+
+    //         {
+    //           to: "/",
+    //           icon: <FaInstagram />,
+    //         },
+    //         {
+    //           to: "/",
+    //           icon: <FaTiktok />,
+    //         },
+    //         {
+    //           to: "/",
+    //           icon: <FaTwitter />,
+    //         },
+    //       ],
+    //     },
+    //     {
+    //       id: 11,
+
+    //       img: model3,
+
+    //       name: "Melinda Ademi",
+    //       text1: (
+    //         <FormattedMessage
+    //           id={translate[language].about_models_tab_height11}
+    //         />
+    //       ),
+    //       text2: (
+    //         <FormattedMessage
+    //           id={translate[language].about_models_tab_bust11}
+    //         />
+    //       ),
+    //       text3: (
+    //         <FormattedMessage
+    //           id={translate[language].about_models_tab_waist11}
+    //         />
+    //       ),
+    //       text4: (
+    //         <FormattedMessage
+    //           id={translate[language].about_models_tab_hips11}
+    //         />
+    //       ),
+    //       text5: (
+    //         <FormattedMessage
+    //           id={translate[language].about_models_tab_dress11}
+    //         />
+    //       ),
+    //       text6: (
+    //         <FormattedMessage
+    //           id={translate[language].about_models_tab_shoe11}
+    //         />
+    //       ),
+    //       text7: (
+    //         <FormattedMessage
+    //           id={translate[language].about_models_tab_hair11}
+    //         />
+    //       ),
+    //       text8: (
+    //         <FormattedMessage
+    //           id={translate[language].about_models_tab_eyes11}
+    //         />
+    //       ),
+    //       socialMedia: [
+    //         {
+    //           to: "/",
+    //           icon: <FaFacebookF />,
+    //         },
+
+    //         {
+    //           to: "/",
+    //           icon: <FaInstagram />,
+    //         },
+    //         {
+    //           to: "/",
+    //           icon: <FaTiktok />,
+    //         },
+    //         {
+    //           to: "/",
+    //           icon: <FaTwitter />,
+    //         },
+    //       ],
+    //     },
+    //   ],
+    // },
   },
   // {
   //   cls: "tab1",

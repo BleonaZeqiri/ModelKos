@@ -14,7 +14,6 @@ import Our_partners from "../../components/shared/Our_partners/Our_partners";
 import Subscribe from "../../components/shared/Subscribe/Subscribe";
 import Footer from "../../components/shared/Footer/Footer";
 import Content from "../../components/pages/AboutUs/Content";
-
 const AboutUs = () => {
   return (
     <div className="about-page">
@@ -26,7 +25,6 @@ const AboutUs = () => {
       <Our_partnerships />
       <Kosova_Girls />
       <What_people_say />
-
       <Our_blog />
       <Academy />
       <Our_partners />

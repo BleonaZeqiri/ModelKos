@@ -198,6 +198,21 @@
     }
   }
 }
+@media (max-width: 2950px) {
+  .about-AboutUs .right .img {
+    height: max(7rem, 17vw);
+  }
+  .about-AboutUs .right .flex .aboutCard {
+    // width: max(10rem, 25vw);
+
+    height: max(10rem, 25vw);
+  }
+  // .about-AboutUs .right .rec-pagination {
+  //   padding-right: 63.5%;
+  //   bottom: 107px;
+  // }
+}
+
 @media (max-width: 1300px) {
   .about-AboutUs {
     align-items: center;
