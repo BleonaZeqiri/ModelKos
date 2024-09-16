@@ -126,7 +126,7 @@ export const AboutData = (language) => [
 
 export const Our_work2 = (language) => [
   {
-    to: "/",
+    to: "/profile/1",
     img: model_image3,
     name: "Anda Lleshi",
     description: [
@@ -153,7 +153,7 @@ export const Our_work2 = (language) => [
     date: "19 may 2022",
   },
   {
-    to: "/",
+    to: "/profile/4",
     img: model_image4,
     name: "Driada Lakna",
     description: [
@@ -180,7 +180,7 @@ export const Our_work2 = (language) => [
     date: "19 may 2022",
   },
   {
-    to: "/",
+    to: "/profile/7",
     img: model_image5,
     name: "Klea Gashi",
     description: [
@@ -207,7 +207,7 @@ export const Our_work2 = (language) => [
     date: "19 may 2022",
   },
   {
-    to: "/",
+    to: "/profile/9",
     img: model_image6,
     name: "Arta Kalludra",
     description: [
@@ -234,7 +234,7 @@ export const Our_work2 = (language) => [
     date: "19 may 2022",
   },
   {
-    to: "/",
+    to: "/profile/2",
     img: model_image8,
     name: "Anila Xhaferi",
     description: [
@@ -261,7 +261,7 @@ export const Our_work2 = (language) => [
     date: "19 may 2022",
   },
   {
-    to: "/",
+    to: "/profile/5",
     img: model_image7,
     name: "Albina Myrtezaj",
     description: [

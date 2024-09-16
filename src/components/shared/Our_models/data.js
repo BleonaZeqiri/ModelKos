@@ -24,7 +24,6 @@ import prtofile8 from "../../../assets/Home/Profile/236.png";
 import prtofile9 from "../../../assets/Home/Profile/237.png";
 import prtofile10 from "../../../assets/Home/Profile/242.png";
 import prtofile11 from "../../../assets/Home/Profile/252.png";
-
 export const Data = (language) => [
   {
     cls: "tab1",
@@ -33,19 +32,25 @@ export const Data = (language) => [
       innerItems: [
         {
           id: 1,
-          img: model1,
+          img: [
+            model1,
+            prtofile4,
+            prtofile8,
+            prtofile2,
 
-          img1: prtofile1,
-          img2: prtofile2,
-          img3: prtofile3,
-          img4: prtofile4,
-          img5: prtofile5,
-          img6: prtofile6,
-          img7: prtofile7,
-          img8: prtofile8,
-          img9: prtofile9,
-          img10: prtofile10,
-          img11: prtofile11,
+            prtofile1,
+            prtofile6,
+            prtofile10,
+            prtofile5,
+
+            prtofile3,
+
+            prtofile7,
+            prtofile11,
+
+            prtofile9,
+          ],
+
           name: "Anda Lleshi",
           text1: (
             <FormattedMessage
@@ -100,14 +105,12 @@ export const Data = (language) => [
         {
           id: 2,
 
-          img: model7,
+          img: [model7],
 
           name: "Anila Xhaferi",
           text1: (
             <FormattedMessage
               id={translate[language].about_models_tab_height2}
-              // id="video-productionn"
-              // defaultMessage="Video Phjhjroduction"
             />
           ),
           text2: (
@@ -158,7 +161,7 @@ export const Data = (language) => [
         {
           id: 3,
 
-          img: model10,
+          img: [model10],
           name: "Blerta Salihu",
 
           text1: (
@@ -214,7 +217,7 @@ export const Data = (language) => [
         {
           id: 4,
 
-          img: model4,
+          img: [model4],
 
           name: "Drianda Lakna",
           text1: (
@@ -270,7 +273,7 @@ export const Data = (language) => [
         {
           id: 5,
 
-          img: model8,
+          img: [model8],
 
           name: "Albina Myrtezaj",
           text1: (
@@ -326,7 +329,7 @@ export const Data = (language) => [
         {
           id: 6,
 
-          img: model2,
+          img: [model2],
           name: "Iliada Sadriu",
 
           text1: (
@@ -382,7 +385,7 @@ export const Data = (language) => [
         {
           id: 7,
 
-          img: model5,
+          img: [model5],
 
           name: "Klea Gashi",
           text1: (
@@ -438,7 +441,7 @@ export const Data = (language) => [
         {
           id: 8,
 
-          img: model9,
+          img: [model9],
 
           name: "Drenusha Qaza",
           text1: (
@@ -505,7 +508,7 @@ export const Data = (language) => [
         {
           id: 9,
 
-          img: model6,
+          img: [model6],
           name: "Arta Kalludra",
 
           text1: (
@@ -561,7 +564,7 @@ export const Data = (language) => [
         {
           id: 10,
 
-          img: model11,
+          img: [model11],
 
           name: "Klesta Trifoni",
           text1: (
@@ -628,7 +631,7 @@ export const Data = (language) => [
         {
           id: 11,
 
-          img: model3,
+          img: [model3],
 
           name: "Melinda Ademi",
           text1: (

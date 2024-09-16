@@ -56,7 +56,7 @@ const Our_models = () => {
                           <>
                             <div
                               className="model-image"
-                              style={{ content: `url(${i.img})` }}
+                              style={{ content: `url(${i.img[0]})` }}
                             ></div>
                             <div
                               className="about-models-hover"
@@ -64,6 +64,7 @@ const Our_models = () => {
                             >
                               <div className="about-models-description cursor-pointer">
                                 <h4>{i.name}</h4>
+
                                 <p>{i.text1}</p>
                                 <p>{i.text2}</p>
                                 <p>{i.text3}</p>

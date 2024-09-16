@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import Navbar from "../../components/shared/Navbar/Navbar";
 import Footer from "../../components/shared/Footer/Footer";
 import Our_partners from "../../components/shared/Our_partners/Our_partners";
@@ -7,10 +7,11 @@ import Subscribe from "../../components/shared/Subscribe/Subscribe";
 import { Data } from "../../components/shared/Our_models/data";
 import { Link, useParams } from "react-router-dom";
 import { useSelector } from "react-redux";
-import { IoClose } from "react-icons/io5";
+import image1 from "../../assets/Home/Profile/arrow-left.svg";
+import Carousel from "react-elastic-carousel";
 const Profile = () => {
+  const carouselRef = useRef(null);
   const { id } = useParams();
-  console.log(id);
 
   const language = useSelector((state) => state.language.language);
 
@@ -19,10 +20,24 @@ const Profile = () => {
   console.log(dataResult);
 
   const [model, setModel] = useState(false);
-  const [tempimg, setTempimg] = useState("");
+  const [tempImg, setTempImg] = useState(0);
+
   const getImg = (img) => {
-    setTempimg(img);
+    setTempImg(img);
     setModel(true);
+  };
+
+  const PIJXl = ({ type, onClick, isEdge }) => {
+    const pointer = type === "PREV" ? "<" : ">";
+    return (
+      <button
+        onClick={onClick}
+        disabled={isEdge}
+        className={`PIJXl ${type.toLowerCase()}`}
+      >
+        {pointer}
+      </button>
+    );
   };
   return (
     <div>
@@ -52,63 +67,61 @@ const Profile = () => {
                     ))}
                 </div>
               </div>
-
               <div className={model ? "model open" : "model"}>
-                <img src={setTempimg} />
-                <IoClose onclick={() => setModel(false)} />
+                {model && (
+                  <div className="model_body">
+                    <Carousel
+                      itemsToShow={1}
+                      ref={carouselRef}
+                      className="absoluteSlider"
+                      disableArrowsOnEnd={false}
+                      initialActiveIndex={tempImg}
+                      renderArrow={({ type, onClick, isEdge }) => (
+                        <PIJXl
+                          className="PIJXl"
+                          type={type}
+                          onClick={onClick}
+                          isEdge={isEdge}
+                        />
+                      )}
+                    >
+                      {dataResult?.img?.map((item) => {
+                        return (
+                          <div
+                            className="img"
+                            style={{ content: `url(${item})` }}
+                          ></div>
+                        );
+                      })}
+                    </Carousel>
+                    <span
+                      className="close-icon"
+                      onClick={() => setModel(false)}
+                    >
+                      {" "}
+                      X
+                    </span>
+                  </div>
+                )}
               </div>
+
               <div className="gallery">
                 <div className="pics">
-                  <div
-                    className="model-image"
-                    onclick={() => getImg(dataResult.img)}
-                    style={{ content: `url(${dataResult.img})` }}
-                  ></div>
-
-                  <div
-                    className="model-image"
-                    style={{ content: `url(${dataResult.img4})` }}
-                  ></div>
-                  <div
-                    className="model-image"
-                    style={{ content: `url(${dataResult.img8})` }}
-                  ></div>
-                  <div
-                    className="model-image"
-                    style={{ content: `url(${dataResult.img2})` }}
-                  ></div>
-                  <div
-                    className="model-image"
-                    style={{ content: `url(${dataResult.img1})` }}
-                  ></div>
-                  <div
-                    className="model-image"
-                    style={{ content: `url(${dataResult.img6})` }}
-                  ></div>
-                  <div
-                    className="model-image"
-                    style={{ content: `url(${dataResult.img10})` }}
-                  ></div>
-                  <div
-                    className="model-image"
-                    style={{ content: `url(${dataResult.img5})` }}
-                  ></div>
-                  <div
-                    className="model-image"
-                    style={{ content: `url(${dataResult.img3})` }}
-                  ></div>
-                  <div
-                    className="model-image"
-                    style={{ content: `url(${dataResult.img7})` }}
-                  ></div>
-                  <div
-                    className="model-image"
-                    style={{ content: `url(${dataResult.img11})` }}
-                  ></div>
-                  <div
-                    className="model-image"
-                    style={{ content: `url(${dataResult.img9})` }}
-                  ></div>
+                  {dataResult?.img?.map((item, index) => {
+                    return (
+                      <div className="pics__item">
+                        <div
+                          className="model-image"
+                          style={{ content: `url(${item})` }}
+                        ></div>
+                        <div
+                          onClick={() => getImg(index)}
+                          className="resize-image"
+                          style={{ content: `url(${image1})` }}
+                        ></div>
+                      </div>
+                    );
+                  })}
                 </div>
               </div>
             </div>
