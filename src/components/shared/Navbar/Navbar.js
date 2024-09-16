@@ -119,7 +119,7 @@ const Navbar = (props) => {
       <div className="nav-auth">
         {/* <ThemeSwitcher /> */}
         <Link
-          to="/"
+          to="/apply"
           className="apply-now"
           style={{ color: props.isColor || isSticky ? "black" : "white" }}
         >

@@ -13,6 +13,7 @@ import "aos/dist/aos.css";
 
 import { IntlProvider } from "react-intl";
 import Profile from "./pages/Profile/Profile";
+import Apply from "./pages/ApplyNow/Apply";
 // import { translate } from "./translation/translate";
 // import { useSelector } from "react-redux";
 
@@ -38,6 +39,8 @@ function App() {
           <Routes>
             <Route exact path="/" element={<Home />} />
             <Route exact path="/about" element={<AboutUs />} />
+            <Route exact path="/apply" element={<Apply />} />
+
             <Route exact path="/profile/:id" element={<Profile />} />
             <Route path="*" element={<Navigate to="/" />} />
           </Routes>
