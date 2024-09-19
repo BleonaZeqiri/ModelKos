@@ -204,7 +204,7 @@ const Sidebar = (props) => {
       </div>
 
       <div className="sidebar-auth">
-        <Link to="/" className="contact-us">
+        <Link to="/apply" className="contact-us">
           <FormattedMessage id={translate[language].apply} />
         </Link>
       </div>

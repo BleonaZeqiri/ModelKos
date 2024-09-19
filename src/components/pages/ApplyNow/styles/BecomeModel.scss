@@ -2,7 +2,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 10% 5%;
+  margin-top: 8%;
+  padding: 1% 5%;
   width: 100%;
   gap: max(9rem, 4vw);
   .left {
@@ -72,11 +73,11 @@
 }
 @media (max-width: 800px) {
   .apply-BecomeModel {
-    padding: 15% 5%;
+    margin-top: 14%;
   }
 }
 @media (max-width: 450px) {
   .apply-BecomeModel {
-    padding: 21% 5%;
+    margin-top: 22%;
   }
 }

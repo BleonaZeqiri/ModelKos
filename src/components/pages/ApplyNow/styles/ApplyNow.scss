@@ -1,0 +1,309 @@
+.apply-form {
+  padding: 5% 8%;
+  width: 100%;
+  form {
+    gap: max(3rem, 3vw);
+    display: grid;
+    .container-form {
+      display: flex;
+      justify-content: space-between;
+      .contact-information {
+        width: 46%;
+        .contact-group {
+          gap: max(2rem, 2vw);
+          display: grid;
+          h1 {
+            font-size: max(20px, 2.5vw);
+            font-weight: 100;
+            font-family: "CustomFont", sans-serif;
+          }
+          .input-name {
+            width: 100%;
+            gap: max(0.7rem, 0.7vw);
+            display: grid;
+            p {
+              text-transform: uppercase;
+              color: #1d1d1d;
+
+              font-size: max(14px, 0.85vw);
+              font-weight: 100;
+              font-family: sans-serif;
+            }
+            input,
+            textarea {
+              border: 0.8px solid #bebebe;
+              width: 100%;
+              padding: 2% 3%;
+              font-size: max(12px, 0.85vw);
+            }
+
+            textarea::placeholder {
+              color: #808080;
+            }
+            input::placeholder {
+              color: #808080;
+            }
+            textarea {
+              resize: none;
+            }
+          }
+        }
+      }
+      .measurements {
+        width: 46%;
+        .measurements-group {
+          gap: max(2rem, 2vw);
+          display: grid;
+          h1 {
+            font-size: max(20px, 2.5vw);
+            font-weight: 100;
+            font-family: "CustomFont", sans-serif;
+          }
+          .input-name {
+            width: 100%;
+            gap: max(0.7rem, 0.7vw);
+            display: grid;
+            p {
+              text-transform: uppercase;
+              color: #1d1d1d;
+
+              font-size: max(14px, 0.85vw);
+              font-weight: 100;
+              font-family: sans-serif;
+            }
+            input,
+            textarea {
+              border: 0.8px solid #bebebe;
+              width: 100%;
+              font-size: max(12px, 0.85vw);
+            }
+          }
+
+          .custom-select-wrapper {
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            border: 0.8px solid #bebebe;
+            width: 100%;
+            padding: 2% 3%;
+            font-size: max(12px, 0.85vw);
+            align-items: center;
+            cursor: pointer;
+
+            select {
+              width: 100%;
+              border: none;
+              appearance: none;
+              -webkit-appearance: none;
+              -moz-appearance: none;
+              background-color: white;
+              cursor: pointer;
+
+              &:focus-visible {
+                border: none;
+                outline: none;
+              }
+            }
+
+            input {
+              width: 100%;
+
+              border: none;
+              &:focus-visible {
+                border: none;
+                outline: none;
+              }
+            }
+
+            select.placeholder-selected {
+              color: #808080;
+              font-size: max(12px, 0.85vw);
+            }
+            svg {
+              color: #1d1d1d;
+              font-size: max(9px, 0.85vw);
+            }
+          }
+          .selected {
+            border: 0px;
+            border-left: 0.8px solid #bebebe;
+            width: 70%;
+          }
+          .input-content {
+            display: grid;
+            gap: max(2rem, 2vw) max(0.7rem, 0.7vw);
+            grid-template-columns: repeat(3, 1fr);
+            .input-with-dropdown {
+              display: flex;
+              border: 0.8px solid #bebebe;
+              input {
+                padding: 6% 10%;
+
+                width: 100%;
+                border: none;
+                &::placeholder {
+                  color: #808080;
+                }
+              }
+              select {
+                border: none;
+                border-radius: 0px;
+              }
+            }
+          }
+          .upload-image-wrapper {
+            gap: max(0.7rem, 0.7vw);
+            display: grid;
+            .upload-text {
+              display: flex;
+              align-items: center;
+              span {
+                font-size: max(11px, 0.75vw);
+                color: #808080;
+              }
+            }
+            .upload-image {
+              height: max(10rem, 11.5vw);
+              border: 0.8px solid #bebebe;
+              padding: 2%;
+              font-size: max(12px, 0.85vw);
+              .upload-border {
+                display: flex;
+                justify-content: space-between;
+                padding: 4%;
+                align-items: center;
+
+                height: 100%;
+                background-image: repeating-linear-gradient(
+                    -4deg,
+                    #bebebe,
+                    #bebebe 8px,
+                    transparent 8px,
+                    transparent 12px,
+                    #bebebe 12px
+                  ),
+                  repeating-linear-gradient(
+                    86deg,
+                    #bebebe,
+                    #bebebe 8px,
+                    transparent 8px,
+                    transparent 12px,
+                    #bebebe 12px
+                  ),
+                  repeating-linear-gradient(
+                    176deg,
+                    #bebebe,
+                    #bebebe 8px,
+                    transparent 8px,
+                    transparent 12px,
+                    #bebebe 12px
+                  ),
+                  repeating-linear-gradient(
+                    266deg,
+                    #bebebe,
+                    #bebebe 8px,
+                    transparent 8px,
+                    transparent 12px,
+                    #bebebe 12px
+                  );
+                background-size: 0.8px 100%, 100% 0.8px, 0.8px 100%, 100% 0.8px;
+                background-position: 0 0, 0 0, 100% 0, 0 100%;
+                background-repeat: no-repeat;
+                p {
+                  font-size: max(12px, 0.85vw);
+                  color: #808080;
+                }
+                button {
+                  background-color: #000;
+                  color: white;
+                  width: max(6rem, 6.5vw);
+                  height: max(2rem, 2.4vw);
+                  border: none;
+                  box-shadow: none;
+                  cursor: pointer;
+                  font-size: max(12px, 0.75vw);
+                  font-weight: 600;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .button-container {
+      text-align: center;
+
+      .terms {
+        font-size: max(12px, 0.75vw);
+        color: #808080;
+      }
+      .button-submit {
+        background-color: #000;
+        color: white;
+        height: max(2.5rem, 2.5vw);
+        width: max(19rem, 31.5vw);
+        font-size: max(12px, 0.75vw);
+        border: none;
+        box-shadow: none;
+        cursor: pointer;
+        position: relative;
+        top: 20px;
+        font-weight: 600;
+      }
+    }
+  }
+}
+
+@media (max-width: 1100px) {
+  .apply-form form {
+    display: flex;
+    flex-direction: column;
+
+    .container-form {
+      flex-direction: column;
+      align-items: center;
+      gap: max(1rem, 4vw);
+      .contact-information {
+        width: 100% !important;
+        .contact-group .input-name textarea {
+          width: 100%;
+        }
+        .contact-group .input-name input {
+          width: 100%;
+        }
+      }
+      .measurements {
+        width: 100% !important;
+      }
+    }
+    .button-container .button-submit {
+      width: max(21rem, 50.5vw);
+    }
+  }
+}
+@media (max-width: 500px) {
+  .apply-form {
+    padding: 12% 8%;
+    form {
+      .button-container .button-submit {
+        width: max(11rem, 26.5vw);
+      }
+
+      .container-form .measurements .measurements-group .input-content {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .container-form
+        .measurements
+        .measurements-group
+        .upload-image-wrapper
+        .upload-image
+        .upload-border {
+        gap: max(0.7rem, 0.7vw);
+        button {
+          font-size: max(10px, 0.75vw);
+        }
+      }
+    }
+  }
+}

@@ -7,13 +7,15 @@ import Our_partners from "../../components/shared/Our_partners/Our_partners";
 import Subscribe from "../../components/shared/Subscribe/Subscribe";
 import Footer from "../../components/shared/Footer/Footer";
 import BecomeModel from "../../components/pages/ApplyNow/BecomeModel";
+import ApplyNow from "../../components/pages/ApplyNow/ApplyNow";
+import { useSelector } from "react-redux";
 
 const Apply = () => {
   return (
     <div>
       <Navbar isColor />
       <BecomeModel />
-
+      <ApplyNow />
       <What_people_say />
       <Our_blog />
       <Academy />

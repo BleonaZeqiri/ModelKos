@@ -22,7 +22,7 @@ const BecomeModel = () => {
             <span>
               <FormattedMessage
                 id="become_model_email"
-                defaultMessage=" info@modelkos.com"
+                defaultMessage="info@modelkos.com"
               />
             </span>
           </p>
