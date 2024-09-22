@@ -38,7 +38,7 @@
   "footer_management": "MODELKOS MENAXHIMI",
   "footer_floor": "Kati i parë",
   "footer_jubilee_place": "5 Vendi i Jubileut",
-  "footer_jobs": "Punë",
+  "footer_jobs": "PUNË",
   "footer_help_FAQ": "Ndihmë/FAQ",
   "banner_text": "Punëso një model ose",
   "banner_text1": " bëhu një",
@@ -420,5 +420,7 @@
   "applyNow_Submit": "DORËZO",
   "applyNow_eg": "p.sh. (35)",
   "applyNow_eg1": "p.sh. (20)",
-  "applyNow_eg2": "p.sh. (180)"
+  "applyNow_eg2": "p.sh. (180)",
+  "our_BlogSearch_title": "Blogu Ynë",
+  "our_BlogSearch_placeholder": "Kërko blog këtu"
 }

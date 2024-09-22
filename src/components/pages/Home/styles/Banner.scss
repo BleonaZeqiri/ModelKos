@@ -51,7 +51,7 @@
       h1 {
         font-weight: 400;
         color: #fff;
-        font-size: max(74px, 0.875vw);
+        font-size: max(4.6rem, 4.6vw);
         position: absolute;
       }
 
@@ -76,8 +76,8 @@
       display: flex;
       gap: max(0.25rem, 1vw);
       position: absolute;
-      top: 501px;
-      left: 60px;
+      top: max(31rem, 31vw);
+      left: max(4rem, 4vw);
       .input {
         align-items: center;
         border: 0.6px solid #6c6c6c;
@@ -89,7 +89,7 @@
 
         .icon {
           .img {
-            width: 12px;
+            width: max(0.7rem, 0.7vw);
           }
           svg {
             font-size: max(10.5px, 0.9vw);
@@ -104,7 +104,7 @@
           height: max(2rem, 2vw);
           width: 100%;
           padding-right: 30px;
-
+          font-size: max(0.8rem, 0.8vw);
           &::placeholder {
             color: #fff;
             opacity: 1;
@@ -166,7 +166,7 @@
         transition: 0.2s ease-in-out;
         white-space: nowrap;
         z-index: 4;
-        font-size: max(12.5px, 0.25vw);
+        font-size: max(0.8rem, 0.8vw);
         font-weight: 600;
       }
     }
@@ -230,19 +230,19 @@
   }
 }
 @media (min-width: 2200px) {
-  .banner .left .row {
-    top: 697px !important;
-    left: 188px !important;
-  }
+  // .banner .left .row {
+  //   top: 697px !important;
+  //   left: 188px !important;
+  // }
   .banner .right .img1 {
     top: 0px;
   }
 }
 @media (min-width: 1750px) {
-  .banner .left .row {
-    top: 583px;
-    left: 100px;
-  }
+  // .banner .left .row {
+  //   top: 583px;
+  //   left: 100px;
+  // }
 
   .banner .right .img2 .inner-img .img-img2 {
     width: 430px;
@@ -289,7 +289,7 @@
       }
 
       .row {
-        top: 479px;
+        // top: 479px;
 
         .input input {
           padding-right: 0px;

@@ -106,7 +106,7 @@ const Navbar = (props) => {
 
         <div className=" support-link">
           <Link
-            to="/"
+            to="/OurBlog"
             className="inner-nav-link"
             style={{ color: props.isColor || isSticky ? "black" : "white" }}
           >

@@ -79,8 +79,8 @@
     }
 
     .rec-dot_active {
-      width: max(10.5px, 0.25vw) !important;
-      height: max(10.5px, 0.25vw) !important;
+      width: max(0.7rem, 0.7vw) !important;
+      height: max(0.7rem, 0.7vw) !important;
       border-radius: 50% !important;
       border: 0 !important;
       box-shadow: none !important;
@@ -88,8 +88,8 @@
     }
 
     .rec-dot {
-      width: max(8px, 0.25vw);
-      height: max(8px, 0.25vw);
+      width: max(0.5rem, 0.5vw);
+      height: max(0.5rem, 0.5vw);
       border-radius: 50% !important;
       margin: 0 max(3px, 0.2vw) !important;
       border: 0 !important;

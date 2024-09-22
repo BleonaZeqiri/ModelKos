@@ -152,7 +152,7 @@ const Sidebar = (props) => {
         </div>
 
         <div className="nav-sidebar-link">
-          <Link to="/" className="nav-anchor">
+          <Link to="/OurBlog" className="nav-anchor">
             <RiApps2Fill />
             <FormattedMessage id={translate[language].blog} />
           </Link>
@@ -170,10 +170,7 @@ const Sidebar = (props) => {
             onClick={() => toggleDropdown("list3")}
           >
             <MdOutlineLanguage />
-            <FormattedMessage
-              id={translate[language].language}
-              // defaultMessage="Language"
-            />
+            <FormattedMessage id={translate[language].language} />
             <div className="dropdown-arrow">
               <MdKeyboardArrowDown />
             </div>

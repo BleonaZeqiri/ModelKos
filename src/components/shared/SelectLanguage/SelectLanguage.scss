@@ -9,7 +9,7 @@
   border-radius: 7px;
   justify-content: center;
   width: 165px;
-  font-size: 12px;
+  font-size: max(0.8rem, 0.8vw);
 }
 .select-language .arrow {
   margin-left: 10px;
@@ -76,7 +76,7 @@
 }
 .select-language img {
   margin-right: 8px;
-  width: 27px;
+  width: max(1.7rem, 1.7vw);
 }
 
 @media (max-width: 1475px) {

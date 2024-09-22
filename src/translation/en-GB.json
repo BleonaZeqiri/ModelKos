@@ -37,7 +37,7 @@
   "footer_management": "MODELKOS MANAGEMENT",
   "footer_floor": "1st Floor",
   "footer_jubilee_place": "5 Jubilee Place",
-  "footer_jobs": "Jobs",
+  "footer_jobs": "JOBS",
   "footer_help_FAQ": "Help/FAQ",
   "banner_text": "Hire a model or ",
   "banner_text1": "become one",
@@ -415,5 +415,7 @@
   "applyNow_Submit": "SUBMIT",
   "applyNow_eg": "eg.(35)",
   "applyNow_eg1": "eg.(20)",
-  "applyNow_eg2": "eg.(180)"
+  "applyNow_eg2": "eg.(180)",
+  "our_BlogSearch_title": "  Our Blog",
+  "our_BlogSearch_placeholder": "Search blog here"
 }

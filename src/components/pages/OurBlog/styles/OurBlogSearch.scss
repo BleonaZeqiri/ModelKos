@@ -1,0 +1,115 @@
+.ourBlog {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  text-align: center;
+  position: relative;
+  margin-top: 5%;
+  padding: max(55px, 5%) 7.5% max(50px, 4%);
+  //   -webkit-filter: brightness(40%);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  //   min-height: 40vh;
+  z-index: 1;
+  &:before {
+    content: "";
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.66);
+    z-index: 1;
+  }
+  .content {
+    position: relative;
+    z-index: 2;
+
+    h1 {
+      font-weight: 400;
+      color: #ffffff;
+      font-size: max(74px, 0.875vw);
+      font-family: "CustomFont", sans-serif;
+    }
+    .search {
+      height: max(2.5rem, 2.5vw);
+      width: max(26rem, 38.5vw);
+      border: 0.8px solid #919191b8;
+      padding: max(3px, 0.3vw) max(3px, 0.3vw) max(3px, 0.3vw) max(12.5px, 1vw);
+      display: flex;
+      margin: max(12.5px, 1vw) max(12.5px, 1vw) max(12.5px, 1vw) 0;
+      background-color: #8e8b8b40;
+
+      align-items: center;
+      position: relative;
+      z-index: 1;
+      input {
+        background-color: transparent;
+        border: none;
+        color: #ffffff;
+        width: 100%;
+        height: 100%;
+        position: relative;
+        z-index: 1;
+        &::placeholder {
+          font-size: max(12px, 0.75vw);
+
+          color: #ffffff;
+        }
+      }
+      span {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: max(12px, 0.9vw);
+        margin-right: max(4px, 0.9vw);
+      }
+    }
+  }
+}
+@media (max-width: 1020px) {
+  .ourBlog {
+    margin-top: 8%;
+  }
+}
+@media (max-width: 900px) {
+  .ourBlog {
+    margin-top: 10%;
+  }
+}
+@media (max-width: 670px) {
+  .ourBlog {
+    margin-top: 14%;
+    .content {
+      .search {
+        width: max(18rem, 32.5vw);
+      }
+      h1 {
+        font-size: max(56px, 0.875vw);
+      }
+    }
+  }
+}
+@media (max-width: 475px) {
+  .ourBlog {
+    margin-top: 18%;
+  }
+}
+@media (max-width: 375px) {
+  .ourBlog {
+    margin-top: 24%;
+    .content {
+      .search {
+        width: max(15rem, 32.5vw);
+      }
+      h1 {
+        font-size: max(48px, 0.875vw);
+      }
+    }
+  }
+}

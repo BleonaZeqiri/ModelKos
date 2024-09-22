@@ -8,7 +8,6 @@ import Subscribe from "../../components/shared/Subscribe/Subscribe";
 import Footer from "../../components/shared/Footer/Footer";
 import BecomeModel from "../../components/pages/ApplyNow/BecomeModel";
 import ApplyNow from "../../components/pages/ApplyNow/ApplyNow";
-import { useSelector } from "react-redux";
 
 const Apply = () => {
   return (

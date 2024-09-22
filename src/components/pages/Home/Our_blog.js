@@ -66,7 +66,7 @@ const Our_blog = () => {
           ))}
         </Carousel>
         <StyledLink
-          to="/"
+          to="/OurBlog"
           link={<FormattedMessage id={translate[language].our_blog_read} />}
         />
       </div>
