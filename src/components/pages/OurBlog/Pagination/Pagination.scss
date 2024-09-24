@@ -1,0 +1,56 @@
+.paginationBttns {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  gap: max(1rem, 1vw);
+
+  li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 max(3.5px, 0.25vw);
+    cursor: pointer;
+    transition: all 0.15s ease-in-out;
+    color: #1d1d1d;
+
+    .previousBttn,
+    .nextBttn {
+      text-decoration: none;
+      border: 1px solid #bebebe;
+      width: max(40px, 3vw);
+      height: max(40px, 3vw);
+      cursor: pointer;
+
+      &:hover {
+        background-color: #f0f0f0;
+      }
+    }
+    a {
+      font-size: max(17.5px, 1.5vw);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: max(30px, 2.35vw);
+      height: max(30px, 2.35vw);
+      cursor: pointer;
+    }
+  }
+
+  .previousBttn,
+  .nextBttn {
+    font-weight: bold;
+  }
+}
+@media (max-width: 480px) {
+  .paginationBttns {
+    gap: max(0rem, 0vw);
+    li {
+      .previousBttn,
+      .nextBttn {
+        width: max(30px, 2vw);
+        height: max(30px, 2vw);
+      }
+    }
+  }
+}

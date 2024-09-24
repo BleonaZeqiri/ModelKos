@@ -422,5 +422,15 @@
   "applyNow_eg1": "p.sh. (20)",
   "applyNow_eg2": "p.sh. (180)",
   "our_BlogSearch_title": "Blogu Ynë",
-  "our_BlogSearch_placeholder": "Kërko blog këtu"
+  "our_BlogSearch_placeholder": "Kërko blog këtu",
+  "mainComponent_date": "Data",
+  "mainComponent_results": " rezultate të gjetura",
+  "mainComponent_perPage": "Për faqe",
+  "blogCards_all": "Të gjitha",
+  "blogCards_modeling": "Modelim",
+  "blogCards_fashion": "Moda",
+  "blogCards_celebrities": "Yjet",
+  "blogCards_popular": "Popullore",
+  "blogCards_trendy": "Në modë",
+  "noDataAvailable": "Nuk ka të dhëna të disponueshme"
 }

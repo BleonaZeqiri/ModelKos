@@ -417,5 +417,16 @@
   "applyNow_eg1": "eg.(20)",
   "applyNow_eg2": "eg.(180)",
   "our_BlogSearch_title": "  Our Blog",
-  "our_BlogSearch_placeholder": "Search blog here"
+  "our_BlogSearch_placeholder": "Search blog here",
+  "mainComponent_date": "Date",
+
+  "mainComponent_results": " results found",
+  "mainComponent_perPage": "Per page",
+  "blogCards_all": "All",
+  "blogCards_modeling": "Modeling",
+  "blogCards_fashion": "Fashion",
+  "blogCards_celebrities": "Celebrities",
+  "blogCards_popular": "Popular",
+  "blogCards_trendy": "Trendy",
+  "noDataAvailable": "No data available"
 }

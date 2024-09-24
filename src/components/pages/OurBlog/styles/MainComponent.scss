@@ -1,0 +1,108 @@
+.main-component {
+  display: flex;
+  flex-direction: column;
+  padding: 2% 6%;
+  gap: max(3rem, 3vw);
+
+  .results {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    p,
+    span {
+      color: #1d1d1d;
+      font-size: max(14px, 0.85vw);
+      font-family: sans-serif;
+    }
+
+    .right {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: max(2rem, 2vw);
+
+      .main-component_data {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: max(0.8rem, 0.8vw);
+        .react-datepicker-container {
+          position: relative;
+          display: flex;
+          justify-content: space-between;
+          border: 0.8px solid #bebebe;
+          width: 90%;
+          padding: 5% 10%;
+          align-items: center;
+          cursor: pointer;
+          input {
+            width: 100%;
+            border: none;
+            font-size: max(12px, 0.75vw);
+          }
+          svg {
+            font-size: max(15px, 1.2vw);
+          }
+        }
+      }
+      .select-page {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        p {
+          width: max(8rem, 8vw);
+        }
+        .custom-select-wrapper {
+          position: relative;
+          display: flex;
+          justify-content: space-between;
+          border: 0.8px solid #bebebe;
+          width: 70%;
+          padding: 6% 10%;
+          align-items: center;
+          cursor: pointer;
+
+          select {
+            width: 100%;
+            border: none;
+            appearance: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            background-color: white;
+            cursor: pointer;
+            font-size: max(12px, 0.85vw);
+
+            &:focus-visible {
+              border: none;
+              outline: none;
+            }
+          }
+          select.placeholder-selected {
+            color: #808080;
+            font-size: max(12px, 0.75vw);
+          }
+          svg {
+            font-size: max(15px, 1.2vw);
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 650px) {
+  .main-component .results {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: max(1.5rem, 1.5vw);
+    .right {
+      gap: max(1rem, 1vw);
+      .main-component_data {
+        width: 100%;
+      }
+      .select-page {
+        width: 100%;
+      }
+    }
+  }
+}
