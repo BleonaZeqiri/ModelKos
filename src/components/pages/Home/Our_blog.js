@@ -3,7 +3,7 @@ import React, { useState, useEffect, useRef } from "react";
 import Carousel from "react-elastic-carousel";
 import { FormattedMessage } from "react-intl";
 import "./styles/Our_blog.scss";
-import { Our_workData } from "../data";
+import { Our_workData } from "./data";
 import StyledLink from "../../shared/StyledLink/StyledLink";
 import { translate } from "../../../translation/translate";
 import { useSelector } from "react-redux";

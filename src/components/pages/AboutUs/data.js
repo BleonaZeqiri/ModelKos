@@ -1,16 +1,14 @@
 import { FormattedMessage } from "react-intl";
 import { translate } from "../../../translation/translate";
 // About
-import image1 from "../../../assets/AboutUs-section/DeaGashi.png";
-import image2 from "../../../assets/AboutUs-section/BlertaBerisha.png";
-
-// History
-//hheh
-// import { ReactComponent as What_we_offer2 } from "../../assets/WhatWeOffer/Icon1.svg";
-// import { ReactComponent as What_we_offer3 } from "../../assets/WhatWeOffer/Icon2.svg";
-// import { ReactComponent as What_we_offer4 } from "../../assets/WhatWeOffer/Icon3.svg";
-// import { ReactComponent as What_we_offer5 } from "../../assets/WhatWeOffer/Icon4.svg";
-// import { HiOutlineArrowLongRight } from "react-icons/hi2";
+import image1 from "../../../assets/Home/AboutUs-section/DeaGashi.png";
+import image2 from "../../../assets/Home/AboutUs-section/BlertaBerisha.png";
+import imageModel3 from "../../../assets/Home/AboutUs-section/Image3.jpg";
+import imageModel4 from "../../../assets/Home/AboutUs-section/Image4.jpg";
+import imageModel5 from "../../../assets/Home/AboutUs-section/Image5.jpg";
+import imageModel6 from "../../../assets/Home/AboutUs-section/Image6.jpg";
+import imageModel7 from "../../../assets/Home/AboutUs-section/Image7.jpg";
+import imageModel8 from "../../../assets/Home/AboutUs-section/Image8.jpg";
 export const AboutUsData = (language) => [
   {
     to: "/",
@@ -37,7 +35,7 @@ export const AboutUsData = (language) => [
   },
   {
     to: "/",
-    img: image1,
+    img: imageModel4,
     name: "Klea Gashi",
     about: [
       {
@@ -60,7 +58,7 @@ export const AboutUsData = (language) => [
   },
   {
     to: "/",
-    img: image1,
+    img: imageModel3,
     name: "Arta Kalluri",
     about: [
       {
@@ -83,7 +81,7 @@ export const AboutUsData = (language) => [
   },
   {
     to: "/",
-    img: image1,
+    img: imageModel5,
     name: "Blina Beka",
     about: [
       {
@@ -131,7 +129,7 @@ export const AboutUsData2 = (language) => [
   },
   {
     to: "/",
-    img: image2,
+    img: imageModel6,
     name: "Alora Gojani",
     about: [
       {
@@ -154,7 +152,7 @@ export const AboutUsData2 = (language) => [
   },
   {
     to: "/",
-    img: image2,
+    img: imageModel7,
     name: "Anila Xhaferi",
     about: [
       {
@@ -177,7 +175,7 @@ export const AboutUsData2 = (language) => [
   },
   {
     to: "/",
-    img: image2,
+    img: imageModel8,
     name: "Anisa Xhaferi",
     about: [
       {

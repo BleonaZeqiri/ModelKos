@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import Carousel from "react-elastic-carousel";
 import "../Home/styles/What_we_offer.scss";
-import { What_we_offerData } from "../data";
+import { What_we_offerData } from "./data";
 import { Link } from "react-router-dom";
 import { FormattedMessage } from "react-intl";
 import StyledLink from "../../shared/StyledLink/StyledLink";

@@ -12,7 +12,7 @@ const OurBlog = () => {
   return (
     <div>
       <Navbar isColor />
-      <OurBlogSearch />
+      {/* <OurBlogSearch /> */}
       <MainComponent />
       <Our_partners />
       <Subscribe />

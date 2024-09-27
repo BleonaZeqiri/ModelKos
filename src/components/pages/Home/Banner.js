@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 import "./styles/Banner.scss";
-import { BannerData1 } from "../data";
+import { BannerData1 } from "./data";
 import { FormattedMessage } from "react-intl";
 import { Link } from "react-router-dom";
 import { SlLocationPin } from "react-icons/sl";

@@ -10,6 +10,7 @@ import Stack from "@mui/material/Stack";
 import { TiArrowSortedDown } from "react-icons/ti";
 import { FormattedMessage } from "react-intl";
 import { translate } from "../../../translation/translate";
+import OurBlogSearch from "../OurBlog/OurBlogSearch";
 
 const MainComponent = () => {
   const language = useSelector((state) => state.language.language);
@@ -18,10 +19,12 @@ const MainComponent = () => {
   const [itemsPerPage, setItemsPerPage] = useState(12);
   const [currentPage, setCurrentPage] = useState(1);
   const datePickerRef = useRef(null);
+  const [searchItem, setSearchItem] = useState("");
 
   const allItems = our_workData.reduce((acc, tab) => {
     return acc.concat(tab.items.innerItems);
   }, []);
+  const [isPlaceholderSelected] = useState(true);
 
   const formatDate = (dateString) => {
     const options = { day: "numeric", month: "long", year: "numeric" };
@@ -39,12 +42,18 @@ const MainComponent = () => {
     return `${day}${ordinalSuffix(day)} ${month}, ${year}`;
   };
   const selectedDateValue = formatDate(selectedDate);
-  const filteredItems = selectedDate
-    ? allItems.filter((item) => {
-        const itemDate = item.data_format;
-        return itemDate === selectedDateValue;
-      })
-    : allItems;
+
+  const filteredItems =
+    selectedDate || searchItem
+      ? allItems.filter((item) => {
+          const itemDate = item.data_format;
+          const dateFilter = itemDate === selectedDateValue;
+          const matchesSearch = item.title.props.id
+            .toLowerCase()
+            .includes(searchItem.toLowerCase());
+          return selectedDate ? dateFilter && matchesSearch : matchesSearch;
+        })
+      : allItems;
 
   const totalCards = filteredItems.length;
   const totalPages = Math.ceil(totalCards / itemsPerPage);
@@ -60,79 +69,87 @@ const MainComponent = () => {
       datePickerRef.current.setOpen(true);
     }
   };
-  console.log(filteredItems);
-  console.log(currentItems);
-  console.log(itemsPerPage);
+  // console.log(filteredItems);
+  // console.log(currentItems);
 
   return (
-    <div className="main-component">
-      <div className="results">
-        <div className="left">
-          <span>
-            {filteredItems.length}
-            <FormattedMessage id={translate[language].mainComponent_results} />
-          </span>
-        </div>
-        <div className="right">
-          <div className="main-component_data">
-            <p>
-              <FormattedMessage id={translate[language].mainComponent_date} />
-            </p>
-            <div className="react-datepicker-container">
-              <DatePicker
-                selected={selectedDate}
-                onChange={(date) => setSelectedDate(date)}
-                dateFormat="MM/dd/yy"
-                placeholderText="MM/DD/YY"
-                className="date-input"
-                ref={datePickerRef}
-                required
-              />
-              <TiArrowSortedDown
-                className="select-arrow"
-                onClick={handleIconClick}
-              />
-            </div>
-          </div>
-          <div className="select-page">
-            <p>
+    <>
+      <OurBlogSearch setSearchItem={setSearchItem} searchItem={searchItem} />
+      <div className="main-component">
+        <div className="results">
+          <div className="left">
+            <span>
+              {filteredItems.length}
               <FormattedMessage
-                id={translate[language].mainComponent_perPage}
+                id={translate[language].mainComponent_results}
               />
-            </p>
-            <div className="custom-select-wrapper">
-              <select
-                id="itemsPerPage"
-                value={itemsPerPage}
-                onChange={(e) => {
-                  setItemsPerPage(Number(e.target.value));
-                  setCurrentPage(1);
-                }}
-              >
-                <option value={3}>3</option>
-                <option value={6}>6</option>
-                <option value={9}>9</option>
-                <option value={12}>12</option>
-              </select>
-              <TiArrowSortedDown />
+            </span>
+          </div>
+          <div className="right">
+            <div className="main-component_data">
+              <p>
+                <FormattedMessage id={translate[language].mainComponent_date} />
+              </p>
+              <div className="react-datepicker-container">
+                <DatePicker
+                  selected={selectedDate}
+                  onChange={(date) => setSelectedDate(date)}
+                  dateFormat="MM/dd/yy"
+                  placeholderText="MM/DD/YY"
+                  className="date-input"
+                  ref={datePickerRef}
+                  required
+                />
+                <TiArrowSortedDown
+                  className="select-arrow"
+                  onClick={handleIconClick}
+                />
+              </div>
+            </div>
+            <div className="select-page">
+              <p>
+                <FormattedMessage
+                  id={translate[language].mainComponent_perPage}
+                />
+              </p>
+              <div className="custom-select-wrapper">
+                <select
+                  id="itemsPerPage"
+                  className={`required-entry validate-cc-type-select ${
+                    isPlaceholderSelected ? "placeholder-selected" : ""
+                  }`}
+                  value={itemsPerPage}
+                  onChange={(e) => {
+                    setItemsPerPage(Number(e.target.value));
+                    setCurrentPage(1);
+                  }}
+                >
+                  <option value={3}>3</option>
+                  <option value={6}>6</option>
+                  <option value={9}>9</option>
+                  <option value={12}>12</option>
+                </select>
+                <TiArrowSortedDown />
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      <BlogCards
-        items={currentItems}
-        selectedDate={selectedDate}
-        itemsPerPage={itemsPerPage}
-        currentPage={currentPage}
-      />
-      <Stack spacing={2}>
-        <Pagination
-          totalPages={totalPages}
+        <BlogCards
+          items={currentItems}
+          selectedDate={selectedDate}
+          itemsPerPage={itemsPerPage}
           currentPage={currentPage}
-          setCurrentPage={setCurrentPage}
+          searchItem={searchItem}
         />
-      </Stack>
-    </div>
+        <Stack spacing={2}>
+          <Pagination
+            totalPages={totalPages}
+            currentPage={currentPage}
+            setCurrentPage={setCurrentPage}
+          />
+        </Stack>
+      </div>
+    </>
   );
 };
 

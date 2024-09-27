@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import "./styles/Marketing.scss";
 import { FormattedMessage } from "react-intl";
 import { ReactComponent as MarketingIcon } from "../../../assets/ModelsMarketing/ModelsMarektingText.svg";
-import { MarketingData1, MarketingData3 } from "../data";
+import { MarketingData1, MarketingData3 } from "./data";
 import image from "../../../assets/ModelsMarketing/Image2.png";
 import { useSelector } from "react-redux";
 import { translate } from "../../../translation/translate";

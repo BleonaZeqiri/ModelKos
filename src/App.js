@@ -12,15 +12,15 @@ import Aos from "aos";
 import "aos/dist/aos.css";
 
 import { IntlProvider } from "react-intl";
-import Profile from "./pages/Profile/Profile";
-import Apply from "./pages/ApplyNow/Apply";
 
-import OurBlog from "./pages/OurBlog/OurBlog";
 // import { translate } from "./translation/translate";
 // import { useSelector } from "react-redux";
 
 const Home = lazy(() => import("./pages/Home/Home"));
 const AboutUs = lazy(() => import("./pages/AboutUs/AboutUs"));
+const OurBlog = lazy(() => import("./pages/OurBlog/OurBlog"));
+const Profile = lazy(() => import("./pages/Profile/Profile"));
+const Apply = lazy(() => import("./pages/ApplyNow/Apply"));
 
 function App() {
   // const language = useSelector((state) => state.language.language);

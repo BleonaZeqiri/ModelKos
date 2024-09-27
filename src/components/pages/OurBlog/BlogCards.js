@@ -7,7 +7,7 @@ import { useNavigate } from "react-router-dom";
 import { Our_workData } from "./data";
 import { translate } from "../../../translation/translate";
 
-const BlogCards = ({ selectedDate, itemsPerPage, currentPage }) => {
+const BlogCards = ({ selectedDate, itemsPerPage, currentPage, searchItem }) => {
   const language = useSelector((state) => state.language.language);
   const our_workData = Our_workData(language);
   const navigate = useNavigate();
@@ -66,14 +66,20 @@ const BlogCards = ({ selectedDate, itemsPerPage, currentPage }) => {
           </p>
         ) : (
           our_workData.map((props, index) => {
-            const filteredItems = formattedSelectedDate
-              ? props.items.innerItems.filter((item) => {
-                  const itemDate = item.data_format;
-                  console.log(itemDate, "sssa");
-                  return itemDate === formattedSelectedDate;
-                })
-              : props.items.innerItems;
-            console.log(filteredItems, "ssa");
+            const filteredItems =
+              searchItem || formattedSelectedDate
+                ? props.items.innerItems.filter((item) => {
+                    const itemDate = item.data_format;
+                    const matchesSearch = item.title.props.id
+                      .toLowerCase()
+                      .includes(searchItem.toLowerCase());
+                    const dateFilter = itemDate === formattedSelectedDate;
+
+                    return formattedSelectedDate
+                      ? dateFilter && matchesSearch
+                      : matchesSearch;
+                  })
+                : props.items.innerItems;
             return (
               <TabPanel key={index}>
                 {filteredItems.length > 0 ? (

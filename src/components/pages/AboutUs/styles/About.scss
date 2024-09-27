@@ -2,7 +2,8 @@
   display: flex;
   justify-content: space-between;
   align-items: stretch;
-  padding: 5%;
+  margin-top: 5%;
+  padding: 2% 5%;
   width: 100%;
   p {
     line-height: 2.5;
@@ -34,7 +35,7 @@
 
       .circleText {
         .circle {
-          width: 140px;
+          width: max(9rem, 9vw);
         }
       }
     }
@@ -42,6 +43,8 @@
 
   .right {
     width: 60%;
+    height: 100vh;
+
     display: flex;
     justify-content: center;
     align-items: center;
@@ -51,25 +54,29 @@
       height: 100%;
     }
 
-    .rec-carousel {
-      height: 100% !important;
+    // .rec-carousel {
+    //   height: 100% !important;
 
-      .rec-slider {
-        height: 100%;
-      }
-    }
+    // .rec-slider {
+    //   height: 100%;
+    // }
+    // }
 
     .flex {
       width: 100%;
+      height: auto;
       display: flex;
       gap: max(0.5rem, 1vw);
-      padding: max(2rem, 3.5vw);
+      padding: max(3.5rem, 3.5vw);
       align-items: stretch;
       position: relative;
 
       .aboutCard {
-        width: max(10rem, 25vw);
-        height: max(10rem, 31vw);
+        width: 100%;
+        // width: max(10rem, 25vw);
+        // height: max(10rem, 31vw);
+        height: max(7rem, 28vw);
+
         display: flex;
         flex-direction: column;
         gap: max(1rem, 1vw);
@@ -147,14 +154,15 @@
           }
         }
       }
-    }
-
-    .img {
-      background-position: 50% 50%;
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-position: center;
-      height: max(10rem, 20vw);
+      .img {
+        min-width: 100%;
+        height: 100vh;
+        // min-height: 100%;
+        // background-position: 50% 50%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+      }
     }
 
     .rec-arrow,
@@ -167,14 +175,15 @@
       display: flex;
       justify-content: flex-start;
       align-items: center;
-      padding-right: 62.5%;
-      top: -59px;
+      right: 30%;
       position: relative;
+
+      top: max(-4.75rem, -4vw);
     }
 
     .rec-dot {
-      width: max(8px, 0.25vw) !important;
-      height: max(8px, 0.25vw) !important;
+      width: max(0.6rem, 0.6vw);
+      height: max(0.6rem, 0.6vw);
       border-radius: 50% !important;
       margin: 0 max(3px, 0.2vw) !important;
       border: 0 !important;
@@ -183,34 +192,14 @@
     }
 
     .rec-dot_active {
-      width: max(10.5px, 0.25vw) !important;
-      height: max(10.5px, 0.25vw) !important;
+      width: max(0.75rem, 0.75vw);
+      height: max(0.75rem, 0.75vw);
       border-radius: 50% !important;
       border: 0 !important;
       box-shadow: none !important;
       background: #242424 !important;
     }
-    a {
-      position: absolute;
-      z-index: 5;
-      left: max(0.5rem, 1vw);
-      top: max(0.25rem, 1vw);
-    }
   }
-}
-@media (max-width: 2950px) {
-  .about-AboutUs .right .img {
-    height: max(7rem, 17vw);
-  }
-  .about-AboutUs .right .flex .aboutCard {
-    // width: max(10rem, 25vw);
-
-    height: max(10rem, 25vw);
-  }
-  // .about-AboutUs .right .rec-pagination {
-  //   padding-right: 63.5%;
-  //   bottom: 107px;
-  // }
 }
 
 @media (max-width: 1300px) {

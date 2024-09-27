@@ -1,5 +1,5 @@
 import React from "react";
-import { ContentData } from "../data";
+import { ContentData } from "./data";
 import "../Home/styles/Content.scss";
 import { useSelector } from "react-redux";
 

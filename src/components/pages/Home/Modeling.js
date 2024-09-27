@@ -3,7 +3,7 @@ import Carousel from "react-elastic-carousel";
 import { Link } from "react-router-dom";
 import "./styles/Modeling.scss";
 import image from "../../../assets/Modeling/DayOfModelingText.svg";
-import { ModelingData } from "../data";
+import { ModelingData } from "./data";
 import { FormattedMessage } from "react-intl";
 import { translate } from "../../../translation/translate";
 import { useSelector } from "react-redux";

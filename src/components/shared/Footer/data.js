@@ -154,7 +154,12 @@ export const FooterData1 = (language) => [
     category: <FormattedMessage id={translate[language].footer_jobs} />,
     find: [
       {
-        text: <FormattedMessage id="footer_jobs_email" />,
+        text: (
+          <FormattedMessage
+            id="footer_jobs_email"
+            defaultMessage="jobs@modelkos.com"
+          />
+        ),
       },
     ],
   },

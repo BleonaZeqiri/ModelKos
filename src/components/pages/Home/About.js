@@ -6,8 +6,8 @@ import { FormattedMessage } from "react-intl";
 import { useSelector } from "react-redux";
 import { translate } from "../../../translation/translate";
 
-import { AboutUsData, AboutUsData2 } from "../data";
-import image from "../../../assets/AboutUs-section/AboutUsText.svg";
+import { AboutUsData, AboutUsData2 } from "./data";
+import image from "../../../assets/Home/AboutUs-section/AboutUsText.svg";
 
 const About = () => {
   const language = useSelector((state) => state.language.language);

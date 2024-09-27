@@ -4,11 +4,11 @@ import { translate } from "../../../translation/translate";
 import { FormattedMessage } from "react-intl";
 import "./styles/Slider.scss";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
-import { ModelsSliderData } from "../data";
+import { ModelsSliderData } from "./data";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
-import { ReactComponent as ArrowLeft } from "../../../assets/ModelsSlider/arrow/arrow-left.svg";
-import { ReactComponent as ArrowRight } from "../../../assets/ModelsSlider/arrow/arrow-right.svg";
+import { ReactComponent as ArrowLeft } from "../../../assets/Home/ModelsSlider/arrow/arrow-left.svg";
+import { ReactComponent as ArrowRight } from "../../../assets/Home/ModelsSlider/arrow/arrow-right.svg";
 import { HiOutlineArrowLongRight } from "react-icons/hi2";
 const Slider = () => {
   const language = useSelector((state) => state.language.language);

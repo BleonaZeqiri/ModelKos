@@ -1,7 +1,7 @@
 import React from "react";
 
 import "./styles/BeingClassy.scss";
-import { BeingClassyData } from "../data";
+import { BeingClassyData } from "./data";
 import { Link } from "react-router-dom";
 import { FormattedMessage } from "react-intl";
 import { useSelector } from "react-redux";
