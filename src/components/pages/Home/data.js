@@ -498,25 +498,25 @@ export const ModelsSliderData = (language) => [
       },
     ],
   },
-  // {
-  //   cls: "tab2",
-  //   models: [
-  //     {
-  //       image: ModelsSlider1,
-  //       profession: (
-  //         <FormattedMessage id={translate[language].modelsSlider_profession1} />
-  //       ),
-  //       name: "Anila Canolli",
-  //       time: <FormattedMessage id={translate[language].modelsSlider_time1} />,
+  {
+    cls: "tab1",
+    models: [
+      {
+        image: ModelsSlider1,
+        profession: (
+          <FormattedMessage id={translate[language].modelsSlider_profession1} />
+        ),
+        name: "Anila Canolli",
+        time: <FormattedMessage id={translate[language].modelsSlider_time1} />,
 
-  //       location: "Prishtina, Kosova",
+        location: "Prishtina, Kosova",
 
-  //       icon: <SlLocationPin />,
-  //       icon1: <FiEye />,
-  //       view: "290",
-  //     },
-  //   ],
-  // },
+        icon: <SlLocationPin />,
+        icon1: <FiEye />,
+        view: "290",
+      },
+    ],
+  },
 ];
 export const What_we_offerData = (language) => [
   {
@@ -737,5 +737,270 @@ export const Our_workData = (language) => [
     text: <FormattedMessage id={translate[language].our_blog_textt9} />,
     link: <FormattedMessage id={translate[language].our_blog_read_more3} />,
     icon: <HiArrowLongRight />,
+  },
+];
+
+export const ModelsSliderDatahiqu = (language) => [
+  {
+    cls: "tab1",
+    items: [
+      {
+        col: "col1",
+        innerItems: [
+          {
+            image: ModelsSlider1,
+            profession: (
+              <FormattedMessage
+                id={translate[language].modelsSlider_profession1}
+              />
+            ),
+            name: "Anila Canolli",
+            time: (
+              <FormattedMessage id={translate[language].modelsSlider_time1} />
+            ),
+
+            location: "Prishtina, Kosova",
+
+            icon: <SlLocationPin />,
+            icon1: <FiEye />,
+            view: "290",
+          },
+
+          {
+            image: ModelsSlider2,
+            profession: (
+              <FormattedMessage
+                id={translate[language].modelsSlider_profession2}
+              />
+            ),
+
+            name: "Klea Gashi",
+            time: (
+              <FormattedMessage id={translate[language].modelsSlider_time2} />
+            ),
+
+            location: "Prishtina, Kosova",
+            icon: <SlLocationPin />,
+            icon1: <FiEye />,
+
+            view: "290",
+          },
+          {
+            image: ModelsSlider3,
+            profession: (
+              <FormattedMessage
+                id={translate[language].modelsSlider_profession3}
+              />
+            ),
+            name: "Ari Berisha",
+            time: (
+              <FormattedMessage id={translate[language].modelsSlider_time3} />
+            ),
+
+            location: "Prishtina, Kosova",
+            icon: <SlLocationPin />,
+            icon1: <FiEye />,
+
+            view: "290",
+          },
+          {
+            image: ModelsSlider4,
+            profession: (
+              <FormattedMessage
+                id={translate[language].modelsSlider_profession4}
+              />
+            ),
+            name: "Jon Klaiqi",
+            time: (
+              <FormattedMessage id={translate[language].modelsSlider_time4} />
+            ),
+
+            location: "Prishtina, Kosova",
+            icon: <SlLocationPin />,
+            icon1: <FiEye />,
+
+            view: "290",
+          },
+          {
+            image: ModelsSlider5,
+            profession: (
+              <FormattedMessage
+                id={translate[language].modelsSlider_profession5}
+              />
+            ),
+
+            name: "Anila Canolli",
+            time: (
+              <FormattedMessage id={translate[language].modelsSlider_time5} />
+            ),
+
+            location: "Prishtina, Kosova",
+
+            icon: <SlLocationPin />,
+            icon1: <FiEye />,
+            view: "290",
+          },
+          {
+            image: ModelsSlider6,
+            profession: (
+              <FormattedMessage
+                id={translate[language].modelsSlider_profession6}
+              />
+            ),
+
+            name: "Klea Gashi",
+            time: (
+              <FormattedMessage id={translate[language].modelsSlider_time6} />
+            ),
+
+            location: "Prishtina, Kosova",
+            icon: <SlLocationPin />,
+            icon1: <FiEye />,
+
+            view: "290",
+          },
+          {
+            image: ModelsSlider7,
+            profession: (
+              <FormattedMessage
+                id={translate[language].modelsSlider_profession7}
+              />
+            ),
+            name: "Ari Berisha",
+            time: (
+              <FormattedMessage id={translate[language].modelsSlider_time7} />
+            ),
+
+            location: "Prishtina, Kosova",
+            icon: <SlLocationPin />,
+            icon1: <FiEye />,
+
+            view: "290",
+          },
+          {
+            image: ModelsSlider8,
+            profession: (
+              <FormattedMessage
+                id={translate[language].modelsSlider_profession8}
+              />
+            ),
+            name: "Jon Klaiqi",
+            time: (
+              <FormattedMessage id={translate[language].modelsSlider_time8} />
+            ),
+
+            location: "Prishtina, Kosova",
+            icon: <SlLocationPin />,
+            icon1: <FiEye />,
+
+            view: "290",
+          },
+
+          {
+            image: ModelsSlider9,
+            profession: (
+              <FormattedMessage
+                id={translate[language].modelsSlider_profession9}
+              />
+            ),
+
+            name: "Anila Canolli",
+            time: (
+              <FormattedMessage id={translate[language].modelsSlider_time9} />
+            ),
+
+            location: "Prishtina, Kosova",
+
+            icon: <SlLocationPin />,
+            icon1: <FiEye />,
+            view: "290",
+          },
+          {
+            image: ModelsSlider10,
+            profession: (
+              <FormattedMessage
+                id={translate[language].modelsSlider_profession10}
+              />
+            ),
+
+            name: "Klea Gashi",
+            time: (
+              <FormattedMessage id={translate[language].modelsSlider_time10} />
+            ),
+
+            location: "Prishtina, Kosova",
+            icon: <SlLocationPin />,
+            icon1: <FiEye />,
+
+            view: "290",
+          },
+          {
+            image: ModelsSlider11,
+            profession: (
+              <FormattedMessage
+                id={translate[language].modelsSlider_profession11}
+              />
+            ),
+            name: "Ari Berisha",
+            time: (
+              <FormattedMessage id={translate[language].modelsSlider_time11} />
+            ),
+
+            location: "Prishtina, Kosova",
+            icon: <SlLocationPin />,
+            icon1: <FiEye />,
+
+            view: "290",
+          },
+          {
+            image: ModelsSlider12,
+            profession: (
+              <FormattedMessage
+                id={translate[language].modelsSlider_profession12}
+              />
+            ),
+            name: "Jon Klaiqi",
+            time: (
+              <FormattedMessage id={translate[language].modelsSlider_time12} />
+            ),
+
+            location: "Prishtina, Kosova",
+            icon: <SlLocationPin />,
+            icon1: <FiEye />,
+
+            view: "290",
+          },
+        ],
+      },
+    ],
+  },
+
+  {
+    cls: "tab1",
+    items: [
+      {
+        col: "col1",
+        innerItems: [
+          {
+            image: ModelsSlider1,
+            profession: (
+              <FormattedMessage
+                id={translate[language].modelsSlider_profession1}
+              />
+            ),
+            name: "Anila Canolli",
+            time: (
+              <FormattedMessage id={translate[language].modelsSlider_time1} />
+            ),
+
+            location: "Prishtina, Kosova",
+
+            icon: <SlLocationPin />,
+            icon1: <FiEye />,
+            view: "290",
+          },
+        ],
+      },
+    ],
   },
 ];

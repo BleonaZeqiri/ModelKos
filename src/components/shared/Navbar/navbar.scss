@@ -136,40 +136,27 @@
 .nav__sticky {
   background: #fff;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 5px 0px;
-  color: #111;
+  color: #fff;
   .menu-button,
   .nav-links .inner-nav-link,
-  h1 {
-    color: #111;
+  .mode-switch h1 {
+    color: #1d1d1d;
   }
   .nav-logo .logo-container {
     content: url("../../../assets/NavBar/Logo.svg");
   }
   .nav-auth .contact-us {
-    background: #1d1d1d;
+    background: #1d1d1d !important;
     color: #fff;
   }
   .apply-now {
-    color: #111 !important;
+    color: #fff;
   }
 }
 .logo-black .logo-container {
   content: url("../../../assets/NavBar/Logo.svg") !important;
 }
-body.dark-mode .nav__sticky {
-  background: var(--dark-color);
-  .menu-button,
-  .nav-links .inner-nav-link {
-    color: #fff;
-  }
-  .nav-logo .logo-container {
-    content: url("../../../assets/shared/white-logo.svg");
-  }
-  .nav-auth .contact-us {
-    border: 1px solid #fff;
-    color: #fff;
-  }
-}
+
 @media (max-width: 361px) {
   .footer-row {
     flex-direction: column;

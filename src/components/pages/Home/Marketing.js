@@ -27,7 +27,7 @@ const Marketing = () => {
           {marketingData1.map((item, index) => (
             <div key={`stats-${index}`} className="item">
               <h1>{item.number}</h1>
-              <p className="marketing-textt">{item.name}</p>
+              <p className="marketing-textt content">{item.name}</p>
             </div>
           ))}
         </div>

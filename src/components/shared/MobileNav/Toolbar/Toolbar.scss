@@ -67,18 +67,3 @@
 .logo-black .mobile-logo-container {
   content: url("../../../../assets/NavBar/Logo.svg") !important;
 }
-body.dark-mode {
-  .toolbar__sticky,
-  .white-nav .mobile-toolbar {
-    background: var(--dark-color) !important;
-    .mobile-logo-row a .mobile-logo-container {
-      content: url("../../../../assets/shared/white-logo.svg") !important;
-    }
-    h1 {
-      color: #000000;
-    }
-    button {
-      color: #fff !important;
-    }
-  }
-}

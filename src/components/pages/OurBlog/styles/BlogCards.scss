@@ -111,14 +111,6 @@
     }
   }
 }
-body.dark-mode .shared-our-models .item {
-  border: 1px solid rgba(var(--main-color-rgb), 0.25);
-
-  .icon {
-    filter: brightness(0) invert(1);
-    -webkit-filter: brightness(0) invert(1);
-  }
-}
 
 @keyframes shining {
   0% {

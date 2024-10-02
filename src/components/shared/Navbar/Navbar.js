@@ -117,7 +117,6 @@ const Navbar = (props) => {
       </div>
 
       <div className="nav-auth">
-        {/* <ThemeSwitcher /> */}
         <Link
           to="/apply"
           className="apply-now"

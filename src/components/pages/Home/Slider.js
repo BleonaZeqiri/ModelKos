@@ -5,6 +5,8 @@ import { FormattedMessage } from "react-intl";
 import "./styles/Slider.scss";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import { ModelsSliderData } from "./data";
+import { ModelsSliderDatahiqu } from "./data";
+
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { ReactComponent as ArrowLeft } from "../../../assets/Home/ModelsSlider/arrow/arrow-left.svg";
@@ -17,6 +19,7 @@ const Slider = () => {
 
   const carouselRef = useRef(null);
   const modelsSliderData = ModelsSliderData(language);
+  const shi = ModelsSliderDatahiqu(language);
 
   useEffect(() => {
     if (modelsSliderData.length > 0) {
@@ -49,6 +52,7 @@ const Slider = () => {
   const selectedCategoryData = modelsSliderData.find(
     (category) => category.name === selectedCategory
   ) || { models: [] };
+  console.log(selectedCategory, "ss");
 
   const chunkArray = (array, size) => {
     const result = [];
@@ -58,7 +62,7 @@ const Slider = () => {
     return result;
   };
 
-  const modelChunks = chunkArray(selectedCategoryData.models, itemsToShow);
+  // const modelChunks = chunkArray(selectedCategoryData.models, itemsToShow);
 
   const CustomArrow = ({ type, onClick, isEdge }) => {
     const pointer = type === "PREV" ? <ArrowLeft /> : <ArrowRight />;
@@ -145,27 +149,24 @@ const Slider = () => {
           </div>
         </TabList>
 
-        {modelsSliderData.length === 0 ? (
+        {shi.length === 0 ? (
           <p>No data available</p>
         ) : (
-          modelsSliderData.map((props, index) => (
-            <TabPanel key={index}>
-              <Carousel
-                itemsToShow={1}
-                ref={carouselRef}
-                onPrevStart={() => console.log("Navigating to previous item")}
-                onNextStart={() => console.log("Navigating to next item")}
-                disableArrowsOnEnd={false}
-                renderArrow={CustomArrow}
-              >
-                {modelChunks.map((chunk, chunkIndex) => (
-                  <div key={chunkIndex} className="carousel-slide">
-                    {chunk.map((model, modelIndex) => (
-                      <div
-                        className="modelSliderCard"
-                        tabIndex="0"
-                        key={modelIndex}
-                      >
+          shi.map((props, index) => {
+            console.log(props.items[0].innerItems, "sss");
+            return (
+              <TabPanel key={index}>
+                <Carousel
+                  itemsToShow={4}
+                  ref={carouselRef}
+                  onPrevStart={() => console.log("Navigating to previous item")}
+                  onNextStart={() => console.log("Navigating to next item")}
+                  disableArrowsOnEnd={false}
+                  renderArrow={CustomArrow}
+                >
+                  {props?.items[0]?.innerItems?.map((model, chunkIndex) => (
+                    <div key={chunkIndex} className="carousel-slide">
+                      <div className="modelSliderCard" tabIndex="0">
                         <div
                           className="img"
                           style={{
@@ -203,12 +204,13 @@ const Slider = () => {
                           </div>
                         </div>
                       </div>
-                    ))}
-                  </div>
-                ))}
-              </Carousel>
-            </TabPanel>
-          ))
+                      {/* ))} */}
+                    </div>
+                  ))}
+                </Carousel>
+              </TabPanel>
+            );
+          })
         )}
       </Tabs>
     </div>

@@ -83,6 +83,7 @@
             font-size: max(16px, 1vw);
             font-weight: 500;
             font-family: "CustomFont", sans-serif;
+            color: #191919;
           }
           .row {
             align-items: center;
@@ -110,7 +111,8 @@
           background: #191919;
           color: #fff;
           border: none;
-          p {
+          p,
+          h3 {
             color: #fff;
           }
           .model-item .row span.dot {
@@ -129,7 +131,8 @@
           background: #191919;
           color: #fff;
           border: none;
-          p {
+          p,
+          h3 {
             color: #fff;
           }
           .model-item .row span.dot {
@@ -209,6 +212,7 @@
     }
   }
 }
+
 @media (max-width: 1300px) {
   .home-about {
     align-items: center;

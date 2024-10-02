@@ -111,6 +111,10 @@
         span {
           color: #fff !important;
         }
+        h3,
+        .def-text {
+          color: #fff !important;
+        }
 
         .item svg {
           color: #fff !important;
@@ -193,6 +197,10 @@
           color: #808080;
           font-size: max(12px, 0.75vw);
         }
+        h3,
+        .def-text {
+          color: #1d1d1d;
+        }
 
         .row-content {
           padding: 10px 0px;
@@ -204,6 +212,9 @@
           justify-content: space-between;
           width: 100%;
 
+          // &:hover {
+          //   color: #fff;
+          // }
           h3 {
             font-size: max(16px, 1vw);
             font-family: "CustomFont", sans-serif;
@@ -302,15 +313,6 @@
     .tabs .react-tabs__tab-list {
       justify-content: center !important;
     }
-  }
-}
-
-body.dark-mode .shared-our-work .item {
-  border: 1px solid rgba(var(--main-color-rgb), 0.25);
-
-  .icon {
-    filter: brightness(0) invert(1);
-    -webkit-filter: brightness(0) invert(1);
   }
 }
 

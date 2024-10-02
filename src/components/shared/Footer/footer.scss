@@ -23,9 +23,19 @@
 .shared-footer .first-col {
   width: 35%;
   .top {
-    gap: 10px;
+    gap: max(3rem, 3vw);
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    :last-child {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+    }
+    .section {
+      display: flex;
+      flex-direction: column;
+      gap: max(1rem, 1vw);
+    }
     h1 {
       color: #fff;
     }
