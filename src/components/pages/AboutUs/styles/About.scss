@@ -43,7 +43,6 @@
 
   .right {
     width: 60%;
-    // height: 100vh;
     margin-top: 40px;
     display: flex;
     justify-content: center;
@@ -51,16 +50,7 @@
     position: relative;
 
     .rec-carousel-wrapper {
-      // height: 100%;
     }
-
-    // .rec-carousel {
-    //   height: 100% !important;
-
-    // .rec-slider {
-    //   height: 100%;
-    // }
-    // }
 
     .flex {
       width: 100%;
@@ -73,8 +63,6 @@
 
       .aboutCard {
         width: 100%;
-        // width: max(10rem, 25vw);
-        // height: max(10rem, 31vw);
         height: max(7rem, 28vw);
 
         display: flex;
@@ -157,11 +145,8 @@
       .img {
         min-width: 100%;
         height: 100vh;
-        // min-height: 100%;
-        // background-position: 50% 50%;
         background-repeat: no-repeat;
         background-size: cover;
-        background-position: center;
       }
     }
 
@@ -240,13 +225,8 @@
 
     .right {
       width: 100%;
-      // height: max(31rem, 45vw);
       .flex {
-        // justify-content: center;
-
         .aboutCard {
-          // display: flex;
-          // flex-direction: column;
           height: 35vh;
           width: 100%;
           left: auto;
@@ -279,36 +259,25 @@
     .right {
       width: 63%;
 
-      // height: max(77rem, 43vw);
-
       .flex {
         flex-direction: column;
         padding: 0;
         .aboutCard {
-          // display: flex;
-          // flex-direction: column;
           height: 35vh;
         }
       }
       .rec-pagination {
         top: 0;
       }
-      // .img {
-      //   height: max(26rem, 20vw);
-      // }
     }
   }
 }
 @media (max-width: 450px) {
   .about-AboutUs {
-    // padding: 30% 8%;
+    padding: 15% 5%;
 
     .right {
       width: 100%;
-
-      // .img {
-      //   height: max(12rem, 20vw);
-      // }
     }
   }
 }

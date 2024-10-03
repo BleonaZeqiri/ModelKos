@@ -5,7 +5,6 @@ import { FormattedMessage } from "react-intl";
 import "./styles/Slider.scss";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import { ModelsSliderData } from "./data";
-import { ModelsSliderDatahiqu } from "./data";
 
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
@@ -19,7 +18,7 @@ const Slider = () => {
 
   const carouselRef = useRef(null);
   const modelsSliderData = ModelsSliderData(language);
-  const shi = ModelsSliderDatahiqu(language);
+  const shi = ModelsSliderData(language);
 
   useEffect(() => {
     if (modelsSliderData.length > 0) {
@@ -48,21 +47,6 @@ const Slider = () => {
       window.removeEventListener("resize", updateItemsToShow);
     };
   }, []);
-
-  const selectedCategoryData = modelsSliderData.find(
-    (category) => category.name === selectedCategory
-  ) || { models: [] };
-  console.log(selectedCategory, "ss");
-
-  const chunkArray = (array, size) => {
-    const result = [];
-    for (let i = 0; i < array.length; i += size) {
-      result.push(array.slice(i, i + size));
-    }
-    return result;
-  };
-
-  // const modelChunks = chunkArray(selectedCategoryData.models, itemsToShow);
 
   const CustomArrow = ({ type, onClick, isEdge }) => {
     const pointer = type === "PREV" ? <ArrowLeft /> : <ArrowRight />;
@@ -157,7 +141,7 @@ const Slider = () => {
             return (
               <TabPanel key={index}>
                 <Carousel
-                  itemsToShow={4}
+                  itemsToShow={itemsToShow}
                   ref={carouselRef}
                   onPrevStart={() => console.log("Navigating to previous item")}
                   onNextStart={() => console.log("Navigating to next item")}
@@ -204,7 +188,6 @@ const Slider = () => {
                           </div>
                         </div>
                       </div>
-                      {/* ))} */}
                     </div>
                   ))}
                 </Carousel>

@@ -311,213 +311,7 @@ export const MarketingData3 = (language) => [
   },
 ];
 export const BeingClassyData = [{ image1: BeingClassy1, image2: BeingClassy2 }];
-export const ModelsSliderData = (language) => [
-  {
-    cls: "tab1",
-    models: [
-      {
-        image: ModelsSlider1,
-        profession: (
-          <FormattedMessage id={translate[language].modelsSlider_profession1} />
-        ),
-        name: "Anila Canolli",
-        time: <FormattedMessage id={translate[language].modelsSlider_time1} />,
 
-        location: "Prishtina, Kosova",
-
-        icon: <SlLocationPin />,
-        icon1: <FiEye />,
-        view: "290",
-      },
-
-      {
-        image: ModelsSlider2,
-        profession: (
-          <FormattedMessage id={translate[language].modelsSlider_profession2} />
-        ),
-
-        name: "Klea Gashi",
-        time: <FormattedMessage id={translate[language].modelsSlider_time2} />,
-
-        location: "Prishtina, Kosova",
-        icon: <SlLocationPin />,
-        icon1: <FiEye />,
-
-        view: "290",
-      },
-      {
-        image: ModelsSlider3,
-        profession: (
-          <FormattedMessage id={translate[language].modelsSlider_profession3} />
-        ),
-        name: "Ari Berisha",
-        time: <FormattedMessage id={translate[language].modelsSlider_time3} />,
-
-        location: "Prishtina, Kosova",
-        icon: <SlLocationPin />,
-        icon1: <FiEye />,
-
-        view: "290",
-      },
-      {
-        image: ModelsSlider4,
-        profession: (
-          <FormattedMessage id={translate[language].modelsSlider_profession4} />
-        ),
-        name: "Jon Klaiqi",
-        time: <FormattedMessage id={translate[language].modelsSlider_time4} />,
-
-        location: "Prishtina, Kosova",
-        icon: <SlLocationPin />,
-        icon1: <FiEye />,
-
-        view: "290",
-      },
-      {
-        image: ModelsSlider5,
-        profession: (
-          <FormattedMessage id={translate[language].modelsSlider_profession5} />
-        ),
-
-        name: "Anila Canolli",
-        time: <FormattedMessage id={translate[language].modelsSlider_time5} />,
-
-        location: "Prishtina, Kosova",
-
-        icon: <SlLocationPin />,
-        icon1: <FiEye />,
-        view: "290",
-      },
-      {
-        image: ModelsSlider6,
-        profession: (
-          <FormattedMessage id={translate[language].modelsSlider_profession6} />
-        ),
-
-        name: "Klea Gashi",
-        time: <FormattedMessage id={translate[language].modelsSlider_time6} />,
-
-        location: "Prishtina, Kosova",
-        icon: <SlLocationPin />,
-        icon1: <FiEye />,
-
-        view: "290",
-      },
-      {
-        image: ModelsSlider7,
-        profession: (
-          <FormattedMessage id={translate[language].modelsSlider_profession7} />
-        ),
-        name: "Ari Berisha",
-        time: <FormattedMessage id={translate[language].modelsSlider_time7} />,
-
-        location: "Prishtina, Kosova",
-        icon: <SlLocationPin />,
-        icon1: <FiEye />,
-
-        view: "290",
-      },
-      {
-        image: ModelsSlider8,
-        profession: (
-          <FormattedMessage id={translate[language].modelsSlider_profession8} />
-        ),
-        name: "Jon Klaiqi",
-        time: <FormattedMessage id={translate[language].modelsSlider_time8} />,
-
-        location: "Prishtina, Kosova",
-        icon: <SlLocationPin />,
-        icon1: <FiEye />,
-
-        view: "290",
-      },
-
-      {
-        image: ModelsSlider9,
-        profession: (
-          <FormattedMessage id={translate[language].modelsSlider_profession9} />
-        ),
-
-        name: "Anila Canolli",
-        time: <FormattedMessage id={translate[language].modelsSlider_time9} />,
-
-        location: "Prishtina, Kosova",
-
-        icon: <SlLocationPin />,
-        icon1: <FiEye />,
-        view: "290",
-      },
-      {
-        image: ModelsSlider10,
-        profession: (
-          <FormattedMessage
-            id={translate[language].modelsSlider_profession10}
-          />
-        ),
-
-        name: "Klea Gashi",
-        time: <FormattedMessage id={translate[language].modelsSlider_time10} />,
-
-        location: "Prishtina, Kosova",
-        icon: <SlLocationPin />,
-        icon1: <FiEye />,
-
-        view: "290",
-      },
-      {
-        image: ModelsSlider11,
-        profession: (
-          <FormattedMessage
-            id={translate[language].modelsSlider_profession11}
-          />
-        ),
-        name: "Ari Berisha",
-        time: <FormattedMessage id={translate[language].modelsSlider_time11} />,
-
-        location: "Prishtina, Kosova",
-        icon: <SlLocationPin />,
-        icon1: <FiEye />,
-
-        view: "290",
-      },
-      {
-        image: ModelsSlider12,
-        profession: (
-          <FormattedMessage
-            id={translate[language].modelsSlider_profession12}
-          />
-        ),
-        name: "Jon Klaiqi",
-        time: <FormattedMessage id={translate[language].modelsSlider_time12} />,
-
-        location: "Prishtina, Kosova",
-        icon: <SlLocationPin />,
-        icon1: <FiEye />,
-
-        view: "290",
-      },
-    ],
-  },
-  {
-    cls: "tab1",
-    models: [
-      {
-        image: ModelsSlider1,
-        profession: (
-          <FormattedMessage id={translate[language].modelsSlider_profession1} />
-        ),
-        name: "Anila Canolli",
-        time: <FormattedMessage id={translate[language].modelsSlider_time1} />,
-
-        location: "Prishtina, Kosova",
-
-        icon: <SlLocationPin />,
-        icon1: <FiEye />,
-        view: "290",
-      },
-    ],
-  },
-];
 export const What_we_offerData = (language) => [
   {
     icon: <What_we_offer2 />,
@@ -740,7 +534,7 @@ export const Our_workData = (language) => [
   },
 ];
 
-export const ModelsSliderDatahiqu = (language) => [
+export const ModelsSliderData = (language) => [
   {
     cls: "tab1",
     items: [
@@ -829,7 +623,7 @@ export const ModelsSliderDatahiqu = (language) => [
               />
             ),
 
-            name: "Anila Canolli",
+            name: "Jora Preniqi",
             time: (
               <FormattedMessage id={translate[language].modelsSlider_time5} />
             ),
@@ -848,7 +642,7 @@ export const ModelsSliderDatahiqu = (language) => [
               />
             ),
 
-            name: "Klea Gashi",
+            name: "Alea Kabashi",
             time: (
               <FormattedMessage id={translate[language].modelsSlider_time6} />
             ),
@@ -866,7 +660,7 @@ export const ModelsSliderDatahiqu = (language) => [
                 id={translate[language].modelsSlider_profession7}
               />
             ),
-            name: "Ari Berisha",
+            name: "Aulona Morina ",
             time: (
               <FormattedMessage id={translate[language].modelsSlider_time7} />
             ),
@@ -884,7 +678,7 @@ export const ModelsSliderDatahiqu = (language) => [
                 id={translate[language].modelsSlider_profession8}
               />
             ),
-            name: "Jon Klaiqi",
+            name: "Mal Behluli",
             time: (
               <FormattedMessage id={translate[language].modelsSlider_time8} />
             ),
@@ -904,7 +698,7 @@ export const ModelsSliderDatahiqu = (language) => [
               />
             ),
 
-            name: "Anila Canolli",
+            name: "Altin Shala",
             time: (
               <FormattedMessage id={translate[language].modelsSlider_time9} />
             ),
@@ -923,7 +717,7 @@ export const ModelsSliderDatahiqu = (language) => [
               />
             ),
 
-            name: "Klea Gashi",
+            name: "Genta Salihu",
             time: (
               <FormattedMessage id={translate[language].modelsSlider_time10} />
             ),
@@ -941,7 +735,7 @@ export const ModelsSliderDatahiqu = (language) => [
                 id={translate[language].modelsSlider_profession11}
               />
             ),
-            name: "Ari Berisha",
+            name: "Dior Behrami",
             time: (
               <FormattedMessage id={translate[language].modelsSlider_time11} />
             ),
@@ -959,7 +753,7 @@ export const ModelsSliderDatahiqu = (language) => [
                 id={translate[language].modelsSlider_profession12}
               />
             ),
-            name: "Jon Klaiqi",
+            name: "Albios Avdiu",
             time: (
               <FormattedMessage id={translate[language].modelsSlider_time12} />
             ),
@@ -982,21 +776,78 @@ export const ModelsSliderDatahiqu = (language) => [
         col: "col1",
         innerItems: [
           {
-            image: ModelsSlider1,
+            image: ModelsSlider7,
             profession: (
               <FormattedMessage
-                id={translate[language].modelsSlider_profession1}
+                id={translate[language].modelsSlider_profession7}
               />
             ),
-            name: "Anila Canolli",
+            name: "Dior Behrami",
             time: (
-              <FormattedMessage id={translate[language].modelsSlider_time1} />
+              <FormattedMessage id={translate[language].modelsSlider_time7} />
+            ),
+
+            location: "Prishtina, Kosova",
+            icon: <SlLocationPin />,
+            icon1: <FiEye />,
+
+            view: "290",
+          },
+          {
+            image: ModelsSlider8,
+            profession: (
+              <FormattedMessage
+                id={translate[language].modelsSlider_profession8}
+              />
+            ),
+            name: "Albios Avdiu",
+            time: (
+              <FormattedMessage id={translate[language].modelsSlider_time8} />
+            ),
+
+            location: "Prishtina, Kosova",
+            icon: <SlLocationPin />,
+            icon1: <FiEye />,
+
+            view: "290",
+          },
+
+          {
+            image: ModelsSlider9,
+            profession: (
+              <FormattedMessage
+                id={translate[language].modelsSlider_profession9}
+              />
+            ),
+
+            name: "Daorsa Bindi",
+            time: (
+              <FormattedMessage id={translate[language].modelsSlider_time9} />
             ),
 
             location: "Prishtina, Kosova",
 
             icon: <SlLocationPin />,
             icon1: <FiEye />,
+            view: "290",
+          },
+          {
+            image: ModelsSlider10,
+            profession: (
+              <FormattedMessage
+                id={translate[language].modelsSlider_profession10}
+              />
+            ),
+
+            name: "Enda Doci",
+            time: (
+              <FormattedMessage id={translate[language].modelsSlider_time10} />
+            ),
+
+            location: "Prishtina, Kosova",
+            icon: <SlLocationPin />,
+            icon1: <FiEye />,
+
             view: "290",
           },
         ],
