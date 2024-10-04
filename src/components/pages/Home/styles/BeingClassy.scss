@@ -44,7 +44,7 @@
       transition: 0.2s ease-out;
       width: fit-content;
       svg {
-        height: 143px;
+        height: max(9.3px, 9.3vw);
       }
     }
   }

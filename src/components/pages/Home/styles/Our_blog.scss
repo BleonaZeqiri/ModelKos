@@ -44,7 +44,7 @@
 
       p,
       .def-text {
-        font-size: max(12px, 0.3vw);
+        font-size: max(12px, 0.82vw);
         line-height: max(32px, 2vw);
 
         color: #3e3e3e;
@@ -123,8 +123,8 @@
   .rec-arrow-right {
     text-indent: -9999px;
     display: inline-block;
-    width: 40px;
-    height: 40px;
+    width: max(3rem, 3vw);
+    height: max(2.5rem, 2.5vw);
     background-color: transparent;
     border: none;
     cursor: pointer;

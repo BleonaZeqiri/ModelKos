@@ -43,8 +43,12 @@
             input::placeholder {
               color: #808080;
             }
+
             textarea {
               resize: none;
+              background-color: initial;
+              border: 1px solid #ccc;
+              outline: none;
             }
           }
         }
