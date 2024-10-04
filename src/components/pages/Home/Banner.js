@@ -12,10 +12,10 @@ import { translate } from "../../../translation/translate";
 import { useSelector } from "react-redux";
 const Banner = () => {
   const language = useSelector((state) => state.language.language);
-
   const [isOpenModelDropdown, setIsOpenModelDropdown] = useState(false);
   const [isOpenLocationDropdown, setIsOpenLocationDropdown] = useState(false);
-
+  const placeholderText = `${translate[language].banner_dropdown_find_location} `;
+  const placeholderText1 = `${translate[language].banner_dropdown_find_Female_models} `;
   const toggleModelDropdown = () => {
     setIsOpenModelDropdown(!isOpenModelDropdown);
   };
@@ -33,8 +33,6 @@ const Banner = () => {
     console.log(`Selected Location: ${option}`);
     setIsOpenLocationDropdown(false);
   };
-  const placeholderText = `${translate[language].banner_dropdown_find_location} `;
-  const placeholderText1 = `${translate[language].banner_dropdown_find_Female_models} `;
 
   return (
     <div className="banner">

@@ -1,13 +1,13 @@
 import React from "react";
+import { useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
 import { translate } from "../../../translation/translate";
 import { FormattedMessage } from "react-intl";
 import "./Our_models.scss";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import { Data } from "./data";
 import { Link } from "react-router-dom";
-import { useSelector } from "react-redux";
 import StyledLink from "../StyledLink/StyledLink";
-import { useNavigate } from "react-router-dom";
 
 const Our_models = () => {
   const language = useSelector((state) => state.language.language);

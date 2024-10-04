@@ -1,10 +1,10 @@
 import React from "react";
+import { useSelector } from "react-redux";
 import { Our_partnersData } from "./data";
 import "./Our_partners.scss";
 import { FormattedMessage } from "react-intl";
 import StyledLink from "../StyledLink/StyledLink";
 import { translate } from "../../../translation/translate";
-import { useSelector } from "react-redux";
 const Our_partners = () => {
   const language = useSelector((state) => state.language.language);
 

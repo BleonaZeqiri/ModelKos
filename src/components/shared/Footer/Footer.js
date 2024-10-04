@@ -8,7 +8,9 @@ import "./footer.scss";
 const Footer = (props) => {
   const language = useSelector((state) => state.language.language);
   const [isSticky, setIsSticky] = useState(false);
-
+  const footerData = FooterData(language);
+  const footerData1 = FooterData1(language);
+  const footerData2 = FooterData2(language);
   useEffect(() => {
     const handleScroll = () => {
       const scrollHeight = window.pageYOffset;
@@ -18,10 +20,6 @@ const Footer = (props) => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-
-  const footerData = FooterData(language);
-  const footerData1 = FooterData1(language);
-  const footerData2 = FooterData2(language);
 
   return (
     <div className="shared-footer">

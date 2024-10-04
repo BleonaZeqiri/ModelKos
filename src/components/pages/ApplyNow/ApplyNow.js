@@ -11,8 +11,17 @@ const ApplyNow = () => {
 
   const fileInputRef = useRef(null);
   const [isPlaceholderSelected, setIsPlaceholderSelected] = useState(true);
-
+  const intl = useIntl();
+  const placeholderMessage = `${translate[language].applyNow_placeholderMessage} `;
+  const placeholderAddress = `${translate[language].applyNow_placeholderAddress} `;
+  const placeholderName = `${translate[language].applyNow_placeholderName} `;
+  const placeholderEmail = `${translate[language].applyNow_placeholderEmail} `;
+  const placeholderNumber = `${translate[language].applyNow_placeholderNumber} `;
+  const eg = `${translate[language].applyNow_eg} `;
+  const eg1 = `${translate[language].applyNow_eg1} `;
+  const eg2 = `${translate[language].applyNow_eg2} `;
   const [selectedImage, setSelectedImage] = useState(null);
+
   const handleSelectedChange = (e) => {
     setIsPlaceholderSelected(e.target.value === "");
   };
@@ -45,17 +54,6 @@ const ApplyNow = () => {
       console.error("Selected file is not an image.");
     }
   };
-  const intl = useIntl();
-  const placeholderMessage = `${translate[language].applyNow_placeholderMessage} `;
-  const placeholderAddress = `${translate[language].applyNow_placeholderAddress} `;
-  const placeholderName = `${translate[language].applyNow_placeholderName} `;
-
-  const placeholderEmail = `${translate[language].applyNow_placeholderEmail} `;
-
-  const placeholderNumber = `${translate[language].applyNow_placeholderNumber} `;
-  const eg = `${translate[language].applyNow_eg} `;
-  const eg1 = `${translate[language].applyNow_eg1} `;
-  const eg2 = `${translate[language].applyNow_eg2} `;
 
   return (
     <div className="apply-form">

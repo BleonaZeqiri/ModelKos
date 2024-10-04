@@ -1,6 +1,5 @@
 import React from "react";
 import Navbar from "../../components/shared/Navbar/Navbar";
-import OurBlogSearch from "../../components/pages/OurBlog/OurBlogSearch";
 
 import Our_partners from "../../components/shared/Our_partners/Our_partners";
 
@@ -12,7 +11,6 @@ const OurBlog = () => {
   return (
     <div>
       <Navbar isColor />
-      {/* <OurBlogSearch /> */}
       <MainComponent />
       <Our_partners />
       <Subscribe />

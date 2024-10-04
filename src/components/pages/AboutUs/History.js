@@ -1,6 +1,5 @@
 import React from "react";
 import { FormattedMessage } from "react-intl";
-// import { Link } from "react-router-dom";
 import "./styles/History.scss";
 import historyImage1 from "../../../assets/AboutUsPage/History/banner-5.png";
 import historyImage2 from "../../../assets/AboutUsPage/History/banner-4.png";

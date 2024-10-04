@@ -10,7 +10,7 @@ import { useSelector } from "react-redux";
 
 const Our_blog = () => {
   const language = useSelector((state) => state.language.language);
-
+  const our_workData = Our_workData(language);
   const [itemsToShow, setItemsToShow] = useState(4);
   const carouselRef = useRef(null);
 
@@ -33,7 +33,6 @@ const Our_blog = () => {
       window.removeEventListener("resize", updateItemsToShow);
     };
   }, []);
-  const our_workData = Our_workData(language);
 
   return (
     <div className="home-our_work">

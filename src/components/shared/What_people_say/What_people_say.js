@@ -1,14 +1,14 @@
 import React from "react";
+import { useSelector } from "react-redux";
 import Carousel from "react-elastic-carousel";
 import "./What_people_say.scss";
 import { What_people_sayData } from "./data.js";
 import { FormattedMessage } from "react-intl";
 import { translate } from "../../../translation/translate.js";
 
-import { useSelector } from "react-redux";
-
 const What_people_say = () => {
   const language = useSelector((state) => state.language.language);
+  const what_people_sayData = What_people_sayData(language);
 
   const itemsToShow = 1;
   const carouselRef = React.createRef();
@@ -29,7 +29,6 @@ const What_people_say = () => {
       </button>
     );
   };
-  const what_people_sayData = What_people_sayData(language);
   return (
     <div className="what_people_say">
       <div className="text">

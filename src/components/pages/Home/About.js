@@ -11,7 +11,8 @@ import image from "../../../assets/Home/AboutUs-section/AboutUsText.svg";
 
 const About = () => {
   const language = useSelector((state) => state.language.language);
-
+  const aboutUsData = AboutUsData(language);
+  const aboutUsData2 = AboutUsData2(language);
   const carouselRef = React.useRef(null);
 
   const onNextStart = (currentItem, nextItem) => {
@@ -25,9 +26,6 @@ const About = () => {
       carouselRef.current.goTo(carouselRef.current.props.itemsToShow - 1);
     }
   };
-
-  const aboutUsData = AboutUsData(language);
-  const aboutUsData2 = AboutUsData2(language);
 
   return (
     <div className="home-about">

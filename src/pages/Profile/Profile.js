@@ -74,7 +74,6 @@ const Profile = () => {
                       itemsToShow={1}
                       ref={carouselRef}
                       className="absoluteSlider"
-                      // onPrevStart={() =>
                       disableArrowsOnEnd={false}
                       initialActiveIndex={tempImg}
                       renderArrow={({ type, onClick, isEdge }) => (

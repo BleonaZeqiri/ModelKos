@@ -10,9 +10,11 @@ import { translate } from "../../../translation/translate";
 
 const What_we_offer = () => {
   const language = useSelector((state) => state.language.language);
-
   const [itemsToShow, setItemsToShow] = useState(4);
   const carouselRef = useRef(null);
+  const onPrevStart = () => {};
+  const onNextStart = () => {};
+  const what_we_offerData = What_we_offerData(language);
 
   const updateItemsToShow = () => {
     const screenWidth = window.innerWidth;
@@ -36,9 +38,6 @@ const What_we_offer = () => {
     };
   }, []);
 
-  const onPrevStart = () => {};
-  const onNextStart = () => {};
-  const what_we_offerData = What_we_offerData(language);
   return (
     <div className="home-what_we_offer">
       <div className="text">

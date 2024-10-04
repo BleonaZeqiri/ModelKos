@@ -1,9 +1,9 @@
 import React from "react";
+import { useSelector } from "react-redux";
 import { SubscribeData } from "./data";
 import "./Subscribe.scss";
 import { translate } from "../../../translation/translate";
 
-import { useSelector } from "react-redux";
 const Subscribe = () => {
   const language = useSelector((state) => state.language.language);
   const subscribeData = SubscribeData(language);
